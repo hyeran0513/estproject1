@@ -35,4 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch("components/sjpark.html")
   .then((response) => response.text())
   .then((data) => (document.getElementById("sjpark").innerHTML = data));
+
+  // jhhyung.html 불러오기
+  fetch("components/jhhyung.html")
+    .then((response) => response.text())
+    .then((data) => (document.getElementById("jhhyung").innerHTML = data));
 });
