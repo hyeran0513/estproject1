@@ -30,4 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch("components/hrkim.html")
     .then((response) => response.text())
     .then((data) => (document.getElementById("hrkim").innerHTML = data));
+
+  // jhhyung.html 불러오기
+  fetch("components/jhhyung.html")
+    .then((response) => response.text())
+    .then((data) => (document.getElementById("jhhyung").innerHTML = data));
 });
