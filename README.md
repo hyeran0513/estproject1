@@ -54,3 +54,4 @@
 <br/>
 
 ## 📱 QR코드
+![image](https://github.com/user-attachments/assets/afdae05f-f527-4886-a55c-539ce4d9ed4b)
