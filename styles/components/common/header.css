@@ -4,17 +4,17 @@ header {
   background-color: #fff;
   color: var(--text-color);
   border-bottom: 1px solid #d7d7d7;
-}
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  max-width: var(--container-max-width);
-  width: 100%;
-  height: 100%;
-}
+  .header-inner {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: var(--container-max-width);
+    width: 100%;
+    height: 100%;
 
-.btn-menu {
-  margin-left: auto;
+    .btn-menu {
+      margin-left: auto;
+    }
+  }
 }
