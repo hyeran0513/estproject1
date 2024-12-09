@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     .then((response) => response.text())
     .then((data) => (document.getElementById("hrkim").innerHTML = data));
 
+  // sjpark.html 불러오기
+  fetch("components/sjpark.html")
+  .then((response) => response.text())
+  .then((data) => (document.getElementById("sjpark").innerHTML = data));
+
   // jhhyung.html 불러오기
   fetch("components/jhhyung.html")
     .then((response) => response.text())
