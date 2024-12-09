@@ -1,6 +1,5 @@
 /* 기본 버튼 스타일 */
 button {
-  padding: 10px 20px;
   border-radius: 4px;
   border: 1px solid transparent;
   cursor: pointer;
