@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+/* 메인 콘텐츠 영역 */
+main {
+  flex: 1;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: var(--container-max-width);
+  width: 100%;
+}

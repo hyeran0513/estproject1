@@ -1,0 +1,15 @@
+footer {
+  padding: 0 20px;
+  height: 100px;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: var(--container-max-width);
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,75 @@
+/* 기본 버튼 스타일 */
+button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* 크기별 버튼 스타일 */
+button.btn-s {
+  font-size: 12px;
+  padding: 6px 12px;
+}
+
+button.btn-m {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+button.btn-l {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+/* 버튼 형태별 스타일 */
+button.btn-fill {
+  color: #fff;
+  border-color: transparent;
+}
+
+button.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* 색상별 버튼 스타일 */
+button.btn-fill-main {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+button.btn-fill-gray {
+  background-color: var(--gray-color);
+  border-color: var(--gray-color);
+}
+
+button.btn-outline-main {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background: #fff;
+}
+
+button.btn-outline-gray {
+  border-color: var(--gray-color);
+  color: var(--gray-color);
+  background: #fff;
+}
+
+/* 호버 상태 */
+button.btn-s:hover,
+button.btn-m:hover,
+button.btn-l:hover {
+  background-color: var(--primary-darken-color);
+  border-color: var(--primary-darken-color);
+}
+
+button.btn-s.btn-outline:hover,
+button.btn-m.btn-outline:hover,
+button.btn-l.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
