@@ -1,4 +1,7 @@
 :root {
+  /* 기본 폰트 크기 설정 */
+  font-size: 16px;
+
   /* 색상 변수 */
   --primary-color: #2E3192;
   --primary-darken-color: #282a7b;
@@ -9,15 +12,13 @@
 
   /* 기본 폰트와 크기 */
   --font-family: 'Arial', sans-serif;
-  --font-size-base: 16px;
-  --font-size-lg: 18px;
 
   /* 레이아웃 변수 */
   --container-max-width: 1340px;
+}
 
-  /* 반응형 브레이크포인트 */
-  --sm: 576px;
-  --md: 768px;
-  --lg: 992px;
-  --xl: 1200px;
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
 }
