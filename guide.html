@@ -22,10 +22,13 @@
   </head>
   <body>
     <div class="sidebar">
-      <ul>
-        <li><a href="#" id="homeLink"><i class="fa-solid fa-house"></i> 홈으로 돌아가기</a></li>
-        <li><a href="#section1"><i class="fa-solid fa-web-awesome"></i> 컴포넌트 추가</a></li>
-        <li><a href="#section2"><i class="fa-solid fa-paintbrush"></i> 버튼 스타일 지정</a></li>
+      <div class="home">
+        <a href="#" id="homeLink">홈으로 돌아가기 <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+
+      <ul class="menu">
+        <li class="menu-item is-active"><a href="#section1"><i class="fa-solid fa-web-awesome"></i> 컴포넌트 추가</a></li>
+        <li class="menu-item"><a href="#section2"><i class="fa-solid fa-paintbrush"></i> 버튼 스타일 지정</a></li>
       </ul>
     </div>
 
@@ -59,7 +62,7 @@
             
             <div class="details">
               <p>예시:</p>
-              <div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><pre style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;hrkim.html&nbsp;불러오기</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">fetch(<span style="color:#63a35c">"components/hrkim.html"</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;.then((response)&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;response.text())</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;.then((data)&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;(<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"hrkim"</span>).innerHTML&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;data));</div></pre></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>  
+              <div class="colorscripter-code" style="color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; position:relative !important;overflow:auto"><table class="colorscripter-code-table" style="margin:0;padding:0;border:none;background-color:#fafafa;border-radius:4px;" cellspacing="0" cellpadding="0"><tr><td style="padding:6px 0;text-align:left"><pre style="margin:0;padding:0;color:#010101;font-family:Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;line-height:130%"><div style="padding:0 6px; white-space:pre; line-height:130%"><span style="color:#999999">//&nbsp;hrkim.html&nbsp;불러오기</span></div><div style="padding:0 6px; white-space:pre; line-height:130%">fetch(<span style="color:#63a35c">"components/hrkim.html"</span>)</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;.then((response)&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;response.text())</div><div style="padding:0 6px; white-space:pre; line-height:130%">&nbsp;&nbsp;.then((data)&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span><span style="color:#ff3399"></span><span style="color:#a71d5d">&gt;</span>&nbsp;(<span style="color:#066de2">document</span>.<span style="color:#066de2">getElementById</span>(<span style="color:#63a35c">"hrkim"</span>).innerHTML&nbsp;<span style="color:#ff3399"></span><span style="color:#a71d5d">=</span>&nbsp;data));</div></pre></td><td style="vertical-align:bottom;padding:0 2px 4px 0"><a href="http://colorscripter.com/info#e" target="_blank" style="text-decoration:none;color:white"><span style="font-size:9px;word-break:normal;background-color:#e5e5e5;color:white;border-radius:10px;padding:1px">cs</span></a></td></tr></table></div>
             </div>
         </div>
       </div>
