@@ -1,0 +1,18 @@
+:root {
+  /* 기본 폰트 크기 설정 */
+  font-size: 100%;
+
+  /* 색상 변수 */
+  --primary-color: #0046FE;
+  --text-color: #333;
+  --secondary-text-color: #999;
+  --border-color: #eaeaea;
+  
+  --swiper-default-color: #464646;
+  --bullet-bg-color: #fff;
+
+  --member-bg-color: #f8f8f8;
+  --contact-bg-color: #000;
+
+  --footer-text-color: #adadad;
+}

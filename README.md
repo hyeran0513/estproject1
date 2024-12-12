@@ -13,36 +13,29 @@
 
 ```
 📦estproject1
- ┣ 📂.vscode
- ┃ ┗ 📜settings.json
- ┣ 📂components                  # HTML 컴포넌트 모음
- ┃ ┣ 📂common                    # 공통 컴포넌트
- ┃ ┃ ┣ 📜banner.html
- ┃ ┃ ┣ 📜footer.html
- ┃ ┃ ┗ 📜header.html
- ┃ ┣ 📜about.html
- ┃ ┗ 📜hrkim.html
- ┣ 📂images                      # 이미지 파일 모음
- ┃ ┣ 📜cat.jpg
- ┃ ┗ 📜guide.png
- ┣ 📂js                          # JavaScript 파일 모음
- ┃ ┗ 📜index.js                  # 메인 JavaScript 파일 (컴포넌트 로드, 동작 제어)
- ┣ 📂styles                      # CSS 스타일 파일 모음
- ┃ ┣ 📂base                      # 프로젝트 공통 스타일 (전역 스타일)
- ┃ ┃ ┣ 📜common.css              # 공통 요소 스타일
- ┃ ┃ ┣ 📜layout.css              # 전체 레이아웃 스타일
- ┃ ┃ ┣ 📜reset.css               # 브라우저 기본 스타일 초기화
- ┃ ┃ ┗ 📜variables.css           # CSS 변수 정의 (색상, 폰트 등)
- ┃ ┣ 📂components                # 컴포넌트별 CSS 스타일
- ┃ ┃ ┣ 📂common                  # 공통 컴포넌트 스타일
- ┃ ┃ ┃ ┣ 📜footer.css
- ┃ ┃ ┃ ┗ 📜header.css
- ┃ ┃ ┗ 📜about.css
- ┃ ┗ 📂pages                     # 페이지별 CSS 스타일
- ┃ ┃ ┣ 📜guide.css
- ┃ ┃ ┗ 📜index.css
- ┣ 📜guide.html                  # 가이드 페이지
- ┣ 📜index.html                  # 메인 페이지
+┣ 📂images
+ ┃ ┣ 📂banner
+ ┃ ┃ ┣ 📜banner1.jpg
+ ┃ ┃ ┣ 📜banner2.jpg
+ ┃ ┃ ┣ 📜banner3.jpg
+ ┃ ┃ ┣ 📜banner4.jpg
+ ┃ ┃ ┗ 📜banner5.jpg
+ ┃ ┣ 📂icon
+ ┃ ┃ ┗ 📜icon_logo.svg
+ ┃ ┗ 📂member
+ ┃ ┃ ┣ 📜member1.jpg
+ ┃ ┃ ┣ 📜member2.jpg
+ ┃ ┃ ┣ 📜member3.jpg
+ ┃ ┃ ┗ 📜member4.jpg
+ ┣ 📂js
+ ┃ ┗ 📜index.js
+ ┣ 📂styles
+ ┃ ┣ 📜common.css
+ ┃ ┣ 📜index.css
+ ┃ ┣ 📜layout.css
+ ┃ ┣ 📜reset.css
+ ┃ ┗ 📜variables.css
+ ┣ 📜index.html
  ┗ 📜README.md
 ```
 <br/>

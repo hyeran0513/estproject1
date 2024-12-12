@@ -1,48 +1,111 @@
 document.addEventListener("DOMContentLoaded", () => {
   // baseurl 처리
+  setBaseUrl();
+
+  // 스크롤 이벤트를 감지하여 헤더 배경색 변경
+  handleScrollEvent();
+
+  // swiper 객체 초기화
+  const swiper = initializeSwiper();
+
+  // 슬라이드 변경 이벤트 핸들러 추가
+  handleSlideChange(swiper);
+
+  // 재생/일시정지 버튼 이벤트 핸들러
+  handlePlayPauseButton(swiper);
+
+  // 카드 애니메이션 관찰
+  observeCards();
+});
+
+// baseurl 처리
+const setBaseUrl = () => {
   if (window.location.hostname === "hyeran0513.github.io") {
-    var base = document.createElement("base");
+    const base = document.createElement("base");
     base.href = "/estproject1/";
     document.head.appendChild(base);
   }
+};
 
-  // header.html 불러오기
-  fetch("components/common/header.html")
-    .then((response) => response.text())
-    .then((data) => (document.getElementById("header").innerHTML = data));
+// 스크롤 이벤트를 감지하여 헤더 배경색 변경
+const handleScrollEvent = () => {
+  const header = document.querySelector(".header");
 
-  // footer.html 불러오기
-  fetch("components/common/footer.html")
-    .then((response) => response.text())
-    .then((data) => (document.getElementById("footer").innerHTML = data));
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 500) {
+      header.classList.add("active");
+    } else {
+      header.classList.remove("active");
+    }
+  });
+};
 
-  // banner.html 불러오기
-  fetch("components/common/banner.html")
-    .then((response) => response.text())
-    .then((data) => (document.getElementById("banner").innerHTML = data));
+// swiper 객체 초기화
+const initializeSwiper = () => {
+  return new Swiper(".swiper", {
+    loop: true,
+    speed: 800,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+};
 
-  // about.html 불러오기
-  fetch("components/about.html")
-    .then((response) => response.text())
-    .then((data) => (document.getElementById("about").innerHTML = data));
+// 슬라이드 변경 이벤트 핸들러 추가
+const handleSlideChange = (swiper) => {
+  swiper.on("slideChange", () => {
+    const currentIndex = swiper.realIndex + 1;
+    const totalSlides = swiper.slides.length;
 
-  // hrkim.html 불러오기
-  fetch("components/hrkim.html")
-    .then((response) => response.text())
-    .then((data) => (document.getElementById("hrkim").innerHTML = data));
+    document.querySelector(
+      ".swiper-fraction"
+    ).textContent = `${currentIndex} / ${totalSlides}`;
+  });
+};
 
-  // jhhyung.html 불러오기
-  fetch("components/jhhyung.html")
-    .then((response) => response.text())
-    .then((data) => (document.getElementById("jhhyung").innerHTML = data));
+// 재생/일시정지 버튼 이벤트 핸들러
+const handlePlayPauseButton = (swiper) => {
+  const playPauseButton = document.querySelector(".btn-play-pause");
+  playPauseButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
 
-  // sjpark.html 불러오기
-  fetch("components/sjpark.html")
-    .then((response) => response.text())
-    .then((data) => (document.getElementById("sjpark").innerHTML = data));
+  playPauseButton.addEventListener("click", () => {
+    if (swiper.autoplay.running) {
+      swiper.autoplay.stop();
+      playPauseButton.innerHTML = '<i class="fa-solid fa-play"></i>';
+    } else {
+      swiper.autoplay.start();
+      playPauseButton.innerHTML = '<i class="fa-solid fa-pause"></i>';
+    }
+  });
+};
 
-  // slchoi.html 불러오기
-  fetch("components/slchoi.html")
-    .then((response) => response.text())
-    .then((data) => (document.getElementById("slchoi").innerHTML = data));
-});
+// 카드 애니메이션 관찰
+const observeCards = () => {
+  const cards = document.querySelectorAll(".card__item");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // 요소가 보이면 더 이상 관찰하지 않음
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  cards.forEach((card) => observer.observe(card)); // 각 카드 요소를 관찰
+};

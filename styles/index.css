@@ -1,0 +1,351 @@
+/* 헤더 */
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  z-index: 10;
+  transition: background-color ease 0.3s, border-bottom ease 0.3s;
+
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1240px;
+    width: 100%;
+    height: 100%;
+
+    .logo {
+      width: 100px;
+    }
+
+    .gnb {
+      display: flex;
+      align-items: center;
+
+      .gnb__list {
+        display: flex;
+
+        .gnb__item {
+          & > a {
+            padding: 0 10px;
+            font-size: 0.8rem;
+            color: #fff;
+            transition: color ease 0.3s;
+
+            &:hover {
+              color: var(--primary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.active {
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+
+    .header__inner {
+      .gnb {
+        .gnb__list {
+          .gnb__item {
+            & > a {
+              color: var(--text-color);
+
+              &:hover {
+                color: var(--primary-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 배너 */
+#banner {
+  margin: 0 auto;
+  max-width: 100%;
+
+  .swiper {
+    width: 100%;
+    height: 700px;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+
+    .swiper-control-wrap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 1240px;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+
+      .swiper-control {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        width: 100%;
+
+        .swiper-pagination {
+          position: static;
+          grid-column: 2;
+          padding-bottom: 10px;
+
+          .swiper-pagination-bullet {
+            width: 14px;
+            height: 2px;
+            background-color: var(--bullet-bg-color);
+            border-radius: 0;
+            transition: height ease 0.3s;
+          }
+
+          .swiper-pagination-bullet-active {
+            height: 4px;
+          }
+        }
+
+        .swiper-action {
+          display: inline-flex;
+          justify-self: flex-end;
+          align-items: center;
+
+          .swiper-fraction {
+            padding: 0 14px;
+            height: 24px;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.8rem;
+          }
+
+          .swiper-btn-wrap {
+            display: flex;
+            align-items: center;
+            padding-left: 8px;
+            background-color: #fff;
+            border-radius: 30px;
+            height: 40px;
+
+            .swiper-button-prev,
+            .swiper-button-next {
+              position: static;
+              margin-top: 0;
+              color: var(--swiper-default-color);
+
+              &::after {
+                font-family: "Font Awesome 6 Free";
+                font-weight: 600;
+                font-size: 1rem;
+              }
+            }
+
+            .swiper-button-prev {
+              &::after {
+                content: "\f104";
+              }
+            }
+
+            .swiper-button-next {
+              &::after {
+                content: "\f105";
+              }
+            }
+
+            .btn-play-pause {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: #fff;
+              color: var(--swiper-default-color);
+              border: 1px solid var(--swiper-default-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 회사 소개*/
+#company {
+  padding: 50px;
+
+  .company__inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+  }
+}
+
+/* 포트폴리오 */
+#portfolio {
+  padding: 50px;
+
+  .portfolio__inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+  }
+}
+
+/* 직원 소개 */
+#member {
+  padding: 50px;
+  background-color: var(--member-bg-color);
+
+  .member__inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+
+    .member__title {
+      margin-bottom: 30px;
+    }
+
+    .card {
+      display: flex;
+      gap: 24px;
+
+      .card__item {
+        flex: 1;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateY(40%);
+        transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.25),
+          opacity 0.8s ease;
+
+        &.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        &:nth-child(1) {
+          transition-delay: 0s;
+        }
+
+        &:nth-child(2) {
+          transition-delay: 0.2s;
+        }
+
+        &:nth-child(3) {
+          transition-delay: 0.4s;
+        }
+
+        &:nth-child(4) {
+          transition-delay: 0.6s;
+        }
+
+        .card__item-profile {
+          height: 280px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .card__item-details {
+          padding: 20px;
+
+          .card__item-details-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 4px;
+
+            .card__item-details-name {
+              font-size: 1.2rem;
+            }
+          }
+
+          .card__item-details-role {
+            font-size: 0.9rem;
+            color: var(--secondary-text-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 인터뷰 */
+#interview {
+  padding: 50px;
+
+  .interview__inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+  }
+}
+
+/* 문의 */
+#contact {
+  padding: 50px;
+  background-color: var(--contact-bg-color);
+  color: #fff;
+
+  .contact__inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+  }
+}
+
+/* 푸터 */
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  border-top: 1px solid var(--border-color);
+
+  .footer__inner {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1240px;
+    width: 100%;
+    height: 100%;
+    color: var(--footer-text-color);
+    font-size: 0.8rem;
+  }
+}
