@@ -217,12 +217,187 @@
 
 /* 포트폴리오 */
 #portfolio {
-  padding: 50px 20px;
+  /* border:10px solid yellowgreen ; */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
 
   .portfolio__inner {
-    margin: 0 auto;
-    max-width: 1200px;
+    /* margin: 0 auto; */
+    /* max-width: 1200px; */
     width: 100%;
+    display:flex;
+    flex-direction: column;
+    background-color: #fff;
+    position: relative;
+    border:1px solid blue;
+  }
+
+  .portfolio__container_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    /* border:1px solid red; */
+    background: #000;
+    height: 85.698rem;
+    padding: 12rem 0rem 8rem 10.175rem;
+    margin-bottom:12rem;
+  }
+
+  .portfolio__container_1__inner {
+    background-color: #000;
+    width: 181.825rem;
+    height: 65.6984rem;
+    /* top: 12rem;
+    bottom: 8rem;
+    left:10.18rem; */
+    position: absolute;
+    /* border : 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .portfolio__infomation {
+    display:flex;
+    flex-direction: row;
+    width: 45.4563rem;
+    height: 60.8984rem;
+  }
+  .portfolio__infomation__description {
+    /* width: 45.4563rem; */
+    height: 60.8984rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 45.4563rem;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-self: start;
+    flex-shrink: 0;
+    /* border:1px solid greenyellow; */
+  }
+  
+  .portfolio__infomation__introduce {
+    font-family: var(--portfolio-font-family_1);
+    position: relative;
+    text-transform: uppercase;
+    margin:0.75rem 1.8rem;
+    /* border : 1px solid white; */
+    font-size:1.2rem;
+    font-weight:400;
+    color:var(--portfolio-font-white-color);
+  }
+
+  .portfolio__infomation__introduce::before {
+    content: '';
+    width: 0.5rem;
+    aspect-ratio: 1;
+    background-color:var(--portfolio-bg-white-color);
+    border-radius: 50%;
+    color:var(--portfolio-font-white-color);
+    position: absolute;
+    left:-1.8rem;
+    top: 0.55rem;
+    margin:0;
+    border : none;
+  }
+
+  .portfolio__image__infomation{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+  .portfolio__image__infomation__title{
+    font-family: var(--portfolio-font-family_1);
+    font-size: 2.4rem;
+    font-weight: 400;
+    color:var(--portfolio-font-white-color);
+    margin-bottom: 1rem;
+  }
+  .portfolio__image__infomation__creater{
+    font-family: var(--portfolio-font-family_1);
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.24rem;
+    color:var(--portfolio-font-white-color);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+
+  .portfolio__infomation__picture{
+    height: 60.8984rem;
+    flex-shrink: 0;
+    flex-grow:0;
+    flex-basis: 107.2313rem;
+    object-fit: cover;
+    transition: all 0.5s;
+    overflow: hidden;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .portfolio__img_controller{
+    display:flex;
+    height: 4.8rem;
+    position: relative;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid gold; */
+  }
+
+  button{
+    width : 3.1rem;
+    height: 0.8rem;
+    flex-shrink: 0;
+    z-index: 10;
+    /* border: 1px solid gold; */
+    margin: 2rem 1.9rem;
+  }
+
+  /* 버튼 위치가 폰트크기를 100%지정하면 안맞음
+  내 모니터 가로px 1920
+  피그마 설계 가로px 1920
+  폰트크기를 62.5%로 변경하고 확인해보니 
+  화면상과 동일함
+   -> 추후 고려사항. 
+      div로 한번 더 감싸서 반응형에 
+      유동적으로 따라가도록 해야함.
+  */
+  .portfolio__img__prev{
+    position: absolute;
+    left:145rem;
+    background: url(../images/icon/icon_btn_prev.svg) no-repeat;
+  }
+  .portfolio__img__next{
+    position: absolute;
+    left: 150rem;
+    background: url(../images/icon/icon_btn_next.svg) no-repeat;
+  }
+
+  /* .portfolio__img__prev:active{
+  }
+  .portfolio__img__next:active{
+    .portfolio__image__modify{
+      자식요소가 아니라 당연히 적용 안됨
+      flex-shrink: 0;
+    }
+  } */
+
+  .portfolio__container_2{
+    background-color: #fff;
+  }
+  .portfolio__inner:nth-of-type(2){
+    border-bottom: 1px solid var(--portfolio-border-gray-color);
+    width:100%;
   }
 }
 

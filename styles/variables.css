@@ -15,4 +15,15 @@
   --contact-bg-color: #000;
 
   --footer-text-color: #adadad;
+
+  /* 포트폴리오 변수 설정 */
+  --portfolio-font-white-color:#fff;
+  --portfolio-font-black-color:#000;
+  --portfolio-bg-black-color:#000;
+  --portfolio-bg-white-color:#fff;
+  --portfolio-font-family_1: DM Sans, Sans-Serif;
+  --portfolio-font-family_2: Nunito sans, Sans-Serif;
+  --portfolio-border-black-color:#000;
+  --portfolio-border-gray-color:#E7E7DA;
+  --portfolio-section-gray-color:#E3E3E3;
 }
