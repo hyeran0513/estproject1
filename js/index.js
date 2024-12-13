@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 지도 이벤트 핸들러
   handleMap();
+
+  // 포트폴리오 이미지 슬라이드
+  handlePortfolio();
 });
 
 // baseurl 처리
@@ -158,16 +161,45 @@ const handleMap = () => {
   });
 };
 
-const portfolioNextBtn = document.querySelector('.portfolio__img__next');
+// 포트폴리오 이미지 슬라이드
+const handlePortfolio = () => {
+  const pictureWrap = document.querySelector(
+    ".portfolio__infomation__picture-container"
+  );
+  const nextButton = document.querySelector(".portfolio__img__next");
+  const prevButton = document.querySelector(".portfolio__img__prev");
+  const pictures = document.querySelectorAll(".portfolio__infomation__picture");
 
-portfolioNextBtn.addEventListener( 'click' , function(event){
-  let portfolio_image = document.querySelector('.portfolio__image__modify');
-  portfolio_image.style.flexBasis = "0";
-})
+  let currentIndex = 0; // 현재 이미지의 인덱스 초기화
 
-const portfolioPrevBtn = document.querySelector('.portfolio__img__prev');
+  // 이미지와 gap의 너비를 계산
+  const slideWidth =
+    pictures[0].offsetWidth + parseInt(getComputedStyle(pictureWrap).gap);
 
-portfolioPrevBtn.addEventListener( 'click' , function(event){
-  let portfolio_image = document.querySelector('.portfolio__image__modify');
-  portfolio_image.style.flexBasis = "107.2313rem";
-})
+  // active 클래스를 관리
+  const updateActiveClass = () => {
+    pictures.forEach((picture, index) => {
+      picture.classList.toggle("active", index === currentIndex);
+    });
+  };
+
+  // 슬라이드 이동
+  const moveSlide = () => {
+    pictureWrap.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    updateActiveClass();
+  };
+
+  nextButton.addEventListener("click", () => {
+    if (currentIndex < pictures.length - 1) {
+      currentIndex++;
+      moveSlide();
+    }
+  });
+
+  prevButton.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      moveSlide();
+    }
+  });
+};
