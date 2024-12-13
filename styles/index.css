@@ -17,6 +17,9 @@
     height: 100%;
 
     .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100px;
     }
 
@@ -37,6 +40,10 @@
           }
         }
       }
+    }
+
+    .btn-hamburger {
+      display: none;
     }
   }
 
@@ -112,7 +119,7 @@
         display: grid;
         grid-template-columns: 1fr auto 1fr;
         align-items: center;
-        width: 100%;
+        width: calc(100% - 40px);
 
         .swiper-pagination {
           position: static;
@@ -199,7 +206,7 @@
 
 /* 회사 소개*/
 #company {
-  padding: 50px;
+  padding: 50px 20px;
 
   .company__inner {
     margin: 0 auto;
@@ -210,7 +217,7 @@
 
 /* 포트폴리오 */
 #portfolio {
-  padding: 50px;
+  padding: 50px 20px;
 
   .portfolio__inner {
     margin: 0 auto;
@@ -221,7 +228,7 @@
 
 /* 직원 소개 */
 #member {
-  padding: 50px;
+  padding: 50px 20px;
   background-color: var(--member-bg-color);
 
   .member__inner {
@@ -234,7 +241,8 @@
     }
 
     .card {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
 
       .card__item {
@@ -246,6 +254,36 @@
         transform: translateY(40%);
         transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.25),
           opacity 0.8s ease;
+
+        &:nth-child(2) {
+          &::before {
+            border-bottom: 50px solid #f0bf4c;
+          }
+        }
+
+        &:nth-child(3) {
+          &::before {
+            border-bottom: 50px solid #d4ed31;
+          }
+        }
+
+        &:nth-child(4) {
+          &::before {
+            border-bottom: 50px solid #5bd1d7;
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-left: 50px solid transparent;
+          border-bottom: 50px solid #f59794;
+        }
 
         &.visible {
           opacity: 1;
@@ -304,7 +342,7 @@
 
 /* 인터뷰 */
 #interview {
-  padding: 50px;
+  padding: 50px 20px;
 
   .interview__inner {
     margin: 0 auto;
@@ -315,7 +353,7 @@
 
 /* 문의 */
 #contact {
-  padding: 50px;
+  padding: 50px 20px;
   background-color: var(--contact-bg-color);
   color: #fff;
 
@@ -323,23 +361,422 @@
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
+
+    .contact__title {
+      margin-bottom: 30px;
+    }
+
+    .contact__content {
+      display: flex;
+      gap: 48px;
+      height: 350px;
+
+      #map {
+        flex: 1;
+        height: 350px !important;
+        border-radius: 10px;
+        border: 1px solid #fff;
+      }
+
+      .contact__details {
+        width: 34%;
+
+        .contact__details-name {
+          position: relative;
+          margin-bottom: 10px;
+          font-size: 1.4rem;
+        }
+
+        .contact__info-wrap {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+
+          .contact__info-item {
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+            &:has(.address) {
+              display: flex;
+              justify-content: space-between;
+            }
+
+            &.full-type {
+              grid-column: 2 span;
+            }
+
+            .contact__info-title {
+              margin-bottom: 10px;
+            }
+
+            .contact__info-text {
+              position: relative;
+              display: block;
+              padding-left: 20px;
+
+              &::before {
+                position: absolute;
+                top: 0.3rem;
+                left: 0;
+                margin-right: 10px;
+                font-family: "Font Awesome 6 Free";
+                font-weight: 600;
+                font-size: 0.8rem;
+              }
+
+              &.address {
+                flex: 1;
+
+                &::before {
+                  content: "\f3c5";
+                }
+              }
+
+              &.phone,
+              &.inquiry {
+                &::before {
+                  content: "\f095";
+                }
+              }
+
+              &.email {
+                &::before {
+                  content: "\f0e0";
+                }
+              }
+            }
+
+            .btn-find-route {
+              a {
+                padding: 4px 8px;
+                color: #333;
+                background-color: #fff;
+                border-radius: 4px;
+                font-size: 0.8rem;
+                transition: background-color ease 0.3s;
+
+                & > i {
+                  margin-right: 8px;
+                }
+
+                &:hover {
+                  background-color: var(--primary-color);
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 /* 푸터 */
 .footer {
-  width: 100%;
   border-top: 1px solid var(--border-color);
+
+  .footer__inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 60px 20px;
+    max-width: 1240px;
+    width: 100%;
+    color: var(--footer-text-color);
+    font-size: 0.8rem;
+
+    .logo {
+      img {
+        width: 100px;
+      }
+    }
+
+    .footer-menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 40%;
+
+      .footer-menu__item {
+        .footer-menu__title {
+          margin-bottom: 20px;
+          color: #333;
+        }
+
+        .footer-menu__list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .footer-menu__list-item {
+            .footer-menu__link {
+              line-height: 1.2;
+              color: #000;
+              transition: color ease 0.3s;
+              word-break: keep-all;
+
+              &:hover {
+                color: var(--primary-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .subfooter {
+    padding: 40px 0;
+    background-color: #f8f8f8;
+
+    .subfooter__inner {
+      margin: 0 auto;
+      padding: 0 20px;
+      max-width: 1240px;
+      width: 100%;
+      color: #adadad;
+      font-size: 0.8rem;
+    }
+  }
 }
 
-.footer__inner {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0 20px;
-  max-width: 1240px;
-  width: 100%;
-  height: 80px;
-  color: var(--footer-text-color);
-  font-size: 0.8rem;
+@media screen and (max-width: 1024px) {
+  /* 헤더 */
+  .header {
+    height: 50px;
+
+    .header__inner {
+      .gnb {
+        display: none;
+      }
+
+      .btn-hamburger {
+        display: block;
+        color: #fff;
+        font-size: 1.2rem;
+      }
+    }
+
+    &.active {
+      .header__inner {
+        .btn-hamburger {
+          color: #333;
+        }
+      }
+    }
+  }
+
+  /* 배너 */
+  #banner {
+    .swiper {
+      height: 600px;
+    }
+  }
+
+  /* 직원 소개 */
+  #member {
+    .member__inner {
+      .card {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  /* 문의 */
+  #contact {
+    .contact__inner {
+      .contact__content {
+        height: auto;
+
+        .contact__details {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  /* 푸터 */
+  .footer {
+    .footer__inner {
+      .footer-menu {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* 헤더 */
+  .header {
+    .header__inner {
+      .logo {
+        width: 80px;
+      }
+    }
+  }
+
+  /* 배너 */
+  #banner {
+    .swiper {
+      height: 400px;
+
+      .swiper-control-wrap {
+        .swiper-control {
+          right: 0;
+          padding: 0 20px;
+          width: 100%;
+
+          .swiper-action {
+            .swiper-fraction {
+              display: none;
+            }
+
+            .swiper-btn-wrap {
+              padding-left: 4px;
+              height: 34px;
+
+              .swiper-button-prev,
+              .swiper-button-next {
+                width: 20px;
+
+                &::after {
+                  font-size: 0.8rem;
+                }
+              }
+
+              .btn-play-pause {
+                width: 34px;
+                height: 34px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* 직원 소개 */
+  #member {
+    padding: 20px;
+
+    .member__inner {
+      .card {
+        gap: 10px;
+
+        .card__item {
+          &:nth-child(2) {
+            &::before {
+              border-bottom: 40px solid #f0bf4c;
+            }
+          }
+
+          &:nth-child(3) {
+            &::before {
+              border-bottom: 40px solid #d4ed31;
+            }
+          }
+
+          &:nth-child(4) {
+            &::before {
+              border-bottom: 40px solid #5bd1d7;
+            }
+          }
+
+          &::before {
+            border-left: 40px solid transparent;
+            border-bottom: 40px solid #f59794;
+          }
+
+          .card__item-profile {
+            height: 150px;
+          }
+
+          .card__item-details {
+            .card__item-details-info {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 0;
+
+              .card__item-details-name {
+                font-size: 1rem;
+              }
+
+              .card__item-details-separator {
+                display: none;
+              }
+
+              .card__item-details-english-name {
+                font-size: 0.8rem;
+              }
+            }
+
+            .card__item-details-role {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* 문의 */
+  #contact {
+    padding: 20px;
+
+    .contact__inner {
+      .contact__content {
+        flex-direction: column;
+        gap: 30px;
+
+        #map {
+          height: 200px !important;
+          flex: unset;
+        }
+
+        .contact__details {
+          width: 100%;
+
+          .contact__info-wrap {
+            .contact__info-item {
+              .contact__info-text {
+                font-size: 0.8rem;
+
+                &::before {
+                  top: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* 푸터 */
+  .footer {
+    .footer__inner {
+      flex-direction: column;
+      gap: 20px;
+      padding: 30px 20px;
+
+      .footer-menu {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        width: 100%;
+
+        .footer-menu__item {
+          &:last-child {
+            grid-column: 2 span;
+          }
+        }
+      }
+    }
+
+    .subfooter {
+      padding: 20px;
+
+      .subfooter__inner {
+        padding: 0;
+      }
+    }
+  }
 }
