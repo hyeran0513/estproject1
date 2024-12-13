@@ -342,23 +342,25 @@
 
 /* 인터뷰 */
 #interview {
-  .interview__inner1 {
-    padding: 50px;
+  .interview__inner {
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
     display: flex;
     justify-content: center;
+
     .interview__top {
       display: flex;
       justify-content: center;
       margin-top: 9.38rem;
       margin-bottom: 5.19rem;
-      div{
+
+      div {
         display: flex;
         width: 66.5rem;
         flex-direction: column;
         align-items: center;
+
         .interview__top__content {
           color: #000;
           text-align: center;
@@ -369,6 +371,7 @@
           line-height: 1.8125rem;
           margin-bottom: 2.12rem;
         }
+
         .interview__top__interviewee {
           color: #000;
           text-align: center;
@@ -380,6 +383,7 @@
           text-transform: uppercase;
           margin-bottom: 4.19rem;
         }
+
         .interview__slide {
           width: 4rem;
           height: 0.6875rem;
@@ -388,67 +392,55 @@
       }
     }
   }
-}
-.interview__bg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  background-color: #ECE8E5;
-  /* overflow-x: hidden; */
-}
-.interview_main {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  width: 107.78125rem;
-  height: 40.12988rem;
-  flex-shrink: 0;
-}
 
-.interview_part {
-  width: 27.07031rem;
-  margin-right: 0.38rem;
-  .interview_pic {
-    width: 27.07031rem;
-    margin-bottom: 1.81rem;
-  }
-  .interview__title {
-    color: #000;
-    font-family: "DM Sans";
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1.5625rem;
-    margin-bottom: 1.12rem;
-  }
-  .date {
+  .interview__bg {
     display: flex;
-    color: #000;
-    font-family: "DM Sans";
-    font-size: 0.75rem;
-    font-weight: 400;
-    line-height: 0.875rem; /* 116.667% */
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
-    p{
-      margin-right: 0.89rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10rem 20px;
+    background-color: #ece8e5;
+
+    .interview_main {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1200px;
+
+      .interview_part {
+        .interview_pic {
+          margin-bottom: 1.81rem;
+        }
+
+        .interview__title {
+          color: #000;
+          font-family: "DM Sans";
+          font-size: 1.25rem;
+          font-weight: 400;
+          line-height: 1.5625rem;
+          margin-bottom: 1.12rem;
+        }
+
+        .date {
+          display: flex;
+          color: #000;
+          font-family: "DM Sans";
+          font-size: 0.75rem;
+          font-weight: 400;
+          line-height: 0.875rem;
+          letter-spacing: 0.15rem;
+          text-transform: uppercase;
+
+          p {
+            margin-right: 0.89rem;
+          }
+
+          img {
+            margin-right: 0.89rem;
+          }
+        }
+      }
     }
-    img{
-      margin-right: 0.89rem;
-    }
-  }
-  
-}
-/* 태블릿릿 */
-@media screen and (max-width: 1024px) {
-  .interview_main {
-  grid-template-columns: repeat(2, 1fr)
-}
-/* 모바일일 */
-@media screen and (max-width: 720px) {
-  .interview_main {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -682,6 +674,15 @@
     }
   }
 
+  /* 인터뷰 */
+  #interview {
+    .interview__bg {
+      .interview_main {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
   /* 문의 */
   #contact {
     .contact__inner {
@@ -815,6 +816,15 @@
             }
           }
         }
+      }
+    }
+  }
+
+  /* 인터뷰 */
+  #interview {
+    .interview__bg {
+      .interview_main {
+        grid-template-columns: 1fr;
       }
     }
   }
