@@ -206,12 +206,204 @@
 
 /* 회사 소개*/
 #company {
-  padding: 50px 20px;
+  padding: 10rem 6rem;
+  overflow-x: hidden;
 
   .company__inner {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1600px;
     width: 100%;
+
+    .row {
+      display: flex;
+    }
+
+    .row-1 {
+      background: url(../images/company/bg-company.png) 0px -179.883px / 100% 201.561%
+        no-repeat;
+      gap: 1rem;
+
+      .textarea {
+        flex: 1.5;
+        translate: -80%;
+        opacity: 0;
+        transition: all 1s;
+
+        h2 {
+          color: #000;
+          font-family: "DM Sans";
+          font-size: 0.75rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.4rem;
+          letter-spacing: 0.24rem;
+          text-transform: uppercase;
+          margin-bottom: 2.75rem;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.94rem;
+          translate: 0 -0.37rem;
+
+          /* 도트 */
+          &:before {
+            content: "";
+            display: inline-block;
+            width: 0.25rem;
+            height: 0.25rem;
+            border-radius: 0.125rem;
+            background: #000;
+          }
+        }
+
+        .textarea_description {
+          width: 100%;
+          max-width: 46.20294rem;
+          color: #000;
+          font-family: "DM Sans";
+          font-size: 2.8125rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 3.375rem;
+          margin-bottom: 1.73rem;
+        }
+
+        /* read more 버튼튼 */
+        .btn-more {
+          display: inline-block;
+          color: #000;
+          font-family: "Nunito Sans";
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.6875rem;
+          text-transform: lowercase;
+          margin-bottom: 5.23rem;
+          padding: 0.5rem 1rem;
+          transition: all 0.5s;
+
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+      }
+
+      .image {
+        flex: 1;
+        aspect-ratio: 2/1;
+        position: relative;
+        opacity: 0;
+        translate: 80% 0;
+        transition: all 0.5s;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: all 0.5s 0.2s;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: var(--primary-color);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+          transition: all 0.5s;
+        }
+
+        &:hover {
+          img {
+            left: 2rem;
+            top: -2rem;
+          }
+          &::after {
+            left: -1rem;
+            bottom: -1rem;
+          }
+        }
+      }
+    }
+
+    .row-2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2.69rem;
+      border-top: 1px solid #e3e3e3;
+      padding-top: 4.69rem;
+
+      article {
+        flex: 1;
+        padding: 1rem;
+        transition: all 0.5s;
+
+        &:not(:first-child):hover {
+          transform: scale(1.02);
+          box-shadow: 5px 5px 5px #eee;
+        }
+
+        h2 {
+          color: #000;
+          font-family: "DM Sans";
+          font-size: 1.5rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.8125rem; /* 120.833% */
+          margin-bottom: 1rem;
+        }
+
+        p {
+          color: #000;
+          font-family: "Nunito Sans";
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.6875rem; /* 168.75% */
+        }
+
+        &.qna {
+          ul li {
+            margin-bottom: 0.62rem;
+
+            a {
+              color: #000;
+              font-family: "DM Sans";
+              font-size: 1.5rem;
+              font-weight: 400;
+              line-height: 1.8125rem; /* 120.833% */
+
+              &:hover {
+                text-decoration: underline;
+                text-decoration-color: var(--primary-color);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.active {
+    .company__inner {
+      .row-1 {
+        .textarea {
+          translate: 0 0;
+          opacity: 1;
+        }
+
+        .image {
+          translate: 0 0;
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 
