@@ -1,252 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>이스트소프트 프론트엔드 부트캠프</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 스타일시트 -->
-    <link rel="stylesheet" href="styles/variables.css" />
-    <link rel="stylesheet" href="styles/layout.css" />
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/common.css" />
-    <link rel="stylesheet" href="styles/index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+  <title>이스트소프트 프론트엔드 부트캠프</title>
 
-    <!-- 스크립트 -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  </head>
+  <!-- 스타일시트 -->
+  <link rel="stylesheet" href="styles/variables.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/common.css" />
+  <link rel="stylesheet" href="styles/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <body>
-    <!-- 헤더 -->
-    <div class="a11y-hidden">헤더</div>
+  <!-- 스크립트 -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
 
-    <header class="header">
-      <div class="header__inner">
-        <a href="" class="logo">
-          <img src="./images/icon/icon_logo.svg" alt="로고" />
-        </a>
+<body>
+  <!-- 헤더 -->
+  <div class="a11y-hidden">헤더</div>
 
-        <div class="a11y-hidden">메뉴</div>
+  <header class="header">
+    <div class="header__inner">
+      <a href="" class="logo">
+        <img src="./images/icon/icon_logo.svg" alt="로고" />
+      </a>
 
-        <nav class="gnb">
-          <ul class="gnb__list">
-            <li class="gnb__item">
-              <a href="#banner" class="gnb__link">홈</a>
-            </li>
-            <li class="gnb__item">
-              <a href="#company" class="gnb__link">회사 소개</a>
-            </li>
-            <li class="gnb__item">
-              <a href="#portfolio" class="gnb__link">포트폴리오</a>
-            </li>
-            <li class="gnb__item">
-              <a href="#member" class="gnb__link">직원 소개</a>
-            </li>
-            <li class="gnb__item">
-              <a href="#interview" class="gnb__link">인터뷰</a>
-            </li>
-            <li class="gnb__item">
-              <a href="#contact" class="gnb__link">문의</a>
-            </li>
-          </ul>
-        </nav>
+      <div class="a11y-hidden">메뉴</div>
+
+      <nav class="gnb">
+        <ul class="gnb__list">
+          <li class="gnb__item">
+            <a href="#banner" class="gnb__link">홈</a>
+          </li>
+          <li class="gnb__item">
+            <a href="#company" class="gnb__link">회사 소개</a>
+          </li>
+          <li class="gnb__item">
+            <a href="#portfolio" class="gnb__link">포트폴리오</a>
+          </li>
+          <li class="gnb__item">
+            <a href="#member" class="gnb__link">직원 소개</a>
+          </li>
+          <li class="gnb__item">
+            <a href="#interview" class="gnb__link">인터뷰</a>
+          </li>
+          <li class="gnb__item">
+            <a href="#contact" class="gnb__link">문의</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 배너 -->
+    <div class="a11y-hidden">배너</div>
+
+    <section id="banner">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/banner/banner1.jpg" alt="건물 사진1" />
+          </div>
+
+          <div class="swiper-slide">
+            <img src="images/banner/banner2.jpg" alt="건물 사진2" />
+          </div>
+
+          <div class="swiper-slide">
+            <img src="images/banner/banner3.jpg" alt="건물 사진3" />
+          </div>
+
+          <div class="swiper-slide">
+            <img src="images/banner/banner4.jpg" alt="건물 사진4" />
+          </div>
+
+          <div class="swiper-slide">
+            <img src="images/banner/banner5.jpg" alt="건물 사진5" />
+          </div>
+        </div>
+
+        <div class="swiper-control-wrap">
+          <div class="swiper-control">
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-action">
+              <div class="swiper-fraction"></div>
+
+              <div class="swiper-btn-wrap">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <button type="button" class="btn-play-pause" title="재생&멈춤 버튼">
+                  <i class="fa-solid fa-pause"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <!-- 배너 -->
-      <div class="a11y-hidden">배너</div>
+    <!-- 회사 소개 -->
+    <div class="a11y-hidden">회사 소개</div>
 
-      <section id="banner">
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="images/banner/banner1.jpg" alt="건물 사진1" />
-            </div>
+    <section id="company">
+      <div class="company__inner">
+        <h1 class="company__title a11y-hidden">회사 소개</h1>
 
-            <div class="swiper-slide">
-              <img src="images/banner/banner2.jpg" alt="건물 사진2" />
-            </div>
-
-            <div class="swiper-slide">
-              <img src="images/banner/banner3.jpg" alt="건물 사진3" />
-            </div>
-
-            <div class="swiper-slide">
-              <img src="images/banner/banner4.jpg" alt="건물 사진4" />
-            </div>
-
-            <div class="swiper-slide">
-              <img src="images/banner/banner5.jpg" alt="건물 사진5" />
-            </div>
+        <div class="row row-1">
+          <div class="textarea">
+            <h2 class="textarea__title">Architect studio</h2>
+            <h3 class="textarea_description">Architects excited about beauty,
+              affordability sustainability materials
+              for every project and person</h3>
+            <a href="#" class="btn-more">read more</a>
           </div>
-
-          <div class="swiper-control-wrap">
-            <div class="swiper-control">
-              <div class="swiper-pagination"></div>
-
-              <div class="swiper-action">
-                <div class="swiper-fraction"></div>
-
-                <div class="swiper-btn-wrap">
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
-
-                  <button
-                    type="button"
-                    class="btn-play-pause"
-                    title="재생&멈춤 버튼"
-                  >
-                    <i class="fa-solid fa-pause"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
+          <div class="image">
+            <img src="./images/company/company.png" alt="회사사진">
           </div>
         </div>
-      </section>
-
-      <!-- 회사 소개 -->
-      <div class="a11y-hidden">회사 소개</div>
-
-      <section id="company">
-        <div class="company__inner">
-          <h1 class="company__title">회사 소개</h1>
+        <div class="row row-2 information-list">
+          <article class="information-list__item qna">
+            <ul>
+              <li><a href="#">Design a perfect home</a></li>
+              <li><a href="#">Download our brochure</a></li>
+              <li><a href="#">Ask us your questions our architects</a></li>
+            </ul>
+          </article>
+          <article class="information-list__item">
+            <h2>Urban Exteriors</h2>
+            <p>Purus sit amet vol utpat con sequat mauris nunc congue. Sed id s emper risus in hend rerit. Facilisi
+              etiam dig nissim diam quis enim. Quis auctor.</p>
+          </article>
+          <article class="information-list__item">
+            <h2>Cityscapes Buildings</h2>
+            <p>Purus sit amet vol utpat con sequat mauris nunc congue. Sed id s emper risus in hend rerit. Facilisi
+              etiam dig nissim diam quis enim. Quis auctor.</p>
+          </article>
         </div>
-      </section>
-
-      <!-- 포트폴리오 -->
-      <div class="a11y-hidden">포트폴리오</div>
-
-      <section id="portfolio">
-        <div class="portfolio__inner">
-          <h1 class="portfolio__title">포트폴리오</h1>
-        </div>
-      </section>
-
-      <!-- 직원 소개 -->
-      <div class="a11y-hidden">직원 소개</div>
-
-      <section id="member">
-        <div class="member__inner">
-          <h1 class="member__title">직원 소개</h1>
-
-          <div class="card">
-            <div class="card__item">
-              <div class="card__item-profile">
-                <img
-                  src="images/member/member1.jpg"
-                  alt="김혜란 프로필 이미지"
-                />
-              </div>
-
-              <div class="card__item-details">
-                <div class="card__item-details-info">
-                  <span class="card__item-details-name">김혜란</span> |
-                  <span class="card__item-details-english-name">Hyeran Kim</span>
-                </div>
-
-                <div class="card__item-details-role">프론트엔드</div>
-              </div>
-            </div>
-
-            <div class="card__item">
-              <div class="card__item-profile">
-                <img
-                  src="images/member/member2.jpg"
-                  alt="최승이 프로필 이미지"
-                />
-              </div>
-
-              <div class="card__item-details">
-                <div class="card__item-details-info">
-                  <span class="card__item-details-name">최승이</span> |
-                  <span class="card__item-details-english-name">Seungyi Choi</span>
-                </div>
-
-                <div class="card__item-details-role">프론트엔드</div>
-              </div>
-            </div>
-
-            <div class="card__item">
-              <div class="card__item-profile">
-                <img
-                  src="images/member/member3.jpg"
-                  alt="박세진 프로필 이미지"
-                />
-              </div>
-
-              <div class="card__item-details">
-                <div class="card__item-details-info">
-                  <span class="card__item-details-name">박세진</span> |
-                  <span class="card__item-details-english-name">Sejin Park</span>
-                </div>
-
-                <div class="card__item-details-role">프론트엔드</div>
-              </div>
-            </div>
-
-            <div class="card__item">
-              <div class="card__item-profile">
-                <img
-                  src="images/member/member4.jpg"
-                  alt="형주희 프로필 이미지"
-                />
-              </div>
-
-              <div class="card__item-details">
-                <div class="card__item-details-info">
-                  <span class="card__item-details-name">형주희</span> |
-                  <span class="card__item-details-english-name">Juhee Hyeong</span>
-                </div>
-
-                <div class="card__item-details-role">프론트엔드</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 인터뷰 -->
-      <div class="a11y-hidden">인터뷰</div>
-
-      <section id="interview">
-        <div class="interview__inner">
-          <h1 class="interview__title">인터뷰</h1>
-        </div>
-      </section>
-
-      <!-- 문의 -->
-      <div class="a11y-hidden">문의</div>
-
-      <section id="contact">
-        <div class="contact__inner">
-          <h1 class="contact__title">문의</h1>
-        </div>
-      </section>
-    </main>
-
-    <!-- 푸터 -->
-    <div class="a11y-hidden">푸터</div>
-
-    <footer class="footer">
-      <div class="footer__inner">
-        ⓒ 2024 ESTSOFT Bootcamp 3조. All rights reserved.
       </div>
-    </footer>
+    </section>
 
-    <script src="js/index.js" defer></script>
-  </body>
+    <!-- 포트폴리오 -->
+    <div class="a11y-hidden">포트폴리오</div>
+
+    <section id="portfolio">
+      <div class="portfolio__inner">
+        <h1 class="portfolio__title">포트폴리오</h1>
+      </div>
+    </section>
+
+    <!-- 직원 소개 -->
+    <div class="a11y-hidden">직원 소개</div>
+
+    <section id="member">
+      <div class="member__inner">
+        <h1 class="member__title">직원 소개</h1>
+
+        <div class="card">
+          <div class="card__item">
+            <div class="card__item-profile">
+              <img src="images/member/member1.jpg" alt="김혜란 프로필 이미지" />
+            </div>
+
+            <div class="card__item-details">
+              <div class="card__item-details-info">
+                <span class="card__item-details-name">김혜란</span> |
+                <span class="card__item-details-english-name">Hyeran Kim</span>
+              </div>
+
+              <div class="card__item-details-role">프론트엔드</div>
+            </div>
+          </div>
+
+          <div class="card__item">
+            <div class="card__item-profile">
+              <img src="images/member/member2.jpg" alt="최승이 프로필 이미지" />
+            </div>
+
+            <div class="card__item-details">
+              <div class="card__item-details-info">
+                <span class="card__item-details-name">최승이</span> |
+                <span class="card__item-details-english-name">Seungyi Choi</span>
+              </div>
+
+              <div class="card__item-details-role">프론트엔드</div>
+            </div>
+          </div>
+
+          <div class="card__item">
+            <div class="card__item-profile">
+              <img src="images/member/member3.jpg" alt="박세진 프로필 이미지" />
+            </div>
+
+            <div class="card__item-details">
+              <div class="card__item-details-info">
+                <span class="card__item-details-name">박세진</span> |
+                <span class="card__item-details-english-name">Sejin Park</span>
+              </div>
+
+              <div class="card__item-details-role">프론트엔드</div>
+            </div>
+          </div>
+
+          <div class="card__item">
+            <div class="card__item-profile">
+              <img src="images/member/member4.jpg" alt="형주희 프로필 이미지" />
+            </div>
+
+            <div class="card__item-details">
+              <div class="card__item-details-info">
+                <span class="card__item-details-name">형주희</span> |
+                <span class="card__item-details-english-name">Juhee Hyeong</span>
+              </div>
+
+              <div class="card__item-details-role">프론트엔드</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 인터뷰 -->
+    <div class="a11y-hidden">인터뷰</div>
+
+    <section id="interview">
+      <div class="interview__inner">
+        <h1 class="interview__title">인터뷰</h1>
+      </div>
+    </section>
+
+    <!-- 문의 -->
+    <div class="a11y-hidden">문의</div>
+
+    <section id="contact">
+      <div class="contact__inner">
+        <h1 class="contact__title">문의</h1>
+      </div>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <div class="a11y-hidden">푸터</div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      ⓒ 2024 ESTSOFT Bootcamp 3조. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/index.js" defer></script>
+</body>
+
 </html>
