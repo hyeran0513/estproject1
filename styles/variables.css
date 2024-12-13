@@ -1,18 +1,23 @@
 :root {
-  /* 기본 폰트 크기 설정 */
-  font-size: 100%;
-
   /* 색상 변수 */
   --primary-color: #0046FE;
   --text-color: #333;
   --secondary-text-color: #999;
   --border-color: #eaeaea;
-  
   --swiper-default-color: #464646;
   --bullet-bg-color: #fff;
-
   --member-bg-color: #f8f8f8;
   --contact-bg-color: #000;
-
   --footer-text-color: #adadad;
+
+  /* 포트폴리오 변수 설정 */
+  --portfolio-font-white-color:#fff;
+  --portfolio-font-black-color:#000;
+  --portfolio-bg-black-color:#000;
+  --portfolio-bg-white-color:#fff;
+  --portfolio-font-family_1: DM Sans, Sans-Serif;
+  --portfolio-font-family_2: Nunito sans, Sans-Serif;
+  --portfolio-border-black-color:#000;
+  --portfolio-border-gray-color:#E7E7DA;
+  --portfolio-section-gray-color:#E3E3E3;
 }

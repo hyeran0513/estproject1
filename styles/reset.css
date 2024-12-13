@@ -1,51 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 @font-face {
-  font-family: 'EliceDigitalBaeum-Bd';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'EliceDigitalBaeum-Bd';
+	src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {
-  font-family: 'EliceDigitalBaeum-Bd', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: 'EliceDigitalBaeum-Bd', sans-serif;
+	font-size: 1rem;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 /* 불필요한 리스트 스타일 없애기 */
-ul, ol {
-  list-style: none;
+ul,
+ol {
+	list-style: none;
 }
 
 /* 링크 스타일 초기화 */
 a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 /* 테이블 스타일 초기화 */
 table {
-  border-collapse: collapse;
-  width: 100%;
+	border-collapse: collapse;
+	width: 100%;
 }
 
 /* 이미지 크기 조정 */
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 /* input, button 등의 폼 요소 스타일 초기화 */
@@ -53,17 +55,17 @@ input,
 button,
 textarea,
 select {
-  background: transparent;
-  border: none;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+	background: transparent;
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
 }
 
 button {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 p {
-  margin: 0;
+	margin: 0;
 }

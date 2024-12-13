@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>이스트소프트 프론트엔드 부트캠프</title>
-
+    <!-- 폰트 적용 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- 스타일시트 -->
     <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/layout.css" />
@@ -133,7 +137,56 @@
 
       <section id="company">
         <div class="company__inner">
-          <h1 class="company__title">회사 소개</h1>
+          <h1 class="company__title a11y-hidden">회사 소개</h1>
+
+          <div class="company__intro">
+            <div class="company__info">
+              <div class="company__info-text">
+                <h2 class="company__info-title">Architect studio</h2>
+                <h3 class="company__info-description">
+                  Architects excited about beauty,<br />
+                  affordability sustainability<br />
+                  materials for every project and person
+                </h3>
+              </div>
+
+              <a href="#" class="btn-more">read more</a>
+            </div>
+
+            <div class="company__thumbnail">
+              <img src="./images/company/company.png" alt="회사사진" />
+            </div>
+          </div>
+
+          <div class="company-card">
+            <div class="company-card__item qna">
+              <ul>
+                <li><a href="">Design a perfect home</a></li>
+                <li><a href="">Download our brochure</a></li>
+                <li><a href="">Ask us your questions our architects</a></li>
+              </ul>
+            </div>
+
+            <div class="company-card__item">
+              <h2 class="company-card__item-title">Urban Exteriors</h2>
+
+              <p class="company-card__item-content">
+                Purus sit amet vol utpat con sequat mauris nunc congue. Sed id s
+                emper risus in hend rerit. Facilisi etiam dig nissim diam quis
+                enim. Quis auctor.
+              </p>
+            </div>
+
+            <div class="company-card__item">
+              <h2 class="company-card__item-title">Cityscapes Buildings</h2>
+
+              <p class="company-card__item-content">
+                Purus sit amet vol utpat con sequat mauris nunc congue. Sed id s
+                emper risus in hend rerit. Facilisi etiam dig nissim diam quis
+                enim. Quis auctor.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -141,9 +194,54 @@
       <div class="a11y-hidden">포트폴리오</div>
 
       <section id="portfolio">
-        <div class="portfolio__inner">
-          <h1 class="portfolio__title">포트폴리오</h1>
+        <!-- 포트폴리오1 -->
+        <div class="portfolio__container_1">
+          <div class="portfolio__container_1__inner">
+            <!--설명 & 이미지 감싸는 영역-->
+            <div class="portfolio__infomation">
+              <!-- 설명 영역 -->
+              <div class="portfolio__infomation__description">
+                <p class="portfolio__infomation__introduce">Our work</p>
+
+                <div class="portfolio__image__infomation">
+                  <h3 class="portfolio__image__infomation__title">
+                    Nomus Art House
+                  </h3>
+
+                  <p class="portfolio__image__infomation__creater">Wellness</p>
+                </div>
+              </div>
+
+              <!-- 이미지 영역 -->
+              <div class="portfolio__infomation__picture-wrap">
+                <div class="portfolio__infomation__picture-container">
+                  <div class="portfolio__infomation__picture active">
+                    <img
+                      src="images/portfolio/img_port_big_1.png"
+                      alt="포트폴리오_이미지_1"
+                    />
+                  </div>
+
+                  <div class="portfolio__infomation__picture">
+                    <img
+                      src="images/portfolio/img_port_big_2.png"
+                      alt="포트폴리오_이미지_2"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 컨트롤러 영역 -->
+            <div class="portfolio__img_controller">
+              <button type="button" class="portfolio__img__prev"></button>
+              <button type="button" class="portfolio__img__next"></button>
+            </div>
+          </div>
         </div>
+
+        <!-- 포트폴리오2 -->
+        <div class="portfolio__container_2">포트폴리오_2</div>
       </section>
 
       <!-- 직원 소개 -->
@@ -245,60 +343,106 @@
       <div class="a11y-hidden">인터뷰</div>
 
       <section id="interview">
-        <div class="interview__inner1">
-          <!-- <h1 class="interview__title">인터뷰</h1> -->
+        <div class="interview__inner">
           <div class="interview__top">
             <div>
-              <p class="interview__top__content">Lorem ipsum justo eget magna. Qui varius quam quisque id. Amet justo <br>donec enim diam vulputate ut pharetra sit. Nunc eget lorem nus sed mas.</p>
-              <p class="interview__top__interviewee">Anna Johnson, Architect / green projects</p>
-              <img class="interview__slide" src="./images/interview/icon_slide.svg" alt="">
+              <p class="interview__top__content">
+                Lorem ipsum justo eget magna. Qui varius quam quisque id. Amet
+                justo <br />donec enim diam vulputate ut pharetra sit. Nunc eget
+                lorem nus sed mas.
+              </p>
+
+              <p class="interview__top__interviewee">
+                Anna Johnson, Architect / green projects
+              </p>
+
+              <img
+                class="interview__slide"
+                src="./images/interview/icon_slide.svg"
+                alt=""
+              />
             </div>
           </div>
         </div>
-          <div class="interview__bg">
-            <div class="interview_main">
-              <div class="interview_part">
-                <img class="interview_pic" src="./images/interview/interview_pic1.jpg" alt="">
-                <h2 class="interview__title">Studio Hiroshi Cuisine And Bar Innovative Interior Design</h2>
-                <div class="date">
-                  <p>interviews</p>
-                  <img src="./images/interview/pseudo.png" alt="">
-                  <p>December 14, 2022</p>
-                </div>
-              </div>
-                <div class="interview_part">
-                  <img class="interview_pic" src="./images/interview/interview_pic2.jpg" alt="">
-                  <h2 class="interview__title">Zara Madid Speaking About Her Influence <br> And Creative Vision</h2>
-                  <div class="date">
-                    <p>interviews</p>
-                    <img src="./images/interview/pseudo.png" alt="">
-                    <p>December 14, 2022</p>
-                  </div>
-                </div> 
-                
-                <div class="interview_part">
-                  <img class="interview_pic" src="./images/interview/interview_pic3.jpg" alt="">
-                  <h2 class="interview__title">Glass Wall Facade And How To Design It <br> With AluProfiles</h2>
-                  <div class="date">
-                    <p>interviews</p>
-                    <img src="./images/interview/pseudo.png" alt="">
-                    <p>December 14, 2022</p>
-                  </div>
-                </div>
 
-                <div class="interview_part">
-                  <img class="interview_pic" src="./images/interview/interview_pic4.jpg" alt="">
-                  <h2 class="interview__title">Coexisting With The Landscape Is The Main <br> Rule</h2>
-                  <div class="date">
-                    <p>interviews</p>
-                    <img src="./images/interview/pseudo.png" alt="">
-                    <p>December 14, 2022</p>
-                  </div>
-                </div> 
-              
+        <div class="interview__bg">
+          <div class="interview_main">
+            <div class="interview_part">
+              <img
+                class="interview_pic"
+                src="./images/interview/interview_pic1.jpg"
+                alt=""
+              />
+
+              <h2 class="interview__title">
+                Studio Hiroshi Cuisine And Bar Innovative Interior Design
+              </h2>
+
+              <div class="date">
+                <p>interviews</p>
+                <img src="./images/interview/pseudo.png" alt="" />
+                <p>December 14, 2022</p>
+              </div>
+            </div>
+
+            <div class="interview_part">
+              <img
+                class="interview_pic"
+                src="./images/interview/interview_pic2.jpg"
+                alt=""
+              />
+
+              <h2 class="interview__title">
+                Zara Madid Speaking About Her Influence <br />
+                And Creative Vision
+              </h2>
+
+              <div class="date">
+                <p>interviews</p>
+                <img src="./images/interview/pseudo.png" alt="" />
+                <p>December 14, 2022</p>
+              </div>
+            </div>
+
+            <div class="interview_part">
+              <img
+                class="interview_pic"
+                src="./images/interview/interview_pic3.jpg"
+                alt=""
+              />
+
+              <h2 class="interview__title">
+                Glass Wall Facade And How To Design It <br />
+                With AluProfiles
+              </h2>
+
+              <div class="date">
+                <p>interviews</p>
+                <img src="./images/interview/pseudo.png" alt="" />
+                <p>December 14, 2022</p>
+              </div>
+            </div>
+
+            <div class="interview_part">
+              <img
+                class="interview_pic"
+                src="./images/interview/interview_pic4.jpg"
+                alt=""
+              />
+
+              <h2 class="interview__title">
+                Coexisting With The Landscape Is The Main <br />
+                Rule
+              </h2>
+
+              <div class="date">
+                <p>interviews</p>
+                <img src="./images/interview/pseudo.png" alt="" />
+                <p>December 14, 2022</p>
+              </div>
             </div>
           </div>
-        
+        </div>
       </section>
 
       <!-- 문의 -->
