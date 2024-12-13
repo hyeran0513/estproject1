@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>이스트소프트 프론트엔드 부트캠프</title>
-
+    <!-- 폰트 적용 -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- 스타일시트 -->
     <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/layout.css" />
@@ -129,10 +130,48 @@
 
       <!-- 포트폴리오 -->
       <div class="a11y-hidden">포트폴리오</div>
-
+      <!-- 브랜치 확인 커밋 -->
       <section id="portfolio">
         <div class="portfolio__inner">
-          <h1 class="portfolio__title">포트폴리오</h1>
+          <!-- <h1 class="portfolio__title">포트폴리오_1</h1> -->
+          <div class="portfolio__container_1">
+            <div class="portfolio__container_1__inner">
+              
+              <div class="portfolio__infomation">
+                <div class="portfolio__infomation__description">
+                  <p class="portfolio__infomation__introduce">Our work</p>
+                  <div class="portfolio__image__infomation">
+                    <h3 class="portfolio__image__infomation__title">
+                      Nomus Art House
+                    </h3>
+                    <p class="portfolio__image__infomation__creater">Wellness</p>
+                  </div>
+                </div>
+                <div class="portfolio__infomation__picture portfolio__image__modify">
+                  <img src="images/portfolio/img_port_big_1.png" alt="포트폴리오_이미지_1">
+                </div>
+                <div class="portfolio__infomation__picture">
+                  <img src="images/portfolio/img_port_big_2.png" alt="포트폴리오_이미지_1">
+                </div>
+              </div>
+
+              <!-- 피그마 구성대로 완성은 했으나
+               화면 구성그대로 가면 이게 맞는데
+               누르기에는 버튼크기가 너무 작아서 불편함 -->
+              <div class="portfolio__img_controller">
+                <!-- div로 하나 더 감싸야 할 것 같음. 화면이 작아지면서 위치이동함-->
+                <button type="button" class="portfolio__img__prev"></button>
+                <button type="button" class="portfolio__img__next"></button>
+              </div>
+            </div>
+          
+          </div>
+          
+        </div>
+        
+        <div class="portfolio__inner">
+          <h1 class="portfolio__title">포트폴리오_2</h1>
+          <div class="portfolio__container_2"></div>
         </div>
       </section>
 

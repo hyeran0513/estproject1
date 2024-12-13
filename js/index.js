@@ -109,3 +109,18 @@ const observeCards = () => {
 
   cards.forEach((card) => observer.observe(card)); // 각 카드 요소를 관찰
 };
+
+const portfolioNextBtn = document.querySelector('.portfolio__img__next');
+
+portfolioNextBtn.addEventListener( 'click' , function(event){
+  let portfolio_image = document.querySelector('.portfolio__image__modify');
+  portfolio_image.style.flexBasis = "0";
+})
+
+
+const portfolioPrevBtn = document.querySelector('.portfolio__img__prev');
+
+portfolioPrevBtn.addEventListener( 'click' , function(event){
+  let portfolio_image = document.querySelector('.portfolio__image__modify');
+  portfolio_image.style.flexBasis = "107.2313rem";
+})
