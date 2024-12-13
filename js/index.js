@@ -14,14 +14,21 @@ document.addEventListener("DOMContentLoaded", () => {
   // 재생/일시정지 버튼 이벤트 핸들러
   handlePlayPauseButton(swiper);
 
-  // 카드 애니메이션 관찰
-  observeCards();
+  // 직원 소개: 카드 아이템 관찰
+  observeElements(".card__item");
 
-  // 지도 이벤트 핸들러
-  handleMap();
+  // 회사 소개: 텍스트 영역 관찰
+  observeElements(".company__info-text");
+  observeElements(".company__thumbnail");
+
+  // 인터뷰: 인터뷰 카드 영역 관찰
+  observeElements(".interview_part");
 
   // 포트폴리오 이미지 슬라이드
   handlePortfolio();
+
+  // 지도 이벤트 핸들러
+  handleMap();
 });
 
 // baseurl 처리
@@ -97,23 +104,23 @@ const handlePlayPauseButton = (swiper) => {
   });
 };
 
-// 카드 애니메이션 관찰
-const observeCards = () => {
-  const cards = document.querySelectorAll(".card__item");
+// 요소 애니메이션 관찰
+const observeElements = (selector) => {
+  const elements = document.querySelectorAll(selector);
 
   const observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          observer.unobserve(entry.target); // 요소가 보이면 더 이상 관찰하지 않음
+          observer.unobserve(entry.target); // 더 이상 관찰하지 않음
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.1 } // 요소가 10% 보일 때 애니메이션 시작
   );
 
-  cards.forEach((card) => observer.observe(card)); // 각 카드 요소를 관찰
+  elements.forEach((element) => observer.observe(element));
 };
 
 // 지도 이벤트 핸들러

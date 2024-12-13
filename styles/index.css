@@ -206,80 +206,78 @@
 
 /* 회사 소개*/
 #company {
-  padding: 10rem 6rem;
-  overflow-x: hidden;
+  padding: 50px 20px;
 
   .company__inner {
     margin: 0 auto;
-    max-width: 1600px;
+    max-width: 1200px;
     width: 100%;
 
-    .row {
+    .company__intro {
       display: flex;
-    }
 
-    .row-1 {
-      background: url(../images/company/bg-company.png) 0px -179.883px / 100% 201.561%
-        no-repeat;
-      gap: 1rem;
+      .company__info {
+        width: 60%;
+        background: url(../images/company/bg-company.png) 0px -179.883px / 100% 201.561%
+          no-repeat;
 
-      .textarea {
-        flex: 1.5;
-        translate: -80%;
-        opacity: 0;
-        transition: all 1s;
+        .company__info-text {
+          transform: translateY(40%);
+          opacity: 0;
+          transition: all 1s ease-out;
 
-        h2 {
-          color: #000;
-          font-family: "DM Sans";
-          font-size: 0.75rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 1.4rem;
-          letter-spacing: 0.24rem;
-          text-transform: uppercase;
-          margin-bottom: 2.75rem;
-          display: inline-flex;
-          align-items: center;
-          gap: 0.94rem;
-          translate: 0 -0.37rem;
+          &.visible {
+            transform: translateY(0);
+            opacity: 1;
+          }
 
-          /* 도트 */
-          &:before {
-            content: "";
-            display: inline-block;
-            width: 0.25rem;
-            height: 0.25rem;
-            border-radius: 0.125rem;
-            background: #000;
+          .company__info-title {
+            color: #000;
+            font-family: "DM Sans";
+            font-size: 0.75rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.4rem;
+            letter-spacing: 0.24rem;
+            text-transform: uppercase;
+            margin-bottom: 2.75rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.94rem;
+
+            &:before {
+              content: "";
+              display: inline-block;
+              width: 0.25rem;
+              height: 0.25rem;
+              border-radius: 0.125rem;
+              background: #000;
+            }
+          }
+
+          .company__info-description {
+            width: 100%;
+            max-width: 46.20294rem;
+            color: #000;
+            font-family: "DM Sans";
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 2rem;
+            margin-bottom: 1.73rem;
           }
         }
 
-        .textarea_description {
-          width: 100%;
-          max-width: 46.20294rem;
-          color: #000;
-          font-family: "DM Sans";
-          font-size: 2.8125rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 3.375rem;
-          margin-bottom: 1.73rem;
-        }
-
-        /* read more 버튼튼 */
         .btn-more {
           display: inline-block;
           color: #000;
           font-family: "Nunito Sans";
           font-size: 1rem;
-          font-style: normal;
           font-weight: 400;
           line-height: 1.6875rem;
           text-transform: lowercase;
           margin-bottom: 5.23rem;
-          padding: 0.5rem 1rem;
-          transition: all 0.5s;
+          transition: color ease 0.5s;
 
           &:hover {
             color: var(--primary-color);
@@ -287,13 +285,19 @@
         }
       }
 
-      .image {
-        flex: 1;
-        aspect-ratio: 2/1;
+      .company__thumbnail {
         position: relative;
+        width: 40%;
+        cursor: pointer;
+        transform: translateY(40%);
         opacity: 0;
-        translate: 80% 0;
-        transition: all 0.5s;
+        transition: all 1s ease-out;
+        transition-delay: 0.6s;
+
+        &.visible {
+          transform: translateY(0);
+          opacity: 1;
+        }
 
         img {
           width: 100%;
@@ -302,7 +306,7 @@
           position: absolute;
           top: 0;
           left: 0;
-          transition: all 0.5s 0.2s;
+          transition: transform ease 0.5s;
         }
 
         &::after {
@@ -315,23 +319,22 @@
           bottom: 0;
           left: 0;
           z-index: -1;
-          transition: all 0.5s;
+          transition: transform ease 0.5s;
         }
 
         &:hover {
-          img {
-            left: 2rem;
-            top: -2rem;
-          }
           &::after {
-            left: -1rem;
-            bottom: -1rem;
+            transform: translate(-0.2rem, -0.2rem);
+          }
+
+          img {
+            transform: translate(1.5rem, -1.5rem);
           }
         }
       }
     }
 
-    .row-2 {
+    .company-card {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -339,68 +342,48 @@
       border-top: 1px solid #e3e3e3;
       padding-top: 4.69rem;
 
-      article {
+      .company-card__item {
         flex: 1;
         padding: 1rem;
-        transition: all 0.5s;
+        transition: transform ease 0.5s, box-shadow ease 0.5s;
+        cursor: pointer;
+
+        &.qna {
+          ul {
+            li {
+              margin-bottom: 0.62rem;
+
+              a {
+                color: #000;
+                font-family: "DM Sans";
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 1.8125rem;
+                transition: text-decoration ease 0.3s,
+                  text-decoration-color ease 0.3s;
+
+                &:hover {
+                  text-decoration: underline;
+                  text-decoration-color: var(--primary-color);
+                }
+              }
+            }
+          }
+        }
 
         &:not(:first-child):hover {
           transform: scale(1.02);
           box-shadow: 5px 5px 5px #eee;
         }
 
-        h2 {
+        .company-card__item-title {
           color: #000;
           font-family: "DM Sans";
-          font-size: 1.5rem;
+          font-size: 1.2rem;
           font-style: normal;
           font-weight: 400;
-          line-height: 1.8125rem; /* 120.833% */
+          line-height: 1.8125rem;
           margin-bottom: 1rem;
-        }
-
-        p {
-          color: #000;
-          font-family: "Nunito Sans";
-          font-size: 1rem;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 1.6875rem; /* 168.75% */
-        }
-
-        &.qna {
-          ul li {
-            margin-bottom: 0.62rem;
-
-            a {
-              color: #000;
-              font-family: "DM Sans";
-              font-size: 1.5rem;
-              font-weight: 400;
-              line-height: 1.8125rem; /* 120.833% */
-
-              &:hover {
-                text-decoration: underline;
-                text-decoration-color: var(--primary-color);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  &.active {
-    .company__inner {
-      .row-1 {
-        .textarea {
-          translate: 0 0;
-          opacity: 1;
-        }
-
-        .image {
-          translate: 0 0;
-          opacity: 1;
         }
       }
     }
@@ -733,6 +716,40 @@
       max-width: 1200px;
 
       .interview_part {
+        transform: translateY(20%);
+        opacity: 0;
+        transition: all 1s ease-out;
+
+        &.visible {
+          transform: translateY(0);
+          opacity: 1;
+        }
+
+        &:nth-child(odd) {
+          transform: translateY(-20%);
+
+          &.visible {
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+
+        &:nth-child(1) {
+          transition-delay: 0s;
+        }
+
+        &:nth-child(2) {
+          transition-delay: 0.2s;
+        }
+
+        &:nth-child(3) {
+          transition-delay: 0.4s;
+        }
+
+        &:nth-child(4) {
+          transition-delay: 0.6s;
+        }
+
         .interview_pic {
           margin-bottom: 1.81rem;
         }
