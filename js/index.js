@@ -27,8 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // 포트폴리오 이미지 슬라이드
   handlePortfolio();
 
+  // theme 핸들러
+  handleTheme();
+
   // 지도 이벤트 핸들러
-  handleMap();
+  // handleMap();
 });
 
 // baseurl 처리
@@ -209,4 +212,34 @@ const handlePortfolio = () => {
       moveSlide();
     }
   });
+};
+
+// theme 핸들러
+const handleTheme = () => {
+  const toggleButton = document.getElementById("theme-toggle");
+
+  // 현재 theme 상태 확인 및 설정
+  const setTheme = (theme) => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+
+    // 버튼 텍스트 변경
+    if (theme === "dark") {
+      toggleButton.innerHTML = `<i class='bx bx-sun'></i>`;
+    } else {
+      toggleButton.innerHTML = `<i class='bx bx-moon'></i>`;
+    }
+  };
+
+  // 버튼 클릭 이벤트 리스너
+  toggleButton.addEventListener("click", () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+
+    currentTheme === "dark" ? setTheme("light") : setTheme("dark");
+  });
+
+  // 초기 설정: 로컬 스토리지 확인
+  const savedTheme = localStorage.getItem("theme") || "light";
+
+  setTheme(savedTheme);
 };
