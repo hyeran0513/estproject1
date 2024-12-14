@@ -4,7 +4,7 @@
   width: 100%;
   height: 80px;
   z-index: 10;
-  transition: background-color ease 0.3s, border-bottom ease 0.3s;
+  transition: background-color ease 0.3s, box-shadow ease 0.3s;
 
   .header__inner {
     display: grid;
@@ -42,20 +42,29 @@
       }
     }
 
-    .btn-hamburger {
-      display: none;
+    .btn-wrap {
+      display: flex;
+      align-items: center;
+      gap: 30px;
       justify-self: flex-end;
-    }
 
-    #theme-toggle {
-      justify-self: flex-end;
-      color: var(--fixed-light-color);
+      .btn-hamburger {
+        display: none;
+
+        & > i {
+          color: var(--fixed-light-color);
+        }
+      }
+
+      #theme-toggle {
+        color: var(--fixed-light-color);
+      }
     }
   }
 
   &.active {
     background-color: var(--primary-bg-color);
-    border-bottom: 1px solid var(--primary-border-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
 
     .header__inner {
       .gnb {
@@ -75,6 +84,26 @@
       #theme-toggle {
         color: var(--primary-text-color);
       }
+    }
+  }
+}
+
+/* 세션 타이틀 (공통) */
+section {
+  .section__title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 0.5rem;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: var(--primary-text-color);
     }
   }
 }
@@ -230,11 +259,23 @@
       display: flex;
 
       .company__info {
+        position: relative;
         width: 60%;
-        background: url(../images/company/bg-company.png) 0px -179.883px / 100% 201.561%
-          no-repeat;
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          background: url("../images/company/bg_company.png") no-repeat center /
+            auto 100%;
+        }
 
         .company__info-text {
+          height: 100%;
           transform: translateY(40%);
           opacity: 0;
           transition: all 1s ease-out;
@@ -245,7 +286,6 @@
           }
 
           .company__info-title {
-            font-family: "DM Sans";
             font-size: 0.75rem;
             font-style: normal;
             font-weight: 400;
@@ -270,27 +310,24 @@
           .company__info-description {
             width: 100%;
             max-width: 46.20294rem;
-            font-family: "DM Sans";
             font-size: 1.6rem;
             font-style: normal;
             font-weight: 400;
-            line-height: 2rem;
+            line-height: 2.4rem;
             margin-bottom: 1.73rem;
           }
-        }
 
-        .btn-more {
-          display: inline-block;
-          font-family: "Nunito Sans";
-          font-size: 1rem;
-          font-weight: 400;
-          line-height: 1.6875rem;
-          text-transform: lowercase;
-          margin-bottom: 5.23rem;
-          transition: color ease 0.5s;
+          .btn-more {
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.6875rem;
+            text-transform: lowercase;
+            transition: color ease 0.5s;
 
-          &:hover {
-            color: var(--primary-color);
+            &:hover {
+              color: var(--primary-color);
+            }
           }
         }
       }
@@ -303,6 +340,18 @@
         opacity: 0;
         transition: all 1s ease-out;
         transition-delay: 0.6s;
+        border-radius: 8px;
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.1);
+        }
 
         &.visible {
           transform: translateY(0);
@@ -313,33 +362,6 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
-          position: absolute;
-          top: 0;
-          left: 0;
-          transition: transform ease 0.5s;
-        }
-
-        &::after {
-          content: "";
-          display: block;
-          width: 100%;
-          height: 100%;
-          background-color: var(--primary-color);
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          z-index: -1;
-          transition: transform ease 0.5s;
-        }
-
-        &:hover {
-          &::after {
-            transform: translate(-0.2rem, -0.2rem);
-          }
-
-          img {
-            transform: translate(1.5rem, -1.5rem);
-          }
         }
       }
     }
@@ -347,33 +369,35 @@
     .company-card {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: stretch;
+      gap: 2rem;
       margin-top: 2.69rem;
-      border-top: 1px solid #e3e3e3;
+      border-top: 1px solid var(--secondary-border-color);
       padding-top: 4.69rem;
 
       .company-card__item {
         flex: 1;
-        padding: 1rem;
+        padding: 1.2rem;
         transition: transform ease 0.5s, box-shadow ease 0.5s;
         cursor: pointer;
+        border-radius: 8px;
+        background-color: var(--secondary-bg-color);
 
         &.qna {
           ul {
-            li {
-              margin-bottom: 0.62rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
 
+            li {
               a {
-                font-family: "DM Sans";
-                font-size: 1.2rem;
                 font-weight: 400;
                 line-height: 1.8125rem;
-                transition: text-decoration ease 0.3s,
-                  text-decoration-color ease 0.3s;
+                transition: text-decoration ease 0.3s;
 
                 &:hover {
                   text-decoration: underline;
-                  text-decoration-color: var(--primary-color);
+                  text-underline-offset: 0.2rem;
                 }
               }
             }
@@ -382,11 +406,10 @@
 
         &:not(:first-child):hover {
           transform: scale(1.02);
-          box-shadow: 5px 5px 5px #eee;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
         }
 
         .company-card__item-title {
-          font-family: "DM Sans";
           font-size: 1.2rem;
           font-style: normal;
           font-weight: 400;
@@ -422,24 +445,6 @@
           justify-content: space-between;
           width: 340px;
 
-          .portfolio__infomation__introduce {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            font-weight: 400;
-
-            &::before {
-              content: "";
-              display: inline-block;
-              width: 0.5rem;
-              aspect-ratio: 1;
-              border-radius: 50%;
-              background-color: var(--primary-text-color);
-            }
-          }
-
           .portfolio__image__infomation {
             .portfolio__image__infomation__title {
               margin-bottom: 8px;
@@ -472,6 +477,8 @@
               position: relative;
               flex: 0 0 calc(100% - 340px);
               transition: transform 0.3s ease;
+              border-radius: 10px;
+              overflow: hidden;
 
               &::before {
                 content: "";
@@ -556,11 +563,11 @@
         flex: 1;
         border-radius: 10px;
         overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         opacity: 0;
         transform: translateY(40%);
         transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.25),
-          opacity 0.8s ease;
+          opacity ease 0.8s;
+        background-color: var(--secondary-bg-color);
 
         &:nth-child(2) {
           &::before {
@@ -613,13 +620,25 @@
           transition-delay: 0.6s;
         }
 
+        &:hover {
+          cursor: pointer;
+
+          .card__item-profile {
+            img {
+              transform: scale(1.2);
+            }
+          }
+        }
+
         .card__item-profile {
           height: 280px;
+          overflow: hidden;
 
           img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform ease 0.6s;
           }
         }
 
@@ -649,130 +668,107 @@
 
 /* 인터뷰 */
 #interview {
+  padding: 50px 20px;
+
   .interview__inner {
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
-    display: flex;
-    justify-content: center;
 
-    .interview__top {
-      display: flex;
-      justify-content: center;
-      margin-top: 9.38rem;
-      margin-bottom: 5.19rem;
+    .interview__bg {
+      width: 100%;
 
-      div {
-        display: flex;
-        width: 66.5rem;
-        flex-direction: column;
-        align-items: center;
+      .interview_main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        max-width: 1200px;
 
-        .interview__top__content {
-          text-align: center;
-          font-family: "DM Sans";
-          border: 1px solid black;
-          font-size: 1.5rem;
-          font-weight: 400;
-          line-height: 1.8125rem;
-          margin-bottom: 2.12rem;
-        }
-
-        .interview__top__interviewee {
-          text-align: center;
-          font-family: "DM Sans";
-          font-size: 0.75rem;
-          font-weight: 400;
-          line-height: 0.875rem;
-          letter-spacing: 0.15rem;
-          text-transform: uppercase;
-          margin-bottom: 4.19rem;
-        }
-
-        .interview__slide {
-          width: 4rem;
-          height: 0.6875rem;
-          margin-bottom: 2.75rem;
-        }
-      }
-    }
-  }
-
-  .interview__bg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 10rem 20px;
-
-    .interview_main {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      max-width: 1200px;
-
-      .interview_part {
-        transform: translateY(20%);
-        opacity: 0;
-        transition: all 1s ease-out;
-
-        &.visible {
-          transform: translateY(0);
-          opacity: 1;
-        }
-
-        &:nth-child(odd) {
-          transform: translateY(-20%);
+        .interview_part {
+          transform: translateY(20%);
+          opacity: 0;
+          transition: all 1s ease-out;
 
           &.visible {
             transform: translateY(0);
             opacity: 1;
           }
-        }
 
-        &:nth-child(1) {
-          transition-delay: 0s;
-        }
+          &:nth-child(odd) {
+            transform: translateY(-20%);
 
-        &:nth-child(2) {
-          transition-delay: 0.2s;
-        }
+            .interview_pic {
+              height: 300px;
+            }
 
-        &:nth-child(3) {
-          transition-delay: 0.4s;
-        }
-
-        &:nth-child(4) {
-          transition-delay: 0.6s;
-        }
-
-        .interview_pic {
-          margin-bottom: 1.81rem;
-        }
-
-        .interview__title {
-          font-family: "DM Sans";
-          font-size: 1.25rem;
-          font-weight: 400;
-          line-height: 1.5625rem;
-          margin-bottom: 1.12rem;
-        }
-
-        .date {
-          display: flex;
-          font-family: "DM Sans";
-          font-size: 0.75rem;
-          font-weight: 400;
-          line-height: 0.875rem;
-          letter-spacing: 0.15rem;
-          text-transform: uppercase;
-
-          p {
-            margin-right: 0.89rem;
+            &.visible {
+              transform: translateY(0);
+              opacity: 1;
+            }
           }
 
-          img {
-            margin-right: 0.89rem;
+          &:nth-child(1) {
+            transition-delay: 0s;
+          }
+
+          &:nth-child(2) {
+            transition-delay: 0.2s;
+          }
+
+          &:nth-child(3) {
+            transition-delay: 0.4s;
+          }
+
+          &:nth-child(4) {
+            transition-delay: 0.6s;
+          }
+
+          &:hover {
+            cursor: pointer;
+            .interview_pic {
+              img {
+                transform: scale(1.2);
+              }
+            }
+          }
+
+          .interview_pic {
+            margin-bottom: 1rem;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform ease 0.6s;
+            }
+          }
+
+          .interview__title {
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.5625rem;
+            margin-bottom: 1.12rem;
+            word-break: keep-all;
+          }
+
+          .date {
+            display: flex;
+            font-size: 0.75rem;
+            font-weight: 400;
+            line-height: 0.875rem;
+            letter-spacing: 0.15rem;
+            text-transform: uppercase;
+
+            p {
+              margin-right: 0.89rem;
+            }
+
+            .separator {
+              margin-right: 0.89rem;
+            }
           }
         }
       }
@@ -897,6 +893,8 @@
 
 /* 푸터 */
 .footer {
+  background-color: var(--footer-bg-color);
+
   .footer__inner {
     display: flex;
     justify-content: space-between;
@@ -945,6 +943,7 @@
 
   .subfooter {
     padding: 40px 0;
+    border-top: 1px solid var(--secondary-border-color);
 
     .subfooter__inner {
       margin: 0 auto;
@@ -962,13 +961,18 @@
     height: 50px;
 
     .header__inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
       .gnb {
         display: none;
       }
 
-      .btn-hamburger {
-        display: block;
-        font-size: 1.2rem;
+      .btn-wrap {
+        .btn-hamburger {
+          display: block;
+          font-size: 1.2rem;
+        }
       }
     }
   }

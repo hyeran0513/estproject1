@@ -2,15 +2,21 @@
   --primary-color: rgb(13, 110, 253);
   --primary-bg-color: #fff;
   --primary-text-color: #333;
-  --secondary-text-color: #bbb;
   --primary-border-color: #333;
+  --secondary-text-color: #bbb;
+  --secondary-bg-color: #f5f5f5;
+  --secondary-border-color: #eaeaea;
+  --footer-bg-color: #f8f8f8;
   --fixed-light-color: #e0e0e0;
 }
 
 /* 다크 모드 변수 설정 */
 [data-theme="dark"] {
-  --primary-bg-color: #121212;
+  --primary-bg-color: #272727;
   --primary-text-color: #e0e0e0;
   --secondary-text-color: #bbb;
   --primary-border-color: #e0e0e0;
+  --secondary-bg-color: #444;
+  --secondary-border-color: #444;
+  --footer-bg-color: #222;
 }
