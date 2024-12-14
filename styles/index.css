@@ -7,8 +7,8 @@
   transition: background-color ease 0.3s, border-bottom ease 0.3s;
 
   .header__inner {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     margin: 0 auto;
     padding: 0 20px;
@@ -31,8 +31,8 @@
           & > a {
             padding: 0 10px;
             font-size: 0.8rem;
-            color: #fff;
             transition: color ease 0.3s;
+            color: var(--fixed-light-color);
 
             &:hover {
               color: var(--primary-color);
@@ -44,19 +44,25 @@
 
     .btn-hamburger {
       display: none;
+      justify-self: flex-end;
+    }
+
+    #theme-toggle {
+      justify-self: flex-end;
+      color: var(--fixed-light-color);
     }
   }
 
   &.active {
-    background-color: #fff;
-    border-bottom: 1px solid var(--border-color);
+    background-color: var(--primary-bg-color);
+    border-bottom: 1px solid var(--primary-border-color);
 
     .header__inner {
       .gnb {
         .gnb__list {
           .gnb__item {
             & > a {
-              color: var(--text-color);
+              color: var(--primary-text-color);
 
               &:hover {
                 color: var(--primary-color);
@@ -64,6 +70,10 @@
             }
           }
         }
+      }
+
+      #theme-toggle {
+        color: var(--primary-text-color);
       }
     }
   }
@@ -129,13 +139,14 @@
           .swiper-pagination-bullet {
             width: 14px;
             height: 2px;
-            background-color: var(--bullet-bg-color);
             border-radius: 0;
             transition: height ease 0.3s;
+            background-color: rgba(0, 0, 0, 0.8);
           }
 
           .swiper-pagination-bullet-active {
             height: 4px;
+            background-color: var(--fixed-light-color);
           }
         }
 
@@ -147,30 +158,32 @@
           .swiper-fraction {
             padding: 0 14px;
             height: 24px;
-            color: #fff;
             display: inline-flex;
             align-items: center;
             font-size: 0.8rem;
+            color: var(--fixed-light-color);
           }
 
           .swiper-btn-wrap {
             display: flex;
             align-items: center;
             padding-left: 8px;
-            background-color: #fff;
+            background-color: var(--primary-bg-color);
             border-radius: 30px;
             height: 40px;
+            transition: background-color ease 0.3s;
 
             .swiper-button-prev,
             .swiper-button-next {
               position: static;
               margin-top: 0;
-              color: var(--swiper-default-color);
 
               &::after {
                 font-family: "Font Awesome 6 Free";
                 font-weight: 600;
                 font-size: 1rem;
+                color: var(--primary-text-color);
+                transition: color ease 0.3s;
               }
             }
 
@@ -193,9 +206,9 @@
               width: 40px;
               height: 40px;
               border-radius: 50%;
-              background-color: #fff;
-              color: var(--swiper-default-color);
-              border: 1px solid var(--swiper-default-color);
+              color: var(--primary-text-color);
+              border: 1px solid var(--primary-border-color);
+              transition: color ease 0.3s, border ease 0.3s;
             }
           }
         }
@@ -232,7 +245,6 @@
           }
 
           .company__info-title {
-            color: #000;
             font-family: "DM Sans";
             font-size: 0.75rem;
             font-style: normal;
@@ -251,14 +263,13 @@
               width: 0.25rem;
               height: 0.25rem;
               border-radius: 0.125rem;
-              background: #000;
+              background: var(--primary-text-color);
             }
           }
 
           .company__info-description {
             width: 100%;
             max-width: 46.20294rem;
-            color: #000;
             font-family: "DM Sans";
             font-size: 1.6rem;
             font-style: normal;
@@ -270,7 +281,6 @@
 
         .btn-more {
           display: inline-block;
-          color: #000;
           font-family: "Nunito Sans";
           font-size: 1rem;
           font-weight: 400;
@@ -354,7 +364,6 @@
               margin-bottom: 0.62rem;
 
               a {
-                color: #000;
                 font-family: "DM Sans";
                 font-size: 1.2rem;
                 font-weight: 400;
@@ -377,7 +386,6 @@
         }
 
         .company-card__item-title {
-          color: #000;
           font-family: "DM Sans";
           font-size: 1.2rem;
           font-style: normal;
@@ -397,7 +405,6 @@
     padding: 50px 20px;
     max-width: 100%;
     width: 100%;
-    background: #000;
     overflow: hidden;
 
     .portfolio__container_1__inner {
@@ -419,8 +426,6 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            font-family: var(--portfolio-font-family_1);
-            color: var(--portfolio-font-white-color);
             text-transform: uppercase;
             font-size: 0.8rem;
             font-weight: 400;
@@ -431,8 +436,7 @@
               width: 0.5rem;
               aspect-ratio: 1;
               border-radius: 50%;
-              background-color: var(--portfolio-bg-white-color);
-              color: var(--portfolio-font-white-color);
+              background-color: var(--primary-text-color);
             }
           }
 
@@ -440,14 +444,10 @@
             .portfolio__image__infomation__title {
               margin-bottom: 8px;
               line-height: 1;
-              font-family: var(--portfolio-font-family_1);
-              color: var(--portfolio-font-white-color);
               font-size: 1.4rem;
             }
 
             .portfolio__image__infomation__creater {
-              font-family: var(--portfolio-font-family_1);
-              color: var(--portfolio-font-white-color);
               font-size: 1rem;
               letter-spacing: 0.24rem;
               text-transform: uppercase;
@@ -511,17 +511,17 @@
         .portfolio__img__next {
           width: 3.1rem;
           height: 0.8rem;
-          z-index: 10;
+          z-index: 1;
         }
 
         .portfolio__img__prev {
-          background: url(../images/icon/icon_btn_prev.svg) no-repeat center /
-            cover;
+          background: url(../images/icon/icon_btn_dark_prev.svg) no-repeat
+            center / cover;
         }
 
         .portfolio__img__next {
-          background: url(../images/icon/icon_btn_next.svg) no-repeat center /
-            cover;
+          background: url(../images/icon/icon_btn_dark_next.svg) no-repeat
+            center / cover;
         }
       }
     }
@@ -537,7 +537,6 @@
 /* 직원 소개 */
 #member {
   padding: 50px 20px;
-  background-color: var(--member-bg-color);
 
   .member__inner {
     margin: 0 auto;
@@ -670,7 +669,6 @@
         align-items: center;
 
         .interview__top__content {
-          color: #000;
           text-align: center;
           font-family: "DM Sans";
           border: 1px solid black;
@@ -681,7 +679,6 @@
         }
 
         .interview__top__interviewee {
-          color: #000;
           text-align: center;
           font-family: "DM Sans";
           font-size: 0.75rem;
@@ -707,7 +704,6 @@
     align-items: center;
     width: 100%;
     padding: 10rem 20px;
-    background-color: #ece8e5;
 
     .interview_main {
       display: grid;
@@ -755,7 +751,6 @@
         }
 
         .interview__title {
-          color: #000;
           font-family: "DM Sans";
           font-size: 1.25rem;
           font-weight: 400;
@@ -765,7 +760,6 @@
 
         .date {
           display: flex;
-          color: #000;
           font-family: "DM Sans";
           font-size: 0.75rem;
           font-weight: 400;
@@ -789,8 +783,6 @@
 /* 문의 */
 #contact {
   padding: 50px 20px;
-  background-color: var(--contact-bg-color);
-  color: #fff;
 
   .contact__inner {
     margin: 0 auto;
@@ -810,7 +802,7 @@
         flex: 1;
         height: 350px !important;
         border-radius: 10px;
-        border: 1px solid #fff;
+        border: 1px solid var(--primary-border-color);
       }
 
       .contact__details {
@@ -828,7 +820,7 @@
 
           .contact__info-item {
             padding: 14px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid var(--primary-border-color);
 
             &:has(.address) {
               display: flex;
@@ -883,8 +875,6 @@
             .btn-find-route {
               a {
                 padding: 4px 8px;
-                color: #333;
-                background-color: #fff;
                 border-radius: 4px;
                 font-size: 0.8rem;
                 transition: background-color ease 0.3s;
@@ -895,7 +885,6 @@
 
                 &:hover {
                   background-color: var(--primary-color);
-                  color: #fff;
                 }
               }
             }
@@ -908,8 +897,6 @@
 
 /* 푸터 */
 .footer {
-  border-top: 1px solid var(--border-color);
-
   .footer__inner {
     display: flex;
     justify-content: space-between;
@@ -917,7 +904,6 @@
     padding: 60px 20px;
     max-width: 1240px;
     width: 100%;
-    color: var(--footer-text-color);
     font-size: 0.8rem;
 
     .logo {
@@ -934,7 +920,6 @@
       .footer-menu__item {
         .footer-menu__title {
           margin-bottom: 20px;
-          color: #333;
         }
 
         .footer-menu__list {
@@ -945,7 +930,6 @@
           .footer-menu__list-item {
             .footer-menu__link {
               line-height: 1.2;
-              color: #000;
               transition: color ease 0.3s;
               word-break: keep-all;
 
@@ -961,14 +945,12 @@
 
   .subfooter {
     padding: 40px 0;
-    background-color: #f8f8f8;
 
     .subfooter__inner {
       margin: 0 auto;
       padding: 0 20px;
       max-width: 1240px;
       width: 100%;
-      color: #adadad;
       font-size: 0.8rem;
     }
   }
@@ -986,16 +968,7 @@
 
       .btn-hamburger {
         display: block;
-        color: #fff;
         font-size: 1.2rem;
-      }
-    }
-
-    &.active {
-      .header__inner {
-        .btn-hamburger {
-          color: #333;
-        }
       }
     }
   }
@@ -1229,6 +1202,28 @@
 
       .subfooter__inner {
         padding: 0;
+      }
+    }
+  }
+}
+
+/* 다크 모드 */
+[data-theme="dark"] {
+  #portfolio {
+    /* 포트폴리오1 */
+    .portfolio__container_1 {
+      .portfolio__container_1__inner {
+        .portfolio__img_controller {
+          .portfolio__img__prev {
+            background: url(../images/icon/icon_btn_prev.svg) no-repeat center /
+              cover;
+          }
+
+          .portfolio__img__next {
+            background: url(../images/icon/icon_btn_next.svg) no-repeat center /
+              cover;
+          }
+        }
       }
     }
   }
