@@ -24,6 +24,10 @@
       referrerpolicy="no-referrer"
     />
     <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
@@ -73,9 +77,15 @@
           </ul>
         </nav>
 
-        <button type="button" class="btn-hamburger" title="햄버거 버튼">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+        <div class="btn-wrap">
+          <button type="button" id="theme-toggle" title="테마 변경">
+            <i class="bx bx-moon"></i>
+          </button>
+
+          <button type="button" class="btn-hamburger" title="햄버거 버튼">
+            <i class="bx bx-menu"></i>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -142,48 +152,45 @@
           <div class="company__intro">
             <div class="company__info">
               <div class="company__info-text">
-                <h2 class="company__info-title">Architect studio</h2>
-                <h3 class="company__info-description">
-                  Architects excited about beauty,<br />
-                  affordability sustainability<br />
-                  materials for every project and person
-                </h3>
-              </div>
+                <h2 class="section__title">회사 소개</h2>
 
-              <a href="#" class="btn-more">read more</a>
+                <h3 class="company__info-description">
+                  건축의 아름다움,<br />
+                  합리적인 비용,<br />
+                  지속 가능성에 대한 열정을 가진 건축가들
+                </h3>
+
+                <a href="#" class="btn-more">더보기</a>
+              </div>
             </div>
 
             <div class="company__thumbnail">
-              <img src="./images/company/company.png" alt="회사사진" />
+              <img src="./images/company/company.jpg" alt="설계도 사진" />
             </div>
           </div>
 
           <div class="company-card">
             <div class="company-card__item qna">
               <ul>
-                <li><a href="">Design a perfect home</a></li>
-                <li><a href="">Download our brochure</a></li>
-                <li><a href="">Ask us your questions our architects</a></li>
+                <li><a href="">완벽한 집을 디자인하세요.</a></li>
+                <li><a href="">우리의 브로슈어를 다운로드하세요.</a></li>
+                <li><a href="">건축가에게 궁금한 점을 물어보세요.</a></li>
               </ul>
             </div>
 
             <div class="company-card__item">
-              <h2 class="company-card__item-title">Urban Exteriors</h2>
+              <h2 class="company-card__item-title">도시 외관</h2>
 
               <p class="company-card__item-content">
-                Purus sit amet vol utpat con sequat mauris nunc congue. Sed id s
-                emper risus in hend rerit. Facilisi etiam dig nissim diam quis
-                enim. Quis auctor.
+                순수한 디자인과 완벽한 조화로 도시 외관을 완성합니다.
               </p>
             </div>
 
             <div class="company-card__item">
-              <h2 class="company-card__item-title">Cityscapes Buildings</h2>
+              <h2 class="company-card__item-title">시티스케이프 건축물</h2>
 
               <p class="company-card__item-content">
-                Purus sit amet vol utpat con sequat mauris nunc congue. Sed id s
-                emper risus in hend rerit. Facilisi etiam dig nissim diam quis
-                enim. Quis auctor.
+                건축물의 세부까지 세심하게 설계된 도시 경관을 제공합니다.
               </p>
             </div>
           </div>
@@ -201,14 +208,14 @@
             <div class="portfolio__infomation">
               <!-- 설명 영역 -->
               <div class="portfolio__infomation__description">
-                <p class="portfolio__infomation__introduce">Our work</p>
+                <p class="section__title">포트폴리오</p>
 
                 <div class="portfolio__image__infomation">
                   <h3 class="portfolio__image__infomation__title">
-                    Nomus Art House
+                    이스트 아트 하우스
                   </h3>
 
-                  <p class="portfolio__image__infomation__creater">Wellness</p>
+                  <p class="portfolio__image__infomation__creater">웰니스</p>
                 </div>
               </div>
 
@@ -217,7 +224,7 @@
                 <div class="portfolio__infomation__picture-container">
                   <div class="portfolio__infomation__picture active">
                     <img
-                      src="images/portfolio/img_port_big_1.png"
+                      src="images/portfolio/img_port_big_1.jpg"
                       alt="포트폴리오_이미지_1"
                     />
                   </div>
@@ -239,9 +246,6 @@
             </div>
           </div>
         </div>
-
-        <!-- 포트폴리오2 -->
-        <div class="portfolio__container_2">포트폴리오_2</div>
       </section>
 
       <!-- 직원 소개 -->
@@ -249,7 +253,7 @@
 
       <section id="member">
         <div class="member__inner">
-          <h1 class="member__title">직원 소개</h1>
+          <div class="section__title">직원 소개</div>
 
           <div class="card">
             <div class="card__item">
@@ -341,104 +345,74 @@
 
       <!-- 인터뷰 -->
       <div class="a11y-hidden">인터뷰</div>
-
       <section id="interview">
         <div class="interview__inner">
-          <div class="interview__top">
-            <div>
-              <p class="interview__top__content">
-                Lorem ipsum justo eget magna. Qui varius quam quisque id. Amet
-                justo <br />donec enim diam vulputate ut pharetra sit. Nunc eget
-                lorem nus sed mas.
-              </p>
+          <div class="section__title">인터뷰</div>
 
-              <p class="interview__top__interviewee">
-                Anna Johnson, Architect / green projects
-              </p>
+          <div class="interview__bg">
+            <div class="interview_main">
+              <div class="interview_part">
+                <div class="interview_pic">
+                  <img src="./images/interview/interview_pic1.jpg" alt="" />
+                </div>
 
-              <img
-                class="interview__slide"
-                src="./images/interview/icon_slide.svg"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
+                <h2 class="interview__title">
+                  스튜디오 히로시 퀴진 앤 바: 혁신적인 인테리어 디자인 인터뷰
+                </h2>
 
-        <div class="interview__bg">
-          <div class="interview_main">
-            <div class="interview_part">
-              <img
-                class="interview_pic"
-                src="./images/interview/interview_pic1.jpg"
-                alt=""
-              />
-
-              <h2 class="interview__title">
-                Studio Hiroshi Cuisine And Bar Innovative Interior Design
-              </h2>
-
-              <div class="date">
-                <p>interviews</p>
-                <img src="./images/interview/pseudo.png" alt="" />
-                <p>December 14, 2022</p>
+                <div class="date">
+                  <span>인터뷰</span>
+                  <span class="separator">|</span>
+                  <span>2024년 12월 15일</span>
+                </div>
               </div>
-            </div>
 
-            <div class="interview_part">
-              <img
-                class="interview_pic"
-                src="./images/interview/interview_pic2.jpg"
-                alt=""
-              />
+              <div class="interview_part">
+                <div class="interview_pic">
+                  <img src="./images/interview/interview_pic2.jpg" alt="" />
+                </div>
 
-              <h2 class="interview__title">
-                Zara Madid Speaking About Her Influence <br />
-                And Creative Vision
-              </h2>
+                <h2 class="interview__title">
+                  자라 마디드: 그녀의 영향력과 창의적 비전 인터뷰
+                </h2>
 
-              <div class="date">
-                <p>interviews</p>
-                <img src="./images/interview/pseudo.png" alt="" />
-                <p>December 14, 2022</p>
+                <div class="date">
+                  <span>인터뷰</span>
+                  <span class="separator">|</span>
+                  <span>2024년 12월 15일</span>
+                </div>
               </div>
-            </div>
 
-            <div class="interview_part">
-              <img
-                class="interview_pic"
-                src="./images/interview/interview_pic3.jpg"
-                alt=""
-              />
+              <div class="interview_part">
+                <div class="interview_pic">
+                  <img src="./images/interview/interview_pic3.jpg" alt="" />
+                </div>
 
-              <h2 class="interview__title">
-                Glass Wall Facade And How To Design It <br />
-                With AluProfiles
-              </h2>
+                <h2 class="interview__title">
+                  유리벽 파사드와 알루프로파일을 활용한 디자인 방법 인터뷰
+                </h2>
 
-              <div class="date">
-                <p>interviews</p>
-                <img src="./images/interview/pseudo.png" alt="" />
-                <p>December 14, 2022</p>
+                <div class="date">
+                  <span>인터뷰</span>
+                  <span class="separator">|</span>
+                  <span>2024년 12월 15일</span>
+                </div>
               </div>
-            </div>
 
-            <div class="interview_part">
-              <img
-                class="interview_pic"
-                src="./images/interview/interview_pic4.jpg"
-                alt=""
-              />
+              <div class="interview_part">
+                <div class="interview_pic">
+                  <img src="./images/interview/interview_pic4.jpg" alt="" />
+                </div>
 
-              <h2 class="interview__title">
-                Coexisting With The Landscape Is The Main <br />
-                Rule
-              </h2>
+                <h2 class="interview__title">
+                  풍경과 공존하는 것이 가장 중요한 원칙 인터뷰
+                </h2>
 
-              <div class="date">
-                <p>interviews</p>
-                <img src="./images/interview/pseudo.png" alt="" />
-                <p>December 14, 2022</p>
+                <div class="date">
+                  <span>인터뷰</span>
+                  <span class="separator">|</span>
+                  <span>2024년 12월 15일</span>
+                </div>
               </div>
             </div>
           </div>
@@ -450,7 +424,7 @@
 
       <section id="contact">
         <div class="contact__inner">
-          <h1 class="contact__title">문의</h1>
+          <div class="section__title">문의</div>
 
           <div class="contact__content">
             <div id="map"></div>
