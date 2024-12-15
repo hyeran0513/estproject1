@@ -62,6 +62,7 @@
     }
   }
 
+  /* 헤더 활성화 스타일 */
   &.active {
     background-color: var(--primary-bg-color);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
@@ -78,6 +79,12 @@
               }
             }
           }
+        }
+      }
+
+      .btn-hamburger {
+        & > i {
+          color: var(--primary-text-color);
         }
       }
 
@@ -293,6 +300,7 @@ section {
             font-weight: 400;
             line-height: 2.4rem;
             margin-bottom: 1.73rem;
+            word-break: keep-all;
           }
 
           .btn-more {
@@ -345,10 +353,10 @@ section {
     }
 
     .company__card {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       align-items: stretch;
-      gap: 2rem;
+      gap: 24px;
       margin-top: 2.69rem;
       border-top: 1px solid var(--secondary-border-color);
       padding-top: 4.69rem;
@@ -397,6 +405,10 @@ section {
           line-height: 1.8125rem;
           margin-bottom: 1rem;
         }
+
+        .company__card-content {
+          word-break: keep-all;
+        }
       }
     }
   }
@@ -425,7 +437,7 @@ section {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 340px;
+            width: 30%;
 
             .portfolio__details {
               .portfolio__details-title {
@@ -444,9 +456,9 @@ section {
 
           .portfolio__picture-wrap {
             position: absolute;
-            left: 340px;
+            left: 30%;
             width: 100%;
-            height: 600px;
+            height: 100%;
             overflow: hidden;
 
             .portfolio__picture-container {
@@ -457,7 +469,7 @@ section {
 
               .portfolio__picture {
                 position: relative;
-                flex: 0 0 calc(100% - 340px);
+                flex: 0 0 70%;
                 transition: transform 0.3s ease;
                 border-radius: 10px;
                 overflow: hidden;
@@ -541,24 +553,7 @@ section {
         transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.25),
           opacity ease 0.8s;
         background-color: var(--secondary-bg-color);
-
-        &:nth-child(2) {
-          &::before {
-            border-bottom: 50px solid #f0bf4c;
-          }
-        }
-
-        &:nth-child(3) {
-          &::before {
-            border-bottom: 50px solid #d4ed31;
-          }
-        }
-
-        &:nth-child(4) {
-          &::before {
-            border-bottom: 50px solid #5bd1d7;
-          }
-        }
+        cursor: pointer;
 
         &::before {
           content: "";
@@ -583,19 +578,29 @@ section {
 
         &:nth-child(2) {
           transition-delay: 0.2s;
+
+          &::before {
+            border-bottom: 50px solid #f0bf4c;
+          }
         }
 
         &:nth-child(3) {
           transition-delay: 0.4s;
+
+          &::before {
+            border-bottom: 50px solid #d4ed31;
+          }
         }
 
         &:nth-child(4) {
           transition-delay: 0.6s;
+
+          &::before {
+            border-bottom: 50px solid #5bd1d7;
+          }
         }
 
         &:hover {
-          cursor: pointer;
-
           .member__card-profile {
             img {
               transform: scale(1.2);
@@ -1064,6 +1069,20 @@ section {
     }
   }
 
+  /* 포트폴리오 */
+  #portfolio {
+    .portfolio__container {
+      /* nav 타입 포트폴리오 */
+      &.portfolio__container--nav {
+        .portfolio__container-inner {
+          .portfolio__info-wrap {
+            height: 500px;
+          }
+        }
+      }
+    }
+  }
+
   /* 직원 소개 */
   #member {
     .member__inner {
@@ -1076,7 +1095,17 @@ section {
   /* 인터뷰 */
   #interview {
     .interview__inner {
-      grid-template-columns: repeat(2, 1fr);
+      .interview__card {
+        grid-template-columns: repeat(2, 1fr);
+
+        .interview__card-item {
+          &:nth-child(even) {
+            .interview__card-thumbnail {
+              height: 300px;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -1084,9 +1113,10 @@ section {
   #contact {
     .contact__inner {
       .contact__content {
+        gap: 24px;
         height: auto;
 
-        .contact__details {
+        .contact__info {
           width: 50%;
         }
       }
@@ -1110,6 +1140,17 @@ section {
       .logo {
         width: 80px;
       }
+
+      .btn-wrap {
+        gap: 24px;
+      }
+    }
+  }
+
+  /* 세션 타이틀 (공통) */
+  section {
+    .section__title {
+      margin-bottom: 1rem;
     }
   }
 
@@ -1153,13 +1194,130 @@ section {
     }
   }
 
+  /* 회사 소개 */
+  #company {
+    padding: 20px;
+
+    .company__inner {
+      .company__intro {
+        flex-direction: column;
+        gap: 24px;
+
+        .company__info {
+          width: 100%;
+
+          .company__text {
+            .company__description {
+              margin-bottom: 1rem;
+              line-height: 1.4rem;
+              font-size: 1rem;
+            }
+
+            .btn-more {
+              font-size: 0.8rem;
+            }
+          }
+        }
+
+        .company__thumbnail {
+          width: 100%;
+          height: 200px;
+        }
+      }
+
+      .company__card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 24px;
+        padding-top: 24px;
+
+        .company__card-item {
+          &.qna {
+            & ul {
+              & li {
+                a {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+
+          .company__card-title {
+            margin-bottom: 0.2rem;
+            font-size: 1rem;
+          }
+
+          .company__card-content {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* 포트폴리오 */
+  #portfolio {
+    .portfolio__container {
+      /* nav 타입 포트폴리오 */
+      &.portfolio__container--nav {
+        padding: 20px 0;
+
+        .portfolio__container-inner {
+          .portfolio__info-wrap {
+            flex-direction: column;
+            gap: 24px;
+            height: auto;
+
+            .portfolio__info {
+              padding: 0 20px;
+              width: 100%;
+
+              .portfolio__details {
+                .portfolio__details-title {
+                  margin-bottom: 0.4rem;
+                  font-size: 1rem;
+                }
+
+                .portfolio__details-creator {
+                  font-size: 0.8rem;
+                }
+              }
+            }
+
+            .portfolio__picture-wrap {
+              position: relative;
+              left: 20px;
+
+              .portfolio__picture-container {
+                .portfolio__picture {
+                  flex: 0 0 calc(100% - 40px);
+                }
+              }
+            }
+          }
+
+          .portfolio__control {
+            gap: 12px;
+            padding: 0 20px;
+
+            .portfolio__control-prev,
+            .portfolio__control-next {
+              width: 2rem;
+              height: 0.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
   /* 직원 소개 */
   #member {
     padding: 20px;
 
     .member__inner {
       .member__card {
-        gap: 10px;
+        gap: 12px;
 
         .member__card-item {
           &:nth-child(2) {
@@ -1190,6 +1348,8 @@ section {
           }
 
           .member__card-info {
+            padding: 0.8rem;
+
             .member__card-details {
               flex-direction: column;
               align-items: flex-start;
@@ -1217,10 +1377,111 @@ section {
     }
   }
 
+  /* 뉴스 */
+  #news {
+    padding: 20px;
+
+    .news__inner {
+      .news__container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+
+        .news__card {
+          /* 뉴스 세로 모드 */
+          &.news__card--vertical {
+            .news__card-thumbnail {
+              height: 150px;
+            }
+
+            .news__card-info {
+              padding: 0.8rem;
+
+              .news__card-title {
+                font-size: 1rem;
+              }
+
+              .new__card-content {
+                margin-top: 0.2rem;
+                font-size: 0.8rem;
+              }
+            }
+          }
+
+          /* 뉴스 가로 모드 */
+          &.news__card--horizontal {
+            .news__card-info {
+              padding: 0.8rem;
+
+              .news__card-title {
+                margin-bottom: 0.5rem;
+                font-size: 1rem;
+              }
+
+              .new__card-content {
+                font-size: 0.8rem;
+              }
+            }
+          }
+
+          &:nth-child(1) {
+            grid-row: unset;
+            grid-column: unset;
+          }
+
+          &:nth-child(2) {
+            grid-row: unset;
+            grid-column: unset;
+          }
+
+          &:nth-child(3) {
+            grid-row: unset;
+            grid-column: 2 span;
+          }
+
+          &:nth-child(4) {
+            grid-row: unset;
+            grid-column: 2 span;
+          }
+        }
+      }
+    }
+  }
+
   /* 인터뷰 */
   #interview {
+    padding: 20px;
+
     .interview__inner {
-      grid-template-columns: 1fr;
+      .interview__card {
+        gap: 12px;
+
+        .interview__card-item {
+          &:nth-child(even),
+          &:nth-child(odd) {
+            .interview__card-thumbnail {
+              margin-bottom: 0.75rem;
+              height: 150px;
+            }
+          }
+
+          .interview__card-info {
+            .interview__card-title {
+              margin-bottom: 0.4rem;
+              line-height: 1.3rem;
+              font-size: 1rem;
+            }
+
+            .interview__card-date {
+              flex-direction: column;
+              gap: 0.2rem;
+
+              .interview__card-separator {
+                display: none;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
