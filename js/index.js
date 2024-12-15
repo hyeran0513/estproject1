@@ -179,10 +179,13 @@ const handlePortfolio = () => {
   const pictures = document.querySelectorAll(".portfolio__picture");
 
   let currentIndex = 0; // 현재 이미지의 인덱스 초기화
+  let slideWidth = 0;
 
   // 이미지와 gap의 너비를 계산
-  const slideWidth =
-    pictures[0].offsetWidth + parseInt(getComputedStyle(pictureWrap).gap);
+  const calculateSlideWidth = () => {
+    slideWidth =
+      pictures[0].offsetWidth + parseInt(getComputedStyle(pictureWrap).gap);
+  };
 
   // active 클래스를 관리
   const updateActiveClass = () => {
@@ -210,6 +213,20 @@ const handlePortfolio = () => {
       moveSlide();
     }
   });
+
+  // 초기화 함수
+  const init = () => {
+    calculateSlideWidth();
+    moveSlide();
+  };
+
+  // 화면 리사이즈 시 슬라이드 너비 재계산
+  window.addEventListener("resize", () => {
+    init();
+  });
+
+  // 페이지 로드 시 초기화
+  init();
 };
 
 // theme 핸들러
