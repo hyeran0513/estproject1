@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   observeElements(".member__card-item");
 
   // 회사 소개: 텍스트 영역 관찰
-  observeElements(".company__text");
+  observeElements(".company__info");
   observeElements(".company__thumbnail");
 
   // 인터뷰: 인터뷰 카드 영역 관찰
