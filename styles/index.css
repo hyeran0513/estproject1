@@ -399,6 +399,7 @@
     width: 100%;
     background: #000;
     overflow: hidden;
+    margin-bottom: 7.5rem;
 
     .portfolio__container_1__inner {
       margin: 0 auto;
@@ -422,13 +423,14 @@
             font-family: var(--portfolio-font-family_1);
             color: var(--portfolio-font-white-color);
             text-transform: uppercase;
-            font-size: 0.8rem;
+            font-size: 1rem;
             font-weight: 400;
 
             &::before {
               content: "";
               display: inline-block;
-              width: 0.5rem;
+              position: relative;
+              width: 0.3125rem;
               aspect-ratio: 1;
               border-radius: 50%;
               background-color: var(--portfolio-bg-white-color);
@@ -438,18 +440,20 @@
 
           .portfolio__image__infomation {
             .portfolio__image__infomation__title {
-              margin-bottom: 8px;
+              margin-bottom: 0.62375rem;
               line-height: 1;
               font-family: var(--portfolio-font-family_1);
               color: var(--portfolio-font-white-color);
-              font-size: 1.4rem;
+              font-size: 1.5rem;
+              font-weight: 400;
             }
 
             .portfolio__image__infomation__creater {
               font-family: var(--portfolio-font-family_1);
               color: var(--portfolio-font-white-color);
-              font-size: 1rem;
-              letter-spacing: 0.24rem;
+              font-size: 0.75rem;
+              font-weight: 400;
+              letter-spacing: 0.15rem;
               text-transform: uppercase;
             }
           }
@@ -531,6 +535,133 @@
   .portfolio__container_2 {
     padding: 30px 0;
     text-align: center;
+    width: 100%;
+    padding: 10px 40px 66px 40px;
+    border-bottom: 1px solid var(--portfolio-border-gray-color);
+    position: relative;
+    &:before{
+      content: '';
+      border-top: 1px solid var(--portfolio-border-gray-color);
+      position: absolute;
+      left: 2.5rem;
+      right: 2.5rem;
+    }
+    .portfolio__list{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding-top: 4.25rem;
+    }
+
+
+    .portfolio__contents__wrapper{
+      border-left: 1px solid var(--portfolio-border-gray-color);
+      padding-left: 15rem;
+      display:flex;
+      flex:1;
+      flex-direction: row;
+      /* gap : 0.625rem; */
+      position: relative;
+      height: 44.5498125rem;
+      overflow: hidden;
+      transition: border-left 0.6s ease;
+      /* 컨텐츠 영역을 클릭하면 after를 안보이게*/
+      &::before{
+        content: '';
+        position: absolute;
+        width: 1.8125rem;
+        top: 1.375rem;
+        right: 1.4375rem;;
+        border-top: 0.0625rem solid var(--portfolio-border-black-color);
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        height: 0.6875rem;
+        top: 1.0625rem;
+        right: 2.25rem;
+        border-left: 0.0625rem solid var(--portfolio-border-black-color);
+        transition: opacity 0.6s ease;
+      }
+    }
+    .portfolio__contents__wrapper:hover{
+      cursor:pointer;
+    }
+    .portfolio__contents{
+      display:flex;
+      flex-direction: row;
+      gap : 0 0.625rem;
+      width: 100%;
+      height: 100%;
+      transform: translateX(0);
+      transition : all 0.6 ease;
+    }
+    
+    .portfolio__contents__info-wrapper{
+      display:flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: start;
+      gap: 1.5625rem;
+      padding: 2.6875rem 5rem;
+    }
+    .portfolio__contents__text{
+      color: var(--portfolio-font-black-color);
+      text-align: left;
+      font-family: var(--portfolio-font-family_2);
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.6875rem;
+    }
+    .portfolio__contents__text-readmore{
+      color: var(--portfolio-font-black-color);
+      font-family: var(--portfolio-font-family_2);
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1rem;
+    }
+    .portfolio__contents__text-readmore:hover{
+      transition: color 0.3s ease;
+      color:var(--primary-color);
+    }
+    .portfolio__contents__img{
+      width: 100%;
+      height: 100%;
+      img{
+        /* border: 1px solid aqua; */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    
+    /* 하나의 클래스에 active의 속성값을 
+    적용시키고싶으면 active를 나중에 선언할것.*/
+    .active{
+      border-left: 1px solid var(--portfolio-border-black-color);
+      opacity: 1;
+      flex:30;
+      transition: border-left 0.6s ease;
+      &:after{
+        transition: opacity 0.6s ease;
+        opacity: 0;
+      }
+    }
+
+    [data-visible="false"] {
+      transform: translateX(100%);
+      opacity: 0;
+      transition: transform 0.6s ease, opacity 0.6s ease
+    }
+    [data-visible="true"] {
+      transform: translateX(0);
+      opacity: 1;
+      cursor: default;
+      transition: transform 0.6s ease, opacity 0.6s ease
+    }
+
   }
 }
 
