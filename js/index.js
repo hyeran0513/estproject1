@@ -15,14 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
   handlePlayPauseButton(swiper);
 
   // 직원 소개: 카드 아이템 관찰
-  observeElements(".card__item");
+  observeElements(".member__card-item");
 
   // 회사 소개: 텍스트 영역 관찰
-  observeElements(".company__info-text");
+  observeElements(".company__text");
   observeElements(".company__thumbnail");
 
   // 인터뷰: 인터뷰 카드 영역 관찰
-  observeElements(".interview_part");
+  observeElements(".interview__card-item");
 
   // 포트폴리오 이미지 슬라이드
   handlePortfolio();
@@ -173,12 +173,10 @@ const handleMap = () => {
 
 // 포트폴리오 이미지 슬라이드
 const handlePortfolio = () => {
-  const pictureWrap = document.querySelector(
-    ".portfolio__infomation__picture-container"
-  );
-  const nextButton = document.querySelector(".portfolio__img__next");
-  const prevButton = document.querySelector(".portfolio__img__prev");
-  const pictures = document.querySelectorAll(".portfolio__infomation__picture");
+  const pictureWrap = document.querySelector(".portfolio__picture-container");
+  const nextButton = document.querySelector(".portfolio__control-next");
+  const prevButton = document.querySelector(".portfolio__control-prev");
+  const pictures = document.querySelectorAll(".portfolio__picture");
 
   let currentIndex = 0; // 현재 이미지의 인덱스 초기화
 
@@ -216,7 +214,7 @@ const handlePortfolio = () => {
 
 // theme 핸들러
 const handleTheme = () => {
-  const toggleButton = document.getElementById("theme-toggle");
+  const toggleButton = document.getElementById("btn-theme-toggle");
 
   // 현재 theme 상태 확인 및 설정
   const setTheme = (theme) => {
