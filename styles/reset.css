@@ -17,7 +17,7 @@ body {
 	background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
 	font-family: 'EliceDigitalBaeum-Bd', sans-serif;
-	font-size: 1rem;
+	font-size: var(--font-size);
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
