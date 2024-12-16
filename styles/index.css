@@ -913,6 +913,68 @@ section {
     margin: 0 auto;
     max-width: 75rem;
     width: 100%;
+
+    .notice__container {
+      display: grid;
+      grid-template-columns: minmax(30%,40%) 1fr;
+      border-radius: 0.625rem;
+      background: url(../images/interview/interview_pic1.jpg) no-repeat;
+      background-size: cover;
+      border: 1px solid black;
+      .notice__title {
+        width: 100%;
+        padding: 3.125rem 0;
+        border-right: 1px solid black;
+        .notice__title-notice {
+          font-size: 4.375rem;
+          font-weight: 400;
+          text-align: center;
+          line-height: 5rem; 
+          letter-spacing: -0.0875rem;
+          text-transform: uppercase;
+        }
+      }  
+      .notice__list {
+        display: grid;
+        .notice__list-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 3rem 2rem 3rem 3.62rem;
+          position: relative;
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3){
+            border-bottom: 1px solid black;
+          }
+          .notice__list-item-box {
+            width: 70%;
+            .notice__list-item-box-title {
+              font-size: 2.1875rem;
+              font-weight: 400;
+              line-height: 2.8125rem;
+              letter-spacing: 0.04375rem;
+              text-transform: uppercase;
+              margin-bottom: 0.36rem;
+            }
+            .notice__list-item-box-content {
+              font-size: 1.125rem;
+              font-weight: 400;
+              line-height: 1.5rem;
+            }
+          }
+          .notice__list-viewmore {
+            .notice__list-viewmore-a {
+              margin-right: 2rem;
+              .notice__list-viewmore-img {
+              position: absolute;
+              margin-left: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1162,6 +1224,24 @@ section {
     .member__inner {
       .member__card {
         grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  /* 공지사항 */
+  #notice {
+    .notice__inner {
+      .notice__container {
+        .notice__list-item {
+          display: flex;
+          flex-direction: column;
+          .notice__list-item-box {
+            .notice__list-item-box-content {
+              text-align: left;
+              padding-bottom: 2rem;
+            }
+          }
+        }
       }
     }
   }
@@ -1551,7 +1631,18 @@ section {
   /* 공지사항 */
   #notice {
     padding: 1.25rem;
+    .notice__inner {
+      .notice__container {
+        display: flex;
+        flex-direction: column;
+        .notice__title {
+          border-right: none;
+          border-bottom: 1px solid black;
+        }
+      }
+    }
   }
+  
 
   /* 문의 */
   #contact {
