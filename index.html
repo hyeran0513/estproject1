@@ -1,249 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이스트소프트 프론트엔드 부트캠프</title>
+    <!-- 폰트 적용 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="styles/variables.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-  <title>이스트소프트 프론트엔드 부트캠프</title>
-  <!-- 폰트 적용 -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet" />
-  <!-- 스타일시트 -->
-  <link rel="stylesheet" href="styles/variables.css" />
-  <link rel="stylesheet" href="styles/layout.css" />
-  <link rel="stylesheet" href="styles/reset.css" />
-  <link rel="stylesheet" href="styles/common.css" />
-  <link rel="stylesheet" href="styles/index.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- 스크립트 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- appkey 보안 취약 | html, css, javascript로 스택이 제한된 상황에서 직접 입력 밖에 방법이 없습니다.. -->
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54772cdac3b4403953b1c4c44df17866&libraries=services,clusterer,drawing"
+    ></script>
+    <script src="js/index.js" defer></script>
+  </head>
 
-  <!-- 스크립트 -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- appkey 보안 취약 | html, css, javascript로 스택이 제한된 상황에서 직접 입력 밖에 방법이 없습니다.. -->
-  <script type="text/javascript"
-    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54772cdac3b4403953b1c4c44df17866&libraries=services,clusterer,drawing"></script>
-  <script src="js/index.js" defer></script>
-</head>
+  <body>
+    <!-- 헤더 -->
+    <div class="a11y-hidden">헤더</div>
 
-<body>
-  <!-- 헤더 -->
-  <div class="a11y-hidden">헤더</div>
+    <header class="header">
+      <div class="header__inner">
+        <a href="#" class="logo">
+          <img
+            src="./images/icon/icon_logo_white.svg"
+            alt="로고"
+            class="logo--white"
+          />
+          <img
+            src="./images/icon/icon_logo_black.svg"
+            alt="로고"
+            class="logo--black"
+          />
+        </a>
 
-  <header class="header">
-    <div class="header__inner">
-      <a href="#" class="logo">
-        <img src="./images/icon/icon_logo_white.svg" alt="로고" class="logo--white" />
-        <img src="./images/icon/icon_logo_black.svg" alt="로고" class="logo--black" />
-      </a>
+        <div class="a11y-hidden">메뉴</div>
 
-      <div class="a11y-hidden">메뉴</div>
+        <nav class="gnb">
+          <ul class="gnb__list">
+            <li class="gnb__list-item">
+              <a href="#banner" class="gnb__list-link">홈</a>
+            </li>
 
-      <nav class="gnb">
-        <ul class="gnb__list">
-          <li class="gnb__list-item">
-            <a href="#banner" class="gnb__list-link">홈</a>
-          </li>
+            <li class="gnb__list-item">
+              <a href="#company" class="gnb__list-link">회사 소개</a>
+            </li>
 
-          <li class="gnb__list-item">
-            <a href="#company" class="gnb__list-link">회사 소개</a>
-          </li>
+            <li class="gnb__list-item">
+              <a href="#portfolio" class="gnb__list-link">포트폴리오</a>
+            </li>
 
-          <li class="gnb__list-item">
-            <a href="#portfolio" class="gnb__list-link">포트폴리오</a>
-          </li>
+            <li class="gnb__list-item">
+              <a href="#coworker" class="gnb__list-link">직원 소개</a>
+            </li>
 
-          <li class="gnb__list-item">
-            <a href="#coworker" class="gnb__list-link">직원 소개</a>
-          </li>
+            <li class="gnb__list-item">
+              <a href="#interview" class="gnb__list-link">인터뷰</a>
+            </li>
 
-          <li class="gnb__list-item">
-            <a href="#interview" class="gnb__list-link">인터뷰</a>
-          </li>
+            <li class="gnb__list-item">
+              <a href="#news" class="gnb__list-link">뉴스</a>
+            </li>
 
-          <li class="gnb__list-item">
-            <a href="#news" class="gnb__list-link">뉴스</a>
-          </li>
+            <li class="gnb__list-item">
+              <a href="#member" class="gnb__list-link">작업자 소개</a>
+            </li>
 
-          <li class="gnb__list-item">
-            <a href="#member" class="gnb__list-link">작업자 소개</a>
-          </li>
+            <li class="gnb__list-item">
+              <a href="#notice" class="gnb__list-link">공지사항</a>
+            </li>
 
-          <li class="gnb__list-item">
-            <a href="#notice" class="gnb__list-link">공지사항</a>
-          </li>
+            <li class="gnb__list-item">
+              <a href="#contact" class="gnb__list-link">문의</a>
+            </li>
+          </ul>
+        </nav>
 
-          <li class="gnb__list-item">
-            <a href="#contact" class="gnb__list-link">문의</a>
-          </li>
-        </ul>
-      </nav>
+        <div class="btn-wrap">
+          <button type="button" id="btn-theme-toggle" title="테마 변경">
+            <i class="bx bx-moon"></i>
+          </button>
 
-      <div class="btn-wrap">
-        <button type="button" id="btn-theme-toggle" title="테마 변경">
-          <i class="bx bx-moon"></i>
-        </button>
-
-        <button type="button" class="btn-hamburger" title="햄버거 버튼">
-          <i class="bx bx-menu"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- 메인 -->
-  <main>
-    <!-- 배너 -->
-    <div class="a11y-hidden">배너</div>
-
-    <!-- swiper.js 라이브러리로 BEM 규칙 적용 불가 -->
-    <section id="banner">
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="images/banner/banner1.jpg" alt="건물 사진1" />
-          </div>
-
-          <div class="swiper-slide">
-            <img src="images/banner/banner2.jpg" alt="건물 사진2" />
-          </div>
-
-          <div class="swiper-slide">
-            <img src="images/banner/banner3.jpg" alt="건물 사진3" />
-          </div>
-
-          <div class="swiper-slide">
-            <img src="images/banner/banner4.jpg" alt="건물 사진4" />
-          </div>
-
-          <div class="swiper-slide">
-            <img src="images/banner/banner5.jpg" alt="건물 사진5" />
-          </div>
-        </div>
-
-        <!-- swiper 컨트롤러 영역 -->
-        <div class="swiper-control-wrap">
-          <div class="swiper-control">
-            <div class="swiper-pagination"></div>
-
-            <div class="swiper-action">
-              <div class="swiper-fraction"></div>
-
-              <div class="swiper-btn-wrap">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
-                <button type="button" class="btn-play-pause" title="재생&멈춤 버튼">
-                  <i class="fa-solid fa-pause"></i>
-                </button>
-              </div>
-            </div>
-          </div>
+          <button type="button" class="btn-hamburger" title="햄버거 버튼">
+            <i class="bx bx-menu"></i>
+          </button>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- 회사 소개 -->
-    <div class="a11y-hidden">회사 소개</div>
+    <!-- 메인 -->
+    <main>
+      <!-- 배너 -->
+      <div class="a11y-hidden">배너</div>
 
-    <section id="company">
-      <div class="company__inner">
-        <!-- 회사 정보 영역 -->
-        <div class="company__intro">
-          <div class="company__info">
-            <h2 class="section__title">회사 소개</h2>
-
-            <h3 class="company__description">
-              건축의 아름다움,<br />
-              합리적인 비용,<br />
-              지속 가능성에 대한 열정을 가진 건축가들
-            </h3>
-
-            <a href="#" class="btn-more">더보기</a>
-          </div>
-
-          <div class="company__thumbnail">
-            <img src="./images/company/company.jpg" alt="설계도 사진" />
-          </div>
-        </div>
-
-        <!-- 회사 카드 영역 -->
-        <div class="company__card">
-          <div class="company__card-item qna">
-            <ul>
-              <li><a href="">완벽한 집을 디자인하세요.</a></li>
-              <li><a href="">우리의 브로슈어를 다운로드하세요.</a></li>
-              <li><a href="">건축가에게 궁금한 점을 물어보세요.</a></li>
-            </ul>
-          </div>
-
-          <div class="company__card-item">
-            <h2 class="company__card-title">도시 외관</h2>
-
-            <p class="company__card-content">
-              순수한 디자인과 완벽한 조화로 도시 외관을 완성합니다.
-            </p>
-          </div>
-
-          <div class="company__card-item">
-            <h2 class="company__card-title">시티스케이프 건축물</h2>
-
-            <p class="company__card-content">
-              건축물의 세부까지 세심하게 설계된 도시 경관을 제공합니다.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 포트폴리오 -->
-    <div class="a11y-hidden">포트폴리오</div>
-
-    <section id="portfolio">
-      <!-- nav 타입 포트폴리오 -->
-      <div class="portfolio__container portfolio__container--nav">
-        <div class="portfolio__container-inner">
-          <!--설명 & 이미지 감싸는 영역-->
-          <div class="portfolio__info-wrap">
-            <!-- 설명 영역 -->
-            <div class="portfolio__info">
-              <p class="section__title">포트폴리오</p>
-
-              <div class="portfolio__details">
-                <h3 class="portfolio__details-title">이스트 아트 하우스</h3>
-
-                <p class="portfolio__details-creator">웰니스</p>
-              </div>
+      <!-- swiper.js 라이브러리로 BEM 규칙 적용 불가 -->
+      <section id="banner">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/banner/banner1.jpg" alt="건물 사진1" />
             </div>
 
-            <!-- 이미지 영역 -->
-            <div class="portfolio__picture-wrap">
-              <div class="portfolio__picture-container">
-                <div class="portfolio__picture active">
-                  <img src="images/portfolio/img_port_big_1.jpg" alt="포트폴리오_이미지_1" />
-                </div>
+            <div class="swiper-slide">
+              <img src="images/banner/banner2.jpg" alt="건물 사진2" />
+            </div>
 
-                <div class="portfolio__picture">
-                  <img src="images/portfolio/img_port_big_2.png" alt="포트폴리오_이미지_2" />
+            <div class="swiper-slide">
+              <img src="images/banner/banner3.jpg" alt="건물 사진3" />
+            </div>
+
+            <div class="swiper-slide">
+              <img src="images/banner/banner4.jpg" alt="건물 사진4" />
+            </div>
+
+            <div class="swiper-slide">
+              <img src="images/banner/banner5.jpg" alt="건물 사진5" />
+            </div>
+          </div>
+
+          <!-- swiper 컨트롤러 영역 -->
+          <div class="swiper-control-wrap">
+            <div class="swiper-control">
+              <div class="swiper-pagination"></div>
+
+              <div class="swiper-action">
+                <div class="swiper-fraction"></div>
+
+                <div class="swiper-btn-wrap">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+
+                  <button
+                    type="button"
+                    class="btn-play-pause"
+                    title="재생&멈춤 버튼"
+                  >
+                    <i class="fa-solid fa-pause"></i>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <!-- 컨트롤러 영역 -->
-          <div class="portfolio__control">
-            <button type="button" title="포트폴리오 이전 버튼" class="portfolio__control-prev"></button>
-            <button type="button" title="포트폴리오 다음 버튼" class="portfolio__control-next"></button>
+      <!-- 회사 소개 -->
+      <div class="a11y-hidden">회사 소개</div>
+
+      <section id="company">
+        <div class="company__inner">
+          <!-- 회사 정보 영역 -->
+          <div class="company__intro">
+            <div class="company__info">
+              <h2 class="section__title">회사 소개</h2>
+
+              <h3 class="company__description">
+                건축의 아름다움,<br />
+                합리적인 비용,<br />
+                지속 가능성에 대한 열정을 가진 건축가들
+              </h3>
+
+              <a href="#" class="btn-more">더보기</a>
+            </div>
+
+            <div class="company__thumbnail">
+              <img src="./images/company/company.jpg" alt="설계도 사진" />
+            </div>
+          </div>
+
+          <!-- 회사 카드 영역 -->
+          <div class="company__card">
+            <div class="company__card-item qna">
+              <ul>
+                <li><a href="">완벽한 집을 디자인하세요.</a></li>
+                <li><a href="">우리의 브로슈어를 다운로드하세요.</a></li>
+                <li><a href="">건축가에게 궁금한 점을 물어보세요.</a></li>
+              </ul>
+            </div>
+
+            <div class="company__card-item">
+              <h2 class="company__card-title">도시 외관</h2>
+
+              <p class="company__card-content">
+                순수한 디자인과 완벽한 조화로 도시 외관을 완성합니다.
+              </p>
+            </div>
+
+            <div class="company__card-item">
+              <h2 class="company__card-title">시티스케이프 건축물</h2>
+
+              <p class="company__card-content">
+                건축물의 세부까지 세심하게 설계된 도시 경관을 제공합니다.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 직원 소개 -->
+      <!-- 포트폴리오 -->
+      <div class="a11y-hidden">포트폴리오</div>
+
+      <section id="portfolio">
+        <!-- nav 타입 포트폴리오 -->
+        <div class="portfolio__container portfolio__container--nav">
+          <div class="portfolio__container-inner">
+            <!--설명 & 이미지 감싸는 영역-->
+            <div class="portfolio__info-wrap">
+              <!-- 설명 영역 -->
+              <div class="portfolio__info">
+                <p class="section__title">포트폴리오</p>
+
+                <div class="portfolio__details">
+                  <h3 class="portfolio__details-title">이스트 아트 하우스</h3>
+
+                  <p class="portfolio__details-creator">웰니스</p>
+                </div>
+              </div>
+
+              <!-- 이미지 영역 -->
+              <div class="portfolio__picture-wrap">
+                <div class="portfolio__picture-container">
+                  <div class="portfolio__picture active">
+                    <img
+                      src="images/portfolio/img_port_big_1.jpg"
+                      alt="포트폴리오_이미지_1"
+                    />
+                  </div>
+
+                  <div class="portfolio__picture">
+                    <img
+                      src="images/portfolio/img_port_big_2.png"
+                      alt="포트폴리오_이미지_2"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 컨트롤러 영역 -->
+            <div class="portfolio__control">
+              <button
+                type="button"
+                title="포트폴리오 이전 버튼"
+                class="portfolio__control-prev"
+              ></button>
+              <button
+                type="button"
+                title="포트폴리오 다음 버튼"
+                class="portfolio__control-next"
+              ></button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 포트폴리오2 -->
+        <div class="portfolio__container_2">
+          <h2 class="a11y-hidden">포트폴리오 목록</h2>
+          <!-- 포트폴리오 컨텐츠 리스트영역 -->
+          <div class="portfolio__list">
+            <!-- 포트폴리오 컨텐츠 래퍼 영역-->
+            <div class="portfolio__contents__wrapper active">
+              <!-- 포트폴리오 컨텐츠 영역-->
+              <div class="portfolio__contents visible">
+                <!-- 포트폴리오 컨텐츠 이미지-->
+                <div class="portfolio__contents__img">
+                  <img src="./images/portfolio/portfolio_image.png" alt="포트폴리오 이미지 자료">
+                </div>
+                <!-- 포트폴리오 컨텐츠 텍스트 및 더보기-->
+                <div class="portfolio__contents__info-wrapper">
+                  <p class="portfolio__contents__text multi-ellipsis">Lorem ipsum dolor sit amet, cons ectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+                  <a href="" class="portfolio__contents__text-readmore">read more</a>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="portfolio__contents__wrapper">
+              
+              <div class="portfolio__contents">
+                
+                <div class="portfolio__contents__img">
+                  <img src="./images/portfolio/portfolio_image.png" alt="포트폴리오 이미지 자료">
+                </div>
+                
+                <div class="portfolio__contents__info-wrapper">
+                  <p class="portfolio__contents__text multi-ellipsis">Lorem ipsum dolor sit amet, cons ectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a href="" class="portfolio__contents__text-readmore">read more</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="portfolio__contents__wrapper">
+              
+              <div class="portfolio__contents">
+                
+                <div class="portfolio__contents__img">
+                  <img src="./images/portfolio/portfolio_image.png" alt="포트폴리오 이미지 자료">
+                </div>
+                
+                <div class="portfolio__contents__info-wrapper">
+                  <p class="portfolio__contents__text multi-ellipsis">Lorem ipsum dolor sit amet, cons ectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a href="" class="portfolio__contents__text-readmore">read more</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="portfolio__contents__wrapper">
+              
+              <div class="portfolio__contents">
+                
+                <div class="portfolio__contents__img">
+                  <img src="./images/portfolio/portfolio_image.png" alt="포트폴리오 이미지 자료">
+                </div>
+                
+                <div class="portfolio__contents__info-wrapper">
+                  <p class="portfolio__contents__text multi-ellipsis">Lorem ipsum dolor sit amet, cons ectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <a href="" class="portfolio__contents__text-readmore">read more</a>
+                </div>
+              </div>
+            </div>
+            
+            
+        </div>
+      </section>
+
+
+      <!-- 회사 비전 -->
+      <div class="a11y-hidden">회사 비전</div>
+
+      <!-- 비전 섹션 -->
+      <section id="vision">
+        <!-- 비전 컨테이너 -->
+        <div class="vision__inner">
+
+          <h2 class="section__title">회사 소개</h2>
+
+          <!-- 비전 개별 컨테이너 (텍스트, 이미지)-->
+          <div class="vision__info">
+
+            <!-- 비전 텍스트박스(타이틀,내용,버튼) -->
+            <div class="vision__textBox">
+              <div class="vision__textBox__title">
+                <span class="vision__textBox__title-backTitle">Strong</span>
+                Be you, just stronger!<br/>Power is in you
+              </div>
+              <p class="vision__textBox__text">Unum solum justo ex ius. Pro cu probo laboramus eius insolens euripidis te eos, ut agam tota.</p>
+              <a class="vision__textBox__viewmore link" 
+                 href="" >
+                 View more
+                 <span class="vision__textBox__view-more-icon"></span>
+              </a>
+            </div>
+
+            <!-- 비전 이미지컨테이너 -->
+            <div class="vision__image__container">
+              <img src="./images/vision/vision_image_1.png" alt="회사 비전 이미지 1">
+            </div>
+            
+          </div>
+          
+          <div class="vision__info">
+            <div class="vision__image__container">
+              <img src="./images/vision/vision_image_2.png" alt="회사 비전 이미지 2">
+            </div>
+            <div class="vision__textBox">
+              <div class="vision__textBox__title">
+                <span class="vision__textBox__title-backTitle">start</span>
+                Today is the best<br/>day to start!
+              </div>
+              <p class="vision__textBox__text">Unum solum justo ex ius. Pro cu probo laboramus eius insolens euripidis te eos, ut agam tota.</p>
+              <a class="vision__textBox__viewmore link" 
+                 href="" >
+                 View more
+                 <span class="vision__textBox__view-more-icon"></span>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- 직원 소개 -->
+       <!-- 직원 소개 -->
     <div class="a11y-hidden">직원소개 </div>
 
     <section id="coworker">
@@ -324,366 +489,477 @@
       </div>
     </section>
 
-    <!-- 인터뷰 -->
-    <div class="a11y-hidden">인터뷰</div>
+      <!-- 인터뷰 -->
+      <div class="a11y-hidden">인터뷰</div>
 
-    <section id="interview">
-      <div class="interview__inner">
-        <div class="section__title">인터뷰</div>
+      <section id="interview">
+        <div class="interview__inner">
+          <div class="section__title">인터뷰</div>
 
-        <div class="interview__card">
-          <div class="interview__card-item">
-            <div class="interview__card-thumbnail">
-              <img src="./images/interview/interview_pic1.jpg" alt="스튜디오 히로시 퀴진 앤 바: 혁신적인 인테리어 디자인 인터뷰" />
-            </div>
-
-            <div class="interview__card-info">
-              <div class="interview__card-title multi-ellipsis">
-                스튜디오 히로시 퀴진 앤 바: 혁신적인 인테리어 디자인 인터뷰
+          <div class="interview__card">
+            <div class="interview__card-item">
+              <div class="interview__card-thumbnail">
+                <img
+                  src="./images/interview/interview_pic1.jpg"
+                  alt="스튜디오 히로시 퀴진 앤 바: 혁신적인 인테리어 디자인 인터뷰"
+                />
               </div>
 
-              <div class="interview__card-date">
-                <span class="interview__card-label">인터뷰</span>
-                <span class="interview__card-separator">|</span>
-                <span class="interview__card-text">2024년 12월 15일</span>
-              </div>
-            </div>
-          </div>
+              <div class="interview__card-info">
+                <div class="interview__card-title multi-ellipsis">
+                  스튜디오 히로시 퀴진 앤 바: 혁신적인 인테리어 디자인 인터뷰
+                </div>
 
-          <div class="interview__card-item">
-            <div class="interview__card-thumbnail">
-              <img src="./images/interview/interview_pic2.jpg" alt="자라 마디드: 그녀의 영향력과 창의적 비전 인터뷰" />
-            </div>
-
-            <div class="interview__card-info">
-              <div class="interview__card-title multi-ellipsis">
-                자라 마디드: 그녀의 영향력과 창의적 비전 인터뷰
-              </div>
-
-              <div class="interview__card-date">
-                <span class="interview__card-label">인터뷰</span>
-                <span class="interview__card-separator">|</span>
-                <span class="interview__card-text">2024년 12월 15일</span>
+                <div class="interview__card-date">
+                  <span class="interview__card-label">인터뷰</span>
+                  <span class="interview__card-separator">|</span>
+                  <span class="interview__card-text">2024년 12월 15일</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="interview__card-item">
-            <div class="interview__card-thumbnail">
-              <img src="./images/interview/interview_pic3.jpg" alt="유리벽 파사드와 알루프로파일을 활용한 디자인 방법 인터뷰" />
-            </div>
-
-            <div class="interview__card-info">
-              <div class="interview__card-title multi-ellipsis">
-                유리벽 파사드와 알루프로파일을 활용한 디자인 방법 인터뷰
+            <div class="interview__card-item">
+              <div class="interview__card-thumbnail">
+                <img
+                  src="./images/interview/interview_pic2.jpg"
+                  alt="자라 마디드: 그녀의 영향력과 창의적 비전 인터뷰"
+                />
               </div>
 
-              <div class="interview__card-date">
-                <span class="interview__card-label">인터뷰</span>
-                <span class="interview__card-separator">|</span>
-                <span class="interview__card-text">2024년 12월 15일</span>
-              </div>
-            </div>
-          </div>
+              <div class="interview__card-info">
+                <div class="interview__card-title multi-ellipsis">
+                  자라 마디드: 그녀의 영향력과 창의적 비전 인터뷰
+                </div>
 
-          <div class="interview__card-item">
-            <div class="interview__card-thumbnail">
-              <img src="./images/interview/interview_pic4.jpg" alt="풍경과 공존하는 것이 가장 중요한 원칙 인터뷰" />
-            </div>
-
-            <div class="interview__card-info">
-              <div class="interview__card-title multi-ellipsis">
-                풍경과 공존하는 것이 가장 중요한 원칙 인터뷰
-              </div>
-
-              <div class="interview__card-date">
-                <span class="interview__card-label">인터뷰</span>
-                <span class="interview__card-separator">|</span>
-                <span class="interview__card-text">2024년 12월 15일</span>
+                <div class="interview__card-date">
+                  <span class="interview__card-label">인터뷰</span>
+                  <span class="interview__card-separator">|</span>
+                  <span class="interview__card-text">2024년 12월 15일</span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- 뉴스 -->
-    <div class="a11y-hidden">뉴스</div>
-
-    <section id="news">
-      <div class="news__inner">
-        <div class="section__title">뉴스</div>
-
-        <div class="news__container">
-          <!-- 뉴스 세로 모드 -->
-          <div class="news__card news__card--vertical">
-            <div class="news__card-thumbnail">
-              <img src="./images/news/news1.jpg" alt="뉴스1 사진" />
-            </div>
-
-            <div class="news__card-info">
-              <div class="news__card-title ellipsis">
-                새로운 시대를 건축하다
+            <div class="interview__card-item">
+              <div class="interview__card-thumbnail">
+                <img
+                  src="./images/interview/interview_pic3.jpg"
+                  alt="유리벽 파사드와 알루프로파일을 활용한 디자인 방법 인터뷰"
+                />
               </div>
-              <div class="new__card-content multi-ellipsis">
-                혁신적이고 감각적인 건축 디자인을 만나보세요. 미래지향적
-                공간과 독창적 설계를 경험해 보실 준비가 되셨나요?
+
+              <div class="interview__card-info">
+                <div class="interview__card-title multi-ellipsis">
+                  유리벽 파사드와 알루프로파일을 활용한 디자인 방법 인터뷰
+                </div>
+
+                <div class="interview__card-date">
+                  <span class="interview__card-label">인터뷰</span>
+                  <span class="interview__card-separator">|</span>
+                  <span class="interview__card-text">2024년 12월 15일</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- 뉴스 세로 모드 -->
-          <div class="news__card news__card--vertical">
-            <div class="news__card-thumbnail">
-              <img src="./images/news/news2.jpg" alt="뉴스2 사진" />
-            </div>
+            <div class="interview__card-item">
+              <div class="interview__card-thumbnail">
+                <img
+                  src="./images/interview/interview_pic4.jpg"
+                  alt="풍경과 공존하는 것이 가장 중요한 원칙 인터뷰"
+                />
+              </div>
 
-            <div class="news__card-info">
-              <div class="news__card-title ellipsis">
-                공간의 가치를 재정의하다
-              </div>
-              <div class="new__card-content multi-ellipsis">
-                이스트 건축은 건축의 본질을 탐구하고 새로운 트렌드를 반영한
-                디자인으로 공간의 가치를 높입니다. 차별화된 설계를 지금
-                만나보세요.
-              </div>
-            </div>
-          </div>
+              <div class="interview__card-info">
+                <div class="interview__card-title multi-ellipsis">
+                  풍경과 공존하는 것이 가장 중요한 원칙 인터뷰
+                </div>
 
-          <!-- 뉴스 가로 모드 -->
-          <div class="news__card news__card--horizontal">
-            <div class="news__card-info">
-              <div class="news__card-title ellipsis">
-                미래의 건축을 디자인하다
-              </div>
-              <div class="new__card-content multi-ellipsis">
-                혁신과 기술을 기반으로 한 이스트 건축의 디자인은
-                현대적이면서도 지속 가능한 건축 솔루션을 제안합니다. 함께 더
-                나은 미래를 설계해 보세요! 앞으로도 함께 합시다.
-              </div>
-            </div>
-          </div>
-
-          <!-- 뉴스 가로 모드 -->
-          <div class="news__card news__card--horizontal">
-            <div class="news__card-info">
-              <div class="news__card-title ellipsis">
-                세상을 바꾸는 디자인
-              </div>
-              <div class="new__card-content multi-ellipsis">
-                아름다움과 기능을 아우르는 디자인을 통해 새로운 건축
-                패러다임을 만들어갑니다. 우리의 작품을 통해 세상의 변화를
-                확인해 보세요.
+                <div class="interview__card-date">
+                  <span class="interview__card-label">인터뷰</span>
+                  <span class="interview__card-separator">|</span>
+                  <span class="interview__card-text">2024년 12월 15일</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- 작업자 소개 -->
-    <div class="a11y-hidden">작업자 소개</div>
+      <!-- 뉴스 -->
+      <div class="a11y-hidden">뉴스</div>
 
-    <section id="member">
-      <div class="member__inner">
-        <div class="section__title">작업자 소개</div>
+      <section id="news">
+        <div class="news__inner">
+          <div class="section__title">뉴스</div>
 
-        <div class="member__card">
-          <div class="member__card-item">
-            <div class="member__card-profile">
-              <img src="images/member/member1.jpg" alt="김혜란 프로필 이미지" />
-            </div>
-
-            <div class="member__card-info">
-              <div class="member__card-details">
-                <span class="member__card-name">김혜란</span>
-                <span class="member__card-separator">|</span>
-                <span class="member__card-english-name">Hyeran Kim</span>
+          <div class="news__container">
+            <!-- 뉴스 세로 모드 -->
+            <div class="news__card news__card--vertical">
+              <div class="news__card-thumbnail">
+                <img src="./images/news/news1.jpg" alt="뉴스1 사진" />
               </div>
 
-              <div class="member__card-role">프론트엔드</div>
+              <div class="news__card-info">
+                <div class="news__card-title ellipsis">
+                  새로운 시대를 건축하다
+                </div>
+                <div class="new__card-content multi-ellipsis">
+                  혁신적이고 감각적인 건축 디자인을 만나보세요. 미래지향적
+                  공간과 독창적 설계를 경험해 보실 준비가 되셨나요?
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="member__card-item">
-            <div class="member__card-profile">
-              <img src="images/member/member2.jpg" alt="최승이 프로필 이미지" />
-            </div>
-
-            <div class="member__card-info">
-              <div class="member__card-details">
-                <span class="member__card-name">최승이</span>
-                <span class="member__card-separator">|</span>
-                <span class="member__card-english-name">Seungyi Choi</span>
+            <!-- 뉴스 세로 모드 -->
+            <div class="news__card news__card--vertical">
+              <div class="news__card-thumbnail">
+                <img src="./images/news/news2.jpg" alt="뉴스2 사진" />
               </div>
 
-              <div class="member__card-role">프론트엔드</div>
-            </div>
-          </div>
-
-          <div class="member__card-item">
-            <div class="member__card-profile">
-              <img src="images/member/member3.jpg" alt="박세진 프로필 이미지" />
-            </div>
-
-            <div class="member__card-info">
-              <div class="member__card-details">
-                <span class="member__card-name">박세진</span>
-                <span class="member__card-separator">|</span>
-                <span class="member__card-english-name">Sejin Park</span>
+              <div class="news__card-info">
+                <div class="news__card-title ellipsis">
+                  공간의 가치를 재정의하다
+                </div>
+                <div class="new__card-content multi-ellipsis">
+                  이스트 건축은 건축의 본질을 탐구하고 새로운 트렌드를 반영한
+                  디자인으로 공간의 가치를 높입니다. 차별화된 설계를 지금
+                  만나보세요.
+                </div>
               </div>
-
-              <div class="member__card-role">프론트엔드</div>
-            </div>
-          </div>
-
-          <div class="member__card-item">
-            <div class="member__card-profile">
-              <img src="images/member/member4.jpg" alt="형주희 프로필 이미지" />
             </div>
 
-            <div class="member__card-info">
-              <div class="member__card-details">
-                <span class="member__card-name">형주희</span>
-                <span class="member__card-separator">|</span>
-                <span class="member__card-english-name">Juhee Hyeong</span>
+            <!-- 뉴스 가로 모드 -->
+            <div class="news__card news__card--horizontal">
+              <div class="news__card-info">
+                <div class="news__card-title ellipsis">
+                  미래의 건축을 디자인하다
+                </div>
+                <div class="new__card-content multi-ellipsis">
+                  혁신과 기술을 기반으로 한 이스트 건축의 디자인은
+                  현대적이면서도 지속 가능한 건축 솔루션을 제안합니다. 함께 더
+                  나은 미래를 설계해 보세요! 앞으로도 함께 합시다.
+                </div>
               </div>
-
-              <div class="member__card-role">프론트엔드</div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- 공지사항 -->
-    <div class="a11y-hidden">공지사항</div>
-
-    <section id="notice">
-      <div class="notice__inner">
-        <div class="section__title">공지사항</div>
-      </div>
-    </section>
-
-    <!-- 문의 -->
-    <div class="a11y-hidden">문의</div>
-
-    <section id="contact">
-      <div class="contact__inner">
-        <div class="section__title">문의</div>
-
-        <div class="contact__content">
-          <!-- 문의 지도 영역 -->
-          <div id="map" class="contact__map"></div>
-
-          <!-- 문의 정보 영역 -->
-          <div class="contact__info">
-            <div class="contact__info-title">이스트 건축</div>
-
-            <div class="contact__details">
-              <div class="contact__details-item full-type">
-                <span class="contact__details-text address">
-                  서울특별시<br />
-                  서초구 반포대로3 이스트빌딩(우)06711
-                </span>
-
-                <span class="btn-find-route"></span>
-              </div>
-
-              <div class="contact__details-item">
-                <span class="contact__details-text phone">02-583-4620</span>
-              </div>
-
-              <div class="contact__details-item">
-                <span class="contact__details-text email">estsoft@gmail.com</span>
-              </div>
-
-              <div class="contact__details-item full-type">
-                <div class="contact__details-title">건축설계 사업문의</div>
-                <span class="contact__details-text inquiry">02-583-4620</span>
+            <!-- 뉴스 가로 모드 -->
+            <div class="news__card news__card--horizontal">
+              <div class="news__card-info">
+                <div class="news__card-title ellipsis">
+                  세상을 바꾸는 디자인
+                </div>
+                <div class="new__card-content multi-ellipsis">
+                  아름다움과 기능을 아우르는 디자인을 통해 새로운 건축
+                  패러다임을 만들어갑니다. 우리의 작품을 통해 세상의 변화를
+                  확인해 보세요.
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <!-- 푸터 -->
-  <div class="a11y-hidden">푸터</div>
+      <!-- 작업자 소개 -->
+      <div class="a11y-hidden">작업자 소개</div>
 
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="logo">
-        <img src="./images/icon/icon_logo_white.svg" alt="로고" class="logo--white" />
-        <img src="./images/icon/icon_logo_black.svg" alt="로고" class="logo--black" />
-      </div>
+      <section id="member">
+        <div class="member__inner">
+          <div class="section__title">작업자 소개</div>
 
-      <!-- 푸터 메뉴 -->
-      <div class="footer__menu">
-        <div class="footer__menu-item">
-          <p class="footer__menu-title">소셜</p>
+          <div class="member__card">
+            <div class="member__card-item">
+              <div class="member__card-profile">
+                <img
+                  src="images/member/member1.jpg"
+                  alt="김혜란 프로필 이미지"
+                />
+              </div>
 
-          <ul class="footer__list">
-            <li class="footer__list-item">
-              <a href="" class="footer__list-link">인스타그램</a>
-            </li>
+              <div class="member__card-info">
+                <div class="member__card-details">
+                  <span class="member__card-name">김혜란</span>
+                  <span class="member__card-separator">|</span>
+                  <span class="member__card-english-name">Hyeran Kim</span>
+                </div>
 
-            <li class="footer__list-item">
-              <a href="" class="footer__list-link">비핸스</a>
-            </li>
+                <div class="member__card-role">프론트엔드</div>
+              </div>
+            </div>
 
-            <li class="footer__list-item">
-              <a href="" class="footer__list-link">링크드인</a>
-            </li>
-          </ul>
+            <div class="member__card-item">
+              <div class="member__card-profile">
+                <img
+                  src="images/member/member2.jpg"
+                  alt="최승이 프로필 이미지"
+                />
+              </div>
+
+              <div class="member__card-info">
+                <div class="member__card-details">
+                  <span class="member__card-name">최승이</span>
+                  <span class="member__card-separator">|</span>
+                  <span class="member__card-english-name">Seungyi Choi</span>
+                </div>
+
+                <div class="member__card-role">프론트엔드</div>
+              </div>
+            </div>
+
+            <div class="member__card-item">
+              <div class="member__card-profile">
+                <img
+                  src="images/member/member3.jpg"
+                  alt="박세진 프로필 이미지"
+                />
+              </div>
+
+              <div class="member__card-info">
+                <div class="member__card-details">
+                  <span class="member__card-name">박세진</span>
+                  <span class="member__card-separator">|</span>
+                  <span class="member__card-english-name">Sejin Park</span>
+                </div>
+
+                <div class="member__card-role">프론트엔드</div>
+              </div>
+            </div>
+
+            <div class="member__card-item">
+              <div class="member__card-profile">
+                <img
+                  src="images/member/member4.jpg"
+                  alt="형주희 프로필 이미지"
+                />
+              </div>
+
+              <div class="member__card-info">
+                <div class="member__card-details">
+                  <span class="member__card-name">형주희</span>
+                  <span class="member__card-separator">|</span>
+                  <span class="member__card-english-name">Juhee Hyeong</span>
+                </div>
+
+                <div class="member__card-role">프론트엔드</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 공지사항 -->
+      <div class="a11y-hidden">공지사항</div>
+
+      <section id="notice">
+        <div class="notice__inner">
+          <div class="section__title">공지사항</div>
+
+          <div class="notice__container">
+            <div class="notice__title">
+              <h2 class="notice__title-notice">notice</h2>
+            </div>
+
+            <div class="notice__list">
+              <div class="notice__list-item">
+                <div class="notice__list-item-box">
+                  <h3 class="notice__list-item-box-title">
+                    title
+                  </h3>
+                  <p class="notice__list-item-box-content">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                  </p>
+                </div>
+                <div class="notice__list-viewmore">
+                  <a class="notice__list-viewmore-a" href="">
+                    view more 
+                    <img class="notice__list-viewmore-img" src="./images/notice/ico_pointer.svg" alt="">
+                  </a>
+                </div> 
+              </div>
+
+              <div class="notice__list-item">
+                <div class="notice__list-item-box">
+                  <h3 class="notice__list-item-box-title">
+                    title
+                  </h3>
+                  <p class="notice__list-item-box-content">Qui sit, alias quibusdam voluptas sequi assumenda nostrum sapiente reiciendis sunt 
+                  </p>
+                </div>
+                <div class="notice__list-viewmore">
+                  <a class="notice__list-viewmore-a" href="">
+                    view more 
+                    <img src="./images/notice/ico_pointer.svg" alt="">
+                  </a>
+                </div> 
+              </div>
+
+              <div class="notice__list-item">
+                <div class="notice__list-item-box">
+                  <h3 class="notice__list-item-box-title">
+                    title
+                  </h3>
+                  <p class="notice__list-item-box-content">
+                    vero error nisi ab, incidunt nulla, suscipit saepe delectus. Reiciendis.
+                  </p>
+                </div>
+                <div class="notice__list-viewmore">
+                  <a class="notice__list-viewmore-a" href="">
+                    view more 
+                    <img src="./images/notice/ico_pointer.svg" alt="">
+                  </a>
+                </div> 
+              </div>
+
+              <div class="notice__list-item">
+                <div class="notice__list-item-box">
+                  <h3 class="notice__list-item-box-title">
+                    title
+                  </h3>
+                  <p class="notice__list-item-box-content">
+                    Velit molestiae animi sit unde tenetur, dignissimos quam minus.
+                  </p>
+                </div>
+                <div class="notice__list-viewmore">
+                  <a class="notice__list-viewmore-a" href="">
+                    view more 
+                    <img src="./images/notice/ico_pointer.svg" alt="">
+                  </a>
+                </div> 
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 문의 -->
+      <div class="a11y-hidden">문의</div>
+
+      <section id="contact">
+        <div class="contact__inner">
+          <div class="section__title">문의</div>
+
+          <div class="contact__content">
+            <!-- 문의 지도 영역 -->
+            <div id="map" class="contact__map"></div>
+
+            <!-- 문의 정보 영역 -->
+            <div class="contact__info">
+              <div class="contact__info-title">이스트 건축</div>
+
+              <div class="contact__details">
+                <div class="contact__details-item full-type">
+                  <span class="contact__details-text address">
+                    서울특별시<br />
+                    서초구 반포대로3 이스트빌딩(우)06711
+                  </span>
+
+                  <span class="btn-find-route"></span>
+                </div>
+
+                <div class="contact__details-item">
+                  <span class="contact__details-text phone">02-583-4620</span>
+                </div>
+
+                <div class="contact__details-item">
+                  <span class="contact__details-text email"
+                    >estsoft@gmail.com</span
+                  >
+                </div>
+
+                <div class="contact__details-item full-type">
+                  <div class="contact__details-title">건축설계 사업문의</div>
+                  <span class="contact__details-text inquiry">02-583-4620</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 푸터 -->
+    <div class="a11y-hidden">푸터</div>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="logo">
+          <img
+            src="./images/icon/icon_logo_white.svg"
+            alt="로고"
+            class="logo--white"
+          />
+          <img
+            src="./images/icon/icon_logo_black.svg"
+            alt="로고"
+            class="logo--black"
+          />
         </div>
 
-        <div class="footer__menu-item">
-          <p class="footer__menu-title">정보</p>
+        <!-- 푸터 메뉴 -->
+        <div class="footer__menu">
+          <div class="footer__menu-item">
+            <p class="footer__menu-title">소셜</p>
 
-          <ul class="footer__list">
-            <li class="footer__list-item">
-              <a href="" class="footer__list-link">문의하기</a>
-            </li>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">인스타그램</a>
+              </li>
 
-            <li class="footer__list-item">
-              <a href="" class="footer__list-link">이용 약관</a>
-            </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">비핸스</a>
+              </li>
 
-            <li class="footer__list-item">
-              <a href="" class="footer__list-link">스튜디오</a>
-            </li>
-          </ul>
-        </div>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">링크드인</a>
+              </li>
+            </ul>
+          </div>
 
-        <div class="footer__menu-item">
-          <p class="footer__menu-title">연락처</p>
+          <div class="footer__menu-item">
+            <p class="footer__menu-title">정보</p>
 
-          <ul class="footer__list">
-            <li class="footer__list-item">
-              <a href="" class="footer__list-link">서울특별시 서초구 반포대로3 이스트빌딩(우)06711</a>
-            </li>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">문의하기</a>
+              </li>
 
-            <li class="footer__list-item">
-              <a href="" class="footer__list-link">02-583-4620</a>
-            </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">이용 약관</a>
+              </li>
 
-            <li class="footer__list-item">
-              <a href="" class="footer__list-link">estsoft@example.com</a>
-            </li>
-          </ul>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">스튜디오</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-item">
+            <p class="footer__menu-title">연락처</p>
+
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link"
+                  >서울특별시 서초구 반포대로3 이스트빌딩(우)06711</a
+                >
+              </li>
+
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">02-583-4620</a>
+              </li>
+
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">estsoft@example.com</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- 서브 푸터 -->
-    <div class="subfooter">
-      <div class="subfooter__inner">
-        ⓒ 2024 ESTSOFT Bootcamp 3조. All rights reserved.
+      <!-- 서브 푸터 -->
+      <div class="subfooter">
+        <div class="subfooter__inner">
+          ⓒ 2024 ESTSOFT Bootcamp 3조. All rights reserved.
+        </div>
       </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
