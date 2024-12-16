@@ -236,7 +236,7 @@ const handlePortfoliolist = () => {
     });
   });
 
-  function removeWrapperActive(portfolioList){
+  const removeWrapperActive = (portfolioList) => {
     portfolioList.forEach(wrapper =>{
       // 래퍼컨텐츠에 active클래스 추가
       wrapper.classList.remove('active');
