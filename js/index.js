@@ -30,6 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // 포트폴리오 리스트 버튼
   handlePortfoliolist();
 
+  // theme 핸들러
+  handleTheme();
+
   // 지도 이벤트 핸들러
   // handleMap();
 });
@@ -242,21 +245,21 @@ const handlePortfoliolist = () => {
       removeWrapperActive(portfolioList);
       // 래퍼컨텐츠에 active클래스 추가
       portfolioEle.classList.add('active')
-      // 래퍼컨텐츠의 자식 요소에 data-visible 값 변경: true 
+      // 래퍼컨텐츠의 자식 요소에 클래스 추가 
       let childNodes = portfolioEle.children;
       for(let i=0; i<childNodes.length; i++){
-        childNodes[i].setAttribute('data-visible' , 'true');
+        childNodes[i].classList.add('visible');
       }
     });
   });
 
   const removeWrapperActive = (portfolioList) => {
     portfolioList.forEach(wrapper =>{
-      // 래퍼컨텐츠에 active클래스 추가
+      // 래퍼컨텐츠에 active클래스 제거
       wrapper.classList.remove('active');
       let childNodes = wrapper.children;
       for(let i=0; i<childNodes.length; i++){
-        childNodes[i].setAttribute('data-visible' , 'false');
+        childNodes[i].classList.remove('visible');
       }
     })
   }
