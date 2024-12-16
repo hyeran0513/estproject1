@@ -126,6 +126,64 @@
   }
 }
 
+/* 사이드바 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-bg-color);
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+
+  &.sidebar--open {
+    transform: translateX(0);
+  }
+
+  .sidebar__inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .sidebar__head {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 1.25rem;
+      height: 3.125rem;
+      border-bottom: 0.0625rem solid var(--primary-border-color);
+
+      .btn-close {
+        font-size: 1.2rem;
+        color: var(--primary-text-color);
+      }
+    }
+
+    .sidebar__menu {
+      flex: 1;
+      overflow: hidden;
+      overflow-y: auto;
+      padding: 0 1.25rem;
+
+      .menu__list {
+        padding: 0.625rem 0;
+
+        .menu__list-item {
+          .menu__list-link {
+            display: inline-block;
+            padding: 0.875rem 0;
+            width: 100%;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 /* 세션 타이틀 (공통) */
 section {
   scroll-margin-top: 3.75rem;
@@ -571,7 +629,7 @@ section {
 
     &:before {
       content: "";
-      border-top: 1px solid var(--secondary-border-color);
+      border-top: 0.0625rem solid var(--secondary-border-color);
       position: absolute;
       left: 2.5rem;
       right: 2.5rem;
@@ -585,7 +643,7 @@ section {
       max-width: 75rem;
 
       .portfolio__contents__wrapper {
-        border-left: 1px solid var(--secondary-border-color);
+        border-left: 0.0625rem solid var(--secondary-border-color);
         padding-left: 3rem;
         display: flex;
         flex: 1;
@@ -619,7 +677,7 @@ section {
         }
 
         &.active {
-          border-left: 1px solid var(--primary-border-color);
+          border-left: 0.0625rem solid var(--primary-border-color);
           opacity: 1;
           flex: 30;
           transition: border-left 0.6s ease;
@@ -754,7 +812,7 @@ section {
         .vision__textBox__viewmore {
           transition: color 0.6s ease;
           padding: 0.875rem 5.060625rem 0.875rem 1.9375rem;
-          border: 1px solid var(--primary-border-color);
+          border: 0.0625rem solid var(--primary-border-color);
           border-radius: 999rem;
 
           &.link:hover {
@@ -1210,11 +1268,11 @@ section {
       border-radius: 0.625rem;
       background: url(../images/interview/interview_pic1.jpg) no-repeat;
       background-size: cover;
-      border: 1px solid black;
+      border: 0.0625rem solid black;
       .notice__title {
         width: 100%;
         padding: 3.125rem 0;
-        border-right: 1px solid black;
+        border-right: 0.0625rem solid black;
         .notice__title-notice {
           font-size: 4.375rem;
           font-weight: 400;
@@ -1235,7 +1293,7 @@ section {
           &:nth-child(1),
           &:nth-child(2),
           &:nth-child(3) {
-            border-bottom: 1px solid black;
+            border-bottom: 0.0625rem solid black;
           }
           .notice__list-item-box {
             width: 70%;
@@ -1779,13 +1837,13 @@ section {
       .portfolio__list {
         flex-direction: column;
         .portfolio__contents__wrapper {
-          border-top: 1px solid var(--secondary-border-color);
+          border-top: 0.0625rem solid var(--secondary-border-color);
           border-left: none;
           padding: 0;
           padding-top: 3rem;
           transition: color ease 0.3s, border ease 0.3s;
           &.active {
-            border-top: 1px solid var(--primary-border-color);
+            border-top: 0.0625rem solid var(--primary-border-color);
             border-left: none;
             transition: color ease 0.3s, border ease 0.3s;
           }
@@ -2019,7 +2077,7 @@ section {
         flex-direction: column;
         .notice__title {
           border-right: none;
-          border-bottom: 1px solid black;
+          border-bottom: 0.0625rem solid black;
         }
       }
     }
@@ -2064,6 +2122,10 @@ section {
       flex-direction: column;
       gap: 1.25rem;
       padding: 1.875rem 1.25rem;
+
+      .logo {
+        width: 5rem;
+      }
 
       .footer__menu {
         grid-template-columns: repeat(2, 1fr);

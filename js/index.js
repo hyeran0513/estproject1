@@ -33,6 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // theme 핸들러
   handleTheme();
 
+  // 사이드바 핸들러
+  handleSidebar();
+
   // 지도 이벤트 핸들러
   // handleMap();
 });
@@ -51,7 +54,7 @@ const handleScrollEvent = () => {
   const header = document.querySelector(".header");
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY >= 400) {
+    if (window.scrollY >= 340) {
       header.classList.add("active");
     } else {
       header.classList.remove("active");
@@ -293,4 +296,24 @@ const handleTheme = () => {
   const savedTheme = localStorage.getItem("theme") || "light";
 
   setTheme(savedTheme);
+};
+
+// 사이드바 핸들러
+const handleSidebar = () => {
+  const sidebar = document.querySelector(".sidebar");
+  const closeBtn = document.querySelector(".btn-close");
+  const openBtn = document.querySelector(".btn-hamburger");
+  const menuLinks = document.querySelectorAll(".menu__list-link");
+
+  const toggleSidebar = (isOpen) => {
+    sidebar.classList.toggle("sidebar--open", isOpen);
+  };
+
+  openBtn.addEventListener("click", () => toggleSidebar(true));
+  
+  closeBtn.addEventListener("click", () => toggleSidebar(false));
+
+  menuLinks.forEach((link) =>
+    link.addEventListener("click", () => toggleSidebar(false))
+  );
 };
