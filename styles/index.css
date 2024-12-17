@@ -450,7 +450,7 @@ section {
       margin-top: 2.69rem;
       border-top: 0.0625rem solid var(--secondary-border-color);
       padding-top: 4.69rem;
-
+      
       .company__card-item {
         flex: 1;
         padding: 1.2rem;
@@ -506,15 +506,15 @@ section {
 
 /* 포트폴리오 */
 #portfolio {
-  .portfolio__container {
+  .portfolio__inner-top {
     /* nav 타입 포트폴리오 */
-    &.portfolio__container--nav {
+    &.portfolio__inner-top--nav {
       padding: 3.125rem 1.25rem;
       max-width: 100%;
       width: 100%;
       overflow: hidden;
 
-      .portfolio__container-inner {
+      .portfolio__inner {
         margin: 0 auto;
         max-width: 75rem;
 
@@ -620,34 +620,22 @@ section {
   }
 
   /* 포트폴리오2 */
-  .portfolio__container_2 {
-    text-align: center;
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-    &:before {
-      content: "";
-      border-top: 0.0625rem solid var(--secondary-border-color);
-      position: absolute;
-      left: 2.5rem;
-      right: 2.5rem;
-    }
+  .portfolio__inner-bottom {
+    padding: 3.125rem 1.25rem;
 
     .portfolio__list {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      padding-top: 4.25rem;
+      border-top: 0.0625rem solid var(--secondary-border-color);
       max-width: 75rem;
+      margin: 0 auto;
+      padding: 4.25rem 1.25rem;
+      display: flex;
+      justify-content: center;
 
-      .portfolio__contents__wrapper {
+      .portfolio__wrapper {
         border-left: 0.0625rem solid var(--secondary-border-color);
         padding-left: 3rem;
         display: flex;
         flex: 1;
-        flex-direction: row;
         position: relative;
         height: 44.5498125rem;
         overflow: hidden;
@@ -685,27 +673,28 @@ section {
             transition: opacity 0.6s ease;
             opacity: 0;
           }
+          
+          .portfolio__card{
+            transform: translateX(0);
+            opacity: 1;
+            cursor: default;
+            transition: transform 0.6s ease
+                      , opacity 0.6s ease;
+          }
         }
 
-        .portfolio__contents {
+        .portfolio__card {
           display: flex;
           flex-direction: row;
-          gap: 0 0.625rem;
           width: 100%;
           height: 100%;
           margin-left: 3rem;
           transform: translateX(60%);
           opacity: 0;
-          transition: transform 0.6s ease, opacity 0.6s ease;
+          transition: transform 0.6s ease
+                    , opacity 0.6s ease;
 
-          &.visible {
-            transform: translateX(0);
-            opacity: 1;
-            cursor: default;
-            transition: transform 0.6s ease, opacity 0.6s ease;
-          }
-
-          .portfolio__contents__img {
+          .portfolio__img {
             width: 100%;
             height: 100%;
 
@@ -716,18 +705,17 @@ section {
             }
           }
 
-          .portfolio__contents__info-wrapper {
+          .portfolio__text-box {
             width: 100%;
-            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: end;
             align-items: start;
             gap: 1.5625rem;
             padding: 2.6875rem 5rem;
+            color: var(--primary-text-color);
 
-            .portfolio__contents__text {
-              color: var(--primary-text-color);
+            .portfolio__description {
               text-align: left;
               font-size: 1rem;
               font-style: normal;
@@ -735,8 +723,7 @@ section {
               line-height: 1.6875rem;
             }
 
-            .portfolio__contents__text-readmore {
-              color: var(--primary-text-color);
+            .portfolio__readmore {
               font-size: 1rem;
               font-style: normal;
               font-weight: 400;
@@ -761,12 +748,11 @@ section {
   /* 비전 컨테이너 */
   .vision__inner {
     margin: 0 auto;
-    margin-top: 5rem;
     max-width: 75rem;
     width: 100%;
 
     /* 비전 개별 컨테이너 (텍스트, 이미지) */
-    .vision__info {
+    .vision__card {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -783,14 +769,14 @@ section {
         padding: 2rem 2rem;
 
         /* 비전 텍스트박스(타이틀) */
-        .vision__textBox__title {
+        .vision__textBox-title {
           font-size: 3rem;
           position: relative;
           text-transform: uppercase;
           margin-bottom: 0.875rem;
 
           /* 비전 텍스트박스(타이틀 배경글자) */
-          .vision__textBox__title-backTitle {
+          .vision__textBox-backTitle {
             color: var(--primary-color);
             position: absolute;
             left: -1rem;
@@ -803,30 +789,40 @@ section {
         }
 
         /* 비전 텍스트박스(내용) */
-        .vision__textBox__text {
+        .vision__textBox-text {
           font-size: 1rem;
           margin-bottom: 2.3125rem;
         }
 
         /* 비전 텍스트박스(버튼) */
-        .vision__textBox__viewmore {
-          transition: color 0.6s ease;
+        .vision__textBox-viewmore {
+          transition: color 0.6s ease
+                    , transform 0.6s ease;
           padding: 0.875rem 5.060625rem 0.875rem 1.9375rem;
           border: 0.0625rem solid var(--primary-border-color);
           border-radius: 999rem;
+          border-right:none;
+          position: relative;
 
           &.link:hover {
             color: var(--primary-color);
+            transform: scale(1.1);
           }
 
-          /* 비전 텍스트박스(버튼 아이콘) */
-          .vision__textBox__view-more-icon {
-            content: "";
-            height: 100%;
-            width: 100%;
-            /* color: var(--primary-border-color); */
-            background: url(../images/icon/icon_btn_vision-more.svg) no-repeat
-              center / cover;
+          &::after{
+            content: '';
+            position: absolute;
+            top: 0.0rem;
+            bottom: 0.0rem;
+            padding:0.67rem;
+            right: 0;
+            width: 3.5rem;
+            border: 0.0625rem solid var(--primary-border-color);
+            border-radius: 999rem;
+            background-size: 2.03125rem;
+            /* background-size: 1rem 1rem; */
+            background: url(../images/icon/icon_btn_vision-more.svg) 
+                        no-repeat center;
           }
         }
       }
@@ -849,15 +845,14 @@ section {
       max-width: 75rem;
 
       .coworker__card-item {
-        height: 14rem;
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 14rem;
 
         .coworker__card-thumbnail {
           width: 100%;
           height: 100%;
-          /* border-radius: 0.625rem; */
           overflow: hidden;
 
           img {
@@ -875,10 +870,8 @@ section {
         }
 
         .coworker__card-info {
-          padding: 2rem;
           display: flex;
           flex-direction: column;
-          align-content: center;
           gap: 1rem;
 
           .coworker__card-name {
@@ -887,17 +880,18 @@ section {
             line-height: 1.8rem;
             margin-bottom: 0.44rem;
           }
+
           .coworker__card-position {
             text-transform: uppercase;
             font-size: 0.75rem;
           }
 
           .coworker__card-sns {
-            margin-top: auto;
             a {
               font-size: 0.875rem;
               margin-right: 1rem;
               transition: transform ease 0.6s;
+
               &:hover {
                 transform: scale(1.2);
               }
@@ -1266,7 +1260,8 @@ section {
       display: grid;
       grid-template-columns: minmax(30%, 40%) 1fr;
       border-radius: 0.625rem;
-      background: url(../images/interview/interview_pic1.jpg) no-repeat center / cover;
+      background: url(../images/interview/interview_pic1.jpg) no-repeat center /
+        cover;
       border: 0.0625rem solid black;
 
       .notice__title {
@@ -1288,7 +1283,7 @@ section {
 
         .notice__list-item {
           display: grid;
-          grid-template-columns: 1fr minmax(20%,30%);
+          grid-template-columns: 1fr minmax(20%, 30%);
           align-items: center;
           padding: 3rem 2rem 3rem 3.62rem;
           position: relative;
@@ -1543,34 +1538,29 @@ section {
 
   /* 포트폴리오 */
   #portfolio {
-    .portfolio__container {
+    .portfolio__inner-top {
       /* nav 타입 포트폴리오 */
-      &.portfolio__container--nav {
-        .portfolio__container-inner {
+      &.portfolio__inner-top--nav {
+        .portfolio__inner {
           .portfolio__info-wrap {
             height: 31.25rem;
           }
         }
       }
     }
-    .portfolio__container_2 {
+    .portfolio__inner-bottom {
       .portfolio__list {
-        .portfolio__contents__wrapper {
+        .portfolio__wrapper {
           height: 31.25rem;
-          &:nth-child(4) {
-            display: none;
-          }
 
-          .portfolio__contents {
-            flex-direction: column;
+          .portfolio__card {
+            .portfolio__img {
+            }
 
-            .portfolio__contents__img {
-              height: 70%;
+            .portfolio__text-box {
+              padding:2rem;
             }
-            .portfolio__contents__info-wrapper {
-              height: 30%;
-              padding: 1.5rem 1rem;
-            }
+
           }
         }
       }
@@ -1785,12 +1775,12 @@ section {
 
   /* 포트폴리오 */
   #portfolio {
-    .portfolio__container {
+    .portfolio__inner-top {
       /* nav 타입 포트폴리오 */
-      &.portfolio__container--nav {
+      &.portfolio__inner-top--nav {
         padding: 1.25rem 0;
 
-        .portfolio__container-inner {
+        .portfolio__inner {
           .portfolio__info-wrap {
             flex-direction: column;
             gap: 1.5rem;
@@ -1837,41 +1827,110 @@ section {
         }
       }
     }
-    .portfolio__container_2 {
+
+    .portfolio__inner-bottom {
       width: 100%;
       .portfolio__list {
         flex-direction: column;
-        .portfolio__contents__wrapper {
+        padding-bottom: 0;
+        .portfolio__wrapper {
+          flex-direction: column;
           border-top: 0.0625rem solid var(--secondary-border-color);
           border-left: none;
           padding: 0;
           padding-top: 3rem;
-          transition: color ease 0.3s, border ease 0.3s;
+          transition: color ease 0.3s
+                    , border ease 0.3s;
           &.active {
             border-top: 0.0625rem solid var(--primary-border-color);
             border-left: none;
-            transition: color ease 0.3s, border ease 0.3s;
-          }
-          .portfolio__contents {
-            margin-top: 3rem;
-            margin: 0;
-            opacity: 0;
-            height: 0;
-            transform: translate(0, 50%);
-            transition: transform 0.6s ease, opacity 0.6s ease;
-            overflow: hidden;
-            &.visible {
-              opacity: 1;
-              height: 100%;
+            transition: color ease 0.3s
+                      , border ease 0.3s;
+
+            .portfolio__card{
+              height: 80vh;
               transform: translate(0, 0);
-              transition: transform 0.6s ease, opacity 0.6s ease;
+              .portfolio__img{
+                height: 80%;
+              }
             }
-            .portfolio__contents__img {
-              height: 80%;
+          }
+          .portfolio__card {
+            margin: 0;
+            height: 0;
+            padding: auto;
+            overflow: hidden;
+            flex-direction: column;
+            width: 100%;
+            height: 0;
+            transform: translate(0, 100%);
+
+            .portfolio__img {
+              width: 100%;
+              height: 100%;
             }
-            .portfolio__contents__info-wrapper {
-              justify-content: center;
-              height: 20%;
+            .portfolio__text-Box {
+              height: 100%;
+              padding: 0rem 1rem;
+
+              .portfolio__description{
+                display:block;
+                width: 100%;
+              }
+
+              .portfolio__readmore{
+                display:block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #vision{
+    padding: 1.25rem;
+    padding-top : 0;
+    margin-top : 0;
+    .vision__inner{
+      .vision__card{
+        display: grid;
+        grid-template-rows: 2;
+        height : 50rem;
+        row-gap : 2rem;
+        margin-bottom: 3rem;
+        .vision__image__container{
+          grid-row:1;
+          height: 100%;
+          
+          overflow: hidden;
+          img{
+            position: relative;
+            width: 100%;
+            object-fit: cover;
+            transform: translateY(-10rem);
+          }
+        }
+
+        .vision__textBox{
+          grid-row:2;
+          height: 100%;
+          
+          .vision__textBox-title{
+            font-size: 2.5rem;
+          }
+          .vision__textBox-backTitle{
+            font-size: 2.5rem;
+          }
+          .vision__textBox-text{
+            font-size: 1.2rem;
+          }
+          .vision__textBox-viewmore{
+            font-size: 1.2rem;
+            border:0.15rem solid var(--primary-border-color);
+            border-right:none;
+            &::after{
+              border:0.15rem solid var(--primary-border-color);
             }
           }
         }
@@ -1888,9 +1947,7 @@ section {
 
         .coworker__card-item {
           height: 10rem;
-          &:nth-of-type(6) {
-            grid-column: 1/2;
-          }
+          &:nth-of-type(6),
           &:nth-of-type(8) {
             grid-column: 1/2;
           }
@@ -2176,9 +2233,9 @@ section {
   /* 포트폴리오 */
   #portfolio {
     /* nav 타입 포트폴리오 */
-    .portfolio__container {
-      &.portfolio__container--nav {
-        .portfolio__container-inner {
+    .portfolio__inner-top {
+      &.portfolio__inner-top--nav {
+        .portfolio__inner {
           .portfolio__control {
             .portfolio__control-prev {
               background: url(../images/icon/icon_btn_prev.svg) no-repeat center /
@@ -2194,7 +2251,22 @@ section {
       }
     }
   }
-  
+
+  /* 비전 */
+  #vision{
+    .vision__inner{
+      .vision__card{
+        .vision__text_Box{
+          .vision__textBox-viewmore{
+            &::after{
+              background: url(../images/icon/icon_btn_vision-more.svg) no-repeat center;
+            }
+          }
+        }
+      }
+    }
+  }
+
   /* 푸터 */
   .footer {
     .footer__inner {
