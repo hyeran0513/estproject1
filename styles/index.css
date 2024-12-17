@@ -849,15 +849,14 @@ section {
       max-width: 75rem;
 
       .coworker__card-item {
-        height: 14rem;
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 14rem;
 
         .coworker__card-thumbnail {
           width: 100%;
           height: 100%;
-          /* border-radius: 0.625rem; */
           overflow: hidden;
 
           img {
@@ -875,10 +874,8 @@ section {
         }
 
         .coworker__card-info {
-          padding: 2rem;
           display: flex;
           flex-direction: column;
-          align-content: center;
           gap: 1rem;
 
           .coworker__card-name {
@@ -887,17 +884,18 @@ section {
             line-height: 1.8rem;
             margin-bottom: 0.44rem;
           }
+
           .coworker__card-position {
             text-transform: uppercase;
             font-size: 0.75rem;
           }
 
           .coworker__card-sns {
-            margin-top: auto;
             a {
               font-size: 0.875rem;
               margin-right: 1rem;
               transition: transform ease 0.6s;
+
               &:hover {
                 transform: scale(1.2);
               }
@@ -1266,7 +1264,8 @@ section {
       display: grid;
       grid-template-columns: minmax(30%, 40%) 1fr;
       border-radius: 0.625rem;
-      background: url(../images/interview/interview_pic1.jpg) no-repeat center / cover;
+      background: url(../images/interview/interview_pic1.jpg) no-repeat center /
+        cover;
       border: 0.0625rem solid black;
 
       .notice__title {
@@ -1288,7 +1287,7 @@ section {
 
         .notice__list-item {
           display: grid;
-          grid-template-columns: 1fr minmax(20%,30%);
+          grid-template-columns: 1fr minmax(20%, 30%);
           align-items: center;
           padding: 3rem 2rem 3rem 3.62rem;
           position: relative;
@@ -1888,9 +1887,7 @@ section {
 
         .coworker__card-item {
           height: 10rem;
-          &:nth-of-type(6) {
-            grid-column: 1/2;
-          }
+          &:nth-of-type(6),
           &:nth-of-type(8) {
             grid-column: 1/2;
           }
@@ -2194,7 +2191,7 @@ section {
       }
     }
   }
-  
+
   /* 푸터 */
   .footer {
     .footer__inner {
