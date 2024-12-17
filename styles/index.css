@@ -845,15 +845,14 @@ section {
       max-width: 75rem;
 
       .coworker__card-item {
-        height: 14rem;
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 14rem;
 
         .coworker__card-thumbnail {
           width: 100%;
           height: 100%;
-          /* border-radius: 0.625rem; */
           overflow: hidden;
 
           img {
@@ -871,10 +870,8 @@ section {
         }
 
         .coworker__card-info {
-          padding: 2rem;
           display: flex;
           flex-direction: column;
-          align-content: center;
           gap: 1rem;
 
           .coworker__card-name {
@@ -883,17 +880,18 @@ section {
             line-height: 1.8rem;
             margin-bottom: 0.44rem;
           }
+
           .coworker__card-position {
             text-transform: uppercase;
             font-size: 0.75rem;
           }
 
           .coworker__card-sns {
-            margin-top: auto;
             a {
               font-size: 0.875rem;
               margin-right: 1rem;
               transition: transform ease 0.6s;
+
               &:hover {
                 transform: scale(1.2);
               }
@@ -1262,13 +1260,15 @@ section {
       display: grid;
       grid-template-columns: minmax(30%, 40%) 1fr;
       border-radius: 0.625rem;
-      background: url(../images/interview/interview_pic1.jpg) no-repeat;
-      background-size: cover;
+      background: url(../images/interview/interview_pic1.jpg) no-repeat center /
+        cover;
       border: 0.0625rem solid black;
+
       .notice__title {
         width: 100%;
         padding: 3.125rem 0;
         border-right: 0.0625rem solid black;
+
         .notice__title-notice {
           font-size: 4.375rem;
           font-weight: 400;
@@ -1280,9 +1280,10 @@ section {
       }
       .notice__list {
         display: grid;
+
         .notice__list-item {
-          display: flex;
-          justify-content: space-between;
+          display: grid;
+          grid-template-columns: 1fr minmax(20%, 30%);
           align-items: center;
           padding: 3rem 2rem 3rem 3.62rem;
           position: relative;
@@ -1291,9 +1292,11 @@ section {
           &:nth-child(3) {
             border-bottom: 0.0625rem solid black;
           }
-          .notice__list-item-box {
+
+          .notice__list-box {
             width: 70%;
-            .notice__list-item-box-title {
+
+            .notice__box-title {
               font-size: 2.1875rem;
               font-weight: 400;
               line-height: 2.8125rem;
@@ -1301,18 +1304,19 @@ section {
               text-transform: uppercase;
               margin-bottom: 0.36rem;
             }
-            .notice__list-item-box-content {
+
+            .notice__box-content {
               font-size: 1.125rem;
               font-weight: 400;
               line-height: 1.5rem;
             }
           }
+
           .notice__list-viewmore {
-            .notice__list-viewmore-a {
-              margin-right: 2rem;
-              .notice__list-viewmore-img {
-                position: absolute;
+            .notice__viewmore-a {
+              .notice__viewmore-img {
                 margin-left: 0.5rem;
+                transform: translateY(30%);
               }
             }
           }
@@ -1609,12 +1613,12 @@ section {
     .notice__inner {
       .notice__container {
         .notice__list-item {
-          display: flex;
-          flex-direction: column;
-          .notice__list-item-box {
-            .notice__list-item-box-content {
-              text-align: left;
-              padding-bottom: 2rem;
+          .notice__list-viewmore {
+            .notice__viewmore-a {
+              margin-right: 2rem;
+              .notice__viewmore-img {
+                padding-left: 1rem;
+              }
             }
           }
         }
@@ -1943,9 +1947,7 @@ section {
 
         .coworker__card-item {
           height: 10rem;
-          &:nth-of-type(6) {
-            grid-column: 1/2;
-          }
+          &:nth-of-type(6),
           &:nth-of-type(8) {
             grid-column: 1/2;
           }
@@ -2133,8 +2135,7 @@ section {
     padding: 1.25rem;
     .notice__inner {
       .notice__container {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
         .notice__title {
           border-right: none;
           border-bottom: 0.0625rem solid black;
