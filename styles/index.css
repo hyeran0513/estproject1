@@ -753,7 +753,7 @@ section {
     width: 100%;
 
     /* 비전 개별 컨테이너 (텍스트, 이미지) */
-    .vision__info {
+    .vision__card {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -770,14 +770,14 @@ section {
         padding: 2rem 2rem;
 
         /* 비전 텍스트박스(타이틀) */
-        .vision__textBox__title {
+        .vision__textBox-title {
           font-size: 3rem;
           position: relative;
           text-transform: uppercase;
           margin-bottom: 0.875rem;
 
           /* 비전 텍스트박스(타이틀 배경글자) */
-          .vision__textBox__title-backTitle {
+          .vision__textBox-backTitle {
             color: var(--primary-color);
             position: absolute;
             left: -1rem;
@@ -790,31 +790,42 @@ section {
         }
 
         /* 비전 텍스트박스(내용) */
-        .vision__textBox__text {
+        .vision__textBox-text {
           font-size: 1rem;
           margin-bottom: 2.3125rem;
         }
 
         /* 비전 텍스트박스(버튼) */
-        .vision__textBox__viewmore {
-          transition: color 0.6s ease;
+        .vision__textBox-viewmore {
+          transition: color 0.6s ease
+                    , transform 0.6s ease;
           padding: 0.875rem 5.060625rem 0.875rem 1.9375rem;
           border: 0.0625rem solid var(--primary-border-color);
           border-radius: 999rem;
+          border-right:none;
+          position: relative;
 
           &.link:hover {
             color: var(--primary-color);
+            transform: scale(1.1);
           }
 
-          /* 비전 텍스트박스(버튼 아이콘) */
-          .vision__textBox__view-more-icon {
-            content: "";
-            height: 100%;
-            width: 100%;
-            /* color: var(--primary-border-color); */
-            background: url(../images/icon/icon_btn_vision-more.svg) no-repeat
-              center / cover;
+          &::after{
+            content: '';
+            position: absolute;
+            top: 0.0rem;
+            bottom: 0.0rem;
+            padding:0.67rem;
+            right: 0;
+            width: 3.5rem;
+            border: 0.0625rem solid var(--primary-border-color);
+            border-radius: 999rem;
+            background-size: 2.03125rem;
+            /* background-size: 1rem 1rem; */
+            background: url(../images/icon/icon_btn_vision-more.svg) 
+                        no-repeat center;
           }
+
         }
       }
     }
@@ -1866,6 +1877,37 @@ section {
                 display:block;
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  #vision{
+    padding: 1.25rem;
+
+    .vision__inner{
+      .vision__card{
+        display: grid;
+        grid-template-rows: 2;
+        height : 80vh;
+        
+        .vision__image__container{
+          grid-row:1;
+          height: 50vh;
+          overflow: hidden;
+          /* position: static; */
+          img{
+            position: static;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .vision__textBox{
+          grid-row:2;
+          .vision__textBox-title{
           }
         }
       }
