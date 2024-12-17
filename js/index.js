@@ -239,7 +239,7 @@ const handlePortfolio = () => {
 const handlePortfoliolist = () => {
   //모든 포트폴리오 컨텐츠 래퍼 수집
   const portfolioList = document.querySelectorAll(
-    ".portfolio__contents__wrapper"
+    ".portfolio__wrapper"
   );
 
   // 모든 래퍼 컨텐츠의 자식요소에 기능 할당.
@@ -248,11 +248,6 @@ const handlePortfoliolist = () => {
       removeWrapperActive(portfolioList);
       // 래퍼컨텐츠에 active클래스 추가
       portfolioEle.classList.add('active')
-      // 래퍼컨텐츠의 자식 요소에 클래스 추가 
-      let childNodes = portfolioEle.children;
-      for(let i=0; i<childNodes.length; i++){
-        childNodes[i].classList.add('visible');
-      }
     });
   });
 
@@ -260,10 +255,6 @@ const handlePortfoliolist = () => {
     portfolioList.forEach(wrapper =>{
       // 래퍼컨텐츠에 active클래스 제거
       wrapper.classList.remove('active');
-      let childNodes = wrapper.children;
-      for(let i=0; i<childNodes.length; i++){
-        childNodes[i].classList.remove('visible');
-      }
     })
   }
 }

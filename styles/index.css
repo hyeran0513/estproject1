@@ -450,7 +450,7 @@ section {
       margin-top: 2.69rem;
       border-top: 0.0625rem solid var(--secondary-border-color);
       padding-top: 4.69rem;
-
+      
       .company__card-item {
         flex: 1;
         padding: 1.2rem;
@@ -506,15 +506,15 @@ section {
 
 /* 포트폴리오 */
 #portfolio {
-  .portfolio__container {
+  .portfolio__inner-top {
     /* nav 타입 포트폴리오 */
-    &.portfolio__container--nav {
+    &.portfolio__inner-top--nav {
       padding: 3.125rem 1.25rem;
       max-width: 100%;
       width: 100%;
       overflow: hidden;
 
-      .portfolio__container-inner {
+      .portfolio__inner {
         margin: 0 auto;
         max-width: 75rem;
 
@@ -620,34 +620,22 @@ section {
   }
 
   /* 포트폴리오2 */
-  .portfolio__container_2 {
-    text-align: center;
-    max-width: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-    &:before {
-      content: "";
-      border-top: 0.0625rem solid var(--secondary-border-color);
-      position: absolute;
-      left: 2.5rem;
-      right: 2.5rem;
-    }
+  .portfolio__inner-bottom {
+    padding: 3.125rem 1.25rem;
 
     .portfolio__list {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      padding-top: 4.25rem;
+      border-top: 0.0625rem solid var(--secondary-border-color);
       max-width: 75rem;
+      margin: 0 auto;
+      padding: 4.25rem 1.25rem;
+      display: flex;
+      justify-content: center;
 
-      .portfolio__contents__wrapper {
+      .portfolio__wrapper {
         border-left: 0.0625rem solid var(--secondary-border-color);
         padding-left: 3rem;
         display: flex;
         flex: 1;
-        flex-direction: row;
         position: relative;
         height: 44.5498125rem;
         overflow: hidden;
@@ -685,27 +673,28 @@ section {
             transition: opacity 0.6s ease;
             opacity: 0;
           }
+          
+          .portfolio__card{
+            transform: translateX(0);
+            opacity: 1;
+            cursor: default;
+            transition: transform 0.6s ease
+                      , opacity 0.6s ease;
+          }
         }
 
-        .portfolio__contents {
+        .portfolio__card {
           display: flex;
           flex-direction: row;
-          gap: 0 0.625rem;
           width: 100%;
           height: 100%;
           margin-left: 3rem;
           transform: translateX(60%);
           opacity: 0;
-          transition: transform 0.6s ease, opacity 0.6s ease;
+          transition: transform 0.6s ease
+                    , opacity 0.6s ease;
 
-          &.visible {
-            transform: translateX(0);
-            opacity: 1;
-            cursor: default;
-            transition: transform 0.6s ease, opacity 0.6s ease;
-          }
-
-          .portfolio__contents__img {
+          .portfolio__img {
             width: 100%;
             height: 100%;
 
@@ -716,18 +705,17 @@ section {
             }
           }
 
-          .portfolio__contents__info-wrapper {
+          .portfolio__text-box {
             width: 100%;
-            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: end;
             align-items: start;
             gap: 1.5625rem;
             padding: 2.6875rem 5rem;
+            color: var(--primary-text-color);
 
-            .portfolio__contents__text {
-              color: var(--primary-text-color);
+            .portfolio__description {
               text-align: left;
               font-size: 1rem;
               font-style: normal;
@@ -735,8 +723,7 @@ section {
               line-height: 1.6875rem;
             }
 
-            .portfolio__contents__text-readmore {
-              color: var(--primary-text-color);
+            .portfolio__readmore {
               font-size: 1rem;
               font-style: normal;
               font-weight: 400;
@@ -1538,34 +1525,29 @@ section {
 
   /* 포트폴리오 */
   #portfolio {
-    .portfolio__container {
+    .portfolio__inner-top {
       /* nav 타입 포트폴리오 */
-      &.portfolio__container--nav {
-        .portfolio__container-inner {
+      &.portfolio__inner-top--nav {
+        .portfolio__inner {
           .portfolio__info-wrap {
             height: 31.25rem;
           }
         }
       }
     }
-    .portfolio__container_2 {
+    .portfolio__inner-bottom {
       .portfolio__list {
-        .portfolio__contents__wrapper {
+        .portfolio__wrapper {
           height: 31.25rem;
-          &:nth-child(4) {
-            display: none;
-          }
 
-          .portfolio__contents {
-            flex-direction: column;
+          .portfolio__card {
+            .portfolio__img {
+            }
 
-            .portfolio__contents__img {
-              height: 70%;
+            .portfolio__text-box {
+              padding:2rem;
             }
-            .portfolio__contents__info-wrapper {
-              height: 30%;
-              padding: 1.5rem 1rem;
-            }
+
           }
         }
       }
@@ -1780,12 +1762,12 @@ section {
 
   /* 포트폴리오 */
   #portfolio {
-    .portfolio__container {
+    .portfolio__inner-top {
       /* nav 타입 포트폴리오 */
-      &.portfolio__container--nav {
+      &.portfolio__inner-top--nav {
         padding: 1.25rem 0;
 
-        .portfolio__container-inner {
+        .portfolio__inner {
           .portfolio__info-wrap {
             flex-direction: column;
             gap: 1.5rem;
@@ -1832,41 +1814,57 @@ section {
         }
       }
     }
-    .portfolio__container_2 {
+    .portfolio__inner-bottom {
       width: 100%;
       .portfolio__list {
         flex-direction: column;
-        .portfolio__contents__wrapper {
+        .portfolio__wrapper {
+          flex-direction: column;
           border-top: 0.0625rem solid var(--secondary-border-color);
           border-left: none;
           padding: 0;
           padding-top: 3rem;
-          transition: color ease 0.3s, border ease 0.3s;
+          transition: color ease 0.3s
+                    , border ease 0.3s;
           &.active {
             border-top: 0.0625rem solid var(--primary-border-color);
             border-left: none;
-            transition: color ease 0.3s, border ease 0.3s;
+            transition: color ease 0.3s
+                      , border ease 0.3s;
+
+            .portfolio__card{
+              opacity: 1;
+              height: 100vh;
+              transform: translate(0, 0);
+              transition: transform 0.6s ease
+                        , opacity 0.6s ease;
+            }
           }
-          .portfolio__contents {
+          .portfolio__card {
             margin-top: 3rem;
             margin: 0;
             opacity: 0;
             height: 0;
+            padding: auto;
             transform: translate(0, 50%);
             transition: transform 0.6s ease, opacity 0.6s ease;
             overflow: hidden;
-            &.visible {
-              opacity: 1;
-              height: 100%;
-              transform: translate(0, 0);
-              transition: transform 0.6s ease, opacity 0.6s ease;
+            flex-direction: column;
+            width: 100%;
+            gap:2rem;
+            .portfolio__img {
+              width: 100%;
+              height: 70%;
             }
-            .portfolio__contents__img {
-              height: 80%;
-            }
-            .portfolio__contents__info-wrapper {
-              justify-content: center;
-              height: 20%;
+            .portfolio__text-Box {
+              padding: 1rem 1rem;
+              .portfolio__description{
+                display:block;
+                width: 100%;
+              }
+              .portfolio__readmore{
+                display:block;
+              }
             }
           }
         }
@@ -2172,9 +2170,9 @@ section {
   /* 포트폴리오 */
   #portfolio {
     /* nav 타입 포트폴리오 */
-    .portfolio__container {
-      &.portfolio__container--nav {
-        .portfolio__container-inner {
+    .portfolio__inner-top {
+      &.portfolio__inner-top--nav {
+        .portfolio__inner {
           .portfolio__control {
             .portfolio__control-prev {
               background: url(../images/icon/icon_btn_prev.svg) no-repeat center /
