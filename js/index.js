@@ -1,45 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // baseurl 처리
-  setBaseUrl();
-
-  // 스크롤 이벤트를 감지하여 헤더 배경색 변경
-  handleScrollEvent();
-
-  // swiper 객체 초기화
-  const swiper = initializeSwiper();
-
-  // 슬라이드 변경 이벤트 핸들러 추가
-  handleSlideChange(swiper);
-
-  // 재생/일시정지 버튼 이벤트 핸들러
-  handlePlayPauseButton(swiper);
-
-  // 직원 소개: 카드 아이템 관찰
-  observeElements(".member__card-item");
-
-  // 회사 소개: 텍스트 영역 관찰
-  observeElements(".company__info");
-  observeElements(".company__thumbnail");
-
-  // 인터뷰: 인터뷰 카드 영역 관찰
-  observeElements(".interview__card-item");
-
-  // 포트폴리오 이미지 슬라이드
-  handlePortfolio();
-
-  // 포트폴리오 리스트 버튼
-  handlePortfoliolist();
-
-  // theme 핸들러
-  handleTheme();
-
-  // 사이드바 핸들러
-  handleSidebar();
-
-  // 지도 이벤트 핸들러
-  // handleMap();
-});
-
 // baseurl 처리
 const setBaseUrl = () => {
   if (window.location.hostname === "hyeran0513.github.io") {
@@ -317,3 +275,45 @@ const handleSidebar = () => {
     link.addEventListener("click", () => toggleSidebar(false))
   );
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  // baseurl 처리
+  setBaseUrl();
+
+  // 스크롤 이벤트를 감지하여 헤더 배경색 변경
+  handleScrollEvent();
+
+  // swiper 객체 초기화
+  const swiper = initializeSwiper();
+
+  // 슬라이드 변경 이벤트 핸들러 추가
+  handleSlideChange(swiper);
+
+  // 재생/일시정지 버튼 이벤트 핸들러
+  handlePlayPauseButton(swiper);
+
+  // 직원 소개: 카드 아이템 관찰
+  observeElements(".member__card-item");
+
+  // 회사 소개: 텍스트 영역 관찰
+  observeElements(".company__info");
+  observeElements(".company__thumbnail");
+
+  // 인터뷰: 인터뷰 카드 영역 관찰
+  observeElements(".interview__card-item");
+
+  // 포트폴리오 이미지 슬라이드
+  handlePortfolio();
+
+  // 포트폴리오 리스트 버튼
+  handlePortfoliolist();
+
+  // theme 핸들러
+  handleTheme();
+
+  // 사이드바 핸들러
+  handleSidebar();
+
+  // 지도 이벤트 핸들러
+  // handleMap();
+});
