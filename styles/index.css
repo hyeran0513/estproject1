@@ -819,7 +819,7 @@ section {
             border-radius: 999rem;
             background-size: 2.03125rem;
             /* background-size: 1rem 1rem; */
-            background: url(../images/icon/icon_btn_vision-more.svg) no-repeat
+            background: url(../images/icon/icon_btn_vision-more_dark.svg) no-repeat
               center;
           }
         }
@@ -1898,9 +1898,7 @@ section {
       .vision__card {
         display: grid;
         grid-template-rows: 2;
-        height: 50rem;
-        row-gap: 2rem;
-        margin-bottom: 3rem;
+        height: 30rem;
 
         .vision__image__container {
           grid-row: 1;
@@ -1908,37 +1906,29 @@ section {
           overflow: hidden;
 
           img {
-            position: relative;
             width: 100%;
             object-fit: cover;
-            transform: translateY(-10rem);
           }
         }
 
         .vision__textBox {
           grid-row: 2;
-          height: 100%;
 
           .vision__textBox-title {
-            font-size: 2.5rem;
-          }
-
-          .vision__textBox-backTitle {
-            font-size: 2.5rem;
+            font-size: 2rem;
+            .vision__textBox-backTitle {
+              font-size: 2.5rem;
+              top:-1.25rem;
+            }
           }
 
           .vision__textBox-text {
-            font-size: 1.2rem;
+            font-size: 1rem;
           }
 
           .vision__textBox-viewmore {
-            font-size: 1.2rem;
-            border: 0.15rem solid var(--primary-border-color);
+            font-size: 0.8rem;
             border-right: none;
-
-            &::after {
-              border: 0.15rem solid var(--primary-border-color);
-            }
           }
         }
       }
@@ -2329,7 +2319,7 @@ section {
         .vision__text_Box {
           .vision__textBox-viewmore {
             &::after {
-              background: url(../images/icon/icon_btn_vision-more.svg) no-repeat
+              background: url(../images/icon/icon_btn_vision-more_white.svg) no-repeat
                 center;
             }
           }
