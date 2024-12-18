@@ -37,7 +37,7 @@ const initializeSwiper = () => {
     },
     autoplay: {
       delay: 3000,
-      disableOnInteraction: true,
+      disableOnInteraction:false,
     },
   });
 };
