@@ -1,3 +1,39 @@
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--secondary-border-color);
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* 헤더 */
 .header {
   position: fixed;
@@ -361,6 +397,7 @@ section {
 
     .company__intro {
       display: flex;
+      gap: 1.5rem;
       height: 18.75rem;
 
       .company__info {
@@ -465,6 +502,27 @@ section {
         cursor: pointer;
         border-radius: 0.5rem;
         background-color: var(--secondary-bg-color);
+        opacity: 0;
+        transform: translateY(20%);
+        transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.25),
+          opacity ease 0.8s;
+
+        &.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        &:nth-child(2) {
+          transition-delay: 0.1s;
+        }
+
+        &:nth-child(3) {
+          transition-delay: 0.3s;
+        }
+
+        &:nth-child(4) {
+          transition-delay: 0.5s;
+        }
 
         &.qna {
           ul {
@@ -546,6 +604,15 @@ section {
           /* 비전 텍스트박스(타이틀,내용,버튼) */
           .vision__text-box {
             flex: 1;
+            transform: translateY(20%);
+            opacity: 0;
+            transition: all 1s ease-out;
+            cursor: pointer;
+
+            &.visible {
+              transform: translateY(0);
+              opacity: 1;
+            }
 
             /* 비전 텍스트박스(타이틀) */
             .vision__text-box-header {
@@ -557,7 +624,7 @@ section {
               .vision__back-title {
                 position: absolute;
                 left: -1rem;
-                top: -2rem;
+                top: -1rem;
                 font-size: 3rem;
                 font-weight: 900;
                 letter-spacing: 0.4rem;
@@ -571,6 +638,7 @@ section {
                 position: relative;
                 z-index: 1;
                 font-size: 3.5rem;
+                font-weight: bold;
               }
             }
 
@@ -633,6 +701,16 @@ section {
             height: calc(100% + (3.2rem * 2));
             overflow: hidden;
             border-radius: 10px;
+            transform: translateY(20%);
+            opacity: 0;
+            transition: all 1s ease-out;
+            cursor: pointer;
+            transition-delay: 0.2s;
+
+            &.visible {
+              transform: translateY(0);
+              opacity: 1;
+            }
 
             img {
               width: 100%;
@@ -1015,10 +1093,6 @@ section {
           }
         }
 
-        &:nth-child(1) {
-          transition-delay: 0s;
-        }
-
         &:nth-child(2) {
           transition-delay: 0.2s;
         }
@@ -1239,10 +1313,6 @@ section {
           transform: translateY(0);
         }
 
-        &:nth-child(1) {
-          transition-delay: 0s;
-        }
-
         &:nth-child(2) {
           transition-delay: 0.2s;
 
@@ -1330,26 +1400,41 @@ section {
       .notice__list {
         .notice__list-title {
           margin: 1.4rem 0 0 1.4rem;
-          .notice__title-a {
+
+          .notice__title-link {
+            position: relative;
             padding-bottom: 0.5rem;
-            border-bottom: 0.0625rem solid var(--secondary-border-color);
             font-size: 1.5rem;
+            padding: 0 0.4rem;
+
+            &:before {
+              content: "";
+              position: absolute;
+              left: 50%;
+              bottom: -0.1rem;
+              transform: translateX(-50%);
+              display: inline-block;
+              width: 100%;
+              height: 0.8rem;
+              background-color: var(--secondary-border-color);
+              z-index: -1;
+            }
           }
         }
 
         .notice__list-item {
-          padding: 1.4rem;
           display: flex;
           justify-content: space-between;
           align-items: center;
           gap: 2rem;
-          /* position: relative; */
+          padding: 1.4rem;
 
           &:nth-child(1),
           &:nth-child(2),
           &:nth-child(3) {
             border-bottom: 0.0625rem solid var(--secondary-border-color);
           }
+
           &:last-child {
             border-bottom: none;
           }
@@ -1374,7 +1459,7 @@ section {
           }
 
           .notice__list-viewmore {
-            .notice__viewmore-a {
+            .notice__viewmore-link {
               display: flex;
               align-items: center;
               gap: 0.3rem;
@@ -1503,6 +1588,8 @@ section {
                 border-radius: 0.25rem;
                 font-size: 0.8rem;
                 transition: background-color ease 0.3s;
+                background-color: var(--primary-text-color);
+                color: var(--primary-bg-color);
 
                 & > i {
                   margin-right: 0.5rem;
@@ -1808,7 +1895,6 @@ section {
     .company__inner {
       .company__intro {
         flex-direction: column;
-        gap: 1.5rem;
         height: auto;
 
         .company__info {
@@ -2049,6 +2135,14 @@ section {
         .coworker__card-item {
           height: 10rem;
 
+          .coworker__card-info {
+            gap: 0.4rem;
+
+            .coworker__card-name {
+              font-size: 1rem;
+            }
+          }
+
           &:nth-of-type(6),
           &:nth-of-type(8) {
             grid-column: 1/2;
@@ -2246,6 +2340,12 @@ section {
         }
 
         .notice__list {
+          .notice__list-title {
+            .notice__title-link {
+              font-size: 1.2rem;
+            }
+          }
+
           .notice__list-item {
             flex-direction: column;
             align-items: flex-start;
@@ -2255,6 +2355,7 @@ section {
             .notice__list-box {
               width: 100%;
               padding: 0 0.7rem;
+
               .notice__box-title {
                 margin-bottom: 0.6rem;
                 font-size: 1rem;
@@ -2267,9 +2368,10 @@ section {
             }
 
             .notice__list-viewmore {
-              .notice__viewmore-a {
+              .notice__viewmore-link {
                 font-size: 0.8rem;
                 margin-left: 0.7rem;
+
                 .notice__viewmore-img {
                   width: 1rem;
                   height: 0.8rem;
@@ -2378,7 +2480,7 @@ section {
         .notice__list {
           .notice__list-item {
             .notice__list-viewmore {
-              .notice__viewmore-a {
+              .notice__viewmore-link {
                 &:hover {
                   .notice__viewmore-img {
                     background: url("../images/icon/notice/ico_arrow_main.svg")

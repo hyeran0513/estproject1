@@ -53,8 +53,7 @@
     <!-- Kakao 맵 API -->
     <script
       type="text/javascript"
-      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_APP_KEY&libraries=services,clusterer,drawing"
-      defer
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54772cdac3b4403953b1c4c44df17866&libraries=services,clusterer,drawing"
     ></script>
 
     <!-- 메인 JS 파일 -->
@@ -62,6 +61,11 @@
   </head>
 
   <body>
+    <!-- 로딩 -->
+    <div id="loading">
+      <div class="spinner"></div>
+    </div>
+
     <!-- 헤더 -->
     <div class="a11y-hidden">헤더</div>
 
@@ -391,7 +395,7 @@
 
             <div class="company__thumbnail">
               <img
-                src="./images/bg/company/bg_company2.png"
+                src="./images/bg/company/bg_company2.jpg"
                 alt="설계도 사진"
                 loading="lazy"
               />
@@ -507,7 +511,7 @@
                     >
                     <span class="vision__main-title">안전과 신뢰의 약속</span>
                   </div>
-                  
+
                   <p class="vision__description">
                     튼튼한 기반 위에 더 나은 미래를 세웁니다.
                   </p>
@@ -1147,7 +1151,10 @@
           <div class="notice__container">
             <div class="notice__list">
               <h3 class="notice__list-title">
-                <a class="notice__title-a" href="#" title="파트너 관련 공지사항"
+                <a
+                  class="notice__title-link"
+                  href="#"
+                  title="파트너 관련 공지사항"
                   >Partners</a
                 >
               </h3>
@@ -1167,11 +1174,11 @@
 
                 <div class="notice__list-viewmore">
                   <a
-                    class="notice__viewmore-a"
+                    class="notice__viewmore-link"
                     href="#"
                     aria-label="신규 프로젝트 의뢰 접수 마감 안내 더 보기"
                   >
-                    <span>더 보기</span>
+                    <span>자세히 보기</span>
                     <div class="notice__viewmore-img"></div>
                   </a>
                 </div>
@@ -1190,11 +1197,11 @@
 
                 <div class="notice__list-viewmore">
                   <a
-                    class="notice__viewmore-a"
+                    class="notice__viewmore-link"
                     href="#"
                     aria-label="연말 휴무 안내 더 보기"
                   >
-                    <span>더 보기</span>
+                    <span>자세히 보기</span>
                     <div class="notice__viewmore-img"></div>
                   </a>
                 </div>
@@ -1203,7 +1210,10 @@
 
             <div class="notice__list">
               <h3 class="notice__list-title">
-                <a class="notice__title-a" href="#" title="직원 관련 공지사항"
+                <a
+                  class="notice__title-link"
+                  href="#"
+                  title="직원 관련 공지사항"
                   >Employees</a
                 >
               </h3>
@@ -1223,11 +1233,11 @@
 
                 <div class="notice__list-viewmore">
                   <a
-                    class="notice__viewmore-a"
+                    class="notice__viewmore-link"
                     href="#"
                     aria-label="건축 세미나 개최 안내 더 보기"
                   >
-                    <span>더 보기</span>
+                    <span>자세히 보기</span>
                     <div class="notice__viewmore-img"></div>
                   </a>
                 </div>
@@ -1248,11 +1258,11 @@
 
                 <div class="notice__list-viewmore">
                   <a
-                    class="notice__viewmore-a"
+                    class="notice__viewmore-link"
                     href="#"
                     aria-label="홈페이지 개편 작업 공지 더 보기"
                   >
-                    <span>더 보기</span>
+                    <span>자세히 보기</span>
                     <div class="notice__viewmore-img"></div>
                   </a>
                 </div>
