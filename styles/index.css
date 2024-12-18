@@ -876,7 +876,6 @@ section {
             font-size: 1.2rem;
             font-weight: 400;
             line-height: 1.8rem;
-            margin-bottom: 0.44rem;
           }
 
           .coworker__card-position {
@@ -903,6 +902,10 @@ section {
           display: flex;
           justify-content: center;
           align-items: center;
+
+          &.has-bg {
+            background-color: var(--secondary-bg-color);
+          }
         }
 
         &:nth-of-type(6) {
@@ -992,7 +995,7 @@ section {
 
         .interview__card-info {
           .interview__card-title {
-            font-size: 1.25rem;
+            font-size: 1rem;
             font-weight: 400;
             line-height: 1.5625rem;
             margin-bottom: 1.12rem;
@@ -1097,7 +1100,7 @@ section {
             padding: 2rem;
 
             .news__card-title {
-              font-size: 1.6rem;
+              font-size: 1.2rem;
               -webkit-text-decoration: underline transparent;
               text-decoration: underline transparent;
               text-overflow: ellipsis;
@@ -1587,8 +1590,8 @@ section {
         grid-template-columns: repeat(4, 1fr);
 
         .coworker__card-item {
-          &:nth-of-type(8) {
-            grid-column: 1/2;
+          &:nth-child(5) {
+            grid-column: 2 span;
           }
         }
       }
@@ -1775,7 +1778,7 @@ section {
     .portfolio__inner-top {
       /* nav 타입 포트폴리오 */
       &.portfolio__inner-top--nav {
-        padding:  0 0 1.25rem 0;
+        padding: 0 0 1.25rem 0;
 
         .portfolio__inner {
           .portfolio__info-wrap {
