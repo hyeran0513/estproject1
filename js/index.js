@@ -37,7 +37,7 @@ const initializeSwiper = () => {
     },
     autoplay: {
       delay: 3000,
-      disableOnInteraction: false,
+      disableOnInteraction: true,
     },
   });
 };
@@ -268,9 +268,21 @@ const handleSidebar = () => {
   );
 };
 
+// 로딩 애니메이션
+const loading = () => {
+  const loading = document.getElementById("loading");
+
+  setTimeout(() => {
+    loading.classList.add("hidden");
+  }, 2000);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // baseurl 처리
   setBaseUrl();
+
+  // 로딩 애니메이션
+  loading();
 
   // 스크롤 이벤트를 감지하여 헤더 배경색 변경
   handleScrollEvent();
@@ -290,6 +302,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // 회사 소개: 텍스트 영역 관찰
   observeElements(".company__info");
   observeElements(".company__thumbnail");
+  observeElements(".company__card-item");
+
+  // 비전: 텍스트 영역 관찰
+  observeElements(".vision__text-box");
+  observeElements(".vision__image ");
 
   // 인터뷰: 인터뷰 카드 영역 관찰
   observeElements(".interview__card-item");
@@ -307,5 +324,5 @@ document.addEventListener("DOMContentLoaded", () => {
   handleSidebar();
 
   // 지도 이벤트 핸들러
-  // handleMap();
+  handleMap();
 });

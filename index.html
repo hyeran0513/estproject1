@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="이스트소프트 프론트엔드 부트캠프 - 건축사무소 프로젝트" />
+    <meta
+      name="description"
+      content="이스트소프트 프론트엔드 부트캠프 - 건축사무소 프로젝트"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="canonical" href="https://hyeran0513.github.io/estproject1/" />
 
@@ -11,33 +14,58 @@
     <!-- 중요 CSS 미리 로드 -->
     <link rel="preload" href="./styles/variables.css" as="style" />
     <link rel="preload" href="./styles/layout.css" as="style" />
-    
+
     <!-- 스타일시트 -->
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/layout.css" />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/common.css" />
-    <link rel="stylesheet" href="./styles/index.css" media="print" onload="this.media='all'" />
-  
+    <link
+      rel="stylesheet"
+      href="./styles/index.css"
+      media="print"
+      onload="this.media='all'"
+    />
+
     <!-- 아이콘 라이브러리 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
 
     <!-- Swiper CSS 및 JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-  
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+
     <!-- Kakao 맵 API -->
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_APP_KEY&libraries=services,clusterer,drawing" defer></script>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54772cdac3b4403953b1c4c44df17866&libraries=services,clusterer,drawing"
+    ></script>
 
     <!-- 메인 JS 파일 -->
     <script src="./js/index.js" defer></script>
-</head>
+  </head>
 
   <body>
+    <!-- 로딩 -->
+    <div id="loading">
+      <div class="spinner"></div>
+    </div>
+
     <!-- 헤더 -->
     <div class="a11y-hidden">헤더</div>
 
@@ -49,12 +77,16 @@
             alt="로고"
             class="logo--white"
             loading="lazy"
+            width="100"
+            height="34"
           />
           <img
             src="./images/icon/common/icon_logo_black.svg"
             alt="로고"
             class="logo--black"
             loading="lazy"
+            width="100"
+            height="34"
           />
         </a>
 
@@ -63,34 +95,69 @@
         <nav class="gnb" aria-label="주 메뉴">
           <ul class="gnb__list">
             <li class="gnb__list-item">
-              <a href="#banner" class="gnb__list-link" title="홈 페이지로 이동">홈</a>
+              <a href="#banner" class="gnb__list-link" title="홈 페이지로 이동"
+                >홈</a
+              >
             </li>
             <li class="gnb__list-item">
-              <a href="#company" class="gnb__list-link" title="회사 소개로 이동">회사 소개</a>
+              <a href="#company" class="gnb__list-link" title="회사 소개로 이동"
+                >회사 소개</a
+              >
             </li>
             <li class="gnb__list-item">
-              <a href="#portfolio" class="gnb__list-link" title="포트폴리오로 이동">포트폴리오</a>
+              <a
+                href="#vision"
+                class="gnb__list-link"
+                title="회사 비전으로 이동"
+                >회사 비전</a
+              >
             </li>
             <li class="gnb__list-item">
-              <a href="#vision" class="gnb__list-link" title="회사 비전으로 이동">회사 비전</a>
+              <a
+                href="#portfolio"
+                class="gnb__list-link"
+                title="포트폴리오로 이동"
+                >포트폴리오</a
+              >
             </li>
             <li class="gnb__list-item">
-              <a href="#coworker" class="gnb__list-link" title="직원 소개로 이동">직원 소개</a>
+              <a
+                href="#coworker"
+                class="gnb__list-link"
+                title="직원 소개로 이동"
+                >직원 소개</a
+              >
             </li>
             <li class="gnb__list-item">
-              <a href="#interview" class="gnb__list-link" title="인터뷰로 이동">인터뷰</a>
+              <a href="#interview" class="gnb__list-link" title="인터뷰로 이동"
+                >인터뷰</a
+              >
             </li>
             <li class="gnb__list-item">
-              <a href="#news" class="gnb__list-link" title="뉴스로 이동">뉴스</a>
+              <a href="#news" class="gnb__list-link" title="뉴스로 이동"
+                >뉴스</a
+              >
             </li>
             <li class="gnb__list-item">
-              <a href="#member" class="gnb__list-link" title="작업자 소개로 이동">작업자 소개</a>
+              <a
+                href="#member"
+                class="gnb__list-link"
+                title="작업자 소개로 이동"
+                >작업자 소개</a
+              >
             </li>
             <li class="gnb__list-item">
-              <a href="#notice" class="gnb__list-link" title="공지사항으로 이동">공지사항</a>
+              <a href="#notice" class="gnb__list-link" title="공지사항으로 이동"
+                >공지사항</a
+              >
             </li>
             <li class="gnb__list-item">
-              <a href="#contact" class="gnb__list-link" title="문의 페이지로 이동">문의</a>
+              <a
+                href="#contact"
+                class="gnb__list-link"
+                title="문의 페이지로 이동"
+                >문의</a
+              >
             </li>
           </ul>
         </nav>
@@ -121,97 +188,98 @@
     <div class="a11y-hidden">메뉴</div>
 
     <aside class="sidebar">
-      <nav class="sidebar__menu">
+      <div class="sidebar__inner">
+        <div class="sidebar__head">
+          <button type="button" title="메뉴 닫기" class="btn-close">
+            <i class="bx bx-x"></i>
+          </button>
+        </div>
 
-        <ul class="menu__list">
-          <li class="menu__list-item">
-            <a 
-              href="#banner" 
-              class="menu__list-link" 
-              title="홈 페이지로 이동"
-              >홈</a
-            >
-          </li>
+        <nav class="sidebar__menu">
+          <ul class="menu__list">
+            <li class="menu__list-item">
+              <a href="#banner" class="menu__list-link" title="홈 페이지로 이동"
+                >홈</a
+              >
+            </li>
 
-          <li class="menu__list-item">
-            <a href="#company" class="menu__list-link" title="회사 소개로 이동"
-              >회사 소개</a
-            >
-          </li>
+            <li class="menu__list-item">
+              <a
+                href="#company"
+                class="menu__list-link"
+                title="회사 소개로 이동"
+                >회사 소개</a
+              >
+            </li>
 
-          <li class="menu__list-item">
-            <a
-              href="#portfolio"
-              class="menu__list-link"
-              title="포트폴리오로 이동"
-              >포트폴리오</a
-            >
-          </li>
+            <li class="menu__list-item">
+              <a
+                href="#vision"
+                class="menu__list-link"
+                title="회사 비전으로 이동"
+                >회사 비전</a
+              >
+            </li>
 
-          <li class="menu__list-item">
-            <a 
-              href="#vision" 
-              class="menu__list-link" 
-              title="회사 비전으로 이동"
-              >회사 비전</a
-            >
-          </li>
+            <li class="menu__list-item">
+              <a
+                href="#portfolio"
+                class="menu__list-link"
+                title="포트폴리오로 이동"
+                >포트폴리오</a
+              >
+            </li>
 
-          <li class="menu__list-item">
-            <a 
-              href="#coworker" 
-              class="menu__list-link" 
-              title="직원 소개로 이동"
-              >직원 소개</a
-            >
-          </li>
+            <li class="menu__list-item">
+              <a
+                href="#coworker"
+                class="menu__list-link"
+                title="직원 소개로 이동"
+                >직원 소개</a
+              >
+            </li>
 
-          <li class="menu__list-item">
-            <a 
-              href="#interview" 
-              class="menu__list-link" 
-              title="인터뷰로 이동"
-              >인터뷰</a
-            >
-          </li>
+            <li class="menu__list-item">
+              <a href="#interview" class="menu__list-link" title="인터뷰로 이동"
+                >인터뷰</a
+              >
+            </li>
 
-          <li class="menu__list-item">
-            <a 
-              href="#news" 
-              class="menu__list-link" 
-              title="뉴스로 이동"
-              >뉴스</a
-            >
-          </li>
+            <li class="menu__list-item">
+              <a href="#news" class="menu__list-link" title="뉴스로 이동"
+                >뉴스</a
+              >
+            </li>
 
-          <li class="menu__list-item">
-            <a 
-              href="#member" 
-              class="menu__list-link" 
-              title="작업자 소개로 이동"
-              >작업자 소개</a
-            >
-          </li>
+            <li class="menu__list-item">
+              <a
+                href="#member"
+                class="menu__list-link"
+                title="작업자 소개로 이동"
+                >작업자 소개</a
+              >
+            </li>
 
-          <li class="menu__list-item">
-            <a 
-              href="#notice" 
-              class="menu__list-link" 
-              title="공지사항으로 이동"
-              >공지사항</a
-            >
-          </li>
+            <li class="menu__list-item">
+              <a
+                href="#notice"
+                class="menu__list-link"
+                title="공지사항으로 이동"
+                >공지사항</a
+              >
+            </li>
 
-          <li class="menu__list-item">
-            <a
-              href="#contact"
-              class="menu__list-link"
-              title="문의 페이지로 이동"
-              >문의</a
-            >
-          </li>
-        </ul>
-      </nav>
+            <li class="menu__list-item">
+              <a
+                href="#contact"
+                class="menu__list-link"
+                title="문의 페이지로 이동"
+                >문의</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </aside>
 
     <!-- 메인 -->
@@ -224,23 +292,43 @@
         <div class="swiper" aria-live="polite">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="./images/bg/banner/bg_banner1.png" alt="건물 사진1" loading="lazy" />
+              <img
+                src="./images/bg/banner/bg_banner1.png"
+                alt="건물 사진1"
+                loading="lazy"
+              />
             </div>
 
             <div class="swiper-slide">
-              <img src="./images/bg/banner/bg_banner2.png" alt="건물 사진2" loading="lazy" />
+              <img
+                src="./images/bg/banner/bg_banner2.png"
+                alt="건물 사진2"
+                loading="lazy"
+              />
             </div>
 
             <div class="swiper-slide">
-              <img src="./images/bg/banner/bg_banner3.png" alt="건물 사진3" loading="lazy" />
+              <img
+                src="./images/bg/banner/bg_banner3.png"
+                alt="건물 사진3"
+                loading="lazy"
+              />
             </div>
 
             <div class="swiper-slide">
-              <img src="./images/bg/banner/bg_banner4.png" alt="건물 사진4" loading="lazy" />
+              <img
+                src="./images/bg/banner/bg_banner4.png"
+                alt="건물 사진4"
+                loading="lazy"
+              />
             </div>
 
             <div class="swiper-slide">
-              <img src="./images/bg/banner/bg_banner5.png" alt="건물 사진5" loading="lazy" />
+              <img
+                src="./images/bg/banner/bg_banner5.png"
+                alt="건물 사진5"
+                loading="lazy"
+              />
             </div>
           </div>
 
@@ -306,7 +394,11 @@
             </div>
 
             <div class="company__thumbnail">
-              <img src="./images/bg/company/bg_company2.png" alt="설계도 사진" loading="lazy" />
+              <img
+                src="./images/bg/company/bg_company2.jpg"
+                alt="설계도 사진"
+                loading="lazy"
+              />
             </div>
           </div>
 
@@ -348,6 +440,88 @@
               <p class="company__card-content">
                 건축물의 세부까지 세심하게 설계된 도시 경관을 제공합니다.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 회사 비전 -->
+      <div class="a11y-hidden">회사 비전</div>
+
+      <!-- 비전 섹션 -->
+      <section class="vision" id="vision">
+        <!-- 비전 컨테이너 -->
+        <div class="vision__inner">
+          <div class="vision__header">
+            <div class="section__title" id="vision-title">회사 비전</div>
+          </div>
+
+          <!-- 비전 카드 리스트 -->
+          <div class="vision__cards">
+            <!-- 비전 카드 -->
+            <div class="vision__card">
+              <div class="vision__card-content">
+                <!-- 비전 텍스트 박스 -->
+                <div class="vision__text-box">
+                  <div class="vision__text-box-header">
+                    <span class="vision__back-title" aria-hidden="true"
+                      >Future</span
+                    >
+                    <span class="vision__main-title">미래를 건설하는 힘</span>
+                  </div>
+
+                  <p class="vision__description">
+                    지속 가능한 세상을 함께 만들어갑니다.
+                  </p>
+
+                  <a href="#" class="vision__more" title="회사 비전 더 보기">
+                    <span class="vision__more-text">더 보기</span>
+                    <span class="vision__more-icon"></span>
+                  </a>
+                </div>
+
+                <!-- 비전 이미지 -->
+                <div class="vision__image">
+                  <img
+                    src="./images/bg/vision/bg_vision1.png"
+                    alt="회사를 대표하는 비전 이미지 1"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- 비전 카드 -->
+            <div class="vision__card">
+              <div class="vision__card-content">
+                <!-- 비전 이미지 -->
+                <div class="vision__image">
+                  <img
+                    src="./images/bg/vision/bg_vision2.png"
+                    alt="회사를 대표하는 비전 이미지 2"
+                    loading="lazy"
+                  />
+                </div>
+
+                <!-- 비전 텍스트 박스 -->
+                <div class="vision__text-box">
+                  <div class="vision__text-box-header">
+                    <span class="vision__back-title" aria-hidden="true"
+                      >promise</span
+                    >
+                    <span class="vision__main-title">안전과 신뢰의 약속</span>
+                  </div>
+
+                  <p class="vision__description">
+                    튼튼한 기반 위에 더 나은 미래를 세웁니다.
+                  </p>
+
+                  <a href="#" class="vision__more" title="회사 비전 더 보기">
+                    <span class="vision__more-text">더 보기</span>
+                    <span class="vision__more-icon"></span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -517,82 +691,6 @@
                   >
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 회사 비전 -->
-      <div class="a11y-hidden">회사 비전</div>
-
-      <!-- 비전 섹션 -->
-      <section id="vision">
-        <!-- 비전 컨테이너 -->
-        <div class="vision__inner">
-          <h2 class="section__title" id="vision-title">회사 비전</h2>
-
-          <!-- 비전 개별 컨테이너 (텍스트, 이미지)-->
-          <div class="vision__card">
-            <!-- 비전 텍스트박스(타이틀,내용,버튼) -->
-            <div class="vision__textBox">
-              <div class="vision__textBox-title">
-                <span class="vision__textBox-backTitle" aria-hidden="true"
-                  >Future</span
-                >
-                미래를 건설하는 힘
-              </div>
-
-              <p class="vision__textBox-text">
-                지속 가능한 세상을 함께 만들어갑니다.
-              </p>
-
-              <a
-                href="#"
-                class="vision__textBox-viewmore link"
-                title="회사 비전 더 보기"
-              >
-                <span>더 보기</span>
-              </a>
-            </div>
-
-            <!-- 비전 이미지컨테이너 -->
-            <div class="vision__image__container">
-              <img
-                src="./images/bg/vision/bg_vision1.png"
-                alt="회사를 대표하는 비전 이미지 1"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          <div class="vision__card">
-            <div class="vision__image__container">
-              <img
-                src="./images/bg/vision/bg_vision2.png"
-                alt="회사를 대표하는 비전 이미지 2"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="vision__textBox">
-              <div class="vision__textBox-title">
-                <span class="vision__textBox-backTitle" aria-hidden="true"
-                  >promise</span
-                >
-                안전과 신뢰의 약속
-              </div>
-
-              <p class="vision__textBox-text">
-                튼튼한 기반 위에 더 나은 미래를 세웁니다.
-              </p>
-
-              <a
-                href="#"
-                class="vision__textBox-viewmore link"
-                title="회사 비전 더 보기"
-              >
-                <span>더 보기 </span>
-              </a>
             </div>
           </div>
         </div>
@@ -1053,7 +1151,10 @@
           <div class="notice__container">
             <div class="notice__list">
               <h3 class="notice__list-title">
-                <a class="notice__title-a" href="#" title="파트너 관련 공지사항"
+                <a
+                  class="notice__title-link"
+                  href="#"
+                  title="파트너 관련 공지사항"
                   >Partners</a
                 >
               </h3>
@@ -1073,11 +1174,11 @@
 
                 <div class="notice__list-viewmore">
                   <a
-                    class="notice__viewmore-a"
+                    class="notice__viewmore-link"
                     href="#"
                     aria-label="신규 프로젝트 의뢰 접수 마감 안내 더 보기"
                   >
-                    <span>더 보기</span>
+                    <span>자세히 보기</span>
                     <div class="notice__viewmore-img"></div>
                   </a>
                 </div>
@@ -1096,11 +1197,11 @@
 
                 <div class="notice__list-viewmore">
                   <a
-                    class="notice__viewmore-a"
+                    class="notice__viewmore-link"
                     href="#"
                     aria-label="연말 휴무 안내 더 보기"
                   >
-                    <span>더 보기</span>
+                    <span>자세히 보기</span>
                     <div class="notice__viewmore-img"></div>
                   </a>
                 </div>
@@ -1109,7 +1210,10 @@
 
             <div class="notice__list">
               <h3 class="notice__list-title">
-                <a class="notice__title-a" href="#" title="직원 관련 공지사항"
+                <a
+                  class="notice__title-link"
+                  href="#"
+                  title="직원 관련 공지사항"
                   >Employees</a
                 >
               </h3>
@@ -1129,11 +1233,11 @@
 
                 <div class="notice__list-viewmore">
                   <a
-                    class="notice__viewmore-a"
+                    class="notice__viewmore-link"
                     href="#"
                     aria-label="건축 세미나 개최 안내 더 보기"
                   >
-                    <span>더 보기</span>
+                    <span>자세히 보기</span>
                     <div class="notice__viewmore-img"></div>
                   </a>
                 </div>
@@ -1154,11 +1258,11 @@
 
                 <div class="notice__list-viewmore">
                   <a
-                    class="notice__viewmore-a"
+                    class="notice__viewmore-link"
                     href="#"
                     aria-label="홈페이지 개편 작업 공지 더 보기"
                   >
-                    <span>더 보기</span>
+                    <span>자세히 보기</span>
                     <div class="notice__viewmore-img"></div>
                   </a>
                 </div>
@@ -1264,18 +1368,12 @@
                 >
               </li>
               <li class="footer__list-item">
-                <a 
-                  href="" 
-                  class="footer__list-link" 
-                  aria-label="비핸스 링크"
+                <a href="" class="footer__list-link" aria-label="비핸스 링크"
                   >비핸스</a
                 >
               </li>
               <li class="footer__list-item">
-                <a 
-                  href="" 
-                  class="footer__list-link" 
-                  aria-label="링크드인 링크"
+                <a href="" class="footer__list-link" aria-label="링크드인 링크"
                   >링크드인</a
                 >
               </li>

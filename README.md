@@ -14,13 +14,20 @@
 ```
 📦estproject1
  ┣ 📂images
- ┃ ┣ 📂banner
- ┃ ┣ 📂company
- ┃ ┣ 📂icon
- ┃ ┣ 📂interview
- ┃ ┣ 📂member
- ┃ ┣ 📂news
- ┃ ┗ 📂portfolio
+ ┃ ┣ 📂bg
+ ┃ ┃ ┣ 📂banner
+ ┃ ┃ ┣ 📂company
+ ┃ ┃ ┣ 📂coworker
+ ┃ ┃ ┣ 📂interview
+ ┃ ┃ ┣ 📂member
+ ┃ ┃ ┣ 📂news
+ ┃ ┃ ┣ 📂portfolio
+ ┃ ┃ ┗ 📂vision
+ ┃ ┗ 📂icon
+ ┃ ┃ ┣ 📂common
+ ┃ ┃ ┣ 📂notice
+ ┃ ┃ ┣ 📂portfolio
+ ┃ ┃ ┗ 📂vision
  ┣ 📂js
  ┃ ┗ 📜index.js
  ┣ 📂styles
@@ -30,7 +37,8 @@
  ┃ ┣ 📜reset.css
  ┃ ┗ 📜variables.css
  ┣ 📜index.html
- ┗ 📜README.md
+ ┣ 📜README.md
+ ┗ 📜robots.txt
 ```
 <br/>
 

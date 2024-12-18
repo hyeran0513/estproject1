@@ -7,9 +7,9 @@
 }
 
 @font-face {
-	font-family: 'EliceDigitalBaeum-Bd';
-	src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
-	font-weight: normal;
+	font-family: 'Pretendard-Regular';
+	src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
@@ -17,7 +17,7 @@
 body {
 	background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
-	font-family: 'EliceDigitalBaeum-Bd', sans-serif;
+	font-family: 'Pretendard-Regular', sans-serif;
 	font-size: var(--font-size);
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
