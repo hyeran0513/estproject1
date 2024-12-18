@@ -2319,7 +2319,7 @@ section {
         .vision__text_Box {
           .vision__textBox-viewmore {
             &::after {
-              background: url(../images/icon/icon_btn_vision-more.svg) no-repeat
+              background: url(../images/icon/icon_btn_vision-more_white.svg) no-repeat
                 center;
             }
           }
