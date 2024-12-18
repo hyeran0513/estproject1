@@ -445,43 +445,39 @@
       <div class="a11y-hidden">회사 비전</div>
 
       <!-- 비전 섹션 -->
-      <section id="vision">
+      <section class="vision" id="vision">
         <!-- 비전 컨테이너 -->
         <div class="vision__inner">
-          <div class="vision__title">
-            <h2 class="section__title" id="vision-title">회사 비전</h2>
+          <div class="vision__header">
+            <div class="section__title" id="vision-title">회사 비전</div>
           </div>
 
-          <!-- 비전 개별 컨테이너 (텍스트, 이미지)-->
-          <div class="vision__card">
-            <div class="vision__card-item">
-              <!-- 비전 텍스트박스(타이틀,내용,버튼) -->
-              <div class="vision__card-inner">
-                <div class="vision__textBox">
-                  <div class="vision__textBox-title">
-                    <span class="vision__textBox-backTitle" aria-hidden="true"
+          <!-- 비전 카드 리스트 -->
+          <div class="vision__cards">
+            <!-- 비전 카드 -->
+            <div class="vision__card">
+              <div class="vision__card-content">
+                <!-- 비전 텍스트 박스 -->
+                <div class="vision__text-box">
+                  <div class="vision__text-box-header">
+                    <span class="vision__back-title" aria-hidden="true"
                       >Future</span
                     >
-                    <span class="vision__textBox-mainTitle"
-                      >미래를 건설하는 힘</span
-                    >
+                    <span class="vision__main-title">미래를 건설하는 힘</span>
                   </div>
 
-                  <p class="vision__textBox-text">
+                  <p class="vision__description">
                     지속 가능한 세상을 함께 만들어갑니다.
                   </p>
 
-                  <a
-                    href="#"
-                    class="vision__textBox-viewmore link"
-                    title="회사 비전 더 보기"
-                  >
-                    <span class="more-text">더 보기</span>
+                  <a href="#" class="vision__more" title="회사 비전 더 보기">
+                    <span class="vision__more-text">더 보기</span>
+                    <span class="vision__more-icon"></span>
                   </a>
                 </div>
 
-                <!-- 비전 이미지컨테이너 -->
-                <div class="vision__image__container">
+                <!-- 비전 이미지 -->
+                <div class="vision__image">
                   <img
                     src="./images/bg/vision/bg_vision1.png"
                     alt="회사를 대표하는 비전 이미지 1"
@@ -491,9 +487,11 @@
               </div>
             </div>
 
-            <div class="vision__card-item">
-              <div class="vision__card-inner">
-                <div class="vision__image__container">
+            <!-- 비전 카드 -->
+            <div class="vision__card">
+              <div class="vision__card-content">
+                <!-- 비전 이미지 -->
+                <div class="vision__image">
                   <img
                     src="./images/bg/vision/bg_vision2.png"
                     alt="회사를 대표하는 비전 이미지 2"
@@ -501,26 +499,22 @@
                   />
                 </div>
 
-                <div class="vision__textBox">
-                  <div class="vision__textBox-title">
-                    <span class="vision__textBox-backTitle" aria-hidden="true"
+                <!-- 비전 텍스트 박스 -->
+                <div class="vision__text-box">
+                  <div class="vision__text-box-header">
+                    <span class="vision__back-title" aria-hidden="true"
                       >promise</span
                     >
-                    <span class="vision__textBox-mainTitle"
-                      >안전과 신뢰의 약속</span
-                    >
+                    <span class="vision__main-title">안전과 신뢰의 약속</span>
                   </div>
-
-                  <p class="vision__textBox-text">
+                  
+                  <p class="vision__description">
                     튼튼한 기반 위에 더 나은 미래를 세웁니다.
                   </p>
 
-                  <a
-                    href="#"
-                    class="vision__textBox-viewmore link"
-                    title="회사 비전 더 보기"
-                  >
-                    <span class="more-text">더 보기 </span>
+                  <a href="#" class="vision__more" title="회사 비전 더 보기">
+                    <span class="vision__more-text">더 보기</span>
+                    <span class="vision__more-icon"></span>
                   </a>
                 </div>
               </div>

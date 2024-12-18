@@ -519,20 +519,20 @@ section {
   .vision__inner {
     margin: 0 auto;
 
-    .vision__title {
+    .vision__header {
       margin: 0 auto;
       padding: 0 1.25rem;
       max-width: 77.5rem;
     }
 
     /* 비전 개별 컨테이너 (텍스트, 이미지) */
-    .vision__card {
-      .vision__card-item {
+    .vision__cards {
+      .vision__card {
         &:nth-child(even) {
           background-color: var(--secondary-bg-color);
         }
 
-        .vision__card-inner {
+        .vision__card-content {
           margin: 0 auto;
           padding: 0 1.25rem;
           max-width: 77.5rem;
@@ -543,42 +543,22 @@ section {
           width: 100%;
           height: 30rem;
 
-          .vision__image__container {
-            width: 30rem;
-            height: calc(100% + (3.2rem * 2));
-            overflow: hidden;
-            border-radius: 10px;
-
-            img {
-              height: 100%;
-              width: 100%;
-              object-fit: cover;
-              transition: all 0.6s ease;
-
-              &:hover {
-                z-index: 10;
-                transform: scale(1.1);
-              }
-            }
-          }
-
           /* 비전 텍스트박스(타이틀,내용,버튼) */
-          .vision__textBox {
+          .vision__text-box {
             flex: 1;
 
             /* 비전 텍스트박스(타이틀) */
-            .vision__textBox-title {
-              font-size: 2.4rem;
+            .vision__text-box-header {
               position: relative;
               text-transform: uppercase;
               margin-bottom: 0.875rem;
 
               /* 비전 텍스트박스(타이틀 배경글자) */
-              .vision__textBox-backTitle {
+              .vision__back-title {
                 position: absolute;
                 left: -1rem;
                 top: -2rem;
-                font-size: 3.5rem;
+                font-size: 3rem;
                 font-weight: 900;
                 letter-spacing: 0.4rem;
                 text-transform: uppercase;
@@ -587,47 +567,82 @@ section {
                 -webkit-text-stroke-color: var(--secondary-text-color);
               }
 
-              .vision__textBox-mainTitle {
+              .vision__main-title {
                 position: relative;
                 z-index: 1;
+                font-size: 3.5rem;
               }
             }
 
             /* 비전 텍스트박스(내용) */
-            .vision__textBox-text {
+            .vision__description {
               font-size: 1rem;
               margin-bottom: 2.3rem;
               color: var(--secondary-text-color);
             }
 
             /* 비전 텍스트박스(버튼) */
-            .vision__textBox-viewmore {
+            .vision__more {
               display: inline-flex;
               align-items: center;
               border: 0.0625rem solid var(--primary-border-color);
-              border-radius: 999rem;
+              border-radius: 1.875rem;
               border-right: none;
               transition: color 0.6s ease, transform 0.6s ease;
 
-              .more-text {
+              &:hover {
+                color: var(--primary-color);
+                transform: scale(1.1);
+
+                .vision__more-icon {
+                  &::after {
+                    background: url("../images/icon/vision/icon_arrow_main.svg")
+                      no-repeat center / contain;
+                  }
+                }
+              }
+
+              .vision__more-text {
                 padding: 0 1rem;
               }
 
-              &.link:hover {
-                color: var(--primary-color);
-                transform: scale(1.1);
-              }
-
-              &::after {
-                content: "";
-                padding: 0.67rem;
+              .vision__more-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 width: 3rem;
-                height: 3rem;
-                border: 0.0625rem solid var(--primary-border-color);
-                border-radius: 999rem;
-                background-size: 2.03125rem;
-                background: url("../images/icon/vision/icon_more_black.svg")
-                  no-repeat center;
+                aspect-ratio: 1;
+                border: 1px solid var(--primary-border-color);
+                border-radius: 50%;
+                position: relative;
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  width: 2rem;
+                  aspect-ratio: 1;
+                  background: url("../images/icon/vision/icon_arrow_black.svg")
+                    no-repeat center / contain;
+                }
+              }
+            }
+          }
+
+          .vision__image {
+            width: 30rem;
+            height: calc(100% + (3.2rem * 2));
+            overflow: hidden;
+            border-radius: 10px;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.6s ease;
+
+              &:hover {
+                z-index: 10;
+                transform: scale(1.1);
               }
             }
           }
@@ -1617,17 +1632,12 @@ section {
     /* 비전 컨테이너 */
     .vision__inner {
       /* 비전 개별 컨테이너 (텍스트, 이미지) */
-      .vision__card {
-        .vision__card-item {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 30rem;
-
-          .vision__image__container {
-            width: 20rem;
-            height: 30rem;
+      .vision__cards {
+        .vision__card {
+          .vision__card-content {
+            .vision__image {
+              width: 40%;
+            }
           }
         }
       }
@@ -1853,41 +1863,57 @@ section {
 
   /* 비전 */
   #vision {
-    padding: 1.25rem;
-    padding-top: 0;
-    margin-top: 0;
+    padding: 1.25rem 0;
 
     .vision__inner {
-      .vision__card {
-        .vision__card-item {
-          .vision__image__container {
-            grid-row: 1;
-            height: 100%;
-            overflow: hidden;
+      .vision__cards {
+        .vision__card {
+          .vision__card-content {
+            gap: 0.75rem;
+            height: 12rem;
 
-            img {
-              width: 100%;
-              object-fit: cover;
-            }
-          }
+            .vision__text-box {
+              .vision__text-box-header {
+                margin-bottom: 0.4rem;
 
-          .vision__textBox {
-            .vision__textBox-title {
-              font-size: 2rem;
+                .vision__back-title {
+                  top: -0.4rem;
+                  left: -0.4rem;
+                  font-size: 1rem;
+                }
 
-              .vision__textBox-backTitle {
-                font-size: 2.5rem;
-                top: -1.25rem;
+                .vision__main-title {
+                  font-size: 1.3rem;
+                }
+              }
+
+              .vision__description {
+                margin-bottom: 0.8rem;
+                font-size: 0.8rem;
+              }
+
+              .vision__more {
+                .more-text {
+                  font-size: 0.8rem;
+                }
+
+                .vision__more-text {
+                  font-size: 0.8rem;
+                }
+
+                .vision__more-icon {
+                  width: 2rem;
+
+                  &::after {
+                    width: 1rem;
+                  }
+                }
               }
             }
 
-            .vision__textBox-text {
-              font-size: 1rem;
-            }
-
-            .vision__textBox-viewmore {
-              font-size: 0.8rem;
-              border-right: none;
+            .vision__image {
+              width: 45%;
+              height: calc(100% + (1.4rem * 2));
             }
           }
         }
@@ -2397,19 +2423,15 @@ section {
   /* 비전 */
   #vision {
     .vision__inner {
-      .vision__card {
-        .vision__card-item {
-          .vision__textBox {
-            & .vision__textBox-title {
-              .vision__textBox-backTitle {
-                color: var(--primary-bg-color);
-              }
-            }
-
-            .vision__textBox-viewmore {
-              &::after {
-                background: url("../images/icon/vision/icon_more_white.svg")
-                  no-repeat center;
+      .vision__cards {
+        .vision__card {
+          .vision__text-box {
+            .vision__more {
+              .vision__more-icon {
+                &::after {
+                  background: url("../images/icon/vision/icon_arrow_white.svg")
+                    no-repeat center / contain;
+                }
               }
             }
           }
