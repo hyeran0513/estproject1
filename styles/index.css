@@ -303,7 +303,7 @@ section {
             .swiper-button-prev,
             .swiper-button-next {
               position: static;
-              margin-top: 0;
+              margin: 0 0.125rem;
 
               &::after {
                 font-family: "Font Awesome 6 Free";
@@ -836,8 +836,8 @@ section {
             border-radius: 999rem;
             background-size: 2.03125rem;
             /* background-size: 1rem 1rem; */
-            background: url(../images/icon/icon_btn_vision-more_dark.svg) no-repeat
-              center;
+            background: url(../images/icon/icon_btn_vision-more_dark.svg)
+              no-repeat center;
           }
         }
       }
@@ -1098,7 +1098,6 @@ section {
 
             .new__card-content {
               margin-top: 0.4rem;
-              color: var(--secondary-text-color);
             }
           }
         }
@@ -1127,7 +1126,6 @@ section {
 
             .new__card-content {
               margin-top: 0.4rem;
-              color: var(--secondary-text-color);
             }
           }
         }
@@ -1281,34 +1279,36 @@ section {
 
     .notice__container {
       display: grid;
-      grid-template-columns: minmax(30%, 40%) 1fr;
+      grid-template-columns: 1fr;
       border-radius: 0.625rem;
       border: 0.0625rem solid var(--secondary-border-color);
       overflow: hidden;
 
-      .notice__title {
-        width: 100%;
-        padding: 1.4rem;
-        border-right: 0.0625rem solid var(--secondary-border-color);
-        background: url(../images/interview/interview_pic1.jpg) no-repeat center /
-          cover;
-      }
-
       .notice__list {
-        display: grid;
+        .notice__list-title {
+          margin: 1.4rem 0 0 1.4rem;
+          .notice__title-a {
+            padding-bottom: 0.5rem;
+            border-bottom: 0.0625rem solid var(--secondary-border-color);
+            font-size: 1.5rem;
+          }
+        }
 
         .notice__list-item {
+          padding: 1.4rem;
           display: flex;
           justify-content: space-between;
           align-items: center;
           gap: 2rem;
-          padding: 1.4rem;
-          position: relative;
+          /* position: relative; */
 
           &:nth-child(1),
           &:nth-child(2),
           &:nth-child(3) {
             border-bottom: 0.0625rem solid var(--secondary-border-color);
+          }
+          &:last-child {
+            border-bottom: none;
           }
 
           .notice__list-box {
@@ -1323,7 +1323,7 @@ section {
             }
 
             .notice__box-content {
-              font-size: 1rem;
+              font-size: 0.9rem;
               font-weight: 400;
               line-height: 1.5rem;
               color: var(--secondary-text-color);
@@ -1950,7 +1950,7 @@ section {
 
             .vision__textBox-backTitle {
               font-size: 2.5rem;
-              top:-1.25rem;
+              top: -1.25rem;
             }
           }
 
@@ -2181,7 +2181,7 @@ section {
 
             .notice__list-box {
               width: 100%;
-
+              padding: 0 0.7rem;
               .notice__box-title {
                 margin-bottom: 0.6rem;
                 font-size: 1rem;
@@ -2196,7 +2196,7 @@ section {
             .notice__list-viewmore {
               .notice__viewmore-a {
                 font-size: 0.8rem;
-
+                margin-left: 0.7rem;
                 .notice__viewmore-img {
                   width: 1rem;
                   height: 0.8rem;
@@ -2351,8 +2351,8 @@ section {
         .vision__textBox {
           .vision__textBox-viewmore {
             &::after {
-              background: url(../images/icon/icon_btn_vision-more_white.svg) no-repeat
-                center;
+              background: url(../images/icon/icon_btn_vision-more_white.svg)
+                no-repeat center;
             }
           }
         }

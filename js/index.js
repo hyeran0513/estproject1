@@ -27,7 +27,6 @@ const initializeSwiper = () => {
     speed: 800,
     pagination: {
       el: ".swiper-pagination",
-      clickable: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -196,26 +195,24 @@ const handlePortfolio = () => {
 // 포트폴리오 리스트 요소 동작
 const handlePortfoliolist = () => {
   //모든 포트폴리오 컨텐츠 래퍼 수집
-  const portfolioList = document.querySelectorAll(
-    ".portfolio__wrapper"
-  );
+  const portfolioList = document.querySelectorAll(".portfolio__wrapper");
 
   // 모든 래퍼 컨텐츠의 자식요소에 기능 할당.
-  portfolioList.forEach( portfolioEle =>{
-    portfolioEle.addEventListener('click' , ()=>{
+  portfolioList.forEach((portfolioEle) => {
+    portfolioEle.addEventListener("click", () => {
       removeWrapperActive(portfolioList);
       // 래퍼컨텐츠에 active클래스 추가
-      portfolioEle.classList.add('active')
+      portfolioEle.classList.add("active");
     });
   });
 
   const removeWrapperActive = (portfolioList) => {
-    portfolioList.forEach(wrapper =>{
+    portfolioList.forEach((wrapper) => {
       // 래퍼컨텐츠에 active클래스 제거
-      wrapper.classList.remove('active');
-    })
-  }
-}
+      wrapper.classList.remove("active");
+    });
+  };
+};
 
 // theme 핸들러
 const handleTheme = () => {
@@ -259,7 +256,7 @@ const handleSidebar = () => {
   };
 
   openBtn.addEventListener("click", () => toggleSidebar(true));
-  
+
   closeBtn.addEventListener("click", () => toggleSidebar(false));
 
   menuLinks.forEach((link) =>
