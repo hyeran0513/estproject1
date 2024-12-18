@@ -450,7 +450,7 @@ section {
       margin-top: 2.69rem;
       border-top: 0.0625rem solid var(--secondary-border-color);
       padding-top: 4.69rem;
-      
+
       .company__card-item {
         flex: 1;
         padding: 1.2rem;
@@ -637,7 +637,7 @@ section {
         display: flex;
         flex: 1;
         position: relative;
-        height: 44.5498125rem;
+        height: 37.5rem;
         overflow: hidden;
         transition: border-left 0.6s ease;
 
@@ -673,13 +673,12 @@ section {
             transition: opacity 0.6s ease;
             opacity: 0;
           }
-          
-          .portfolio__card{
+
+          .portfolio__card {
             transform: translateX(0);
             opacity: 1;
             cursor: default;
-            transition: transform 0.6s ease
-                      , opacity 0.6s ease;
+            transition: transform 0.6s ease, opacity 0.6s ease;
           }
         }
 
@@ -691,12 +690,13 @@ section {
           margin-left: 3rem;
           transform: translateX(60%);
           opacity: 0;
-          transition: transform 0.6s ease
-                    , opacity 0.6s ease;
+          transition: transform 0.6s ease, opacity 0.6s ease;
 
           .portfolio__img {
             width: 100%;
             height: 100%;
+            border-radius: 10px;
+            overflow: hidden;
 
             img {
               width: 100%;
@@ -710,9 +710,8 @@ section {
             display: flex;
             flex-direction: column;
             justify-content: end;
-            align-items: start;
-            gap: 1.5625rem;
-            padding: 2.6875rem 5rem;
+            gap: 1.5rem;
+            padding: 2rem;
             color: var(--primary-text-color);
 
             .portfolio__description {
@@ -796,12 +795,11 @@ section {
 
         /* 비전 텍스트박스(버튼) */
         .vision__textBox-viewmore {
-          transition: color 0.6s ease
-                    , transform 0.6s ease;
+          transition: color 0.6s ease, transform 0.6s ease;
           padding: 0.875rem 5.060625rem 0.875rem 1.9375rem;
           border: 0.0625rem solid var(--primary-border-color);
           border-radius: 999rem;
-          border-right:none;
+          border-right: none;
           position: relative;
 
           &.link:hover {
@@ -809,20 +807,20 @@ section {
             transform: scale(1.1);
           }
 
-          &::after{
-            content: '';
+          &::after {
+            content: "";
             position: absolute;
-            top: 0.0rem;
-            bottom: 0.0rem;
-            padding:0.67rem;
+            top: 0rem;
+            bottom: 0rem;
+            padding: 0.67rem;
             right: 0;
             width: 3.5rem;
             border: 0.0625rem solid var(--primary-border-color);
             border-radius: 999rem;
             background-size: 2.03125rem;
             /* background-size: 1rem 1rem; */
-            background: url(../images/icon/icon_btn_vision-more.svg) 
-                        no-repeat center;
+            background: url(../images/icon/icon_btn_vision-more.svg) no-repeat
+              center;
           }
         }
       }
@@ -878,7 +876,6 @@ section {
             font-size: 1.2rem;
             font-weight: 400;
             line-height: 1.8rem;
-            margin-bottom: 0.44rem;
           }
 
           .coworker__card-position {
@@ -905,6 +902,10 @@ section {
           display: flex;
           justify-content: center;
           align-items: center;
+
+          &.has-bg {
+            background-color: var(--secondary-bg-color);
+          }
         }
 
         &:nth-of-type(6) {
@@ -994,7 +995,7 @@ section {
 
         .interview__card-info {
           .interview__card-title {
-            font-size: 1.25rem;
+            font-size: 1rem;
             font-weight: 400;
             line-height: 1.5625rem;
             margin-bottom: 1.12rem;
@@ -1080,6 +1081,7 @@ section {
 
             .new__card-content {
               margin-top: 0.4rem;
+              color: var(--secondary-text-color);
             }
           }
         }
@@ -1098,13 +1100,17 @@ section {
             padding: 2rem;
 
             .news__card-title {
-              margin-bottom: 0.6rem;
-              font-size: 1.6rem;
+              font-size: 1.2rem;
               -webkit-text-decoration: underline transparent;
               text-decoration: underline transparent;
               text-overflow: ellipsis;
               text-underline-offset: 0.2rem;
               transition: text-decoration ease 0.3s;
+            }
+
+            .new__card-content {
+              margin-top: 0.4rem;
+              color: var(--secondary-text-color);
             }
           }
         }
@@ -1260,63 +1266,76 @@ section {
       display: grid;
       grid-template-columns: minmax(30%, 40%) 1fr;
       border-radius: 0.625rem;
-      background: url(../images/interview/interview_pic1.jpg) no-repeat center /
-        cover;
-      border: 0.0625rem solid black;
+      border: 0.0625rem solid var(--secondary-border-color);
+      overflow: hidden;
 
       .notice__title {
         width: 100%;
-        padding: 3.125rem 0;
-        border-right: 0.0625rem solid black;
-
-        .notice__title-notice {
-          font-size: 4.375rem;
-          font-weight: 400;
-          text-align: center;
-          line-height: 5rem;
-          letter-spacing: -0.0875rem;
-          text-transform: uppercase;
-        }
+        padding: 1.4rem;
+        border-right: 0.0625rem solid var(--secondary-border-color);
+        background: url(../images/interview/interview_pic1.jpg) no-repeat center /
+          cover;
       }
+
       .notice__list {
         display: grid;
 
         .notice__list-item {
-          display: grid;
-          grid-template-columns: 1fr minmax(20%, 30%);
+          display: flex;
+          justify-content: space-between;
           align-items: center;
-          padding: 3rem 2rem 3rem 3.62rem;
+          gap: 2rem;
+          padding: 1.4rem;
           position: relative;
+
           &:nth-child(1),
           &:nth-child(2),
           &:nth-child(3) {
-            border-bottom: 0.0625rem solid black;
+            border-bottom: 0.0625rem solid var(--secondary-border-color);
           }
 
           .notice__list-box {
-            width: 70%;
+            flex: 1;
 
             .notice__box-title {
-              font-size: 2.1875rem;
+              font-size: 1.125rem;
               font-weight: 400;
-              line-height: 2.8125rem;
               letter-spacing: 0.04375rem;
               text-transform: uppercase;
-              margin-bottom: 0.36rem;
+              margin-bottom: 0.4rem;
             }
 
             .notice__box-content {
-              font-size: 1.125rem;
+              font-size: 1rem;
               font-weight: 400;
               line-height: 1.5rem;
+              color: var(--secondary-text-color);
             }
           }
 
           .notice__list-viewmore {
             .notice__viewmore-a {
+              display: flex;
+              align-items: center;
+              gap: 0.3rem;
+              font-size: 0.8rem;
+              transition: color ease 0.3s;
+
+              &:hover {
+                color: var(--primary-color);
+
+                .notice__viewmore-img {
+                  background: url("/images/notice/ico_pointer_main.svg")
+                    no-repeat center / auto 100%;
+                }
+              }
+
               .notice__viewmore-img {
-                margin-left: 0.5rem;
-                transform: translateY(30%);
+                width: 2rem;
+                height: 1.2rem;
+                background: url("/images/notice/ico_pointer.svg") no-repeat
+                  center / auto 100%;
+                transition: background ease 0.3s;
               }
             }
           }
@@ -1548,19 +1567,16 @@ section {
         }
       }
     }
+
     .portfolio__inner-bottom {
       .portfolio__list {
         .portfolio__wrapper {
           height: 31.25rem;
 
           .portfolio__card {
-            .portfolio__img {
-            }
-
             .portfolio__text-box {
-              padding:2rem;
+              padding: 2rem;
             }
-
           }
         }
       }
@@ -1574,8 +1590,8 @@ section {
         grid-template-columns: repeat(4, 1fr);
 
         .coworker__card-item {
-          &:nth-of-type(8) {
-            grid-column: 1/2;
+          &:nth-child(5) {
+            grid-column: 2 span;
           }
         }
       }
@@ -1604,24 +1620,6 @@ section {
     .member__inner {
       .member__card {
         grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  }
-
-  /* 공지사항 */
-  #notice {
-    .notice__inner {
-      .notice__container {
-        .notice__list-item {
-          .notice__list-viewmore {
-            .notice__viewmore-a {
-              margin-right: 2rem;
-              .notice__viewmore-img {
-                padding-left: 1rem;
-              }
-            }
-          }
-        }
       }
     }
   }
@@ -1775,10 +1773,12 @@ section {
 
   /* 포트폴리오 */
   #portfolio {
+    padding: 1.25rem;
+
     .portfolio__inner-top {
       /* nav 타입 포트폴리오 */
       &.portfolio__inner-top--nav {
-        padding: 1.25rem 0;
+        padding: 0 0 1.25rem 0;
 
         .portfolio__inner {
           .portfolio__info-wrap {
@@ -1787,7 +1787,6 @@ section {
             height: auto;
 
             .portfolio__info {
-              padding: 0 1.25rem;
               width: 100%;
 
               .portfolio__details {
@@ -1804,11 +1803,11 @@ section {
 
             .portfolio__picture-wrap {
               position: relative;
-              left: 1.25rem;
+              left: 0;
 
               .portfolio__picture-container {
                 .portfolio__picture {
-                  flex: 0 0 calc(100% - 2.5rem);
+                  flex: 0 0 100%;
                 }
               }
             }
@@ -1829,32 +1828,36 @@ section {
     }
 
     .portfolio__inner-bottom {
+      padding: 1.25rem 0 0 0;
       width: 100%;
+
       .portfolio__list {
         flex-direction: column;
-        padding-bottom: 0;
+        padding: 0;
+
         .portfolio__wrapper {
           flex-direction: column;
           border-top: 0.0625rem solid var(--secondary-border-color);
           border-left: none;
           padding: 0;
           padding-top: 3rem;
-          transition: color ease 0.3s
-                    , border ease 0.3s;
+          transition: color ease 0.3s, border ease 0.3s;
+
           &.active {
             border-top: 0.0625rem solid var(--primary-border-color);
             border-left: none;
-            transition: color ease 0.3s
-                      , border ease 0.3s;
+            transition: color ease 0.3s, border ease 0.3s;
 
-            .portfolio__card{
-              height: 80vh;
+            .portfolio__card {
+              height: auto;
               transform: translate(0, 0);
-              .portfolio__img{
-                height: 80%;
+
+              .portfolio__img {
+                height: 12rem;
               }
             }
           }
+
           .portfolio__card {
             margin: 0;
             height: 0;
@@ -1869,17 +1872,15 @@ section {
               width: 100%;
               height: 100%;
             }
-            .portfolio__text-Box {
+
+            .portfolio__text-box {
+              justify-content: flex-start;
               height: 100%;
-              padding: 0rem 1rem;
+              padding: 1.2rem 0;
+              gap: 0.8rem;
 
-              .portfolio__description{
-                display:block;
-                width: 100%;
-              }
-
-              .portfolio__readmore{
-                display:block;
+              .portfolio__readmore {
+                font-size: 0.8rem;
               }
             }
           }
@@ -1888,23 +1889,25 @@ section {
     }
   }
 
-  #vision{
+  #vision {
     padding: 1.25rem;
-    padding-top : 0;
-    margin-top : 0;
-    .vision__inner{
-      .vision__card{
+    padding-top: 0;
+    margin-top: 0;
+
+    .vision__inner {
+      .vision__card {
         display: grid;
         grid-template-rows: 2;
-        height : 50rem;
-        row-gap : 2rem;
+        height: 50rem;
+        row-gap: 2rem;
         margin-bottom: 3rem;
-        .vision__image__container{
-          grid-row:1;
+
+        .vision__image__container {
+          grid-row: 1;
           height: 100%;
-          
           overflow: hidden;
-          img{
+
+          img {
             position: relative;
             width: 100%;
             object-fit: cover;
@@ -1912,25 +1915,29 @@ section {
           }
         }
 
-        .vision__textBox{
-          grid-row:2;
+        .vision__textBox {
+          grid-row: 2;
           height: 100%;
-          
-          .vision__textBox-title{
+
+          .vision__textBox-title {
             font-size: 2.5rem;
           }
-          .vision__textBox-backTitle{
+
+          .vision__textBox-backTitle {
             font-size: 2.5rem;
           }
-          .vision__textBox-text{
+
+          .vision__textBox-text {
             font-size: 1.2rem;
           }
-          .vision__textBox-viewmore{
+
+          .vision__textBox-viewmore {
             font-size: 1.2rem;
-            border:0.15rem solid var(--primary-border-color);
-            border-right:none;
-            &::after{
-              border:0.15rem solid var(--primary-border-color);
+            border: 0.15rem solid var(--primary-border-color);
+            border-right: none;
+
+            &::after {
+              border: 0.15rem solid var(--primary-border-color);
             }
           }
         }
@@ -2030,11 +2037,11 @@ section {
               padding: 0.8rem;
 
               .news__card-title {
-                margin-bottom: 0.5rem;
                 font-size: 1rem;
               }
 
               .new__card-content {
+                margin-top: 0.2rem;
                 font-size: 0.8rem;
               }
             }
@@ -2133,12 +2140,48 @@ section {
   /* 공지사항 */
   #notice {
     padding: 1.25rem;
+
     .notice__inner {
       .notice__container {
         grid-template-columns: 1fr;
+        max-width: 100%;
+
         .notice__title {
-          border-right: none;
-          border-bottom: 0.0625rem solid black;
+          display: none;
+        }
+
+        .notice__list {
+          .notice__list-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.8rem;
+            padding: 0.8rem;
+
+            .notice__list-box {
+              width: 100%;
+
+              .notice__box-title {
+                margin-bottom: 0.6rem;
+                font-size: 1rem;
+              }
+
+              .notice__box-content {
+                line-height: 1.2rem;
+                font-size: 0.8rem;
+              }
+            }
+
+            .notice__list-viewmore {
+              .notice__viewmore-a {
+                font-size: 0.8rem;
+
+                .notice__viewmore-img {
+                  width: 1rem;
+                  height: 0.8rem;
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -2230,6 +2273,33 @@ section {
     }
   }
 
+  /* 공지사항 */
+  #notice {
+    .notice__inner {
+      .notice__container {
+        .notice__list {
+          .notice__list-item {
+            .notice__list-viewmore {
+              .notice__viewmore-a {
+                &:hover {
+                  .notice__viewmore-img {
+                    background: url("/images/notice/ico_pointer_main.svg")
+                      no-repeat center / auto 100%;
+                  }
+                }
+
+                .notice__viewmore-img {
+                  background: url("/images/notice/ico_pointer_white.svg")
+                    no-repeat center / auto 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   /* 포트폴리오 */
   #portfolio {
     /* nav 타입 포트폴리오 */
@@ -2253,13 +2323,14 @@ section {
   }
 
   /* 비전 */
-  #vision{
-    .vision__inner{
-      .vision__card{
-        .vision__text_Box{
-          .vision__textBox-viewmore{
-            &::after{
-              background: url(../images/icon/icon_btn_vision-more.svg) no-repeat center;
+  #vision {
+    .vision__inner {
+      .vision__card {
+        .vision__text_Box {
+          .vision__textBox-viewmore {
+            &::after {
+              background: url(../images/icon/icon_btn_vision-more.svg) no-repeat
+                center;
             }
           }
         }
