@@ -606,12 +606,12 @@ section {
           }
 
           .portfolio__control-prev {
-            background: url("../images/icon/portfolio/icon_prev_dark.svg") no-repeat
+            background: url("../images/icon/portfolio/icon_prev_black.svg") no-repeat
               center / cover;
           }
 
           .portfolio__control-next {
-            background: url("../images/icon/portfolio/icon_next_dark.svg") no-repeat
+            background: url("../images/icon/portfolio/icon_next_black.svg") no-repeat
               center / cover;
           }
         }
@@ -835,7 +835,7 @@ section {
             border: 0.0625rem solid var(--primary-border-color);
             border-radius: 999rem;
             background-size: 2.03125rem;
-            background: url("../images/icon/vision/icon_more_dark.svg")
+            background: url("../images/icon/vision/icon_more_black.svg")
               no-repeat center;
           }
         }
@@ -1349,7 +1349,7 @@ section {
               .notice__viewmore-img {
                 width: 2rem;
                 height: 1.2rem;
-                background: url("../images/icon/notice/ico_arrow.svg") no-repeat
+                background: url("../images/icon/notice/ico_arrow_black.svg") no-repeat
                   center / auto 100%;
                 transition: background ease 0.3s;
               }
@@ -2329,12 +2329,12 @@ section {
         .portfolio__inner {
           .portfolio__control {
             .portfolio__control-prev {
-              background: url("../images/icon/portfolio/icon_prev.svg") no-repeat center /
+              background: url("../images/icon/portfolio/icon_prev_white.svg") no-repeat center /
                 cover;
             }
 
             .portfolio__control-next {
-              background: url("../images/icon/portfolio/icon_next.svg") no-repeat center /
+              background: url("../images/icon/portfolio/icon_next_white.svg") no-repeat center /
                 cover;
             }
           }
