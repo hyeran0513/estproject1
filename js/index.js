@@ -251,6 +251,10 @@ const handleSidebar = () => {
   const openBtn = document.querySelector(".btn-hamburger");
   const menuLinks = document.querySelectorAll(".menu__list-link");
 
+  if (!sidebar || !closeBtn || !openBtn || menuLinks.length === 0) {
+    return;
+  }
+
   const toggleSidebar = (isOpen) => {
     sidebar.classList.toggle("sidebar--open", isOpen);
   };

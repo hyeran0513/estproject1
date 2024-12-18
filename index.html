@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="이스트소프트 프론트엔드 부트캠프 - 건축사무소 프로젝트">
+    <meta
+      name="description"
+      content="이스트소프트 프론트엔드 부트캠프 - 건축사무소 프로젝트"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://hyeran0513.github.io/estproject1/" />
 
     <title>이스트소프트 프론트엔드 부트캠프</title>
     <!-- 폰트 적용 -->
@@ -12,11 +16,11 @@
       rel="stylesheet"
     />
     <!-- 스타일시트 -->
-    <link rel="stylesheet" href="styles/variables.css" />
-    <link rel="stylesheet" href="styles/layout.css" />
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/common.css" />
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/common.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -40,7 +44,7 @@
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54772cdac3b4403953b1c4c44df17866&libraries=services,clusterer,drawing"
     ></script>
-    <script src="js/index.js" defer></script>
+    <script src="./js/index.js" defer></script>
   </head>
 
   <body>
@@ -64,44 +68,35 @@
 
         <div class="a11y-hidden">메뉴</div>
 
-        <nav class="gnb">
+        <nav class="gnb" aria-label="주 메뉴">
           <ul class="gnb__list">
             <li class="gnb__list-item">
               <a href="#banner" class="gnb__list-link">홈</a>
             </li>
-
             <li class="gnb__list-item">
               <a href="#company" class="gnb__list-link">회사 소개</a>
             </li>
-
             <li class="gnb__list-item">
               <a href="#portfolio" class="gnb__list-link">포트폴리오</a>
             </li>
-
             <li class="gnb__list-item">
               <a href="#vision" class="gnb__list-link">회사 비전</a>
             </li>
-
             <li class="gnb__list-item">
               <a href="#coworker" class="gnb__list-link">직원 소개</a>
             </li>
-
             <li class="gnb__list-item">
               <a href="#interview" class="gnb__list-link">인터뷰</a>
             </li>
-
             <li class="gnb__list-item">
               <a href="#news" class="gnb__list-link">뉴스</a>
             </li>
-
             <li class="gnb__list-item">
               <a href="#member" class="gnb__list-link">작업자 소개</a>
             </li>
-
             <li class="gnb__list-item">
               <a href="#notice" class="gnb__list-link">공지사항</a>
             </li>
-
             <li class="gnb__list-item">
               <a href="#contact" class="gnb__list-link">문의</a>
             </li>
@@ -109,76 +104,122 @@
         </nav>
 
         <div class="btn-wrap">
-          <button type="button" id="btn-theme-toggle" title="테마 변경">
+          <button
+            type="button"
+            id="btn-theme-toggle"
+            aria-label="테마 변경"
+            title="테마 변경"
+          >
             <i class="bx bx-moon"></i>
           </button>
 
-          <button type="button" class="btn-hamburger" title="햄버거 버튼">
+          <button
+            type="button"
+            class="btn-hamburger"
+            aria-label="메뉴 열기"
+            title="햄버거 버튼"
+          >
             <i class="bx bx-menu"></i>
           </button>
         </div>
       </div>
     </header>
 
-    <!-- 사이드바 -->
-    <div class="a11y-hidden">사이드바</div>
+    <!-- 메뉴 -->
+    <div class="a11y-hidden">메뉴</div>
 
     <aside class="sidebar">
-      <div class="sidebar__inner">
-        <!-- 닫기 버튼 -->
-        <div class="sidebar__head">
-          <button class="btn-close" title="닫기">
-            <i class="bx bx-x"></i>
-          </button>
-        </div>
+      <nav class="sidebar__menu">
 
-        <!-- 메뉴 -->
-        <div class="a11y-hidden">메뉴</div>
+        <ul class="menu__list">
+          <li class="menu__list-item">
+            <a 
+              href="#banner" 
+              class="menu__list-link" 
+              title="홈 페이지로 이동"
+              >홈</a
+            >
+          </li>
 
-        <nav class="sidebar__menu">
-          <ul class="menu__list">
-            <li class="menu__list-item">
-              <a href="#banner" class="menu__list-link">홈</a>
-            </li>
+          <li class="menu__list-item">
+            <a href="#company" class="menu__list-link" title="회사 소개로 이동"
+              >회사 소개</a
+            >
+          </li>
 
-            <li class="menu__list-item">
-              <a href="#company" class="menu__list-link">회사 소개</a>
-            </li>
+          <li class="menu__list-item">
+            <a
+              href="#portfolio"
+              class="menu__list-link"
+              title="포트폴리오로 이동"
+              >포트폴리오</a
+            >
+          </li>
 
-            <li class="menu__list-item">
-              <a href="#portfolio" class="menu__list-link">포트폴리오</a>
-            </li>
+          <li class="menu__list-item">
+            <a 
+              href="#vision" 
+              class="menu__list-link" 
+              title="회사 비전으로 이동"
+              >회사 비전</a
+            >
+          </li>
 
-            <li class="menu__list-item">
-              <a href="#vision" class="menu__list-link">회사 비전</a>
-            </li>
+          <li class="menu__list-item">
+            <a 
+              href="#coworker" 
+              class="menu__list-link" 
+              title="직원 소개로 이동"
+              >직원 소개</a
+            >
+          </li>
 
-            <li class="menu__list-item">
-              <a href="#coworker" class="menu__list-link">직원 소개</a>
-            </li>
+          <li class="menu__list-item">
+            <a 
+              href="#interview" 
+              class="menu__list-link" 
+              title="인터뷰로 이동"
+              >인터뷰</a
+            >
+          </li>
 
-            <li class="menu__list-item">
-              <a href="#interview" class="menu__list-link">인터뷰</a>
-            </li>
+          <li class="menu__list-item">
+            <a 
+              href="#news" 
+              class="menu__list-link" 
+              title="뉴스로 이동"
+              >뉴스</a
+            >
+          </li>
 
-            <li class="menu__list-item">
-              <a href="#news" class="menu__list-link">뉴스</a>
-            </li>
+          <li class="menu__list-item">
+            <a 
+              href="#member" 
+              class="menu__list-link" 
+              title="작업자 소개로 이동"
+              >작업자 소개</a
+            >
+          </li>
 
-            <li class="menu__list-item">
-              <a href="#member" class="menu__list-link">작업자 소개</a>
-            </li>
+          <li class="menu__list-item">
+            <a 
+              href="#notice" 
+              class="menu__list-link" 
+              title="공지사항으로 이동"
+              >공지사항</a
+            >
+          </li>
 
-            <li class="menu__list-item">
-              <a href="#notice" class="menu__list-link">공지사항</a>
-            </li>
-
-            <li class="menu__list-item">
-              <a href="#contact" class="menu__list-link">문의</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+          <li class="menu__list-item">
+            <a
+              href="#contact"
+              class="menu__list-link"
+              title="문의 페이지로 이동"
+              >문의</a
+            >
+          </li>
+        </ul>
+      </nav>
     </aside>
 
     <!-- 메인 -->
@@ -188,26 +229,26 @@
 
       <!-- swiper.js 라이브러리로 BEM 규칙 적용 불가 -->
       <section id="banner">
-        <div class="swiper">
+        <div class="swiper" aria-live="polite">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="images/banner/banner1.jpg" alt="건물 사진1" />
+              <img src="./images/banner/banner1.jpg" alt="건물 사진1" />
             </div>
 
             <div class="swiper-slide">
-              <img src="images/banner/banner2.jpg" alt="건물 사진2" />
+              <img src="./images/banner/banner2.jpg" alt="건물 사진2" />
             </div>
 
             <div class="swiper-slide">
-              <img src="images/banner/banner3.jpg" alt="건물 사진3" />
+              <img src="./images/banner/banner3.jpg" alt="건물 사진3" />
             </div>
 
             <div class="swiper-slide">
-              <img src="images/banner/banner4.jpg" alt="건물 사진4" />
+              <img src="./images/banner/banner4.jpg" alt="건물 사진4" />
             </div>
 
             <div class="swiper-slide">
-              <img src="images/banner/banner5.jpg" alt="건물 사진5" />
+              <img src="./images/banner/banner5.jpg" alt="건물 사진5" />
             </div>
           </div>
 
@@ -220,15 +261,31 @@
                 <div class="swiper-fraction"></div>
 
                 <div class="swiper-btn-wrap">
-                  <div class="swiper-button-prev"></div>
-                  <div class="swiper-button-next"></div>
+                  <button
+                    type="button"
+                    class="swiper-button-prev"
+                    title="이전 슬라이드로 이동"
+                    aria-label="이전 슬라이드로 이동"
+                  >
+                    <span class="sr-only">이전</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="swiper-button-next"
+                    title="다음 슬라이드로 이동"
+                    aria-label="다음 슬라이드로 이동"
+                  >
+                    <span class="sr-only">다음</span>
+                  </button>
 
                   <button
                     type="button"
                     class="btn-play-pause"
-                    title="재생&멈춤 버튼"
+                    title="배너 슬라이드 재생 및 일시정지"
+                    aria-label="배너 슬라이드 재생 및 일시정지"
                   >
                     <i class="fa-solid fa-pause"></i>
+                    <span class="sr-only">재생/일시정지</span>
                   </button>
                 </div>
               </div>
@@ -245,7 +302,7 @@
           <!-- 회사 정보 영역 -->
           <div class="company__intro">
             <div class="company__info">
-              <h2 class="section__title">회사 소개</h2>
+              <h2 class="section__title" id="company-title">회사 소개</h2>
 
               <h3 class="company__description">
                 건축의 아름다움,<br />
@@ -253,7 +310,7 @@
                 지속 가능성에 대한 열정을 가진 건축가들
               </h3>
 
-              <a href="#" class="btn-more">더 보기</a>
+              <a href="#" class="btn-more" title="더 보기">더 보기</a>
             </div>
 
             <div class="company__thumbnail">
@@ -265,9 +322,23 @@
           <div class="company__card">
             <div class="company__card-item qna">
               <ul>
-                <li><a href="">완벽한 집을 디자인하세요.</a></li>
-                <li><a href="">우리의 브로슈어를 다운로드하세요.</a></li>
-                <li><a href="">건축가에게 궁금한 점을 물어보세요.</a></li>
+                <li>
+                  <a href="#" title="완벽한 집을 디자인하는 방법에 대한 링크"
+                    >완벽한 집을 디자인하세요.</a
+                  >
+                </li>
+
+                <li>
+                  <a href="#" title="브로슈어 다운로드 링크"
+                    >우리의 브로슈어를 다운로드하세요.</a
+                  >
+                </li>
+
+                <li>
+                  <a href="#" title="건축가에게 궁금한 점을 물어보는 링크"
+                    >건축가에게 궁금한 점을 물어보세요.</a
+                  >
+                </li>
               </ul>
             </div>
 
@@ -297,11 +368,11 @@
         <!-- nav 타입 포트폴리오 -->
         <div class="portfolio__inner-top portfolio__inner-top--nav">
           <div class="portfolio__inner">
-            <!--설명 & 이미지 감싸는 영역-->
+            <!-- 설명 & 이미지 감싸는 영역-->
             <div class="portfolio__info-wrap">
               <!-- 설명 영역 -->
               <div class="portfolio__info">
-                <p class="section__title">포트폴리오</p>
+                <p class="section__title" id="portfolio-title">포트폴리오</p>
 
                 <div class="portfolio__details">
                   <h3 class="portfolio__details-title">이스트 아트 하우스</h3>
@@ -315,15 +386,15 @@
                 <div class="portfolio__picture-container">
                   <div class="portfolio__picture active">
                     <img
-                      src="images/portfolio/img_port_big_1.jpg"
-                      alt="포트폴리오_이미지_1"
+                      src="./images/portfolio/img_port_big_1.jpg"
+                      alt="이스트 아트 하우스 포트폴리오 이미지 1"
                     />
                   </div>
 
                   <div class="portfolio__picture">
                     <img
-                      src="images/portfolio/img_port_big_2.png"
-                      alt="포트폴리오_이미지_2"
+                      src="./images/portfolio/img_port_big_2.png"
+                      alt="이스트 아트 하우스 포트폴리오 이미지 2"
                     />
                   </div>
                 </div>
@@ -334,14 +405,16 @@
             <div class="portfolio__control">
               <button
                 type="button"
-                title="포트폴리오 이전 버튼"
+                title="이전 포트폴리오로 이동"
                 class="portfolio__control-prev"
+                aria-label="이전 포트폴리오로 이동"
               ></button>
 
               <button
                 type="button"
-                title="포트폴리오 다음 버튼"
+                title="다음 포트폴리오로 이동"
                 class="portfolio__control-next"
+                aria-label="다음 포트폴리오로 이동"
               ></button>
             </div>
           </div>
@@ -360,8 +433,8 @@
                 <!-- 포트폴리오 컨텐츠 이미지-->
                 <div class="portfolio__img">
                   <img
-                    src="/images/banner/banner1.jpg"
-                    alt="포트폴리오 이미지 자료"
+                    src="./images/banner/banner1.jpg"
+                    alt="포트폴리오 이미지 자료 1"
                   />
                 </div>
 
@@ -373,7 +446,9 @@
                     바탕으로 지속 가능한 에너지를 활용합니다.
                   </p>
 
-                  <a href="" class="portfolio__readmore">더 보기</a>
+                  <a href="#" class="portfolio__readmore" title="더 보기"
+                    >더 보기</a
+                  >
                 </div>
               </div>
             </div>
@@ -382,8 +457,8 @@
               <div class="portfolio__card">
                 <div class="portfolio__img">
                   <img
-                    src="/images/banner/banner2.jpg"
-                    alt="포트폴리오 이미지 자료"
+                    src="./images/banner/banner2.jpg"
+                    alt="포트폴리오 이미지 자료 2"
                   />
                 </div>
 
@@ -394,7 +469,9 @@
                     공간과 보안 시스템을 갖추고 있습니다.
                   </p>
 
-                  <a href="" class="portfolio__readmore">더 보기</a>
+                  <a href="#" class="portfolio__readmore" title="더 보기"
+                    >더 보기</a
+                  >
                 </div>
               </div>
             </div>
@@ -403,8 +480,8 @@
               <div class="portfolio__card">
                 <div class="portfolio__img">
                   <img
-                    src="/images/banner/banner3.jpg"
-                    alt="포트폴리오 이미지 자료"
+                    src="./images/banner/banner3.jpg"
+                    alt="포트폴리오 이미지 자료 3"
                   />
                 </div>
 
@@ -415,7 +492,9 @@
                     교통과 접근성이 뛰어난 입지로 많은 기업의 선택을 받고
                     있습니다.
                   </p>
-                  <a href="" class="portfolio__readmore">더 보기</a>
+                  <a href="#" class="portfolio__readmore" title="더 보기"
+                    >더 보기</a
+                  >
                 </div>
               </div>
             </div>
@@ -424,8 +503,8 @@
               <div class="portfolio__card">
                 <div class="portfolio__img">
                   <img
-                    src="/images/banner/banner4.jpg"
-                    alt="포트폴리오 이미지 자료"
+                    src="./images/banner/banner4.jpg"
+                    alt="포트폴리오 이미지 자료 4"
                   />
                 </div>
 
@@ -435,7 +514,9 @@
                     외관과 함께 넓은 실내 공간이 돋보입니다. 주변 공원과
                     산책로가 있어 여유로운 라이프스타일을 제공합니다.
                   </p>
-                  <a href="" class="portfolio__readmore">더 보기</a>
+                  <a href="#" class="portfolio__readmore" title="더 보기"
+                    >더 보기</a
+                  >
                 </div>
               </div>
             </div>
@@ -450,14 +531,16 @@
       <section id="vision">
         <!-- 비전 컨테이너 -->
         <div class="vision__inner">
-          <h2 class="section__title">회사 비전</h2>
+          <h2 class="section__title" id="vision-title">회사 비전</h2>
 
           <!-- 비전 개별 컨테이너 (텍스트, 이미지)-->
           <div class="vision__card">
             <!-- 비전 텍스트박스(타이틀,내용,버튼) -->
             <div class="vision__textBox">
               <div class="vision__textBox-title">
-                <span class="vision__textBox-backTitle">Future</span>
+                <span class="vision__textBox-backTitle" aria-hidden="true"
+                  >Future</span
+                >
                 미래를 건설하는 힘
               </div>
 
@@ -465,7 +548,11 @@
                 지속 가능한 세상을 함께 만들어갑니다.
               </p>
 
-              <a href="#" class="vision__textBox-viewmore link">
+              <a
+                href="#"
+                class="vision__textBox-viewmore link"
+                title="회사 비전 더 보기"
+              >
                 <span>더 보기</span>
               </a>
             </div>
@@ -474,7 +561,7 @@
             <div class="vision__image__container">
               <img
                 src="./images/vision/vision_image_1.png"
-                alt="회사 비전 이미지 1"
+                alt="회사를 대표하는 비전 이미지 1"
               />
             </div>
           </div>
@@ -483,13 +570,15 @@
             <div class="vision__image__container">
               <img
                 src="./images/vision/vision_image_2.jpg"
-                alt="회사 비전 이미지 2"
+                alt="회사를 대표하는 비전 이미지 2"
               />
             </div>
 
             <div class="vision__textBox">
               <div class="vision__textBox-title">
-                <span class="vision__textBox-backTitle">promise</span>
+                <span class="vision__textBox-backTitle" aria-hidden="true"
+                  >promise</span
+                >
                 안전과 신뢰의 약속
               </div>
 
@@ -497,7 +586,11 @@
                 튼튼한 기반 위에 더 나은 미래를 세웁니다.
               </p>
 
-              <a href="#" class="vision__textBox-viewmore link">
+              <a
+                href="#"
+                class="vision__textBox-viewmore link"
+                title="회사 비전 더 보기"
+              >
                 <span>더 보기 </span>
               </a>
             </div>
@@ -510,14 +603,14 @@
 
       <section id="coworker">
         <div class="coworker__inner">
-          <div class="section__title">직원 소개</div>
+          <div class="section__title" id="coworker-title">직원 소개</div>
 
           <div class="coworker__card">
             <div class="coworker__card-item">
               <div class="coworker__card-thumbnail">
                 <img
                   src="./images/coworker/coworker1.png"
-                  alt="CEO/건축가 로버트 존슨"
+                  alt="CEO 로버트 존슨: 건축가 및 CEO"
                 />
               </div>
             </div>
@@ -525,22 +618,22 @@
             <div class="coworker__card-item">
               <div class="coworker__card-info">
                 <div class="coworker__card-name">로버트 존슨</div>
-                <div class="coworker__card-position">ceo / 건축가</div>
+                <div class="coworker__card-position">CEO / 건축가</div>
                 <div class="coworker__card-sns">
                   <a
                     href="https://twitter.com"
                     class="fa-brands fa-twitter"
-                    aria-label="twitter"
+                    aria-label="로버트 존슨의 Twitter 페이지"
                   ></a>
                   <a
                     href="https://linkedin.com"
                     class="fa-brands fa-linkedin-in"
-                    aria-label="linkedIn"
+                    aria-label="로버트 존슨의 LinkedIn 프로필"
                   ></a>
                   <a
                     href="https://facebook.com"
                     class="fa-brands fa-facebook-f"
-                    aria-label="facebook"
+                    aria-label="로버트 존슨의 Facebook 페이지"
                   ></a>
                 </div>
               </div>
@@ -563,17 +656,17 @@
                   <a
                     href="https://twitter.com"
                     class="fa-brands fa-twitter"
-                    aria-label="twitter"
+                    aria-label="아이다 베툴의 Twitter 페이지"
                   ></a>
                   <a
                     href="https://linkedin.com"
                     class="fa-brands fa-linkedin-in"
-                    aria-label="linkedIn"
+                    aria-label="아이다 베툴의 LinkedIn 프로필"
                   ></a>
                   <a
                     href="https://facebook.com"
                     class="fa-brands fa-facebook-f"
-                    aria-label="facebook"
+                    aria-label="아이다 베툴의 Facebook 페이지"
                   ></a>
                 </div>
               </div>
@@ -602,17 +695,17 @@
                   <a
                     href="https://twitter.com"
                     class="fa-brands fa-twitter"
-                    aria-label="twitter"
+                    aria-label="레베카 웨일스의 Twitter 페이지"
                   ></a>
                   <a
                     href="https://linkedin.com"
                     class="fa-brands fa-linkedin-in"
-                    aria-label="linkedIn"
+                    aria-label="레베카 웨일스의 LinkedIn 프로필"
                   ></a>
                   <a
                     href="https://facebook.com"
                     class="fa-brands fa-facebook-f"
-                    aria-label="facebook"
+                    aria-label="레베카 웨일스의 Facebook 페이지"
                   ></a>
                 </div>
               </div>
@@ -635,17 +728,17 @@
                   <a
                     href="https://twitter.com"
                     class="fa-brands fa-twitter"
-                    aria-label="twitter"
+                    aria-label="기예르모 메디치의 Twitter 페이지"
                   ></a>
                   <a
                     href="https://linkedin.com"
                     class="fa-brands fa-linkedin-in"
-                    aria-label="linkedIn"
+                    aria-label="기예르모 메디치의 LinkedIn 프로필"
                   ></a>
                   <a
                     href="https://facebook.com"
                     class="fa-brands fa-facebook-f"
-                    aria-label="facebook"
+                    aria-label="기예르모 메디치의 Facebook 페이지"
                   ></a>
                 </div>
               </div>
@@ -659,7 +752,7 @@
 
       <section id="interview">
         <div class="interview__inner">
-          <div class="section__title">인터뷰</div>
+          <div class="section__title" id="interview-title">인터뷰</div>
 
           <div class="interview__card">
             <div class="interview__card-item">
@@ -678,7 +771,12 @@
                 <div class="interview__card-date">
                   <span class="interview__card-label">인터뷰</span>
                   <span class="interview__card-separator">|</span>
-                  <span class="interview__card-text">2024년 12월 15일</span>
+                  <span
+                    class="interview__card-text"
+                    aria-label="인터뷰 날짜: 2024년 12월 15일"
+                  >
+                    2024년 12월 15일
+                  </span>
                 </div>
               </div>
             </div>
@@ -699,7 +797,12 @@
                 <div class="interview__card-date">
                   <span class="interview__card-label">인터뷰</span>
                   <span class="interview__card-separator">|</span>
-                  <span class="interview__card-text">2024년 12월 15일</span>
+                  <span
+                    class="interview__card-text"
+                    aria-label="인터뷰 날짜: 2024년 12월 15일"
+                  >
+                    2024년 12월 15일
+                  </span>
                 </div>
               </div>
             </div>
@@ -720,7 +823,12 @@
                 <div class="interview__card-date">
                   <span class="interview__card-label">인터뷰</span>
                   <span class="interview__card-separator">|</span>
-                  <span class="interview__card-text">2024년 12월 15일</span>
+                  <span
+                    class="interview__card-text"
+                    aria-label="인터뷰 날짜: 2024년 12월 15일"
+                  >
+                    2024년 12월 15일
+                  </span>
                 </div>
               </div>
             </div>
@@ -741,7 +849,12 @@
                 <div class="interview__card-date">
                   <span class="interview__card-label">인터뷰</span>
                   <span class="interview__card-separator">|</span>
-                  <span class="interview__card-text">2024년 12월 15일</span>
+                  <span
+                    class="interview__card-text"
+                    aria-label="인터뷰 날짜: 2024년 12월 15일"
+                  >
+                    2024년 12월 15일
+                  </span>
                 </div>
               </div>
             </div>
@@ -754,13 +867,16 @@
 
       <section id="news">
         <div class="news__inner">
-          <div class="section__title">뉴스</div>
+          <div class="section__title" id="news-title">뉴스</div>
 
           <div class="news__container">
             <!-- 뉴스 세로 모드 -->
             <div class="news__card news__card--vertical">
               <div class="news__card-thumbnail">
-                <img src="./images/news/news1.jpg" alt="뉴스1 사진" />
+                <img
+                  src="./images/news/news1.jpg"
+                  alt="새로운 시대를 건축하는 혁신적이고 감각적인 디자인 이미지"
+                />
               </div>
 
               <div class="news__card-info">
@@ -777,7 +893,10 @@
             <!-- 뉴스 세로 모드 -->
             <div class="news__card news__card--vertical">
               <div class="news__card-thumbnail">
-                <img src="./images/news/news2.jpg" alt="뉴스2 사진" />
+                <img
+                  src="./images/news/news2.jpg"
+                  alt="공간의 가치를 재정의하는 건축 디자인 이미지"
+                />
               </div>
 
               <div class="news__card-info">
@@ -828,14 +947,14 @@
 
       <section id="member">
         <div class="member__inner">
-          <div class="section__title">작업자 소개</div>
+          <div class="section__title" id="member-title">작업자 소개</div>
 
           <div class="member__card">
             <div class="member__card-item">
               <div class="member__card-profile">
                 <img
-                  src="images/member/member1.jpg"
-                  alt="김혜란 프로필 이미지"
+                  src="./images/member/member1.jpg"
+                  alt="김혜란 프로필 이미지, 프론트엔드 개발자"
                 />
               </div>
 
@@ -853,8 +972,8 @@
             <div class="member__card-item">
               <div class="member__card-profile">
                 <img
-                  src="images/member/member2.jpg"
-                  alt="최승이 프로필 이미지"
+                  src="./images/member/member2.jpg"
+                  alt="최승이 프로필 이미지, 프론트엔드 개발자"
                 />
               </div>
 
@@ -872,8 +991,8 @@
             <div class="member__card-item">
               <div class="member__card-profile">
                 <img
-                  src="images/member/member3.jpg"
-                  alt="박세진 프로필 이미지"
+                  src="./images/member/member3.jpg"
+                  alt="박세진 프로필 이미지, 프론트엔드 개발자"
                 />
               </div>
 
@@ -891,8 +1010,8 @@
             <div class="member__card-item">
               <div class="member__card-profile">
                 <img
-                  src="images/member/member4.jpg"
-                  alt="형주희 프로필 이미지"
+                  src="./images/member/member4.jpg"
+                  alt="형주희 프로필 이미지, 프론트엔드 개발자"
                 />
               </div>
 
@@ -915,104 +1034,122 @@
 
       <section id="notice">
         <div class="notice__inner">
-          <div class="section__title">공지사항</div>
+          <div class="section__title" id="notice-title">공지사항</div>
 
           <div class="notice__container">
-            <!-- <div class="notice__title"></div> -->
+            <div class="notice__list">
+              <h3 class="notice__list-title">
+                <a class="notice__title-a" href="#" title="파트너 관련 공지사항"
+                  >Partners</a
+                >
+              </h3>
 
-              <div class="notice__list">
-                <h3 class="notice__list-title">
-                  <a class="notice__title-a" href="">Partners</a>
-                </h3>
-                <div class="notice__list-item">
-                  <div class="notice__list-box">
-                    <h3 class="notice__box-title ellipsis">
-                      신규 프로젝트 의뢰 접수 마감 안내
-                    </h3>
+              <div class="notice__list-item">
+                <div class="notice__list-box">
+                  <h3 class="notice__box-title ellipsis">
+                    신규 프로젝트 의뢰 접수 마감 안내
+                  </h3>
 
-                    <p class="notice__box-content multi-ellipsis">
-                      현재 프로젝트 진행 상황으로 인해 신규 의뢰 접수를 일시적으로
-                      중단합니다. 접수 재개일은 추후 공지를 통해 안내드리겠습니다.
-                      양해 부탁드립니다.
-                    </p>
-                  </div>
-
-                  <div class="notice__list-viewmore">
-                    <a class="notice__viewmore-a" href="">
-                      <span>더 보기</span>
-                      <div class="notice__viewmore-img"></div>
-                    </a>
-                  </div>
+                  <p class="notice__box-content multi-ellipsis">
+                    현재 프로젝트 진행 상황으로 인해 신규 의뢰 접수를 일시적으로
+                    중단합니다. 접수 재개일은 추후 공지를 통해 안내드리겠습니다.
+                    양해 부탁드립니다.
+                  </p>
                 </div>
 
-                <div class="notice__list-item">
-                  <div class="notice__list-box">
-                    <h3 class="notice__box-title ellipsis">연말 휴무 안내</h3>
-
-                    <p class="notice__box-content multi-ellipsis">
-                      안녕하세요. 저희 건축사무소는 12월 30일부터 1월 2일까지 연말
-                      연휴로 인해 휴무합니다. 긴급한 문의 사항은 대표 이메일로
-                      연락 부탁드립니다.
-                    </p>
-                  </div>
-
-                  <div class="notice__list-viewmore">
-                    <a class="notice__viewmore-a" href="">
-                      <span>더 보기</span>
-                      <div class="notice__viewmore-img"></div>
-                    </a>
-                  </div>
+                <div class="notice__list-viewmore">
+                  <a
+                    class="notice__viewmore-a"
+                    href="#"
+                    aria-label="신규 프로젝트 의뢰 접수 마감 안내 더 보기"
+                  >
+                    <span>더 보기</span>
+                    <div class="notice__viewmore-img"></div>
+                  </a>
                 </div>
-                
               </div>
 
-              <div class="notice__list">
-                <h3 class="notice__list-title">
-                  <a class="notice__title-a" href="">Employees</a>
-                </h3>
-                <div class="notice__list-item">
-                  <div class="notice__list-box">
-                    <h3 class="notice__box-title ellipsis">
-                      건축 세미나 개최 안내
-                    </h3>
+              <div class="notice__list-item">
+                <div class="notice__list-box">
+                  <h3 class="notice__box-title ellipsis">연말 휴무 안내</h3>
 
-                    <p class="notice__box-content multi-ellipsis">
-                      12월 20일, 최신 건축 트렌드와 사례를 주제로 한 세미나를
-                      개최합니다. 장소는 사무소 내 컨퍼런스 룸이며, 참석 희망자는
-                      12월 18일까지 사전 신청 바랍니다.
-                    </p>
-                  </div>
-
-                  <div class="notice__list-viewmore">
-                    <a class="notice__viewmore-a" href="">
-                      <span>더 보기</span>
-                      <div class="notice__viewmore-img"></div>
-                    </a>
-                  </div>
+                  <p class="notice__box-content multi-ellipsis">
+                    안녕하세요. 저희 건축사무소는 12월 30일부터 1월 2일까지 연말
+                    연휴로 인해 휴무합니다. 긴급한 문의 사항은 대표 이메일로
+                    연락 부탁드립니다.
+                  </p>
                 </div>
-                <div class="notice__list-item">
-                  <div class="notice__list-box">
-                    <h3 class="notice__box-title ellipsis">
-                      홈페이지 개편 작업 공지
-                    </h3>
 
-                    <p class="notice__box-content multi-ellipsis">
-                      보다 나은 서비스를 제공하기 위해 1월 10일부터 15일까지
-                      홈페이지 개편 작업이 진행됩니다. 이 기간 동안 일부 기능이
-                      제한될 수 있으니 양해 부탁드립니다.
-                    </p>
-                  </div>
-
-                  <div class="notice__list-viewmore">
-                    <a class="notice__viewmore-a" href="">
-                      <span>더 보기</span>
-                      <div class="notice__viewmore-img"></div>
-                    </a>
-                  </div>
+                <div class="notice__list-viewmore">
+                  <a
+                    class="notice__viewmore-a"
+                    href="#"
+                    aria-label="연말 휴무 안내 더 보기"
+                  >
+                    <span>더 보기</span>
+                    <div class="notice__viewmore-img"></div>
+                  </a>
                 </div>
-                
               </div>
-            
+            </div>
+
+            <div class="notice__list">
+              <h3 class="notice__list-title">
+                <a class="notice__title-a" href="#" title="직원 관련 공지사항"
+                  >Employees</a
+                >
+              </h3>
+
+              <div class="notice__list-item">
+                <div class="notice__list-box">
+                  <h3 class="notice__box-title ellipsis">
+                    건축 세미나 개최 안내
+                  </h3>
+
+                  <p class="notice__box-content multi-ellipsis">
+                    12월 20일, 최신 건축 트렌드와 사례를 주제로 한 세미나를
+                    개최합니다. 장소는 사무소 내 컨퍼런스 룸이며, 참석 희망자는
+                    12월 18일까지 사전 신청 바랍니다.
+                  </p>
+                </div>
+
+                <div class="notice__list-viewmore">
+                  <a
+                    class="notice__viewmore-a"
+                    href="#"
+                    aria-label="건축 세미나 개최 안내 더 보기"
+                  >
+                    <span>더 보기</span>
+                    <div class="notice__viewmore-img"></div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="notice__list-item">
+                <div class="notice__list-box">
+                  <h3 class="notice__box-title ellipsis">
+                    홈페이지 개편 작업 공지
+                  </h3>
+
+                  <p class="notice__box-content multi-ellipsis">
+                    보다 나은 서비스를 제공하기 위해 1월 10일부터 15일까지
+                    홈페이지 개편 작업이 진행됩니다. 이 기간 동안 일부 기능이
+                    제한될 수 있으니 양해 부탁드립니다.
+                  </p>
+                </div>
+
+                <div class="notice__list-viewmore">
+                  <a
+                    class="notice__viewmore-a"
+                    href="#"
+                    aria-label="홈페이지 개편 작업 공지 더 보기"
+                  >
+                    <span>더 보기</span>
+                    <div class="notice__viewmore-img"></div>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1020,9 +1157,9 @@
       <!-- 문의 -->
       <div class="a11y-hidden">문의</div>
 
-      <section id="contact">
+      <section id="contact" aria-labelledby="contact-title">
         <div class="contact__inner">
-          <div class="section__title">문의</div>
+          <div class="section__title" id="contact-title">문의</div>
 
           <div class="contact__content">
             <!-- 문의 지도 영역 -->
@@ -1039,22 +1176,38 @@
                     서초구 반포대로3 이스트빌딩(우)06711
                   </span>
 
-                  <span class="btn-find-route"></span>
+                  <button
+                    class="btn-find-route"
+                    title="길찾기 찾기"
+                    aria-label="길찾기 찾기"
+                  ></button>
                 </div>
 
                 <div class="contact__details-item">
-                  <span class="contact__details-text phone">02-583-4620</span>
+                  <span class="contact__details-text phone">
+                    <a href="tel:025834620" aria-label="전화 걸기"
+                      >02-583-4620</a
+                    >
+                  </span>
                 </div>
 
                 <div class="contact__details-item">
-                  <span class="contact__details-text email"
-                    >estsoft@gmail.com</span
-                  >
+                  <span class="contact__details-text email">
+                    <a
+                      href="mailto:estsoft@gmail.com"
+                      aria-label="이메일 보내기"
+                      >estsoft@gmail.com</a
+                    >
+                  </span>
                 </div>
 
                 <div class="contact__details-item full-type">
                   <div class="contact__details-title">건축설계 사업문의</div>
-                  <span class="contact__details-text inquiry">02-583-4620</span>
+                  <span class="contact__details-text inquiry">
+                    <a href="tel:025834620" aria-label="전화 걸기"
+                      >02-583-4620</a
+                    >
+                  </span>
                 </div>
               </div>
             </div>
@@ -1085,56 +1238,81 @@
         <div class="footer__menu">
           <div class="footer__menu-item">
             <p class="footer__menu-title">소셜</p>
-
-            <ul class="footer__list">
+            <ul class="footer__list" role="list">
               <li class="footer__list-item">
-                <a href="" class="footer__list-link">인스타그램</a>
+                <a
+                  href=""
+                  class="footer__list-link"
+                  aria-label="인스타그램 링크"
+                  >인스타그램</a
+                >
               </li>
-
               <li class="footer__list-item">
-                <a href="" class="footer__list-link">비핸스</a>
+                <a 
+                  href="" 
+                  class="footer__list-link" 
+                  aria-label="비핸스 링크"
+                  >비핸스</a
+                >
               </li>
-
               <li class="footer__list-item">
-                <a href="" class="footer__list-link">링크드인</a>
+                <a 
+                  href="" 
+                  class="footer__list-link" 
+                  aria-label="링크드인 링크"
+                  >링크드인</a
+                >
               </li>
             </ul>
           </div>
 
           <div class="footer__menu-item">
             <p class="footer__menu-title">정보</p>
-
-            <ul class="footer__list">
+            <ul class="footer__list" role="list">
               <li class="footer__list-item">
-                <a href="" class="footer__list-link">문의하기</a>
+                <a href="" class="footer__list-link" aria-label="문의하기"
+                  >문의하기</a
+                >
               </li>
-
               <li class="footer__list-item">
-                <a href="" class="footer__list-link">이용 약관</a>
+                <a href="" class="footer__list-link" aria-label="이용 약관"
+                  >이용 약관</a
+                >
               </li>
-
               <li class="footer__list-item">
-                <a href="" class="footer__list-link">스튜디오</a>
+                <a href="" class="footer__list-link" aria-label="스튜디오"
+                  >스튜디오</a
+                >
               </li>
             </ul>
           </div>
 
           <div class="footer__menu-item">
             <p class="footer__menu-title">연락처</p>
-
-            <ul class="footer__list">
+            <ul class="footer__list" role="list">
               <li class="footer__list-item">
-                <a href="" class="footer__list-link"
+                <a
+                  href="https://www.google.com/maps/search/서울특별시 서초구 반포대로3 이스트빌딩"
+                  class="footer__list-link"
+                  aria-label="주소: 서울특별시 서초구 반포대로3 이스트빌딩"
                   >서울특별시 서초구 반포대로3 이스트빌딩(우)06711</a
                 >
               </li>
-
               <li class="footer__list-item">
-                <a href="" class="footer__list-link">02-583-4620</a>
+                <a
+                  href="tel:025834620"
+                  class="footer__list-link"
+                  aria-label="전화 걸기: 02-583-4620"
+                  >02-583-4620</a
+                >
               </li>
-
               <li class="footer__list-item">
-                <a href="" class="footer__list-link">estsoft@example.com</a>
+                <a
+                  href="mailto:estsoft@example.com"
+                  class="footer__list-link"
+                  aria-label="이메일 보내기: estsoft@example.com"
+                  >estsoft@example.com</a
+                >
               </li>
             </ul>
           </div>
