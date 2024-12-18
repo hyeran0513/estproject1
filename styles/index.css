@@ -17,13 +17,17 @@
     height: 100%;
 
     .logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 6.25rem;
+      height: 2.125rem;
 
-      .logo--black {
-        display: none;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        &.logo--black {
+          display: none;
+        }
       }
     }
 
@@ -90,12 +94,14 @@
 
     .header__inner {
       .logo {
-        .logo--white {
-          display: none;
-        }
+        img {
+          &.logo--white {
+            display: none;
+          }
 
-        .logo--black {
-          display: block;
+          &.logo--black {
+            display: block;
+          }
         }
       }
 
@@ -131,7 +137,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 100%;
   height: 100%;
@@ -364,6 +370,7 @@ section {
         transform: translateY(40%);
         opacity: 0;
         transition: all 1s ease-out;
+
         &.visible {
           transform: translateY(0);
           opacity: 1;
@@ -377,8 +384,8 @@ section {
           display: inline-block;
           width: 100%;
           height: 100%;
-          background: url("../images/bg/company/bg_company2.png") no-repeat right /
-            auto 100%;
+          background: url("../images/bg/company/bg_company1.png") no-repeat
+            right / auto 100%;
           z-index: -1;
         }
 
@@ -504,6 +511,132 @@ section {
   }
 }
 
+/* 비전 */
+#vision {
+  padding: 3.125rem 0;
+
+  /* 비전 컨테이너 */
+  .vision__inner {
+    margin: 0 auto;
+
+    .vision__title {
+      margin: 0 auto;
+      padding: 0 1.25rem;
+      max-width: 77.5rem;
+    }
+
+    /* 비전 개별 컨테이너 (텍스트, 이미지) */
+    .vision__card {
+      .vision__card-item {
+        &:nth-child(even) {
+          background-color: var(--secondary-bg-color);
+        }
+
+        .vision__card-inner {
+          margin: 0 auto;
+          padding: 0 1.25rem;
+          max-width: 77.5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 3rem;
+          width: 100%;
+          height: 30rem;
+
+          .vision__image__container {
+            width: 30rem;
+            height: calc(100% + (3.2rem * 2));
+            overflow: hidden;
+            border-radius: 10px;
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              transition: all 0.6s ease;
+
+              &:hover {
+                z-index: 10;
+                transform: scale(1.1);
+              }
+            }
+          }
+
+          /* 비전 텍스트박스(타이틀,내용,버튼) */
+          .vision__textBox {
+            flex: 1;
+
+            /* 비전 텍스트박스(타이틀) */
+            .vision__textBox-title {
+              font-size: 2.4rem;
+              position: relative;
+              text-transform: uppercase;
+              margin-bottom: 0.875rem;
+
+              /* 비전 텍스트박스(타이틀 배경글자) */
+              .vision__textBox-backTitle {
+                position: absolute;
+                left: -1rem;
+                top: -2rem;
+                font-size: 3.5rem;
+                font-weight: 900;
+                letter-spacing: 0.4rem;
+                text-transform: uppercase;
+                color: transparent;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: var(--secondary-text-color);
+              }
+
+              .vision__textBox-mainTitle {
+                position: relative;
+                z-index: 1;
+              }
+            }
+
+            /* 비전 텍스트박스(내용) */
+            .vision__textBox-text {
+              font-size: 1rem;
+              margin-bottom: 2.3rem;
+              color: var(--secondary-text-color);
+            }
+
+            /* 비전 텍스트박스(버튼) */
+            .vision__textBox-viewmore {
+              display: inline-flex;
+              align-items: center;
+              border: 0.0625rem solid var(--primary-border-color);
+              border-radius: 999rem;
+              border-right: none;
+              transition: color 0.6s ease, transform 0.6s ease;
+
+              .more-text {
+                padding: 0 1rem;
+              }
+
+              &.link:hover {
+                color: var(--primary-color);
+                transform: scale(1.1);
+              }
+
+              &::after {
+                content: "";
+                padding: 0.67rem;
+                width: 3rem;
+                height: 3rem;
+                border: 0.0625rem solid var(--primary-border-color);
+                border-radius: 999rem;
+                background-size: 2.03125rem;
+                background: url("../images/icon/vision/icon_more_black.svg")
+                  no-repeat center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /* 포트폴리오 */
 #portfolio {
   .portfolio__inner-top {
@@ -606,13 +739,13 @@ section {
           }
 
           .portfolio__control-prev {
-            background: url("../images/icon/portfolio/icon_prev_black.svg") no-repeat
-              center / cover;
+            background: url("../images/icon/portfolio/icon_prev_black.svg")
+              no-repeat center / cover;
           }
 
           .portfolio__control-next {
-            background: url("../images/icon/portfolio/icon_next_black.svg") no-repeat
-              center / cover;
+            background: url("../images/icon/portfolio/icon_next_black.svg")
+              no-repeat center / cover;
           }
         }
       }
@@ -733,110 +866,6 @@ section {
                 color: var(--primary-color);
               }
             }
-          }
-        }
-      }
-    }
-  }
-}
-
-/* 비전 섹션 CSS */
-#vision {
-  padding: 3.125rem 1.25rem;
-
-  /* 비전 컨테이너 */
-  .vision__inner {
-    margin: 0 auto;
-    max-width: 75rem;
-    width: 100%;
-    
-    /* 비전 개별 컨테이너 (텍스트, 이미지) */
-    .vision__card {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 30rem;
-
-      .vision__image__container{
-        width:40rem;
-        height:40rem;
-        overflow: hidden;
-        
-        border:1px solid white;
-        img{
-          object-fit: cover;
-          height: 100%;
-          width: 100%;
-          transition: all 0.6s ease;
-          &:hover{
-            z-index: 10;
-            transform : scale(1.1);
-          }
-        }
-      }
-
-      /* 비전 텍스트박스(타이틀,내용,버튼) */
-      .vision__textBox {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        padding: 2rem 2rem;
-
-        /* 비전 텍스트박스(타이틀) */
-        .vision__textBox-title {
-          font-size: 3rem;
-          position: relative;
-          text-transform: uppercase;
-          margin-bottom: 0.875rem;
-
-          /* 비전 텍스트박스(타이틀 배경글자) */
-          .vision__textBox-backTitle {
-            color: var(--primary-color);
-            position: absolute;
-            left: -1rem;
-            top: -2rem;
-            z-index: -1;
-            font-size: 3.5rem;
-            font-weight: 900;
-            text-transform: uppercase;
-          }
-        }
-
-        /* 비전 텍스트박스(내용) */
-        .vision__textBox-text {
-          font-size: 1rem;
-          margin-bottom: 2.3125rem;
-        }
-
-        /* 비전 텍스트박스(버튼) */
-        .vision__textBox-viewmore {
-          transition: color 0.6s ease, transform 0.6s ease;
-          padding: 0.875rem 5.060625rem 0.875rem 1.9375rem;
-          border: 0.0625rem solid var(--primary-border-color);
-          border-radius: 999rem;
-          border-right: none;
-          position: relative;
-
-          &.link:hover {
-            color: var(--primary-color);
-            transform: scale(1.1);
-          }
-
-          &::after {
-            content: "";
-            position: absolute;
-            top: 0rem;
-            bottom: 0rem;
-            padding: 0.67rem;
-            right: 0;
-            width: 3.5rem;
-            border: 0.0625rem solid var(--primary-border-color);
-            border-radius: 999rem;
-            background-size: 2.03125rem;
-            background: url("../images/icon/vision/icon_more_black.svg")
-              no-repeat center;
           }
         }
       }
@@ -1349,8 +1378,8 @@ section {
               .notice__viewmore-img {
                 width: 2rem;
                 height: 1.2rem;
-                background: url("../images/icon/notice/ico_arrow_black.svg") no-repeat
-                  center / auto 100%;
+                background: url("../images/icon/notice/ico_arrow_black.svg")
+                  no-repeat center / auto 100%;
                 transition: background ease 0.3s;
               }
             }
@@ -1491,9 +1520,16 @@ section {
 
     .logo {
       width: 6.25rem;
+      height: 2.125rem;
 
-      .logo--white {
-        display: none;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        &.logo--white {
+          display: none;
+        }
       }
     }
 
@@ -1564,10 +1600,37 @@ section {
     }
   }
 
+  /* 사이드바 */
+  .sidebar {
+    display: flex;
+  }
+
   /* 배너 */
   #banner {
     .swiper {
       height: 37.5rem;
+    }
+  }
+
+  /* 비전 */
+  #vision {
+    /* 비전 컨테이너 */
+    .vision__inner {
+      /* 비전 개별 컨테이너 (텍스트, 이미지) */
+      .vision__card {
+        .vision__card-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 30rem;
+
+          .vision__image__container {
+            width: 20rem;
+            height: 30rem;
+          }
+        }
+      }
     }
   }
 
@@ -1598,26 +1661,6 @@ section {
       }
     }
   }
-  
-/* 비전 섹션 CSS */
-#vision {
-  /* 비전 컨테이너 */
-  .vision__inner {
-    /* 비전 개별 컨테이너 (텍스트, 이미지) */
-    .vision__card {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 30rem;
-      
-      .vision__image__container{
-        width: 20rem;;
-        height: 30rem;
-      }
-    }
-  }
-}
 
   /* 직원 소개 */
   #coworker {
@@ -1689,7 +1732,8 @@ section {
   .header {
     .header__inner {
       .logo {
-        width: 5rem;
+        width: 4rem;
+        height: 1rem;
       }
 
       .btn-wrap {
@@ -1801,6 +1845,50 @@ section {
 
           .company__card-content {
             font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* 비전 */
+  #vision {
+    padding: 1.25rem;
+    padding-top: 0;
+    margin-top: 0;
+
+    .vision__inner {
+      .vision__card {
+        .vision__card-item {
+          .vision__image__container {
+            grid-row: 1;
+            height: 100%;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .vision__textBox {
+            .vision__textBox-title {
+              font-size: 2rem;
+
+              .vision__textBox-backTitle {
+                font-size: 2.5rem;
+                top: -1.25rem;
+              }
+            }
+
+            .vision__textBox-text {
+              font-size: 1rem;
+            }
+
+            .vision__textBox-viewmore {
+              font-size: 0.8rem;
+              border-right: none;
+            }
           }
         }
       }
@@ -1925,47 +2013,6 @@ section {
     }
   }
 
-  #vision {
-    padding: 1.25rem;
-    padding-top: 0;
-    margin-top: 0;
-
-    .vision__inner {
-      .vision__card {
-        .vision__image__container {
-          grid-row: 1;
-          height: 100%;
-          overflow: hidden;
-          img {
-            width: 100%;
-            object-fit: cover;
-          }
-        }
-
-        .vision__textBox {
-
-          .vision__textBox-title {
-            font-size: 2rem;
-
-            .vision__textBox-backTitle {
-              font-size: 2.5rem;
-              top: -1.25rem;
-            }
-          }
-
-          .vision__textBox-text {
-            font-size: 1rem;
-          }
-          
-          .vision__textBox-viewmore {
-            font-size: 0.8rem;
-            border-right: none;
-          }
-        }
-      }
-    }
-  }
-
   /* 직원 소개 */
   #coworker {
     padding: 1.25rem;
@@ -1975,6 +2022,7 @@ section {
 
         .coworker__card-item {
           height: 10rem;
+
           &:nth-of-type(6),
           &:nth-of-type(8) {
             grid-column: 1/2;
@@ -2249,7 +2297,8 @@ section {
       padding: 1.875rem 1.25rem;
 
       .logo {
-        width: 5rem;
+        width: 4rem;
+        height: 1rem;
       }
 
       .footer__menu {
@@ -2282,12 +2331,14 @@ section {
     &.active {
       .header__inner {
         .logo {
-          .logo--white {
-            display: block;
-          }
+          img {
+            &.logo--white {
+              display: block;
+            }
 
-          .logo--black {
-            display: none;
+            &.logo--black {
+              display: none;
+            }
           }
         }
       }
@@ -2329,13 +2380,13 @@ section {
         .portfolio__inner {
           .portfolio__control {
             .portfolio__control-prev {
-              background: url("../images/icon/portfolio/icon_prev_white.svg") no-repeat center /
-                cover;
+              background: url("../images/icon/portfolio/icon_prev_white.svg")
+                no-repeat center / cover;
             }
 
             .portfolio__control-next {
-              background: url("../images/icon/portfolio/icon_next_white.svg") no-repeat center /
-                cover;
+              background: url("../images/icon/portfolio/icon_next_white.svg")
+                no-repeat center / cover;
             }
           }
         }
@@ -2347,11 +2398,19 @@ section {
   #vision {
     .vision__inner {
       .vision__card {
-        .vision__textBox {
-          .vision__textBox-viewmore {
-            &::after {
-              background: url("../images/icon/vision/icon_more_white.svg")
-                no-repeat center;
+        .vision__card-item {
+          .vision__textBox {
+            & .vision__textBox-title {
+              .vision__textBox-backTitle {
+                color: var(--primary-bg-color);
+              }
+            }
+
+            .vision__textBox-viewmore {
+              &::after {
+                background: url("../images/icon/vision/icon_more_white.svg")
+                  no-repeat center;
+              }
             }
           }
         }
@@ -2363,12 +2422,14 @@ section {
   .footer {
     .footer__inner {
       .logo {
-        .logo--white {
-          display: block;
-        }
+        img {
+          &.logo--white {
+            display: block;
+          }
 
-        .logo--black {
-          display: none;
+          &.logo--black {
+            display: none;
+          }
         }
       }
     }
