@@ -637,7 +637,7 @@ section {
         display: flex;
         flex: 1;
         position: relative;
-        height: 44.5498125rem;
+        height: 37.5rem;
         overflow: hidden;
         transition: border-left 0.6s ease;
 
@@ -695,6 +695,8 @@ section {
           .portfolio__img {
             width: 100%;
             height: 100%;
+            border-radius: 10px;
+            overflow: hidden;
 
             img {
               width: 100%;
@@ -708,9 +710,8 @@ section {
             display: flex;
             flex-direction: column;
             justify-content: end;
-            align-items: start;
-            gap: 1.5625rem;
-            padding: 2.6875rem 5rem;
+            gap: 1.5rem;
+            padding: 2rem;
             color: var(--primary-text-color);
 
             .portfolio__description {
@@ -1563,6 +1564,7 @@ section {
         }
       }
     }
+
     .portfolio__inner-bottom {
       .portfolio__list {
         .portfolio__wrapper {
@@ -1768,10 +1770,12 @@ section {
 
   /* 포트폴리오 */
   #portfolio {
+    padding: 1.25rem;
+
     .portfolio__inner-top {
       /* nav 타입 포트폴리오 */
       &.portfolio__inner-top--nav {
-        padding: 1.25rem 0;
+        padding:  0 0 1.25rem 0;
 
         .portfolio__inner {
           .portfolio__info-wrap {
@@ -1780,7 +1784,6 @@ section {
             height: auto;
 
             .portfolio__info {
-              padding: 0 1.25rem;
               width: 100%;
 
               .portfolio__details {
@@ -1797,11 +1800,11 @@ section {
 
             .portfolio__picture-wrap {
               position: relative;
-              left: 1.25rem;
+              left: 0;
 
               .portfolio__picture-container {
                 .portfolio__picture {
-                  flex: 0 0 calc(100% - 2.5rem);
+                  flex: 0 0 100%;
                 }
               }
             }
@@ -1822,10 +1825,13 @@ section {
     }
 
     .portfolio__inner-bottom {
+      padding: 1.25rem 0 0 0;
       width: 100%;
+
       .portfolio__list {
         flex-direction: column;
-        padding-bottom: 0;
+        padding: 0;
+
         .portfolio__wrapper {
           flex-direction: column;
           border-top: 0.0625rem solid var(--secondary-border-color);
@@ -1833,16 +1839,18 @@ section {
           padding: 0;
           padding-top: 3rem;
           transition: color ease 0.3s, border ease 0.3s;
+
           &.active {
             border-top: 0.0625rem solid var(--primary-border-color);
             border-left: none;
             transition: color ease 0.3s, border ease 0.3s;
 
             .portfolio__card {
-              height: 80vh;
+              height: auto;
               transform: translate(0, 0);
+
               .portfolio__img {
-                height: 80%;
+                height: 12rem;
               }
             }
           }
@@ -1862,17 +1870,14 @@ section {
               height: 100%;
             }
 
-            .portfolio__text-Box {
+            .portfolio__text-box {
+              justify-content: flex-start;
               height: 100%;
-              padding: 0rem 1rem;
-
-              .portfolio__description {
-                display: block;
-                width: 100%;
-              }
+              padding: 1.2rem 0;
+              gap: 0.8rem;
 
               .portfolio__readmore {
-                display: block;
+                font-size: 0.8rem;
               }
             }
           }
