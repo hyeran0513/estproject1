@@ -303,7 +303,7 @@ section {
             .swiper-button-prev,
             .swiper-button-next {
               position: static;
-              margin-top: 0;
+              margin: 0 0.125rem;
 
               &::after {
                 font-family: "Font Awesome 6 Free";
@@ -749,7 +749,7 @@ section {
     margin: 0 auto;
     max-width: 75rem;
     width: 100%;
-
+    
     /* 비전 개별 컨테이너 (텍스트, 이미지) */
     .vision__card {
       display: flex;
@@ -757,7 +757,24 @@ section {
       align-items: center;
       width: 100%;
       height: 30rem;
-      margin: 3rem 0;
+
+      .vision__image__container{
+        width:40rem;
+        height:40rem;
+        overflow: hidden;
+        
+        border:1px solid white;
+        img{
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+          transition: all 0.6s ease;
+          &:hover{
+            z-index: 10;
+            transform : scale(1.1);
+          }
+        }
+      }
 
       /* 비전 텍스트박스(타이틀,내용,버튼) */
       .vision__textBox {
@@ -819,8 +836,8 @@ section {
             border-radius: 999rem;
             background-size: 2.03125rem;
             /* background-size: 1rem 1rem; */
-            background: url(../images/icon/icon_btn_vision-more.svg) no-repeat
-              center;
+            background: url(../images/icon/icon_btn_vision-more_dark.svg)
+              no-repeat center;
           }
         }
       }
@@ -1081,7 +1098,6 @@ section {
 
             .new__card-content {
               margin-top: 0.4rem;
-              color: var(--secondary-text-color);
             }
           }
         }
@@ -1110,7 +1126,6 @@ section {
 
             .new__card-content {
               margin-top: 0.4rem;
-              color: var(--secondary-text-color);
             }
           }
         }
@@ -1584,6 +1599,26 @@ section {
       }
     }
   }
+  
+/* 비전 섹션 CSS */
+#vision {
+  /* 비전 컨테이너 */
+  .vision__inner {
+    /* 비전 개별 컨테이너 (텍스트, 이미지) */
+    .vision__card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 30rem;
+      
+      .vision__image__container{
+        width: 20rem;;
+        height: 30rem;
+      }
+    }
+  }
+}
 
   /* 직원 소개 */
   #coworker {
@@ -1898,49 +1933,34 @@ section {
 
     .vision__inner {
       .vision__card {
-        display: grid;
-        grid-template-rows: 2;
-        height: 50rem;
-        row-gap: 2rem;
-        margin-bottom: 3rem;
-
         .vision__image__container {
           grid-row: 1;
           height: 100%;
           overflow: hidden;
-
           img {
-            position: relative;
             width: 100%;
             object-fit: cover;
-            transform: translateY(-10rem);
           }
         }
 
         .vision__textBox {
-          grid-row: 2;
-          height: 100%;
 
           .vision__textBox-title {
-            font-size: 2.5rem;
-          }
+            font-size: 2rem;
 
-          .vision__textBox-backTitle {
-            font-size: 2.5rem;
+            .vision__textBox-backTitle {
+              font-size: 2.5rem;
+              top: -1.25rem;
+            }
           }
 
           .vision__textBox-text {
-            font-size: 1.2rem;
+            font-size: 1rem;
           }
-
+          
           .vision__textBox-viewmore {
-            font-size: 1.2rem;
-            border: 0.15rem solid var(--primary-border-color);
+            font-size: 0.8rem;
             border-right: none;
-
-            &::after {
-              border: 0.15rem solid var(--primary-border-color);
-            }
           }
         }
       }
@@ -2328,11 +2348,11 @@ section {
   #vision {
     .vision__inner {
       .vision__card {
-        .vision__text_Box {
+        .vision__textBox {
           .vision__textBox-viewmore {
             &::after {
-              background: url(../images/icon/icon_btn_vision-more.svg) no-repeat
-                center;
+              background: url(../images/icon/icon_btn_vision-more_white.svg)
+                no-repeat center;
             }
           }
         }
