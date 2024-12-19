@@ -2075,25 +2075,19 @@ section {
           flex-direction: column;
           border-top: 0.0625rem solid var(--secondary-border-color);
           border-left: none;
-          padding: 0;
-          padding-top: 3rem;
+          padding: 3rem 0 0 0;
           transition: color ease 0.3s, border ease 0.3s;
 
           .portfolio__card {
+            flex-direction: column;
             margin: 0;
             height: 0;
-            padding: auto;
-            flex-direction: column;
             width: 100%;
             transform: translate(0, 100%);
 
-            .portfolio__img {
-              width: 100%;
-              height: 100%;
-            }
-
             .portfolio__text-box {
               padding: 1.2rem 0;
+
               .portfolio__readmore {
                 font-size: 0.8rem;
               }
