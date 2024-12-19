@@ -890,24 +890,6 @@ section {
           cursor: pointer;
         }
 
-        &.active {
-          border-left: 0.0625rem solid var(--primary-border-color);
-          opacity: 1;
-          flex: 30;
-          transition: border-left 0.6s ease;
-          &:after {
-            transition: opacity 0.6s ease;
-            opacity: 0;
-          }
-
-          .portfolio__card {
-            transform: translateX(0);
-            opacity: 1;
-            cursor: default;
-            transition: transform 0.6s ease, opacity 0.6s ease;
-          }
-        }
-
         .portfolio__card {
           display: flex;
           flex-direction: row;
@@ -959,6 +941,24 @@ section {
                 color: var(--primary-color);
               }
             }
+          }
+        }
+
+        &.active {
+          border-left: 0.0625rem solid var(--primary-border-color);
+          opacity: 1;
+          flex: 30;
+          transition: border-left 0.6s ease;
+          &:after {
+            transition: opacity 0.6s ease;
+            opacity: 0;
+          }
+
+          .portfolio__card {
+            transform: translateX(0);
+            opacity: 1;
+            cursor: default;
+            transition: transform 0.6s ease, opacity 0.6s ease;
           }
         }
       }
@@ -2079,21 +2079,6 @@ section {
           padding-top: 3rem;
           transition: color ease 0.3s, border ease 0.3s;
 
-          &.active {
-            border-top: 0.0625rem solid var(--primary-border-color);
-            border-left: none;
-            transition: color ease 0.3s, border ease 0.3s;
-
-            .portfolio__card {
-              height: auto;
-              transform: translate(0, 0);
-
-              .portfolio__img {
-                height: 12rem;
-              }
-            }
-          }
-
           .portfolio__card {
             margin: 0;
             height: 0;
@@ -2117,6 +2102,21 @@ section {
 
               .portfolio__readmore {
                 font-size: 0.8rem;
+              }
+            }
+          }
+
+          &.active {
+            border-top: 0.0625rem solid var(--primary-border-color);
+            border-left: none;
+            transition: color ease 0.3s, border ease 0.3s;
+
+            .portfolio__card {
+              height: auto;
+              transform: translate(0, 0);
+
+              .portfolio__img {
+                height: 12rem;
               }
             }
           }
