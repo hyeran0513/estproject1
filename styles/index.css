@@ -890,24 +890,6 @@ section {
           cursor: pointer;
         }
 
-        &.active {
-          border-left: 0.0625rem solid var(--primary-border-color);
-          opacity: 1;
-          flex: 30;
-          transition: border-left 0.6s ease;
-          &:after {
-            transition: opacity 0.6s ease;
-            opacity: 0;
-          }
-
-          .portfolio__card {
-            transform: translateX(0);
-            opacity: 1;
-            cursor: default;
-            transition: transform 0.6s ease, opacity 0.6s ease;
-          }
-        }
-
         .portfolio__card {
           display: flex;
           flex-direction: row;
@@ -959,6 +941,24 @@ section {
                 color: var(--primary-color);
               }
             }
+          }
+        }
+
+        &.active {
+          border-left: 0.0625rem solid var(--primary-border-color);
+          opacity: 1;
+          flex: 30;
+          transition: border-left 0.6s ease;
+          &:after {
+            transition: opacity 0.6s ease;
+            opacity: 0;
+          }
+
+          .portfolio__card {
+            transform: translateX(0);
+            opacity: 1;
+            cursor: default;
+            transition: transform 0.6s ease, opacity 0.6s ease;
           }
         }
       }
@@ -2075,9 +2075,24 @@ section {
           flex-direction: column;
           border-top: 0.0625rem solid var(--secondary-border-color);
           border-left: none;
-          padding: 0;
-          padding-top: 3rem;
+          padding: 3rem 0 0 0;
           transition: color ease 0.3s, border ease 0.3s;
+
+          .portfolio__card {
+            flex-direction: column;
+            margin: 0;
+            height: 0;
+            width: 100%;
+            transform: translate(0, 100%);
+
+            .portfolio__text-box {
+              padding: 1.2rem 0;
+
+              .portfolio__readmore {
+                font-size: 0.8rem;
+              }
+            }
+          }
 
           &.active {
             border-top: 0.0625rem solid var(--primary-border-color);
@@ -2086,37 +2101,9 @@ section {
 
             .portfolio__card {
               height: auto;
-              transform: translate(0, 0);
 
               .portfolio__img {
                 height: 12rem;
-              }
-            }
-          }
-
-          .portfolio__card {
-            margin: 0;
-            height: 0;
-            padding: auto;
-            overflow: hidden;
-            flex-direction: column;
-            width: 100%;
-            height: 0;
-            transform: translate(0, 100%);
-
-            .portfolio__img {
-              width: 100%;
-              height: 100%;
-            }
-
-            .portfolio__text-box {
-              justify-content: flex-start;
-              height: 100%;
-              padding: 1.2rem 0;
-              gap: 0.8rem;
-
-              .portfolio__readmore {
-                font-size: 0.8rem;
               }
             }
           }
