@@ -197,21 +197,12 @@ const handlePortfoliolist = () => {
   //모든 포트폴리오 컨텐츠 래퍼 수집
   const portfolioList = document.querySelectorAll(".portfolio__wrapper");
 
-  // 모든 래퍼 컨텐츠의 자식요소에 기능 할당.
-  portfolioList.forEach((portfolioEle) => {
-    portfolioEle.addEventListener("click", () => {
-      removeWrapperActive(portfolioList);
-      // 래퍼컨텐츠에 active클래스 추가
-      portfolioEle.classList.add("active");
+  portfolioList.forEach((item) => {
+    item.addEventListener("click", () => {
+      // 모든 요소에서 active 제거 후 클릭된 요소에 추가
+      portfolioList.forEach(wrapper => wrapper.classList.toggle("active", wrapper === item));
     });
   });
-
-  const removeWrapperActive = (portfolioList) => {
-    portfolioList.forEach((wrapper) => {
-      // 래퍼컨텐츠에 active클래스 제거
-      wrapper.classList.remove("active");
-    });
-  };
 };
 
 // theme 핸들러
