@@ -62,7 +62,8 @@ body {
                 background-color: var(--fixed-light-color);
               }
 
-              &:hover {
+              &:hover,
+              &.active {
                 &::after {
                   opacity: 1;
                   transform: scaleX(1);
@@ -330,7 +331,7 @@ body {
           width: 4rem;
           height: 1rem;
         }
-        
+
         .footer__menu {
           width: 60%;
         }

@@ -32,21 +32,21 @@ const headerTemplate = `
           >
         </li>
   
+         <li class="gnb__list-item">
+          <a
+            href="./news.html"
+            class="gnb__list-link"
+            title="뉴스 페이지로 이동"
+            >뉴스</a
+          >
+        </li>
+        
         <li class="gnb__list-item">
           <a
             href="./interview.html"
             class="gnb__list-link"
             title="인터뷰 페이지로 이동"
             >인터뷰</a
-          >
-        </li>
-  
-        <li class="gnb__list-item">
-          <a
-            href="./news.html"
-            class="gnb__list-link"
-            title="뉴스 페이지로 이동"
-            >뉴스</a
           >
         </li>
   
@@ -254,6 +254,21 @@ const footerTemplate = `
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#header").innerHTML = headerTemplate;
+
+  // 현재 페이지의 파일명 추출
+  const currentPage = window.location.pathname.split("/").pop();
+
+  const menuLinks = document.querySelectorAll(".gnb__list-link");
+
+  // 각 링크를 순회하며 활성화 상태 설정
+  menuLinks.forEach((link) => {
+    const linkPage = link.getAttribute("href").replace("./", "");
+
+    if (currentPage === linkPage) {
+      link.classList.add("active");
+    }
+  });
+
   document.querySelector("#sidebar").innerHTML = sidebarTemplate;
   document.querySelector("#footer").innerHTML = footerTemplate;
 });

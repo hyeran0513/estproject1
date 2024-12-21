@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         position: coords,
       });
 
+      // 길찾기 버튼
       const infoContent = `
         <a href="https://map.kakao.com/link/to/이스트빌딩,${result[0].y},${result[0].x}" target="_blank" class="link">
           <i class="fa-solid fa-map-location-dot"></i>길찾기

@@ -17,7 +17,7 @@ const setBaseUrl = () => {
   if (window.location.hostname === "hyeran0513.github.io") {
     const base = document.createElement("base");
     base.href = "/estproject1/";
-    document.head.appendChild(base);
+    document.head.prepend(base);
   }
 };
 
