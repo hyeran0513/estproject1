@@ -72,10 +72,6 @@ https://www.youtube.com/watch?v=DCo9veEzZL0
 
 ```
 📦estproject1
- ┣ 📂components
- ┃ ┣ 📜footer.html
- ┃ ┣ 📜header.html
- ┃ ┗ 📜sidebar.html
  ┣ 📂images
  ┃ ┣ 📂bg
  ┃ ┃ ┣ 📂banner
