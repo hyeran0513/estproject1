@@ -1,6 +1,6 @@
 const headerTemplate = `
   <div class="header__inner">
-    <a href="/" class="logo">
+    <a href="/estproject1/" class="logo">
       <img
         src="./images/icon/common/icon_logo_white.svg"
         alt="로고"
