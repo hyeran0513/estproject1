@@ -1,105 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;"
+<div class="header__inner">
+  <a href="/" class="logo">
+    <img
+      src="./images/icon/common/icon_logo_white.svg"
+      alt="로고"
+      class="logo--white"
+      loading="lazy"
+      width="100"
+      height="34"
     />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="header__inner">
-      <a href="/" class="logo">
-        <img
-          src="./images/icon/common/icon_logo_white.svg"
-          alt="로고"
-          class="logo--white"
-          loading="lazy"
-          width="100"
-          height="34"
-        />
-        <img
-          src="./images/icon/common/icon_logo_black.svg"
-          alt="로고"
-          class="logo--black"
-          loading="lazy"
-          width="100"
-          height="34"
-        />
-      </a>
+    <img
+      src="./images/icon/common/icon_logo_black.svg"
+      alt="로고"
+      class="logo--black"
+      loading="lazy"
+      width="100"
+      height="34"
+    />
+  </a>
 
-      <div class="a11y-hidden">메뉴</div>
+  <div class="a11y-hidden">메뉴</div>
 
-      <nav class="gnb" aria-label="주 메뉴">
-        <ul class="gnb__list">
-          <li class="gnb__list-item">
-            <a
-              href="./portfolio.html"
-              class="gnb__list-link"
-              title="포트폴리오 페이지로 이동"
-              >포트폴리오</a
-            >
-          </li>
-
-          <li class="gnb__list-item">
-            <a
-              href="./interview.html"
-              class="gnb__list-link"
-              title="인터뷰 페이지로 이동"
-              >인터뷰</a
-            >
-          </li>
-
-          <li class="gnb__list-item">
-            <a
-              href="./news.html"
-              class="gnb__list-link"
-              title="뉴스 페이지로 이동"
-              >뉴스</a
-            >
-          </li>
-
-          <li class="gnb__list-item">
-            <a
-              href="./notice.html"
-              class="gnb__list-link"
-              title="공지사항 페이지로 이동"
-              >공지사항</a
-            >
-          </li>
-
-          <li class="gnb__list-item">
-            <a
-              href="./contact.html"
-              class="gnb__list-link"
-              title="문의 페이지로 이동"
-              >문의</a
-            >
-          </li>
-        </ul>
-      </nav>
-
-      <div class="btn-wrap">
-        <button
-          type="button"
-          id="btn-theme-toggle"
-          aria-label="테마 변경"
-          title="테마 변경"
+  <nav class="gnb" aria-label="주 메뉴">
+    <ul class="gnb__list">
+      <li class="gnb__list-item">
+        <a
+          href="./portfolio.html"
+          class="gnb__list-link"
+          title="포트폴리오 페이지로 이동"
+          >포트폴리오</a
         >
-          <i class="bx bx-moon"></i>
-        </button>
+      </li>
 
-        <button
-          type="button"
-          class="btn-hamburger"
-          aria-label="메뉴 열기"
-          title="햄버거 버튼"
+      <li class="gnb__list-item">
+        <a
+          href="./interview.html"
+          class="gnb__list-link"
+          title="인터뷰 페이지로 이동"
+          >인터뷰</a
         >
-          <i class="bx bx-menu"></i>
-        </button>
-      </div>
-    </div>
-  </body>
-</html>
+      </li>
+
+      <li class="gnb__list-item">
+        <a
+          href="./news.html"
+          class="gnb__list-link"
+          title="뉴스 페이지로 이동"
+          >뉴스</a
+        >
+      </li>
+
+      <li class="gnb__list-item">
+        <a
+          href="./notice.html"
+          class="gnb__list-link"
+          title="공지사항 페이지로 이동"
+          >공지사항</a
+        >
+      </li>
+
+      <li class="gnb__list-item">
+        <a
+          href="./contact.html"
+          class="gnb__list-link"
+          title="문의 페이지로 이동"
+          >문의</a
+        >
+      </li>
+    </ul>
+  </nav>
+
+  <div class="btn-wrap">
+    <button
+      type="button"
+      id="btn-theme-toggle"
+      aria-label="테마 변경"
+      title="테마 변경"
+    >
+      <i class="bx bx-moon"></i>
+    </button>
+
+    <button
+      type="button"
+      class="btn-hamburger"
+      aria-label="메뉴 열기"
+      title="햄버거 버튼"
+    >
+      <i class="bx bx-menu"></i>
+    </button>
+  </div>
+</div>
