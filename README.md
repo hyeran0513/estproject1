@@ -65,7 +65,7 @@
 <br/>
 
 ## 🎬 시연 영상
-https://www.youtube.com/watch?v=DCo9veEzZL0
+https://www.youtube.com/watch?v=WVf0szhZ7wc
 <br/><br/><br/>
 
 ## 📁 폴더 구조
