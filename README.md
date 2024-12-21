@@ -72,13 +72,16 @@ https://www.youtube.com/watch?v=DCo9veEzZL0
 
 ```
 📦estproject1
+ ┣ 📂images
  ┣ 📂js
- ┃ ┣ 📜about.js
- ┃ ┣ 📜common.js
- ┃ ┣ 📜index.js
- ┃ ┣ 📜layout.js
- ┃ ┣ 📜notice.js
- ┃ ┗ 📜portfolio.js
+ ┃ ┣ 📂base
+ ┃ ┃ ┣ 📜common.js
+ ┃ ┃ ┗ 📜layout.js
+ ┃ ┗ 📂pages
+ ┃ ┃ ┣ 📜about.js
+ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┣ 📜notice.js
+ ┃ ┃ ┗ 📜portfolio.js
  ┣ 📂styles
  ┃ ┣ 📂base
  ┃ ┃ ┣ 📜common.css
