@@ -1,6 +1,6 @@
 const headerTemplate = `
   <div class="header__inner">
-    <a href="/estproject1/" class="logo">
+    <a href="/" class="logo">
       <img
         src="./images/icon/common/icon_logo_white.svg"
         alt="로고"
@@ -25,28 +25,46 @@ const headerTemplate = `
       <ul class="gnb__list">
         <li class="gnb__list-item">
           <a
+            href="./about.html"
+            class="gnb__list-link"
+            title="회사소개 페이지로 이동"
+            >회사소개</a
+          >
+        </li>
+
+        <li class="gnb__list-item">
+          <a
             href="./portfolio.html"
             class="gnb__list-link"
             title="포트폴리오 페이지로 이동"
             >포트폴리오</a
           >
         </li>
-  
+
          <li class="gnb__list-item">
           <a
-            href="./news.html"
+            href="./coworker.html"
             class="gnb__list-link"
-            title="뉴스 페이지로 이동"
-            >뉴스</a
+            title="직원소개 페이지로 이동"
+            >직원소개</a
           >
         </li>
-        
+
         <li class="gnb__list-item">
           <a
             href="./interview.html"
             class="gnb__list-link"
             title="인터뷰 페이지로 이동"
             >인터뷰</a
+          >
+        </li>
+
+                <li class="gnb__list-item">
+          <a
+            href="./news.html"
+            class="gnb__list-link"
+            title="뉴스 페이지로 이동"
+            >뉴스</a
           >
         </li>
   
@@ -56,15 +74,6 @@ const headerTemplate = `
             class="gnb__list-link"
             title="공지사항 페이지로 이동"
             >공지사항</a
-          >
-        </li>
-  
-        <li class="gnb__list-item">
-          <a
-            href="./contact.html"
-            class="gnb__list-link"
-            title="문의 페이지로 이동"
-            >문의</a
           >
         </li>
       </ul>
@@ -104,13 +113,31 @@ const sidebarTemplate = `
       <ul class="menu__list">
         <li class="menu__list-item">
           <a
+            href="./about.html"
+            class="menu__list-link"
+            title="회사소개 페이지로 이동"
+            >회사소개</a
+          >
+        </li>
+
+        <li class="menu__list-item">
+          <a
             href="./portfolio.html"
             class="menu__list-link"
             title="포트폴리오 페이지로 이동"
             >포트폴리오</a
           >
         </li>
-  
+
+         <li class="menu__list-item">
+          <a
+            href="./coworker.html"
+            class="menu__list-link"
+            title="직원소개 페이지로 이동"
+            >직원소개</a
+          >
+        </li>
+
         <li class="menu__list-item">
           <a
             href="./interview.html"
@@ -119,8 +146,8 @@ const sidebarTemplate = `
             >인터뷰</a
           >
         </li>
-  
-        <li class="menu__list-item">
+
+                <li class="menu__list-item">
           <a
             href="./news.html"
             class="menu__list-link"
@@ -135,15 +162,6 @@ const sidebarTemplate = `
             class="menu__list-link"
             title="공지사항 페이지로 이동"
             >공지사항</a
-          >
-        </li>
-  
-        <li class="menu__list-item">
-          <a
-            href="./contact.html"
-            class="menu__list-link"
-            title="문의 페이지로 이동"
-            >문의</a
           >
         </li>
       </ul>
