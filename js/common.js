@@ -25,29 +25,29 @@ const setBaseUrl = () => {
 };
 
 // fetch 핸들러
-const handleFetch = () => {
-  // 모든 fetch 요청을 Promise.all로 처리
-  Promise.all([
-    fetch("../components/header.html").then((response) => response.text()),
-    fetch("../components/sidebar.html").then((response) => response.text()),
-    fetch("../components/footer.html").then((response) => response.text()),
-  ])
-    .then(([headerData, sidebarData, footerData]) => {
-      document.querySelector("#header").innerHTML = headerData;
-      document.querySelector("#sidebar").innerHTML = sidebarData;
-      document.querySelector("#footer").innerHTML = footerData;
+// const handleFetch = () => {
+//   // 모든 fetch 요청을 Promise.all로 처리
+//   Promise.all([
+//     fetch("../components/header.html").then((response) => response.text()),
+//     fetch("../components/sidebar.html").then((response) => response.text()),
+//     fetch("../components/footer.html").then((response) => response.text()),
+//   ])
+//     .then(([headerData, sidebarData, footerData]) => {
+//       document.querySelector("#header").innerHTML = headerData;
+//       document.querySelector("#sidebar").innerHTML = sidebarData;
+//       document.querySelector("#footer").innerHTML = footerData;
 
-      // 스크롤 이벤트를 감지하여 헤더 배경색 변경
-      handleScrollEvent();
+//       // 스크롤 이벤트를 감지하여 헤더 배경색 변경
+//       handleScrollEvent();
 
-      // theme 핸들러
-      handleTheme();
+//       // theme 핸들러
+//       handleTheme();
 
-      // 사이드바 핸들러
-      handleSidebar();
-    })
-    .catch((error) => console.error("에러:", error));
-};
+//       // 사이드바 핸들러
+//       handleSidebar();
+//     })
+//     .catch((error) => console.error("에러:", error));
+// };
 
 // 스크롤 이벤트를 감지하여 헤더 배경색 변경
 const handleScrollEvent = () => {
