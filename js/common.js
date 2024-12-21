@@ -3,7 +3,16 @@ document.addEventListener("DOMContentLoaded", () => {
   setBaseUrl();
 
   // fetch 핸들러
-  handleFetch();
+  // handleFetch();
+
+  // 스크롤 이벤트를 감지하여 헤더 배경색 변경
+  handleScrollEvent();
+
+  // theme 핸들러
+  handleTheme();
+
+  // 사이드바 핸들러
+  handleSidebar();
 });
 
 // baseurl 처리
