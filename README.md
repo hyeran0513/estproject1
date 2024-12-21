@@ -72,6 +72,10 @@ https://www.youtube.com/watch?v=DCo9veEzZL0
 
 ```
 📦estproject1
+ ┣ 📂components
+ ┃ ┣ 📜footer.html
+ ┃ ┣ 📜header.html
+ ┃ ┗ 📜sidebar.html
  ┣ 📂images
  ┃ ┣ 📂bg
  ┃ ┃ ┣ 📂banner
@@ -88,14 +92,28 @@ https://www.youtube.com/watch?v=DCo9veEzZL0
  ┃ ┃ ┣ 📂portfolio
  ┃ ┃ ┗ 📂vision
  ┣ 📂js
- ┃ ┗ 📜index.js
+ ┃ ┣ 📜common.js
+ ┃ ┣ 📜index.js
+ ┃ ┣ 📜kakaomap.js
+ ┃ ┗ 📜notice.js
  ┣ 📂styles
- ┃ ┣ 📜common.css
- ┃ ┣ 📜index.css
- ┃ ┣ 📜layout.css
- ┃ ┣ 📜reset.css
- ┃ ┗ 📜variables.css
+ ┃ ┣ 📂base
+ ┃ ┃ ┣ 📜common.css
+ ┃ ┃ ┣ 📜layout.css
+ ┃ ┃ ┣ 📜reset.css
+ ┃ ┃ ┗ 📜variables.css
+ ┃ ┗ 📂pages
+ ┃ ┃ ┣ 📜card.css
+ ┃ ┃ ┣ 📜contact.css
+ ┃ ┃ ┣ 📜index.css
+ ┃ ┃ ┣ 📜news.css
+ ┃ ┃ ┗ 📜notice.css
+ ┣ 📜contact.html
  ┣ 📜index.html
+ ┣ 📜interview.html
+ ┣ 📜news.html
+ ┣ 📜notice.html
+ ┣ 📜portfolio.html
  ┣ 📜README.md
  ┗ 📜robots.txt
 ```
