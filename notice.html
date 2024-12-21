@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="이스트소프트 프론트엔드 부트캠프 - 건축사무소 프로젝트"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://hyeran0513.github.io/estproject1/" />
+
+    <title>이스트소프트 프론트엔드 부트캠프</title>
+
+    <!-- 중요 CSS 미리 로드 -->
+    <link rel="preload" href="./styles/base/variables.css" as="style" />
+    <link rel="preload" href="./styles/base/layout.css" as="style" />
+
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="./styles/base/variables.css" />
+    <link rel="stylesheet" href="./styles/base/layout.css" />
+    <link rel="stylesheet" href="./styles/base/reset.css" />
+    <link rel="stylesheet" href="./styles/base/common.css" />
+    <link
+      rel="stylesheet"
+      href="./styles/pages/notice.css"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- 아이콘 라이브러리 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- 헤더 -->
+    <div class="a11y-hidden">헤더</div>
+
+    <header id="header" class="header header--sub"></header>
+
+    <!-- 사이드바 -->
+    <div class="a11y-hidden">메뉴</div>
+
+    <aside id="sidebar"></aside>
+
+    <!-- 메인 -->
+    <main class="main main--sub">
+      <section id="notice">
+        <div class="section__head">
+          <div class="section__title">공지사항</div>
+          <div class="section__description">
+            중요한 공지사항을 확인해 주세요.
+          </div>
+        </div>
+
+        <div class="tabs">
+          <div class="tab__buttons">
+            <button
+              class="tab__button active"
+              title="partners"
+              data-tab="partners"
+            >
+              Partners
+            </button>
+            <button class="tab__button" title="employees" data-tab="employees">
+              Employees
+            </button>
+          </div>
+
+          <div class="tab__content">
+            <div class="notice__list active" id="partners">
+              <div class="notice__list-item">
+                <div class="notice__list-title ellipsis">
+                  신규 프로젝트 의뢰 접수 마감 안내
+                </div>
+                <div class="notice__list-content multi-ellipsis">
+                  현재 프로젝트 진행 상황으로 인해 신규 의뢰 접수를 일시적으로
+                  중단합니다. 접수 재개일은 추후 공지를 통해 안내드리겠습니다.
+                  양해 부탁드립니다.
+                </div>
+              </div>
+
+              <div class="notice__list-item">
+                <div class="notice__list-title ellipsis">연말 휴무 안내</div>
+                <div class="notice__list-content multi-ellipsis">
+                  안녕하세요. 저희 건축사무소는 12월 30일부터 1월 2일까지 연말
+                  연휴로 인해 휴무합니다. 긴급한 문의 사항은 대표 이메일로 연락
+                  부탁드립니다.
+                </div>
+              </div>
+            </div>
+
+            <div class="notice__list" id="employees">
+              <div class="notice__list-item">
+                <div class="notice__list-title ellipsis">
+                  건축 세미나 개최 안내
+                </div>
+                <div class="notice__list-content multi-ellipsis">
+                  12월 20일, 최신 건축 트렌드와 사례를 주제로 한 세미나를
+                  개최합니다. 장소는 사무소 내 컨퍼런스 룸이며, 참석 희망자는
+                  12월 18일까지 사전 신청 바랍니다.
+                </div>
+              </div>
+
+              <div class="notice__list-item">
+                <div class="notice__list-title ellipsis">
+                  홈페이지 개편 작업 공지
+                </div>
+                <div class="notice__list-content multi-ellipsis">
+                  보다 나은 서비스를 제공하기 위해 1월 10일부터 15일까지
+                  홈페이지 개편 작업이 진행됩니다. 이 기간 동안 일부 기능이
+                  제한될 수 있으니 양해 부탁드립니다.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer id="footer"></footer>
+
+    <!-- 메인 JS 파일 -->
+    <script src="./js/base/layout.js"></script>
+    <script src="./js/base/common.js"></script>
+    <script src="./js/pages/notice.js"></script>
+  </body>
+</html>
