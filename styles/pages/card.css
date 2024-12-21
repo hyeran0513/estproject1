@@ -21,7 +21,7 @@ section {
     gap: 1.5rem;
 
     .card__item {
-      border-radius: 10px;
+      border-radius: 0.625rem;
       overflow: hidden;
       cursor: pointer;
       background-color: var(--secondary-bg-color);
@@ -41,7 +41,7 @@ section {
       }
 
       .card__item-thumbnail {
-        height: 200px;
+        height: 12.5rem;
         overflow: hidden;
 
         img {
