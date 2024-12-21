@@ -49,9 +49,12 @@
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
       defer
     ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Yantramanav:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Kakao 맵 API -->
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54772cdac3b4403953b1c4c44df17866&libraries=services,clusterer,drawing"
+    ></script>
   </head>
 
   <body>
@@ -169,12 +172,11 @@
         <div class="company__inner">
           <div class="section__head">
             <div class="section__title">회사 소개</div>
-          </div> 
+          </div>
 
           <!-- 회사 정보 영역 -->
           <div class="company__intro">
             <div class="company__info">
-
               <h3 class="company__description">
                 건축의 아름다움,<br />
                 합리적인 비용,<br />
@@ -236,88 +238,6 @@
         </div>
       </section>
 
-      <!-- 회사 비전 -->
-      <div class="a11y-hidden">회사 비전</div>
-
-      <!-- 비전 섹션 -->
-      <section class="vision" id="vision">
-        <!-- 비전 컨테이너 -->
-        <div class="vision__inner">
-          <div class="section__head">
-            <div class="section__title">비전</div>
-          </div> 
-
-          <!-- 비전 카드 리스트 -->
-          <div class="vision__cards">
-            <!-- 비전 카드 -->
-            <div class="vision__card">
-              <div class="vision__card-content">
-                <!-- 비전 텍스트 박스 -->
-                <div class="vision__text-box">
-                  <div class="vision__text-box-header">
-                    <span class="vision__back-title" aria-hidden="true"
-                      >FUTURE</span
-                    >
-                    <span class="vision__main-title">미래를 건설하는 힘</span>
-                  </div>
-
-                  <p class="vision__description">
-                    지속 가능한 세상을 함께 만들어갑니다.
-                  </p>
-
-                  <a href="#" class="vision__more" title="회사 비전 더 보기">
-                    <span class="vision__more-text">더 보기</span>
-                    <span class="vision__more-icon"></span>
-                  </a>
-                </div>
-
-                <!-- 비전 이미지 -->
-                <div class="vision__image">
-                  <img
-                    src="./images/bg/vision/bg_vision1.png"
-                    alt="회사를 대표하는 비전 이미지 1"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <!-- 비전 카드 -->
-            <div class="vision__card">
-              <div class="vision__card-content">
-                <!-- 비전 이미지 -->
-                <div class="vision__image">
-                  <img
-                    src="./images/bg/vision/bg_vision2.png"
-                    alt="회사를 대표하는 비전 이미지 2"
-                    loading="lazy"
-                  />
-                </div>
-
-                <!-- 비전 텍스트 박스 -->
-                <div class="vision__text-box">
-                  <div class="vision__text-box-header">
-                    <span class="vision__back-title" aria-hidden="true"
-                      >PROMISE</span
-                    >
-                    <span class="vision__main-title">안전과 신뢰의 약속</span>
-                  </div>
-
-                  <p class="vision__description">
-                    튼튼한 기반 위에 더 나은 미래를 세웁니다.
-                  </p>
-
-                  <a href="#" class="vision__more" title="회사 비전 더 보기">
-                    <span class="vision__more-text">더 보기</span>
-                    <span class="vision__more-icon"></span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- 포트폴리오 상단 -->
       <div class="a11y-hidden">포트폴리오</div>
 
@@ -325,12 +245,16 @@
         <!-- nav 타입 포트폴리오 -->
         <div class="portfolio__inner-top portfolio__inner-top--nav">
           <div class="portfolio__inner">
-            <div class="section__head color-reverse">
+            <div class="section__head">
               <div class="section__title">포트폴리오</div>
-              <a href="./portfolio.html" title="포트폴리오로 이동" class="section__button section__button--more">
-                <i class='bx bx-plus'></i>
+              <a
+                href="./portfolio.html"
+                title="포트폴리오로 이동"
+                class="section__button section__button--more"
+              >
+                <i class="bx bx-plus"></i>
               </a>
-            </div> 
+            </div>
 
             <!-- 설명 & 이미지 감싸는 영역-->
             <div class="portfolio__info-wrap">
@@ -492,6 +416,19 @@
         </div>
       </section>
 
+      <!-- 영향 -->
+      <div class="a11y-hidden">영향</div>
+
+      <section id="influence">
+        <div class="influence__inner">
+          <div class="influence__description">
+            Villa Esther의 독특한 분위기는<br />
+            Le Corbusier의 Villa Savoye 스타일을 채택한<br />
+            네오-모던 에서부터 시작됩니다.
+          </div>
+        </div>
+      </section>
+
       <!-- 직원 소개 -->
       <div class="a11y-hidden">직원소개</div>
 
@@ -499,7 +436,7 @@
         <div class="coworker__inner">
           <div class="section__head">
             <div class="section__title">직원소개</div>
-          </div> 
+          </div>
 
           <div class="coworker__card">
             <div class="coworker__card-item">
@@ -647,92 +584,96 @@
         </div>
       </section>
 
-       <!-- 뉴스 -->
-       <div class="a11y-hidden">뉴스</div>
+      <!-- 뉴스 -->
+      <div class="a11y-hidden">뉴스</div>
 
-       <section id="news">
-         <div class="news__inner">
-           <div class="section__head">
-             <div class="section__title">뉴스</div>
-             <a href="./news.html" title="뉴스로 이동" class="section__button section__button--more">
-               <i class='bx bx-plus'></i>
-             </a>
-           </div>       
- 
-           <div class="news__container">
-             <!-- 뉴스 세로 모드 -->
-             <div class="news__card news__card--vertical">
-               <div class="news__card-thumbnail">
-                 <img
-                   src="./images/bg/news/bg_news1.png"
-                   alt="새로운 시대를 건축하는 혁신적이고 감각적인 디자인 이미지"
-                   loading="lazy"
-                 />
-               </div>
- 
-               <div class="news__card-info">
-                 <div class="news__card-title ellipsis">
-                   새로운 시대를 건축하다
-                 </div>
-                 <div class="new__card-content multi-ellipsis">
-                   혁신적이고 감각적인 건축 디자인을 만나보세요. 미래지향적
-                   공간과 독창적 설계를 경험해 보실 준비가 되셨나요?
-                 </div>
-               </div>
-             </div>
- 
-             <!-- 뉴스 세로 모드 -->
-             <div class="news__card news__card--vertical">
-               <div class="news__card-thumbnail">
-                 <img
-                   src="./images/bg/news/bg_news2.png"
-                   alt="공간의 가치를 재정의하는 건축 디자인 이미지"
-                   loading="lazy"
-                 />
-               </div>
- 
-               <div class="news__card-info">
-                 <div class="news__card-title ellipsis">
-                   공간의 가치를 재정의하다
-                 </div>
-                 <div class="new__card-content multi-ellipsis">
-                   이스트 건축은 건축의 본질을 탐구하고 새로운 트렌드를 반영한
-                   디자인으로 공간의 가치를 높입니다. 차별화된 설계를 지금
-                   만나보세요.
-                 </div>
-               </div>
-             </div>
- 
-             <!-- 뉴스 가로 모드 -->
-             <div class="news__card news__card--horizontal">
-               <div class="news__card-info">
-                 <div class="news__card-title ellipsis">
-                   미래의 건축을 디자인하다
-                 </div>
-                 <div class="new__card-content multi-ellipsis">
-                   혁신과 기술을 기반으로 한 이스트 건축의 디자인은
-                   현대적이면서도 지속 가능한 건축 솔루션을 제안합니다. 함께 더
-                   나은 미래를 설계해 보세요. 앞으로도 함께 합시다.
-                 </div>
-               </div>
-             </div>
- 
-             <!-- 뉴스 가로 모드 -->
-             <div class="news__card news__card--horizontal">
-               <div class="news__card-info">
-                 <div class="news__card-title ellipsis">
-                   세상을 바꾸는 디자인
-                 </div>
-                 <div class="new__card-content multi-ellipsis">
-                   아름다움과 기능을 아우르는 디자인을 통해 새로운 건축
-                   패러다임을 만들어갑니다. 우리의 작품을 통해 세상의 변화를
-                   확인해 보세요.
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </section>
+      <section id="news">
+        <div class="news__inner">
+          <div class="section__head">
+            <div class="section__title">뉴스</div>
+            <a
+              href="./news.html"
+              title="뉴스로 이동"
+              class="section__button section__button--more"
+            >
+              <i class="bx bx-plus"></i>
+            </a>
+          </div>
+
+          <div class="news__container">
+            <!-- 뉴스 세로 모드 -->
+            <div class="news__card news__card--vertical">
+              <div class="news__card-thumbnail">
+                <img
+                  src="./images/bg/news/bg_news1.png"
+                  alt="새로운 시대를 건축하는 혁신적이고 감각적인 디자인 이미지"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="news__card-info">
+                <div class="news__card-title ellipsis">
+                  새로운 시대를 건축하다
+                </div>
+                <div class="new__card-content multi-ellipsis">
+                  혁신적이고 감각적인 건축 디자인을 만나보세요. 미래지향적
+                  공간과 독창적 설계를 경험해 보실 준비가 되셨나요?
+                </div>
+              </div>
+            </div>
+
+            <!-- 뉴스 세로 모드 -->
+            <div class="news__card news__card--vertical">
+              <div class="news__card-thumbnail">
+                <img
+                  src="./images/bg/news/bg_news2.png"
+                  alt="공간의 가치를 재정의하는 건축 디자인 이미지"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="news__card-info">
+                <div class="news__card-title ellipsis">
+                  공간의 가치를 재정의하다
+                </div>
+                <div class="new__card-content multi-ellipsis">
+                  이스트 건축은 건축의 본질을 탐구하고 새로운 트렌드를 반영한
+                  디자인으로 공간의 가치를 높입니다. 차별화된 설계를 지금
+                  만나보세요.
+                </div>
+              </div>
+            </div>
+
+            <!-- 뉴스 가로 모드 -->
+            <div class="news__card news__card--horizontal">
+              <div class="news__card-info">
+                <div class="news__card-title ellipsis">
+                  미래의 건축을 디자인하다
+                </div>
+                <div class="new__card-content multi-ellipsis">
+                  혁신과 기술을 기반으로 한 이스트 건축의 디자인은
+                  현대적이면서도 지속 가능한 건축 솔루션을 제안합니다. 함께 더
+                  나은 미래를 설계해 보세요. 앞으로도 함께 합시다.
+                </div>
+              </div>
+            </div>
+
+            <!-- 뉴스 가로 모드 -->
+            <div class="news__card news__card--horizontal">
+              <div class="news__card-info">
+                <div class="news__card-title ellipsis">
+                  세상을 바꾸는 디자인
+                </div>
+                <div class="new__card-content multi-ellipsis">
+                  아름다움과 기능을 아우르는 디자인을 통해 새로운 건축
+                  패러다임을 만들어갑니다. 우리의 작품을 통해 세상의 변화를
+                  확인해 보세요.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- 인터뷰 -->
       <div class="a11y-hidden">인터뷰</div>
@@ -741,10 +682,14 @@
         <div class="interview__inner">
           <div class="section__head">
             <div class="section__title">인터뷰</div>
-            <a href="./interview.html" title="인터뷰로 이동" class="section__button section__button--more">
-              <i class='bx bx-plus'></i>
+            <a
+              href="./interview.html"
+              title="인터뷰로 이동"
+              class="section__button section__button--more"
+            >
+              <i class="bx bx-plus"></i>
             </a>
-          </div> 
+          </div>
 
           <div class="interview__card">
             <div class="interview__card-item">
@@ -858,6 +803,69 @@
         </div>
       </section>
 
+      <!-- 문의하기 -->
+      <div class="a11y-hidden">문의하기</div>
+
+      <section id="contact">
+        <div class="contact__inner">
+          <div class="section__head">
+            <div class="section__title">문의하기</div>
+          </div>
+
+          <div class="contact__content">
+            <!-- 문의 지도 영역 -->
+            <div id="map" class="contact__map"></div>
+
+            <!-- 문의 정보 영역 -->
+            <div class="contact__info">
+              <div class="contact__info-title">이스트 건축</div>
+
+              <div class="contact__details">
+                <div class="contact__details-item full-type">
+                  <span class="contact__details-text address">
+                    서울특별시<br />
+                    서초구 반포대로3 이스트빌딩(우)06711
+                  </span>
+
+                  <button
+                    class="btn-find-route"
+                    title="길찾기"
+                    aria-label="길찾기"
+                  ></button>
+                </div>
+
+                <div class="contact__details-item">
+                  <span class="contact__details-text phone">
+                    <a href="tel:025834620" aria-label="전화 걸기"
+                      >02-583-4620</a
+                    >
+                  </span>
+                </div>
+
+                <div class="contact__details-item">
+                  <span class="contact__details-text email">
+                    <a
+                      href="mailto:estsoft@gmail.com"
+                      aria-label="이메일 보내기"
+                      >estsoft@gmail.com</a
+                    >
+                  </span>
+                </div>
+
+                <div class="contact__details-item full-type">
+                  <div class="contact__details-title">건축설계 사업문의</div>
+                  <span class="contact__details-text inquiry">
+                    <a href="tel:025834620" aria-label="전화 걸기"
+                      >02-583-4620</a
+                    >
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- 공지사항 -->
       <div class="a11y-hidden">공지사항</div>
 
@@ -865,10 +873,14 @@
         <div class="notice__inner">
           <div class="section__head">
             <div class="section__title">공지사항</div>
-            <a href="./notice.html" title="공지사항으로 이동" class="section__button section__button--more">
-              <i class='bx bx-plus'></i>
+            <a
+              href="./notice.html"
+              title="공지사항으로 이동"
+              class="section__button section__button--more"
+            >
+              <i class="bx bx-plus"></i>
             </a>
-          </div> 
+          </div>
 
           <div class="notice__container">
             <div class="notice__list">
@@ -1001,7 +1013,7 @@
         <div class="member__inner">
           <div class="section__head">
             <div class="section__title">작업자 소개</div>
-          </div> 
+          </div>
 
           <div class="member__card">
             <div class="member__card-item">

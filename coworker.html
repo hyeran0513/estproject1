@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="이스트소프트 프론트엔드 부트캠프 - 건축사무소 프로젝트"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href="https://hyeran0513.github.io/estproject1/" />
+
+    <title>이스트소프트 프론트엔드 부트캠프</title>
+
+    <!-- 중요 CSS 미리 로드 -->
+    <link rel="preload" href="./styles/base/variables.css" as="style" />
+    <link rel="preload" href="./styles/base/layout.css" as="style" />
+
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="./styles/base/variables.css" />
+    <link rel="stylesheet" href="./styles/base/layout.css" />
+    <link rel="stylesheet" href="./styles/base/reset.css" />
+    <link rel="stylesheet" href="./styles/base/common.css" />
+    <link
+      rel="stylesheet"
+      href="./styles/pages/coworker.css"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- 아이콘 라이브러리 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS 및 JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <!-- 헤더 -->
+    <div class="a11y-hidden">헤더</div>
+
+    <header id="header" class="header header--sub"></header>
+
+    <!-- 사이드바 -->
+    <div class="a11y-hidden">메뉴</div>
+
+    <aside id="sidebar"></aside>
+
+    <!-- 메인 -->
+    <main class="main main--sub">
+      <div class="section__head">
+        <div class="section__title">직원 소개</div>
+        <div class="section__description">직원에 대해 소개합니다.</div>
+      </div>
+
+      <section id="coworker">
+        <div class="coworker__inner">
+          <div class="coworker__card">
+            <div class="coworker__card-item">
+              <div class="coworker__card-thumbnail">
+                <img
+                  src="./images/bg/coworker/bg_coworker1.png"
+                  alt="CEO 로버트 존슨: 건축가 및 CEO"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div class="coworker__card-item">
+              <div class="coworker__card-info">
+                <div class="coworker__card-name">로버트 존슨</div>
+                <div class="coworker__card-position">CEO / 건축가</div>
+                <div class="coworker__card-sns">
+                  <a
+                    href="https://twitter.com"
+                    class="fa-brands fa-twitter"
+                    aria-label="로버트 존슨의 Twitter 페이지"
+                  ></a>
+                  <a
+                    href="https://linkedin.com"
+                    class="fa-brands fa-linkedin-in"
+                    aria-label="로버트 존슨의 LinkedIn 프로필"
+                  ></a>
+                  <a
+                    href="https://facebook.com"
+                    class="fa-brands fa-facebook-f"
+                    aria-label="로버트 존슨의 Facebook 페이지"
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="coworker__card-item">
+              <div class="coworker__card-thumbnail">
+                <img
+                  src="./images/bg/coworker/bg_coworker2.png"
+                  alt="주 시공사 아이다 베툴"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div class="coworker__card-item">
+              <div class="coworker__card-info">
+                <div class="coworker__card-name">아이다 베툴</div>
+                <div class="coworker__card-position">주 시공사</div>
+                <div class="coworker__card-sns">
+                  <a
+                    href="https://twitter.com"
+                    class="fa-brands fa-twitter"
+                    aria-label="아이다 베툴의 Twitter 페이지"
+                  ></a>
+                  <a
+                    href="https://linkedin.com"
+                    class="fa-brands fa-linkedin-in"
+                    aria-label="아이다 베툴의 LinkedIn 프로필"
+                  ></a>
+                  <a
+                    href="https://facebook.com"
+                    class="fa-brands fa-facebook-f"
+                    aria-label="아이다 베툴의 Facebook 페이지"
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="coworker__card-item">
+              <div class="coworker__card-description has-bg">
+                멋진 건축가들 소개
+              </div>
+            </div>
+
+            <div class="coworker__card-item">
+              <div class="coworker__card-thumbnail">
+                <img
+                  src="./images/bg/coworker/bg_coworker3.png"
+                  alt="건축가 레베카 웨일스"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div class="coworker__card-item">
+              <div class="coworker__card-info">
+                <div class="coworker__card-name">레베카 웨일스</div>
+                <div class="coworker__card-position">건축가</div>
+                <div class="coworker__card-sns">
+                  <a
+                    href="https://twitter.com"
+                    class="fa-brands fa-twitter"
+                    aria-label="레베카 웨일스의 Twitter 페이지"
+                  ></a>
+                  <a
+                    href="https://linkedin.com"
+                    class="fa-brands fa-linkedin-in"
+                    aria-label="레베카 웨일스의 LinkedIn 프로필"
+                  ></a>
+                  <a
+                    href="https://facebook.com"
+                    class="fa-brands fa-facebook-f"
+                    aria-label="레베카 웨일스의 Facebook 페이지"
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="coworker__card-item">
+              <div class="coworker__card-thumbnail">
+                <img
+                  src="./images/bg/coworker/bg_coworker4.png"
+                  alt="제품 디자이너 기예르모 메디치"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div class="coworker__card-item">
+              <div class="coworker__card-info">
+                <div class="coworker__card-name">기예르모 메디치</div>
+                <div class="coworker__card-position">제품 디자이너</div>
+                <div class="coworker__card-sns">
+                  <a
+                    href="https://twitter.com"
+                    class="fa-brands fa-twitter"
+                    aria-label="기예르모 메디치의 Twitter 페이지"
+                  ></a>
+                  <a
+                    href="https://linkedin.com"
+                    class="fa-brands fa-linkedin-in"
+                    aria-label="기예르모 메디치의 LinkedIn 프로필"
+                  ></a>
+                  <a
+                    href="https://facebook.com"
+                    class="fa-brands fa-facebook-f"
+                    aria-label="기예르모 메디치의 Facebook 페이지"
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer id="footer"></footer>
+
+    <!-- 메인 JS 파일 -->
+    <script src="./js/layout.js"></script>
+    <script src="./js/common.js"></script>
+  </body>
+</html>

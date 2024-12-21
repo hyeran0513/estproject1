@@ -1,20 +1,4 @@
 #notice {
-  .notice__head {
-    padding: 3.125rem 0;
-    text-align: center;
-
-    .notice__title {
-      margin-bottom: 0.4rem;
-      font-size: 2.625rem;
-      font-weight: bold;
-    }
-
-    .notice__description {
-      font-size: 1.2rem;
-      word-break: keep-all;
-    }
-  }
-
   .tabs {
     .tab__buttons {
       display: flex;
@@ -26,10 +10,10 @@
         cursor: pointer;
         text-align: center;
         color: var(--primary-text-color);
-        transition: color ease .5s;
+        transition: color ease 0.5s;
 
         &:after {
-          content: '';
+          content: "";
           position: absolute;
           bottom: 0;
           left: 0;
@@ -38,10 +22,10 @@
           height: 2px;
           background: var(--primary-color);
           transform: scale(0);
-          transition: transform ease .5s;
+          transition: transform ease 0.5s;
         }
 
-        &.active, 
+        &.active,
         &:hover {
           color: var(--primary-color);
 
@@ -94,19 +78,6 @@
 
 @media screen and (max-width: 768px) {
   #notice {
-    .notice__head {
-      padding: 2rem 0;
-  
-      .notice__title {
-        margin-bottom: 0.2rem;
-        font-size: 2rem;
-      }
-  
-      .notice__description {
-        font-size: 1rem;
-      }
-    }
-
     .tabs {
       .tab__content {
         margin-top: 1.5rem;
@@ -116,7 +87,7 @@
 
           .notice__list-item {
             padding: 1rem;
-            
+
             .notice__list-title {
               font-size: 1rem;
             }

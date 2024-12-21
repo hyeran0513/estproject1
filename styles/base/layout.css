@@ -207,6 +207,22 @@ body {
       padding: 5rem 1.25rem 3.125rem;
       max-width: 77.5rem;
       width: 100%;
+
+      .section__head {
+        padding: 3.125rem 0;
+        text-align: center;
+
+        .section__title {
+          margin-bottom: 0.4rem;
+          font-size: 2.625rem;
+          font-weight: bold;
+        }
+
+        .section__description {
+          font-size: 1.2rem;
+          word-break: keep-all;
+        }
+      }
     }
   }
 
@@ -347,6 +363,23 @@ body {
       .header__inner {
         .btn-wrap {
           gap: 1.5rem;
+        }
+      }
+    }
+
+    main {
+      &.main--sub {
+        .section__head {
+          padding: 2rem 0;
+
+          .section__title {
+            margin-bottom: 0.2rem;
+            font-size: 2rem;
+          }
+
+          .section__description {
+            font-size: 1rem;
+          }
         }
       }
     }
