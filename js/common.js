@@ -19,9 +19,9 @@ const setBaseUrl = () => {
 const handleFetch = () => {
   // 모든 fetch 요청을 Promise.all로 처리
   Promise.all([
-    fetch("/estproject1/components/header.html").then((response) => response.text()),
-    fetch("/estproject1/components/sidebar.html").then((response) => response.text()),
-    fetch("/estproject1/components/footer.html").then((response) => response.text()),
+    fetch("../components/header.html").then((response) => response.text()),
+    fetch("../components/sidebar.html").then((response) => response.text()),
+    fetch("../components/footer.html").then((response) => response.text()),
   ])
     .then(([headerData, sidebarData, footerData]) => {
       document.querySelector("#header").innerHTML = headerData;
