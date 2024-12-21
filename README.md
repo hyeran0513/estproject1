@@ -73,24 +73,11 @@ https://www.youtube.com/watch?v=DCo9veEzZL0
 ```
 📦estproject1
  ┣ 📂images
- ┃ ┣ 📂bg
- ┃ ┃ ┣ 📂banner
- ┃ ┃ ┣ 📂company
- ┃ ┃ ┣ 📂coworker
- ┃ ┃ ┣ 📂interview
- ┃ ┃ ┣ 📂member
- ┃ ┃ ┣ 📂news
- ┃ ┃ ┣ 📂portfolio
- ┃ ┃ ┗ 📂vision
- ┃ ┗ 📂icon
- ┃ ┃ ┣ 📂common
- ┃ ┃ ┣ 📂notice
- ┃ ┃ ┣ 📂portfolio
- ┃ ┃ ┗ 📂vision
  ┣ 📂js
  ┃ ┣ 📜common.js
  ┃ ┣ 📜index.js
  ┃ ┣ 📜kakaomap.js
+ ┃ ┣ 📜layout.js
  ┃ ┗ 📜notice.js
  ┣ 📂styles
  ┃ ┣ 📂base
