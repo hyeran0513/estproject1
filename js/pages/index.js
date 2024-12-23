@@ -203,9 +203,9 @@ document.addEventListener("DOMContentLoaded", () => {
   handleSlidePortfolio();
   handleZoomPortfolio();
 
-  // 로딩 애니메이션
-  loading();
-
   // 카카오맵 핸들러
   handleMap();
+
+  // 로딩 애니메이션
+  loading();
 });
