@@ -1,10 +1,12 @@
+const baseHref = window.location.hostname === "127.0.0.1" ? "/" : "/estproject1/";
+
 const headerTemplate = `
   <div class="header__inner">
-    <a href="/estproject1/" class="logo">
+    <a href="${baseHref}" class="header__logo">
       <img
         src="./images/icon/common/icon_logo_white.svg"
         alt="로고"
-        class="logo--white"
+        class="header__logo--white"
         loading="lazy"
         width="100"
         height="34"
@@ -12,7 +14,7 @@ const headerTemplate = `
       <img
         src="./images/icon/common/icon_logo_black.svg"
         alt="로고"
-        class="logo--black"
+        class="header__logo--black"
         loading="lazy"
         width="100"
         height="34"
@@ -171,17 +173,17 @@ const sidebarTemplate = `
 
 const footerTemplate = `
   <div class="footer__inner">
-    <div class="logo">
+    <div class="footer__logo">
       <img
         src="./images/icon/common/icon_logo_white.svg"
         alt="로고"
-        class="logo--white"
+        class="footer__logo--white"
         loading="lazy"
       />
       <img
         src="./images/icon/common/icon_logo_black.svg"
         alt="로고"
-        class="logo--black"
+        class="footer__logo--black"
         loading="lazy"
       />
     </div>
@@ -283,7 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const linkPage = link.getAttribute("href").replace("./", "");
 
     if (currentPage === linkPage) {
-      link.classList.add("active");
+      link.classList.add("--active");
     }
   });
 
