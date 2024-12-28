@@ -56,7 +56,7 @@ const observeElements = (selector) => {
     (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
+          entry.target.classList.add("--visible");
           observer.unobserve(entry.target); // 더 이상 관찰하지 않음
         }
       });
