@@ -1,172 +1,171 @@
-/* 포트폴리오 */
-#portfolio {
+.portfolio--slide {
   margin-bottom: 3rem;
   max-width: 100%;
   width: 100%;
   overflow: hidden;
+}
 
-  .portfolio__inner {
-    margin: 0 auto;
-    max-width: 75rem;
+.portfolio__inner {
+  margin: 0 auto;
+  max-width: 75rem;
+}
 
-    .portfolio__info-wrap {
-      position: relative;
-      display: flex;
-      height: 37.5rem;
+.portfolio__info-wrap {
+  position: relative;
+  display: flex;
+  height: 37.5rem;
+}
 
-      .portfolio__info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30%;
+.portfolio__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+}
 
-        .portfolio__details {
-          .portfolio__details-title {
-            margin-bottom: 0.5rem;
-            line-height: 1;
-            font-size: 1.4rem;
-          }
+.portfolio__details-title {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  font-size: 1.4rem;
+}
 
-          .portfolio__details-creator {
-            font-size: 1rem;
-            letter-spacing: 0.24rem;
-          }
-        }
-      }
+.portfolio__details-creator {
+  font-size: 1rem;
+  letter-spacing: 0.24rem;
+}
 
-      .portfolio__picture-wrap {
-        position: absolute;
-        left: 30%;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
+.portfolio__picture-wrap {
+  position: absolute;
+  left: 30%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
-        .portfolio__picture-container {
-          display: flex;
-          gap: 0.625rem;
-          height: 100%;
-          transition: transform ease 0.6s;
+.portfolio__picture-container {
+  display: flex;
+  gap: 0.625rem;
+  height: 100%;
+  transition: transform ease 0.6s;
+}
 
-          .portfolio__picture {
-            position: relative;
-            flex: 0 0 70%;
-            transition: transform 0.3s ease;
-            border-radius: 0.625rem;
-            overflow: hidden;
+.portfolio__picture {
+  position: relative;
+  flex: 0 0 70%;
+  transition: transform 0.3s ease;
+  border-radius: 0.625rem;
+  overflow: hidden;
 
-            &::before {
-              content: "";
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              background: rgba(0, 0, 0, 0.3);
-              opacity: 1;
-              transition: opacity 0.3s ease;
-            }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
 
-            &.active {
-              &::before {
-                opacity: 0;
-              }
-            }
-
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-        }
-      }
+  &.--active {
+    &::before {
+      opacity: 0;
     }
+  }
 
-    .portfolio__control {
-      display: flex;
-      justify-content: flex-end;
-      gap: 1.25rem;
-      margin-top: 1.25rem;
-
-      .portfolio__control-prev,
-      .portfolio__control-next {
-        width: 3.1rem;
-        height: 0.8rem;
-        z-index: 1;
-      }
-
-      .portfolio__control-prev {
-        background: url("../../images/icon/portfolio/icon_prev_black.svg")
-          no-repeat center / cover;
-      }
-
-      .portfolio__control-next {
-        background: url("../../images/icon/portfolio/icon_next_black.svg")
-          no-repeat center / cover;
-      }
-    }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
+.portfolio__control {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.portfolio__control-prev,
+.portfolio__control-next {
+  width: 3.1rem;
+  height: 0.8rem;
+  z-index: 1;
+}
+
+.portfolio__control-prev {
+  background: url("../../images/icon/portfolio/icon_prev_black.svg") no-repeat
+    center / cover;
+}
+
+.portfolio__control-next {
+  background: url("../../images/icon/portfolio/icon_next_black.svg") no-repeat
+    center / cover;
+}
+
 @media screen and (max-width: 1024px) {
-  /* 포트폴리오 */
-  #portfolio {
-    .portfolio__inner {
-      .portfolio__info-wrap {
-        height: 31.25rem;
-      }
-    }
+  .portfolio__info-wrap {
+    height: 31.25rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  /* 포트폴리오 */
-  #portfolio {
-    margin-bottom: 1.5rem;
+  .portfolio--slide {
+    margin-bottom: 1.25rem;
+    padding: 0 1.25rem;
+  }
 
-    .portfolio__inner {
-      .portfolio__info-wrap {
-        flex-direction: column;
-        gap: 1.5rem;
-        height: auto;
+  .portfolio__info-wrap {
+    flex-direction: column;
+    gap: 1.5rem;
+    height: auto;
+  }
 
-        .portfolio__info {
-          width: 100%;
+  .portfolio__info {
+    width: 100%;
+  }
 
-          .portfolio__details {
-            .portfolio__details-title {
-              margin-bottom: 0.4rem;
-              font-size: 1rem;
-            }
+  .portfolio__details-title {
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+  }
 
-            .portfolio__details-creator {
-              font-size: 0.8rem;
-            }
-          }
-        }
+  .portfolio__details-creator {
+    font-size: 0.8rem;
+  }
 
-        .portfolio__picture-wrap {
-          position: relative;
-          left: 0;
+  .portfolio__picture-wrap {
+    position: relative;
+    left: 0;
+  }
 
-          .portfolio__picture-container {
-            .portfolio__picture {
-              flex: 0 0 100%;
-            }
-          }
-        }
-      }
+  .portfolio__picture {
+    flex: 0 0 100%;
+  }
 
-      .portfolio__control {
-        gap: 0.75rem;
-        padding: 0 1.25rem;
+  .portfolio__control {
+    gap: 0.75rem;
+    padding: 0 1.25rem;
+  }
 
-        .portfolio__control-prev,
-        .portfolio__control-next {
-          width: 2rem;
-          height: 0.6rem;
-        }
-      }
-    }
+  .portfolio__control-prev,
+  .portfolio__control-next {
+    width: 2rem;
+    height: 0.6rem;
+  }
+}
+
+/* 다크 모드 */
+[data-theme="dark"] {
+  .portfolio__control-prev {
+    background: url("../../images/icon/portfolio/icon_prev_white.svg") no-repeat
+      center / cover;
+  }
+  
+  .portfolio__control-next {
+    background: url("../../images/icon/portfolio/icon_next_white.svg") no-repeat
+      center / cover;
   }
 }

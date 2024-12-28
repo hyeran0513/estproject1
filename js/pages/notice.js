@@ -6,13 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       document
         .querySelectorAll(".tab__button")
-        .forEach((btn) => btn.classList.remove("active"));
+        .forEach((btn) => btn.classList.remove("--active"));
       document
         .querySelectorAll(".notice__list")
-        .forEach((panel) => panel.classList.remove("active"));
+        .forEach((panel) => panel.classList.remove("--active"));
 
-      button.classList.add("active");
-      document.getElementById(targetTab).classList.add("active");
+      button.classList.add("--active");
+      document.getElementById(targetTab).classList.add("--active");
     });
   });
 });
