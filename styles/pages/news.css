@@ -98,10 +98,8 @@
     height: 10rem;
   }
 
-  .news__info {
-    .news__info-date {
-      margin-top: 1.5rem;
-    }
+  .news__info-date {
+    margin-top: 1.5rem;
   }
 }
 
