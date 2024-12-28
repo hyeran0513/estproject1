@@ -515,12 +515,12 @@ section {
 
 .portfolio__control-prev {
   background: url("../../images/icon/portfolio/icon_prev_white.svg") no-repeat
-    center / cover;
+    center / contain;
 }
 
 .portfolio__control-next {
   background: url("../../images/icon/portfolio/icon_next_white.svg") no-repeat
-    center / cover;
+    center / contain;
 }
 
 /* 확대형 포트폴리오 */
