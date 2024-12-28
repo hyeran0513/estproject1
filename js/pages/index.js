@@ -188,17 +188,6 @@ document.addEventListener("DOMContentLoaded", () => {
   handleSlideChange(swiper);
   handlePlayPauseButton(swiper);
 
-  // 관찰 대상 요소들 한 번에 처리
-  const elementsToObserve = [
-    ".member__card-item",      // 직원 소개
-    ".company__info",          // 회사 소개
-    ".company__thumbnail",
-    ".company__card-item",
-    ".interview__card-item",    // 인터뷰
-    ".influence__description"   // 영향
-  ];
-  elementsToObserve.forEach(selector => observeElements(selector));
-
   // 포트폴리오 기능 처리
   handleSlidePortfolio();
   handleZoomPortfolio();
@@ -210,4 +199,15 @@ document.addEventListener("DOMContentLoaded", () => {
 window.onload = () => {
   // 카카오맵 핸들러
   handleMap();
+
+  // 관찰 대상 요소들 한 번에 처리
+  const elementsToObserve = [
+    ".member__card-item",      // 직원 소개
+    ".company__info",          // 회사 소개
+    ".company__thumbnail",
+    ".company__card-item",
+    ".interview__card-item",    // 인터뷰
+    ".influence__description"   // 영향
+  ];
+  elementsToObserve.forEach(selector => observeElements(selector));  
 };
