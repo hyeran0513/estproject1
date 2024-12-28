@@ -139,8 +139,6 @@ const handleZoomPortfolio = () => {
 
 // 카카오맵 핸들러
 const handleMap = () => {
-  console.log("카카오맵 실행");
-  
   const container = document.getElementById("map");
   const options = {
     center: new kakao.maps.LatLng(37.5665, 126.978), // 초기값: 서울 중심
