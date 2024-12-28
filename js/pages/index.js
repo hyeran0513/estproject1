@@ -83,7 +83,7 @@ const handleSlidePortfolio = () => {
 
   const updateActiveClass = () => {
     pictures.forEach((picture, index) => {
-      picture.classList.toggle("active", index === currentIndex);
+      picture.classList.toggle("--active", index === currentIndex);
     });
   };
 
@@ -132,7 +132,7 @@ const handleZoomPortfolio = () => {
   portfolioList.forEach((item) => {
     item.addEventListener("click", () => {
       // 모든 요소에서 active 제거 후 클릭된 요소에 추가
-      portfolioList.forEach(wrapper => wrapper.classList.toggle("active", wrapper === item));
+      portfolioList.forEach(wrapper => wrapper.classList.toggle("--active", wrapper === item));
     });
   });
 };
@@ -203,9 +203,11 @@ document.addEventListener("DOMContentLoaded", () => {
   handleSlidePortfolio();
   handleZoomPortfolio();
 
-  // 카카오맵 핸들러
-  handleMap();
-
   // 로딩 애니메이션
   loading();
 });
+
+window.onload = () => {
+  // 카카오맵 핸들러
+  handleMap();
+};
