@@ -450,3 +450,13 @@
     height: calc(100% + (1.4rem * 2));
   }
 }
+
+/* 다크 모드 */
+[data-theme="dark"] {
+  .vision__more-icon {
+    &::after {
+      background: url("../../images/icon/vision/icon_arrow_white.svg") no-repeat
+        center / contain;
+    }
+  }
+}
