@@ -99,12 +99,12 @@
 
 .portfolio__control-prev {
   background: url("../../images/icon/portfolio/icon_prev_black.svg") no-repeat
-    center / cover;
+    center / contain;
 }
 
 .portfolio__control-next {
   background: url("../../images/icon/portfolio/icon_next_black.svg") no-repeat
-    center / cover;
+    center / contain;
 }
 
 @media screen and (max-width: 1024px) {
@@ -162,11 +162,11 @@
 [data-theme="dark"] {
   .portfolio__control-prev {
     background: url("../../images/icon/portfolio/icon_prev_white.svg") no-repeat
-      center / cover;
+      center / contain;
   }
   
   .portfolio__control-next {
     background: url("../../images/icon/portfolio/icon_next_white.svg") no-repeat
-      center / cover;
+      center / contain;
   }
 }
