@@ -60,6 +60,10 @@
 모바일 기기에서도 반응형 디자인을 적용하여, 웹사이트가 화면 크기에 맞게 자동으로 조정됩니다.
 <br/>
 
+## 깃허브 url 주소
+https://hyeran0513.github.io/estproject1/
+<br/>
+
 ## 📱 QR코드
 ![image](https://github.com/user-attachments/assets/afdae05f-f527-4886-a55c-539ce4d9ed4b)
 <br/>
