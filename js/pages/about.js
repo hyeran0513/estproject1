@@ -17,7 +17,7 @@ const observeElements = (selector) => {
   elements.forEach((element) => observer.observe(element));
 };
 
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
   // 관찰 대상 요소들 한 번에 처리
   const elementsToObserve = [
     ".company__info",          // 회사 소개
@@ -27,4 +27,4 @@ document.addEventListener("DOMContentLoaded", () => {
     ".vision__image"
   ];
   elementsToObserve.forEach(selector => observeElements(selector));
-});
+};
