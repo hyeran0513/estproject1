@@ -22,6 +22,7 @@ const setBaseUrl = () => {
     base.href = "/";
   }
 
+  console.log(window.location.hostname);
   console.log(base.href);
   document.head.prepend(base);
 };

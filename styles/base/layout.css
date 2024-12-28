@@ -199,6 +199,8 @@ main {
 }
 
 .main--sub {
+  padding-bottom: 3.125rem;
+
   .section__head {
     padding: 8.125rem 0 3.125rem;
     text-align: center;
@@ -334,6 +336,8 @@ main {
   }
 
   .main--sub {
+    padding-bottom: 2rem;
+
     .section__head {
       padding: 5.125rem 0 2rem;
     }
