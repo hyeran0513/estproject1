@@ -203,9 +203,11 @@ document.addEventListener("DOMContentLoaded", () => {
   handleSlidePortfolio();
   handleZoomPortfolio();
 
-  // 카카오맵 핸들러
-  handleMap();
-
   // 로딩 애니메이션
   loading();
 });
+
+window.onload = () => {
+  // 카카오맵 핸들러
+  handleMap();
+};
