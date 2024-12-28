@@ -14,7 +14,7 @@ const handleSlidePortfolio = () => {
 
   const updateActiveClass = () => {
     pictures.forEach((picture, index) => {
-      picture.classList.toggle("active", index === currentIndex);
+      picture.classList.toggle("--active", index === currentIndex);
     });
   };
 

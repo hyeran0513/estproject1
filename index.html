@@ -14,6 +14,16 @@
     <!-- 중요 CSS 미리 로드 -->
     <link rel="preload" href="./styles/base/variables.css" as="style" />
     <link rel="preload" href="./styles/base/layout.css" as="style" />
+    
+    <!-- Swiper CSS 및 JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
 
     <!-- 스타일시트 -->
     <link rel="stylesheet" href="./styles/base/variables.css" />
@@ -27,6 +37,9 @@
       onload="this.media='all'"
     />
 
+    <!-- 파비콘 -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
     <!-- 아이콘 라이브러리 -->
     <link
       rel="stylesheet"
@@ -39,16 +52,6 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-
-    <!-- Swiper CSS 및 JS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      defer
-    ></script>
 
     <!-- Kakao 맵 API -->
     <script
@@ -80,7 +83,7 @@
 
       <!-- swiper.js 라이브러리로 BEM 규칙 적용 불가 -->
       <section id="banner">
-        <div class="swiper" aria-live="polite">
+        <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img
@@ -245,12 +248,12 @@
         </div>
       </section>
 
-      <!-- 포트폴리오 상단 -->
+      <!-- 포트폴리오 -->
       <div class="a11y-hidden">포트폴리오</div>
 
       <section id="portfolio">
-        <!-- nav 타입 포트폴리오 -->
-        <div class="portfolio__inner-top portfolio__inner-top--nav">
+        <!-- 슬라이드형 포트폴리오 -->
+        <div class="portfolio--slide">
           <div class="portfolio__inner">
             <div class="section__head">
               <div class="section__title">포트폴리오</div>
@@ -277,7 +280,7 @@
               <!-- 이미지 영역 -->
               <div class="portfolio__picture-wrap">
                 <div class="portfolio__picture-container">
-                  <div class="portfolio__picture active">
+                  <div class="portfolio__picture --active">
                     <img
                       src="./images/bg/portfolio/bg_portfolio1.png"
                       alt="이스트 아트 하우스 포트폴리오 이미지 1"
@@ -315,14 +318,14 @@
           </div>
         </div>
 
-        <!-- 포트폴리오 하단 -->
-        <div class="portfolio__inner-bottom">
+        <!-- 확대형 포트폴리오 -->
+        <div class="portfolio--zoom">
           <h2 class="a11y-hidden">포트폴리오 목록</h2>
 
           <!-- 포트폴리오 컨텐츠 리스트영역 -->
           <div class="portfolio__list">
             <!-- 포트폴리오 컨텐츠 래퍼 영역-->
-            <div class="portfolio__wrapper active">
+            <div class="portfolio__wrapper --active">
               <!-- 포트폴리오 컨텐츠 영역-->
               <div class="portfolio__card">
                 <!-- 포트폴리오 컨텐츠 이미지-->

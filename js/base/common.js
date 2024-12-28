@@ -14,11 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // baseurl 처리
 const setBaseUrl = () => {
+  const base = document.createElement("base");
+
   if (window.location.hostname === "hyeran0513.github.io") {
-    const base = document.createElement("base");
     base.href = "/estproject1/";
-    document.head.prepend(base);
+  } else {
+    base.href = "/";
   }
+
+  document.head.prepend(base);
 };
 
 // 스크롤 이벤트를 감지하여 헤더 배경색 변경
@@ -27,9 +31,9 @@ const handleScrollEvent = () => {
 
   window.addEventListener("scroll", () => {
     if (window.scrollY >= 340) {
-      header.classList.add("active");
+      header.classList.add("--active");
     } else {
-      header.classList.remove("active");
+      header.classList.remove("--active");
     }
   });
 };
