@@ -246,7 +246,7 @@ section {
   opacity: 0;
   transition: all 1s ease-out;
 
-  &.visible {
+  &.--visible {
     transform: translateY(0);
     opacity: 1;
   }
@@ -311,7 +311,7 @@ section {
     background: rgba(0, 0, 0, 0.1);
   }
 
-  &.visible {
+  &.--visible {
     transform: translateY(0);
     opacity: 1;
   }
@@ -345,7 +345,7 @@ section {
   transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.25),
     opacity ease 0.8s;
 
-  &.visible {
+  &.--visible {
     opacity: 1;
     transform: translateY(0);
   }
@@ -377,7 +377,8 @@ section {
           text-overflow: ellipsis;
           text-underline-offset: 0.2rem;
           transition: text-decoration ease 0.3s;
-
+          word-break: keep-all;
+          
           &:hover {
             text-decoration: underline;
           }
@@ -654,8 +655,8 @@ section {
   display: flex;
   align-items: flex-end;
   margin: 0 auto;
-  padding-bottom: 3rem;
-  max-width: 75rem;
+  padding: 0 1.25rem 3rem;
+  max-width: 77.5rem;
   width: 100%;
   height: 100%;
   color: #fff;
@@ -666,7 +667,7 @@ section {
   transition: all 1s ease-out;
   cursor: pointer;
 
-  &.visible {
+  &.--visible {
     transform: translateY(0);
     opacity: 1;
   }
@@ -785,7 +786,7 @@ section {
   transition: all 1s ease-out;
   cursor: pointer;
 
-  &.visible {
+  &.--visible {
     transform: translateY(0);
     opacity: 1;
   }
@@ -797,7 +798,7 @@ section {
       height: 18.75rem;
     }
 
-    &.visible {
+    &.--visible {
       transform: translateY(0);
       opacity: 1;
     }
@@ -1128,7 +1129,7 @@ section {
     border-bottom: 3.125rem solid #f59794;
   }
 
-  &.visible {
+  &.--visible {
     opacity: 1;
     transform: translateY(0);
   }
@@ -1364,6 +1365,11 @@ section {
     &:nth-of-type(9) {
       order: 8;
     }
+  }
+
+  /* 뉴스 */
+  .news__card-info {
+    padding: 1rem;
   }
 
   /* 인터뷰 */

@@ -20,7 +20,7 @@
   opacity: 0;
   transition: all 1s ease-out;
 
-  &.visible {
+  &.--visible {
     transform: translateY(0);
     opacity: 1;
   }
@@ -85,7 +85,7 @@
     background: rgba(0, 0, 0, 0.1);
   }
 
-  &.visible {
+  &.--visible {
     transform: translateY(0);
     opacity: 1;
   }
@@ -119,7 +119,7 @@
   transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1.25),
     opacity ease 0.8s;
 
-  &.visible {
+  &.--visible {
     opacity: 1;
     transform: translateY(0);
   }
@@ -151,7 +151,8 @@
           text-overflow: ellipsis;
           text-underline-offset: 0.2rem;
           transition: text-decoration ease 0.3s;
-
+          word-break: keep-all;
+          
           &:hover {
             text-decoration: underline;
           }
@@ -214,27 +215,27 @@
 }
 
 /* 비전 텍스트박스(타이틀,내용,버튼) */
-.vision__text-box {
+.text-box {
   flex: 1;
   transform: translateY(20%);
   opacity: 0;
   transition: all 1s ease-out;
   cursor: pointer;
 
-  &.visible {
+  &.--visible {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
 /* 비전 텍스트박스(타이틀) */
-.vision__text-box-header {
+.text-box__header {
   position: relative;
   margin-bottom: 0.875rem;
 }
 
 /* 비전 텍스트박스(타이틀 배경글자) */
-.vision__back-title {
+.text-box__title--back {
   position: absolute;
   left: -2rem;
   top: -2.4rem;
@@ -249,7 +250,7 @@
   font-style: normal;
 }
 
-.vision__main-title {
+.text-box__title--main {
   position: relative;
   z-index: 1;
   font-size: 3.5rem;
@@ -257,14 +258,14 @@
 }
 
 /* 비전 텍스트박스(내용) */
-.vision__description {
+.text-box__description {
   font-size: 1rem;
   margin-bottom: 2.3rem;
   color: var(--secondary-text-color);
 }
 
 /* 비전 텍스트박스(버튼) */
-.vision__more {
+.text-box__more {
   display: inline-flex;
   align-items: center;
   border: 0.0625rem solid var(--primary-border-color);
@@ -276,7 +277,7 @@
     color: var(--primary-color);
     transform: scale(1.1);
 
-    .vision__more-icon {
+    .text-box__more-icon {
       &::after {
         background: url("../../images/icon/vision/icon_arrow_main.svg")
           no-repeat center / contain;
@@ -285,11 +286,11 @@
   }
 }
 
-.vision__more-text {
+.text-box__more-text {
   padding: 0 1rem;
 }
 
-.vision__more-icon {
+.text-box__more-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -320,7 +321,7 @@
   cursor: pointer;
   transition-delay: 0.2s;
 
-  &.visible {
+  &.--visible {
     transform: translateY(0);
     opacity: 1;
   }
@@ -409,35 +410,31 @@
     height: 12rem;
   }
 
-  .vision__text-box-header {
+  .text-box__header {
     margin-bottom: 0.4rem;
   }
 
-  .vision__back-title {
+  .text-box__title--back {
     top: -1rem;
     left: -0.7rem;
     font-size: 2rem;
   }
 
-  .vision__main-title {
+  .text-box__title--main {
     font-size: 1.3rem;
   }
 
-  .vision__description {
+  .text-box__description {
     margin-bottom: 0.8rem;
     font-size: 0.8rem;
   }
 
-  .more-text {
-    font-size: 0.8rem;
-  }
-
-  .vision__more-text {
+  .text-box__more-text {
     padding: 0 0.6rem;
     font-size: 0.8rem;
   }
 
-  .vision__more-icon {
+  .text-box__more-icon {
     width: 1.4rem;
 
     &::after {
@@ -453,7 +450,7 @@
 
 /* 다크 모드 */
 [data-theme="dark"] {
-  .vision__more-icon {
+  .text-box__more-icon {
     &::after {
       background: url("../../images/icon/vision/icon_arrow_white.svg") no-repeat
         center / contain;

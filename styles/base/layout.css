@@ -199,10 +199,10 @@ main {
 }
 
 .main--sub {
-  padding-bottom: 3.125rem;
+  padding: 5rem 0;
 
   .section__head {
-    padding: 8.125rem 0 3.125rem;
+    padding: 3.125rem 0;
     text-align: center;
   }
   
@@ -311,6 +311,11 @@ main {
     font-size: 1.2rem;
   }
 
+  /* 메인 */
+  .main--sub {
+    padding: 3.125rem 0;
+  }
+
   /* 사이드바 */
   #sidebar {
     display: flex;
@@ -336,19 +341,17 @@ main {
   }
 
   .main--sub {
-    padding-bottom: 2rem;
-
     .section__head {
-      padding: 5.125rem 0 2rem;
+      padding: 2.5rem 0;
     }
 
     .section__title {
       margin-bottom: 0.2rem;
-      font-size: 2rem;
+      font-size: 1.2rem;
     }
 
     .section__description {
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
   }
 
