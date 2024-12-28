@@ -75,19 +75,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .section__head {
-    padding: 2rem 0;
-  }
-
-  .section__title {
-    margin-bottom: 0.2rem;
-    font-size: 2rem;
-  }
-
-  .section__description {
-    font-size: 1rem;
-  }
-
   .card {
     grid-template-columns: repeat(1, 1fr);
     gap: 0.75rem;

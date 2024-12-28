@@ -6,7 +6,7 @@ const observeElements = (selector) => {
     (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
+          entry.target.classList.add("--visible");
           observer.unobserve(entry.target); // 더 이상 관찰하지 않음
         }
       });
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ".company__info",          // 회사 소개
     ".company__thumbnail",
     ".company__card-item",
-    ".vision__text-box",       // 비전
+    ".text-box",       // 비전
     ".vision__image"
   ];
   elementsToObserve.forEach(selector => observeElements(selector));

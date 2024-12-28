@@ -7,7 +7,9 @@
 
 .portfolio__inner {
   margin: 0 auto;
-  max-width: 75rem;
+  padding: 0 1.25rem;
+  max-width: 77.5rem;
+  width: 100%;
 }
 
 .portfolio__info-wrap {
@@ -114,7 +116,6 @@
 @media screen and (max-width: 768px) {
   .portfolio--slide {
     margin-bottom: 1.25rem;
-    padding: 0 1.25rem;
   }
 
   .portfolio__info-wrap {
