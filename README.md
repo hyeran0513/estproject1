@@ -9,6 +9,31 @@
 | 형주희  | 팀원 | (인터뷰, 공지사항) 영역 담당,<br/>결과 보고서 차별성 조사 및 자체 평가 의견 작성 |
 <br/>
 
+## 피드백 - 김혜란
+- [x] **DOM 렌더링 시 시각적 처리**
+  - 렌더링 전에 `opacity: 0` 처리 후, DOM이 완전히 렌더링되면 `opacity: 1`로 전환
+
+- [ ] **다크모드 작업 방식 개선**
+  - [YouTube 링크](https://www.youtube.com/watch?v=IhrfGroePPk&t=21s)에서 방법 참고
+
+- [x] **스크립트 모듈화**
+  - JavaScript 파일을 `type="module"`로 모듈화
+
+- [ ] **모바일 크기에 맞는 이미지 추가**
+  - `<picture>` 태그를 활용하여 디바이스 크기와 해상도에 맞는 이미지를 로드하도록 설정
+  - [MDN 문서 링크](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)에서 방법 참고
+
+- [x] **Header와 Footer 공통 컴포넌트 처리**
+  - `fetch` 를 사용하여 Header와 Footer를 공통 컴포넌트로 관리
+
+- [x] **a11y-hidden h2 태그 처리**
+  - 숨겨진 접근성 텍스트는 h2 태그로 구현
+
+- [x] **기존 CSS 작업을 SCSS로 변환**
+  - sass --watch scss:css 명령어 사용
+  
+<br/><br/>
+
 ## 📒 프로젝트 개요
 
 이번 프로젝트는 건축사무소 웹사이트를 리디자인하고 새롭게 개발하는 작업이었습니다. 기존 디자인을 기반으로 하되, 사용자가 더 편리하게 탐색할 수 있도록 몇 가지 인터랙티브 기능과 반응형 디자인을 추가했고, 디자인에는 없던 문의하기, 작업자 소개, 뉴스 섹션 같은 새로운 기능도 더했습니다. 웹사이트를 통해 건축사무소의 비전, 포트폴리오, 팀 소개 등의 정보를 직관적이고 매력적으로 전달하는 것을 목표로 했습니다.
@@ -76,32 +101,95 @@ https://www.youtube.com/watch?v=WVf0szhZ7wc
 
 ```
 📦estproject1
+┣ 📂.vscode
+ ┃ ┗ 📜settings.json
  ┣ 📂images
+ ┃ ┣ 📂icon
+ ┃ ┃ ┣ 📂common
+ ┃ ┃ ┃ ┣ 📜icon_logo_black.svg
+ ┃ ┃ ┃ ┗ 📜icon_logo_white.svg
+ ┃ ┃ ┣ 📂notice
+ ┃ ┃ ┃ ┣ 📜ico_arrow_black.svg
+ ┃ ┃ ┃ ┣ 📜ico_arrow_main.svg
+ ┃ ┃ ┃ ┗ 📜ico_arrow_white.svg
+ ┃ ┃ ┣ 📂portfolio
+ ┃ ┃ ┃ ┣ 📜icon_next_black.svg
+ ┃ ┃ ┃ ┣ 📜icon_next_white.svg
+ ┃ ┃ ┃ ┣ 📜icon_prev_black.svg
+ ┃ ┃ ┃ ┗ 📜icon_prev_white.svg
+ ┃ ┃ ┗ 📂vision
+ ┃ ┃ ┃ ┣ 📜icon_arrow_black.svg
+ ┃ ┃ ┃ ┣ 📜icon_arrow_main.svg
+ ┃ ┃ ┃ ┗ 📜icon_arrow_white.svg
+ ┃ ┣ 📂mobile
+ ┃ ┃ ┗ 📂bg
+ ┃ ┗ 📂pc
+ ┃ ┃ ┗ 📂bg
  ┣ 📂js
- ┃ ┣ 📂base
- ┃ ┃ ┣ 📜common.js
- ┃ ┃ ┗ 📜layout.js
+ ┃ ┣ 📂components
+ ┃ ┃ ┣ 📜footer.js
+ ┃ ┃ ┣ 📜header.js
+ ┃ ┃ ┗ 📜sidebar.js
+ ┃ ┣ 📂data
+ ┃ ┃ ┣ 📂index
+ ┃ ┃ ┣ 📂interview
+ ┃ ┃ ┃ ┗ 📜interview-card.js
+ ┃ ┃ ┗ 📂portfolio
+ ┃ ┃ ┃ ┗ 📜portfolio-card.js
+ ┃ ┣ 📂modules
+ ┃ ┃ ┣ 📂card
+ ┃ ┃ ┃ ┗ 📜component-card.js
+ ┃ ┃ ┣ 📂map
+ ┃ ┃ ┃ ┣ 📜map-handler.js
+ ┃ ┃ ┃ ┗ 📜map.js
+ ┃ ┃ ┣ 📂portfolio
+ ┃ ┃ ┃ ┣ 📜slide-portfolio.js
+ ┃ ┃ ┃ ┗ 📜zoom-portfolio.js
+ ┃ ┃ ┣ 📂scroll
+ ┃ ┃ ┃ ┗ 📜scroll-event.js
+ ┃ ┃ ┣ 📂swiper
+ ┃ ┃ ┃ ┗ 📜swiper.js
+ ┃ ┃ ┣ 📂tab
+ ┃ ┃ ┃ ┗ 📜tab.js
+ ┃ ┃ ┣ 📂theme
+ ┃ ┃ ┃ ┗ 📜theme.js
+ ┃ ┃ ┗ 📂utils
+ ┃ ┃ ┃ ┣ 📜observe-utils.js
+ ┃ ┃ ┃ ┣ 📜page-utils.js
+ ┃ ┃ ┃ ┣ 📜template-utils.js
+ ┃ ┃ ┃ ┗ 📜url-utils.js
  ┃ ┗ 📂pages
  ┃ ┃ ┣ 📜about.js
+ ┃ ┃ ┣ 📜coworker.js
  ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┣ 📜interview.js
+ ┃ ┃ ┣ 📜main.js
+ ┃ ┃ ┣ 📜news.js
  ┃ ┃ ┣ 📜notice.js
  ┃ ┃ ┗ 📜portfolio.js
- ┣ 📂styles
+ ┣ 📂scss
  ┃ ┣ 📂base
- ┃ ┃ ┣ 📜common.css
- ┃ ┃ ┣ 📜layout.css
- ┃ ┃ ┣ 📜reset.css
- ┃ ┃ ┗ 📜variables.css
+ ┃ ┃ ┣ 📜common.scss
+ ┃ ┃ ┣ 📜layout.scss
+ ┃ ┃ ┣ 📜reset.scss
+ ┃ ┃ ┗ 📜variables.scss
+ ┃ ┣ 📂components
+ ┃ ┃ ┣ 📜card.scss
+ ┃ ┃ ┗ 📜slide-portfolio.scss
  ┃ ┗ 📂pages
- ┃ ┃ ┣ 📜about.css
- ┃ ┃ ┣ 📜card.css
- ┃ ┃ ┣ 📜coworker.css
- ┃ ┃ ┣ 📜index.css
- ┃ ┃ ┣ 📜news.css
- ┃ ┃ ┣ 📜notice.css
- ┃ ┃ ┗ 📜portfolio.css
+ ┃ ┃ ┣ 📜about.scss
+ ┃ ┃ ┣ 📜coworker.scss
+ ┃ ┃ ┣ 📜index.scss
+ ┃ ┃ ┣ 📜news.scss
+ ┃ ┃ ┣ 📜notice.scss
+ ┃ ┃ ┗ 📜portfolio.scss
+ ┣ 📂templates
+ ┃ ┣ 📜footer.html
+ ┃ ┣ 📜header.html
+ ┃ ┗ 📜sidebar.html
  ┣ 📜about.html
  ┣ 📜coworker.html
+ ┣ 📜favicon.ico
  ┣ 📜index.html
  ┣ 📜interview.html
  ┣ 📜news.html
