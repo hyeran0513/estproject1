@@ -5,13 +5,18 @@ export const updateHeaderLogo = () => {
 
   if (headerLogoLink && headerLogoImg) {
     const theme = document.documentElement.getAttribute("data-theme");
+
+    console.log(theme + "???????");
     const path = window.location.pathname;
     const baseUrl = window.baseUrl;
 
     const getLogoSrc = () => {
       const isDarkTheme = theme === "dark";
       const isLightTheme = theme === "light";
-      const isHomePage = path === "/";
+      const isHomePage = path === "/" || path === "/index.html";
+
+      console.log(isHomePage);
+      console.log(header.classList.contains("--active"));
 
       if (isDarkTheme) {
         return `${baseUrl}assets/images/icon/common/icon_logo_white.svg`;

@@ -1,6 +1,6 @@
 import { initializeWeb } from "./main.js";
-import { cardData } from "/assets/js/data/news.js";
-import { createCard } from "/assets/js/modules/news-card.js";
+import { cardData } from "../../../assets/js/data/news.js";
+import { createCard } from "../../../assets/js/modules/news-card.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // 웹 초기화 설정

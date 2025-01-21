@@ -1,5 +1,5 @@
 import { initializeWeb } from "./main.js";
-import { observeElements } from "/assets/js/utils/observe-utils.js";
+import { observeElements } from "../../../assets/js/utils/observe-utils.js";
 
 window.onload = () => {
   const elementsToObserve = [

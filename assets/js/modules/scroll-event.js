@@ -1,4 +1,4 @@
-import { updateHeaderLogo } from "/assets/js/modules/header-logo.js";
+import { updateHeaderLogo } from "../../../assets/js/modules/header-logo.js";
 
 export const handleScrollEvent = () => {
   const header = document.querySelector("#header");
