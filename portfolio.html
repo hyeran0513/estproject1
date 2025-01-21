@@ -11,27 +11,14 @@
 
     <title>이스트소프트 프론트엔드 부트캠프</title>
 
-    <!-- 중요 CSS 미리 로드 -->
-    <link rel="preload" href="./css/base/variables.css" as="style" />
-    <link rel="preload" href="./css/base/layout.css" as="style" />
+    <!-- Pretendard -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/preset.css@1.0.0/preset.min.css"
+    />
 
     <!-- 스타일시트 -->
-    <link rel="stylesheet" href="./css/base/variables.css" />
-    <link rel="stylesheet" href="./css/base/layout.css" />
-    <link rel="stylesheet" href="./css/base/reset.css" />
-    <link rel="stylesheet" href="./css/base/common.css" />
-    <link
-      rel="stylesheet"
-      href="./css/components/card.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="./css/components/slide-portfolio.css"
-      media="print"
-      onload="this.media='all'"
-    />
+    <link rel="stylesheet" href="./assets/css/pages/portfolio.css" />
 
     <!-- 파비콘 -->
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
@@ -48,6 +35,9 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+
+    <!-- 페이지 스크립트 -->
+    <script type="module" src="/assets/js/pages/portfolio.js"></script>
   </head>
   <body>
     <!-- 로딩 -->
@@ -94,7 +84,7 @@
                 <div class="portfolio__picture-container">
                   <div class="portfolio__picture --active">
                     <img
-                      src="./images/pc/bg/portfolio/bg_portfolio1.png"
+                      src="/assets/images/pc/bg/portfolio/bg_portfolio1.png"
                       alt="이스트 아트 하우스 포트폴리오 이미지 1"
                       loading="lazy"
                     />
@@ -102,7 +92,7 @@
 
                   <div class="portfolio__picture">
                     <img
-                      src="./images/pc/bg/portfolio/bg_portfolio2.png"
+                      src="/assets/images/pc/bg/portfolio/bg_portfolio2.png"
                       alt="이스트 아트 하우스 포트폴리오 이미지 2"
                       loading="lazy"
                     />
@@ -139,9 +129,5 @@
     <h2 class="a11y-hidden">푸터</h2>
 
     <footer id="footer" class="footer"></footer>
-
-    <!-- 메인 JS 파일 -->
-    <script type="module" src="./js/pages/main.js"></script>
-    <script type="module" src="./js/pages/portfolio.js"></script>
   </body>
 </html>

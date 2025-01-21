@@ -11,24 +11,17 @@
 
     <title>이스트소프트 프론트엔드 부트캠프</title>
 
-    <!-- 중요 CSS 미리 로드 -->
-    <link rel="preload" href="./css/base/variables.css" as="style" />
-    <link rel="preload" href="./css/base/layout.css" as="style" />
-
-    <!-- 스타일시트 -->
-    <link rel="stylesheet" href="./css/base/variables.css" />
-    <link rel="stylesheet" href="./css/base/layout.css" />
-    <link rel="stylesheet" href="./css/base/reset.css" />
-    <link rel="stylesheet" href="./css/base/common.css" />
+    <!-- Pretendard -->
     <link
       rel="stylesheet"
-      href="./css/pages/news.css"
-      media="print"
-      onload="this.media='all'"
+      href="https://cdn.jsdelivr.net/npm/preset.css@1.0.0/preset.min.css"
     />
 
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="./assets/css/pages/news.css" />
+
     <!-- 파비콘 -->
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
 
     <!-- 아이콘 라이브러리 -->
     <link
@@ -42,6 +35,9 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+
+    <!-- 페이지 스크립트 -->
+    <script type="module" src="/assets/js/pages/news.js"></script>
   </head>
   <body>
     <!-- 로딩 -->
@@ -67,83 +63,8 @@
           <div class="section__description">새로운 소식을 살펴보세요.</div>
         </div>
 
-        <div class="news__list">
-          <div class="news__list-item">
-            <div class="news__thumbnail">
-              <img src="./images/bg/news/bg_news1.png" alt="뉴스 사진1" />
-            </div>
-
-            <div class="news__info">
-              <div class="news__info-title">새로운 시대를 건축하다</div>
-
-              <div class="news__info-content multi-ellipsis">
-                혁신적이고 감각적인 건축 디자인을 만나보세요. 미래지향적 공간과
-                독창적 설계를 경험해 보실 준비가 되셨나요?
-              </div>
-
-              <div class="news__info-date">2024.12.21 (토)</div>
-            </div>
-          </div>
-
-          <div class="news__list-item">
-            <div class="news__thumbnail">
-              <img src="./images/bg/news/bg_news2.png" alt="뉴스 사진1" />
-            </div>
-
-            <div class="news__info">
-              <div class="news__info-title">공간의 가치를 재정의하다</div>
-
-              <div class="news__info-content multi-ellipsis">
-                이스트 건축은 건축의 본질을 탐구하고 새로운 트렌드를 반영한
-                디자인으로 공간의 가치를 높입니다. 차별화된 설계를 지금
-                만나보세요. 이스트 건축은 건축의 본질을 탐구하고 새로운 트렌드를
-                반영한 디자인으로 공간의 가치를 높입니다. 차별화된 설계를 지금
-                만나보세요.
-              </div>
-
-              <div class="news__info-date">2024.12.21 (토)</div>
-            </div>
-          </div>
-
-          <div class="news__list-item">
-            <div class="news__thumbnail">
-              <div class="news__thumbnail-default">
-                <i class="bx bxs-image"></i>
-              </div>
-            </div>
-
-            <div class="news__info">
-              <div class="news__info-title">미래의 건축을 디자인하다</div>
-
-              <div class="news__info-content multi-ellipsis">
-                혁신과 기술을 기반으로 한 이스트 건축의 디자인은 현대적이면서도
-                지속 가능한 건축 솔루션을 제안합니다. 함께 더 나은 미래를 설계해
-                보세요. 앞으로도 함께 합시다.
-              </div>
-
-              <div class="news__info-date">2024.12.21 (토)</div>
-            </div>
-          </div>
-
-          <div class="news__list-item">
-            <div class="news__thumbnail">
-              <div class="news__thumbnail-default">
-                <i class="bx bxs-image"></i>
-              </div>
-            </div>
-
-            <div class="news__info">
-              <div class="news__info-title">세상을 바꾸는 디자인</div>
-
-              <div class="news__info-content multi-ellipsis">
-                아름다움과 기능을 아우르는 디자인을 통해 새로운 건축 패러다임을
-                만들어갑니다. 우리의 작품을 통해 세상의 변화를 확인해 보세요.
-              </div>
-
-              <div class="news__info-date">2024.12.21 (토)</div>
-            </div>
-          </div>
-        </div>
+        <!-- 뉴스 리스트 -->
+        <div class="news__list"></div>
       </section>
     </main>
 
@@ -151,9 +72,5 @@
     <h2 class="a11y-hidden">푸터</h2>
 
     <footer id="footer" class="footer"></footer>
-
-    <!-- 메인 JS 파일 -->
-    <script type="module" src="./js/pages/main.js"></script>
-    <script type="module" src="./js/pages/news.js"></script>
   </body>
 </html>
