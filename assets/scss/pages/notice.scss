@@ -1,0 +1,57 @@
+@use "../pages/main" as *;
+
+.notice {
+  &__list {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &.--active {
+      display: flex;
+    }
+
+    &-item {
+      padding: 1.5rem;
+      background-color: var(--secondary-bg-color);
+      border-radius: 10px;
+      cursor: pointer;
+
+      &:hover {
+        .notice__list-title {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-title {
+      margin-bottom: 0.4rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      -webkit-text-decoration: underline transparent;
+      text-decoration: underline transparent;
+      text-overflow: ellipsis;
+      text-underline-offset: 0.2rem;
+      transition: text-decoration ease 0.3s;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .notice {
+    &__list {
+      gap: 0.75rem;
+
+      &-item {
+        padding: 1rem;
+      }
+
+      &-title {
+        font-size: 1rem;
+      }
+
+      &-content {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

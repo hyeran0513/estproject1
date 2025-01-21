@@ -11,24 +11,17 @@
 
     <title>이스트소프트 프론트엔드 부트캠프</title>
 
-    <!-- 중요 CSS 미리 로드 -->
-    <link rel="preload" href="./styles/base/variables.css" as="style" />
-    <link rel="preload" href="./styles/base/layout.css" as="style" />
-
-    <!-- 스타일시트 -->
-    <link rel="stylesheet" href="./styles/base/variables.css" />
-    <link rel="stylesheet" href="./styles/base/layout.css" />
-    <link rel="stylesheet" href="./styles/base/reset.css" />
-    <link rel="stylesheet" href="./styles/base/common.css" />
+    <!-- Pretendard -->
     <link
       rel="stylesheet"
-      href="./styles/pages/card.css"
-      media="print"
-      onload="this.media='all'"
+      href="https://cdn.jsdelivr.net/npm/preset.css@1.0.0/preset.min.css"
     />
 
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="./assets/css/pages/interview.css" />
+
     <!-- 파비콘 -->
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
 
     <!-- 아이콘 라이브러리 -->
     <link
@@ -42,18 +35,26 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+
+    <!-- 페이지 스크립트 -->
+    <script type="module" src="/assets/js/pages/interview.js"></script>
   </head>
 
   <body>
+    <!-- 로딩 -->
+    <div id="loading">
+      <div class="spinner"></div>
+    </div>
+
     <!-- 헤더 -->
-    <div class="a11y-hidden">헤더</div>
+    <h2 class="a11y-hidden">헤더</h2>
 
     <header id="header" class="header header--sub"></header>
 
     <!-- 사이드바 -->
-    <div class="a11y-hidden">메뉴</div>
+    <h2 class="a11y-hidden">메뉴</h2>
 
-    <aside id="sidebar"></aside>
+    <aside id="sidebar" class="sidebar"></aside>
 
     <!-- 메인 -->
     <main class="main main--sub">
@@ -65,123 +66,14 @@
           </div>
         </div>
 
-        <div class="card">
-          <div class="card__item">
-            <div class="card__item-thumbnail">
-              <img
-                src="./images/bg/interview/bg_interview1.png"
-                alt="스튜디오 히로시 퀴진 앤 바: 혁신적인 인테리어 디자인 인터뷰"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="card__item-info">
-              <div class="card__item-title multi-ellipsis">
-                스튜디오 히로시 퀴진 앤 바: 혁신적인 인테리어 디자인 인터뷰
-              </div>
-
-              <div class="card__item-date">
-                <span class="card__item-label">인터뷰</span>
-                <span class="card__item-separator">|</span>
-                <span
-                  class="card__item-text"
-                  aria-label="인터뷰 날짜: 2024.12.15"
-                >
-                  2024.12.15
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card__item">
-            <div class="card__item-thumbnail">
-              <img
-                src="./images/bg/interview/bg_interview2.png"
-                alt="자라 마디드: 그녀의 영향력과 창의적 비전 인터뷰"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="card__item-info">
-              <div class="card__item-title multi-ellipsis">
-                자라 마디드: 그녀의 영향력과 창의적 비전 인터뷰
-              </div>
-
-              <div class="card__item-date">
-                <span class="card__item-label">인터뷰</span>
-                <span class="card__item-separator">|</span>
-                <span
-                  class="card__item-text"
-                  aria-label="인터뷰 날짜: 2024.12.15"
-                >
-                  2024.12.15
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card__item">
-            <div class="card__item-thumbnail">
-              <img
-                src="./images/bg/interview/bg_interview3.png"
-                alt="유리벽 파사드와 알루프로파일을 활용한 디자인 방법 인터뷰"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="card__item-info">
-              <div class="card__item-title multi-ellipsis">
-                유리벽 파사드와 알루프로파일을 활용한 디자인 방법 인터뷰
-              </div>
-
-              <div class="card__item-date">
-                <span class="card__item-label">인터뷰</span>
-                <span class="card__item-separator">|</span>
-                <span
-                  class="card__item-text"
-                  aria-label="인터뷰 날짜: 2024.12.15"
-                >
-                  2024.12.15
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div class="card__item">
-            <div class="card__item-thumbnail">
-              <img
-                src="./images/bg/interview/bg_interview4.png"
-                alt="풍경과 공존하는 것이 가장 중요한 원칙 인터뷰"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="card__item-info">
-              <div class="card__item-title multi-ellipsis">
-                풍경과 공존하는 것이 가장 중요한 원칙 인터뷰
-              </div>
-
-              <div class="card__item-date">
-                <span class="card__item-label">인터뷰</span>
-                <span class="card__item-separator">|</span>
-                <span
-                  class="card__item-text"
-                  aria-label="인터뷰 날짜: 2024.12.15"
-                >
-                  2024.12.15
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- 카드형 인터뷰 -->
+        <div id="card-container" class="card"></div>
       </section>
     </main>
 
     <!-- 푸터 -->
-    <footer id="footer"></footer>
+    <h2 class="a11y-hidden">푸터</h2>
 
-    <!-- 메인 JS 파일 -->
-    <script src="./js/base/layout.js"></script>
-    <script src="./js/base/common.js"></script>
+    <footer id="footer" class="footer"></footer>
   </body>
 </html>

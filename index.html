@@ -11,10 +11,6 @@
 
     <title>이스트소프트 프론트엔드 부트캠프</title>
 
-    <!-- 중요 CSS 미리 로드 -->
-    <link rel="preload" href="./styles/base/variables.css" as="style" />
-    <link rel="preload" href="./styles/base/layout.css" as="style" />
-    
     <!-- Swiper CSS 및 JS -->
     <link
       rel="stylesheet"
@@ -25,20 +21,17 @@
       defer
     ></script>
 
-    <!-- 스타일시트 -->
-    <link rel="stylesheet" href="./styles/base/variables.css" />
-    <link rel="stylesheet" href="./styles/base/layout.css" />
-    <link rel="stylesheet" href="./styles/base/reset.css" />
-    <link rel="stylesheet" href="./styles/base/common.css" />
+    <!-- Pretendard -->
     <link
       rel="stylesheet"
-      href="./styles/pages/index.css"
-      media="print"
-      onload="this.media='all'"
+      href="https://cdn.jsdelivr.net/npm/preset.css@1.0.0/preset.min.css"
     />
 
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="./assets/css/pages/index.css" />
+
     <!-- 파비콘 -->
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
 
     <!-- 아이콘 라이브러리 -->
     <link
@@ -58,6 +51,9 @@
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54772cdac3b4403953b1c4c44df17866&libraries=services,clusterer,drawing"
     ></script>
+
+    <!-- 페이지 스크립트 -->
+    <script type="module" src="/assets/js/pages/index.js"></script>
   </head>
 
   <body>
@@ -67,27 +63,27 @@
     </div>
 
     <!-- 헤더 -->
-    <div class="a11y-hidden">헤더</div>
+    <h2 class="a11y-hidden">헤더</h2>
 
-    <header id="header"></header>
+    <header id="header" class="header"></header>
 
     <!-- 사이드바 -->
-    <div class="a11y-hidden">메뉴</div>
+    <h2 class="a11y-hidden">메뉴</h2>
 
-    <aside id="sidebar"></aside>
+    <aside id="sidebar" class="sidebar"></aside>
 
     <!-- 메인 -->
     <main>
       <!-- 배너 -->
-      <div class="a11y-hidden">배너</div>
+      <h2 class="a11y-hidden">배너</h2>
 
       <!-- swiper.js 라이브러리로 BEM 규칙 적용 불가 -->
-      <section id="banner">
+      <section id="banner" class="banner">
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img
-                src="./images/bg/banner/bg_banner1.png"
+                src="/assets/images/bg/banner/bg_banner1.png"
                 alt="건물 사진1"
                 loading="lazy"
               />
@@ -95,7 +91,7 @@
 
             <div class="swiper-slide">
               <img
-                src="./images/bg/banner/bg_banner2.png"
+                src="/assets/images/bg/banner/bg_banner2.png"
                 alt="건물 사진2"
                 loading="lazy"
               />
@@ -103,7 +99,7 @@
 
             <div class="swiper-slide">
               <img
-                src="./images/bg/banner/bg_banner3.png"
+                src="/assets/images/bg/banner/bg_banner3.png"
                 alt="건물 사진3"
                 loading="lazy"
               />
@@ -111,7 +107,7 @@
 
             <div class="swiper-slide">
               <img
-                src="./images/bg/banner/bg_banner4.png"
+                src="/assets/images/bg/banner/bg_banner4.png"
                 alt="건물 사진4"
                 loading="lazy"
               />
@@ -119,7 +115,7 @@
 
             <div class="swiper-slide">
               <img
-                src="./images/bg/banner/bg_banner5.png"
+                src="/assets/images/bg/banner/bg_banner5.png"
                 alt="건물 사진5"
                 loading="lazy"
               />
@@ -134,7 +130,7 @@
               <div class="swiper-action">
                 <div class="swiper-fraction"></div>
 
-                <div class="swiper-btn-wrap">
+                <div class="swiper-button-wrap">
                   <button
                     type="button"
                     class="swiper-button-prev"
@@ -154,7 +150,7 @@
 
                   <button
                     type="button"
-                    class="btn-play-pause"
+                    class="swiper-button-play"
                     title="배너 슬라이드 재생 및 일시정지"
                     aria-label="배너 슬라이드 재생 및 일시정지"
                   >
@@ -169,9 +165,9 @@
       </section>
 
       <!-- 회사 소개 -->
-      <div class="a11y-hidden">회사 소개</div>
+      <h2 class="a11y-hidden">회사 소개</h2>
 
-      <section id="company">
+      <section id="company" class="company">
         <div class="company__inner">
           <div class="section__head">
             <div class="section__title">회사 소개</div>
@@ -198,7 +194,7 @@
 
             <div class="company__thumbnail">
               <img
-                src="./images/bg/company/bg_company2.jpg"
+                src="/assets/images/bg/company/bg_company2.jpg"
                 alt="설계도 사진"
                 loading="lazy"
               />
@@ -249,23 +245,23 @@
       </section>
 
       <!-- 포트폴리오 -->
-      <div class="a11y-hidden">포트폴리오</div>
+      <h2 class="a11y-hidden">포트폴리오</h2>
 
-      <section id="portfolio">
+      <section id="portfolio" class="portfolio">
+        <div class="section__head">
+          <div class="section__title">포트폴리오</div>
+          <a
+            href="./portfolio.html"
+            title="포트폴리오로 이동"
+            class="section__button section__button--more"
+          >
+            <i class="bx bx-plus"></i>
+          </a>
+        </div>
+
         <!-- 슬라이드형 포트폴리오 -->
         <div class="portfolio--slide">
           <div class="portfolio__inner">
-            <div class="section__head">
-              <div class="section__title">포트폴리오</div>
-              <a
-                href="./portfolio.html"
-                title="포트폴리오로 이동"
-                class="section__button section__button--more"
-              >
-                <i class="bx bx-plus"></i>
-              </a>
-            </div>
-
             <!-- 설명 & 이미지 감싸는 영역-->
             <div class="portfolio__info-wrap">
               <!-- 설명 영역 -->
@@ -282,7 +278,7 @@
                 <div class="portfolio__picture-container">
                   <div class="portfolio__picture --active">
                     <img
-                      src="./images/bg/portfolio/bg_portfolio1.png"
+                      src="/assets/images/bg/portfolio/bg_portfolio1.png"
                       alt="이스트 아트 하우스 포트폴리오 이미지 1"
                       loading="lazy"
                     />
@@ -290,7 +286,7 @@
 
                   <div class="portfolio__picture">
                     <img
-                      src="./images/bg/portfolio/bg_portfolio2.png"
+                      src="/assets/images/bg/portfolio/bg_portfolio2.png"
                       alt="이스트 아트 하우스 포트폴리오 이미지 2"
                       loading="lazy"
                     />
@@ -331,7 +327,7 @@
                 <!-- 포트폴리오 컨텐츠 이미지-->
                 <div class="portfolio__img">
                   <img
-                    src="./images/bg/banner/bg_banner1.png"
+                    src="/assets/images/bg/banner/bg_banner1.png"
                     alt="포트폴리오 이미지 자료 1"
                     loading="lazy"
                   />
@@ -356,7 +352,7 @@
               <div class="portfolio__card">
                 <div class="portfolio__img">
                   <img
-                    src="./images/bg/banner/bg_banner2.png"
+                    src="/assets/images/bg/banner/bg_banner2.png"
                     alt="포트폴리오 이미지 자료 2"
                     loading="lazy"
                   />
@@ -380,7 +376,7 @@
               <div class="portfolio__card">
                 <div class="portfolio__img">
                   <img
-                    src="./images/bg/banner/bg_banner3.png"
+                    src="/assets/images/bg/banner/bg_banner3.png"
                     alt="포트폴리오 이미지 자료 3"
                     loading="lazy"
                   />
@@ -404,7 +400,7 @@
               <div class="portfolio__card">
                 <div class="portfolio__img">
                   <img
-                    src="./images/bg/banner/bg_banner4.png"
+                    src="/assets/images/bg/banner/bg_banner4.png"
                     alt="포트폴리오 이미지 자료 4"
                     loading="lazy"
                   />
@@ -427,9 +423,9 @@
       </section>
 
       <!-- 영향 -->
-      <div class="a11y-hidden">영향</div>
+      <h2 class="a11y-hidden">영향</h2>
 
-      <section id="influence">
+      <section id="influence" class="influence">
         <div class="influence__inner">
           <div class="influence__description">
             Villa Esther의 독특한 분위기는<br />
@@ -440,11 +436,11 @@
       </section>
 
       <!-- 직원 소개 -->
-      <div class="a11y-hidden">직원 소개</div>
+      <h2 class="a11y-hidden">직원 소개</h2>
 
-      <section id="coworker">
+      <section id="coworker" class="coworker">
         <div class="coworker__inner">
-           <div class="section__head">
+          <div class="section__head">
             <div class="section__title">직원 소개</div>
             <a
               href="./coworker.html"
@@ -459,7 +455,7 @@
             <div class="coworker__card-item">
               <div class="coworker__card-thumbnail">
                 <img
-                  src="./images/bg/coworker/bg_coworker1.png"
+                  src="/assets/images/bg/coworker/bg_coworker1.png"
                   alt="CEO 로버트 존슨: 건축가 및 CEO"
                   loading="lazy"
                 />
@@ -493,7 +489,7 @@
             <div class="coworker__card-item">
               <div class="coworker__card-thumbnail">
                 <img
-                  src="./images/bg/coworker/bg_coworker2.png"
+                  src="/assets/images/bg/coworker/bg_coworker2.png"
                   alt="주 시공사 아이다 베툴"
                   loading="lazy"
                 />
@@ -533,7 +529,7 @@
             <div class="coworker__card-item">
               <div class="coworker__card-thumbnail">
                 <img
-                  src="./images/bg/coworker/bg_coworker3.png"
+                  src="/assets/images/bg/coworker/bg_coworker3.png"
                   alt="건축가 레베카 웨일스"
                   loading="lazy"
                 />
@@ -567,7 +563,7 @@
             <div class="coworker__card-item">
               <div class="coworker__card-thumbnail">
                 <img
-                  src="./images/bg/coworker/bg_coworker4.png"
+                  src="/assets/images/bg/coworker/bg_coworker4.png"
                   alt="제품 디자이너 기예르모 메디치"
                   loading="lazy"
                 />
@@ -602,9 +598,9 @@
       </section>
 
       <!-- 뉴스 -->
-      <div class="a11y-hidden">뉴스</div>
+      <h2 class="a11y-hidden">뉴스</h2>
 
-      <section id="news">
+      <section id="news" class="news">
         <div class="news__inner">
           <div class="section__head">
             <div class="section__title">뉴스</div>
@@ -622,7 +618,7 @@
             <div class="news__card news__card--vertical">
               <div class="news__card-thumbnail">
                 <img
-                  src="./images/bg/news/bg_news1.png"
+                  src="/assets/images/bg/news/bg_news1.png"
                   alt="새로운 시대를 건축하는 혁신적이고 감각적인 디자인 이미지"
                   loading="lazy"
                 />
@@ -643,7 +639,7 @@
             <div class="news__card news__card--vertical">
               <div class="news__card-thumbnail">
                 <img
-                  src="./images/bg/news/bg_news2.png"
+                  src="/assets/images/bg/news/bg_news2.png"
                   alt="공간의 가치를 재정의하는 건축 디자인 이미지"
                   loading="lazy"
                 />
@@ -693,9 +689,9 @@
       </section>
 
       <!-- 인터뷰 -->
-      <div class="a11y-hidden">인터뷰</div>
+      <h2 class="a11y-hidden">인터뷰</h2>
 
-      <section id="interview">
+      <section id="interview" class="interview">
         <div class="interview__inner">
           <div class="section__head">
             <div class="section__title">인터뷰</div>
@@ -712,7 +708,7 @@
             <div class="interview__card-item">
               <div class="interview__card-thumbnail">
                 <img
-                  src="./images/bg/interview/bg_interview1.png"
+                  src="/assets/images/bg/interview/bg_interview1.png"
                   alt="스튜디오 히로시 퀴진 앤 바: 혁신적인 인테리어 디자인 인터뷰"
                   loading="lazy"
                 />
@@ -739,7 +735,7 @@
             <div class="interview__card-item">
               <div class="interview__card-thumbnail">
                 <img
-                  src="./images/bg/interview/bg_interview2.png"
+                  src="/assets/images/bg/interview/bg_interview2.png"
                   alt="자라 마디드: 그녀의 영향력과 창의적 비전 인터뷰"
                   loading="lazy"
                 />
@@ -766,7 +762,7 @@
             <div class="interview__card-item">
               <div class="interview__card-thumbnail">
                 <img
-                  src="./images/bg/interview/bg_interview3.png"
+                  src="/assets/images/bg/interview/bg_interview3.png"
                   alt="유리벽 파사드와 알루프로파일을 활용한 디자인 방법 인터뷰"
                   loading="lazy"
                 />
@@ -793,7 +789,7 @@
             <div class="interview__card-item">
               <div class="interview__card-thumbnail">
                 <img
-                  src="./images/bg/interview/bg_interview4.png"
+                  src="/assets/images/bg/interview/bg_interview4.png"
                   alt="풍경과 공존하는 것이 가장 중요한 원칙 인터뷰"
                   loading="lazy"
                 />
@@ -821,9 +817,9 @@
       </section>
 
       <!-- 문의하기 -->
-      <div class="a11y-hidden">문의하기</div>
+      <h2 class="a11y-hidden">문의하기</h2>
 
-      <section id="contact">
+      <section id="contact" class="contact">
         <div class="contact__inner">
           <div class="section__head">
             <div class="section__title">문의하기</div>
@@ -884,9 +880,9 @@
       </section>
 
       <!-- 공지사항 -->
-      <div class="a11y-hidden">공지사항</div>
+      <h2 class="a11y-hidden">공지사항</h2>
 
-      <section id="notice">
+      <section id="notice" class="notice">
         <div class="notice__inner">
           <div class="section__head">
             <div class="section__title">공지사항</div>
@@ -1024,107 +1020,22 @@
       </section>
 
       <!-- 작업자 소개 -->
-      <div class="a11y-hidden">작업자 소개</div>
+      <h2 class="a11y-hidden">작업자 소개</h2>
 
-      <section id="member">
+      <section id="member" class="member">
         <div class="member__inner">
           <div class="section__head">
             <div class="section__title">작업자 소개</div>
           </div>
 
-          <div class="member__card">
-            <div class="member__card-item">
-              <div class="member__card-profile">
-                <img
-                  src="./images/bg/member/bg_member1.png"
-                  alt="김혜란 프로필 이미지, 프론트엔드 개발자"
-                  loading="lazy"
-                />
-              </div>
-
-              <div class="member__card-info">
-                <div class="member__card-details">
-                  <span class="member__card-name">김혜란</span>
-                  <span class="member__card-separator">|</span>
-                  <span class="member__card-english-name">Hyeran Kim</span>
-                </div>
-
-                <div class="member__card-role">프론트엔드</div>
-              </div>
-            </div>
-
-            <div class="member__card-item">
-              <div class="member__card-profile">
-                <img
-                  src="./images/bg/member/bg_member2.png"
-                  alt="최승이 프로필 이미지, 프론트엔드 개발자"
-                  loading="lazy"
-                />
-              </div>
-
-              <div class="member__card-info">
-                <div class="member__card-details">
-                  <span class="member__card-name">최승이</span>
-                  <span class="member__card-separator">|</span>
-                  <span class="member__card-english-name">Seungyi Choi</span>
-                </div>
-
-                <div class="member__card-role">프론트엔드</div>
-              </div>
-            </div>
-
-            <div class="member__card-item">
-              <div class="member__card-profile">
-                <img
-                  src="./images/bg/member/bg_member3.png"
-                  alt="박세진 프로필 이미지, 프론트엔드 개발자"
-                  loading="lazy"
-                />
-              </div>
-
-              <div class="member__card-info">
-                <div class="member__card-details">
-                  <span class="member__card-name">박세진</span>
-                  <span class="member__card-separator">|</span>
-                  <span class="member__card-english-name">Sejin Park</span>
-                </div>
-
-                <div class="member__card-role">프론트엔드</div>
-              </div>
-            </div>
-
-            <div class="member__card-item">
-              <div class="member__card-profile">
-                <img
-                  src="./images/bg/member/bg_member4.png"
-                  alt="형주희 프로필 이미지, 프론트엔드 개발자"
-                  loading="lazy"
-                />
-              </div>
-
-              <div class="member__card-info">
-                <div class="member__card-details">
-                  <span class="member__card-name">형주희</span>
-                  <span class="member__card-separator">|</span>
-                  <span class="member__card-english-name">Juhee Hyeong</span>
-                </div>
-
-                <div class="member__card-role">프론트엔드</div>
-              </div>
-            </div>
-          </div>
+          <div class="member__card"></div>
         </div>
       </section>
     </main>
 
     <!-- 푸터 -->
-    <div class="a11y-hidden">푸터</div>
+    <h2 class="a11y-hidden">푸터</h2>
 
-    <footer id="footer"></footer>
-
-    <!-- 메인 JS 파일 -->
-    <script src="./js/base/layout.js"></script>
-    <script src="./js/base/common.js"></script>
-    <script src="./js/pages/index.js"></script>
+    <footer id="footer" class="footer"></footer>
   </body>
 </html>
