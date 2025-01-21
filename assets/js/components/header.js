@@ -1,5 +1,5 @@
-import { handleTheme } from "/assets/js/modules/theme.js";
-import { updateHeaderLogo } from "/assets/js/modules/header-logo.js";
+import { handleTheme } from "../../../assets/js/modules/theme.js";
+import { updateHeaderLogo } from "../../../assets/js/modules/header-logo.js";
 
 // 메뉴 데이터 정의
 const menuItems = [

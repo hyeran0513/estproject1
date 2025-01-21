@@ -1,6 +1,6 @@
 import { initializeWeb } from "./main.js";
-import { cardData } from "/assets/js/data/coworker.js";
-import { createCard } from "/assets/js/modules/coworker-card.js";
+import { cardData } from "../../../assets/js/data/coworker.js";
+import { createCard } from "../../../assets/js/modules/coworker-card.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initializeWeb();

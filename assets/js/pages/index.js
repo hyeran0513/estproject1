@@ -1,11 +1,11 @@
 import { initializeWeb } from "./main.js";
-import { observeElements } from "/assets/js/utils/observe-utils.js";
-import { initializeSlideBanner } from "/assets/js/modules/swiper.js";
-import { handleMap } from "/assets/js/modules/map-handler.js";
-import { sliderPortfolio } from "/assets/js/modules/slide-portfolio.js";
-import { zoomPortfolio } from "/assets/js/modules/zoom-portfolio.js";
-import { cardData } from "/assets/js/data/member.js";
-import { createCard } from "/assets/js/modules/member-card.js";
+import { observeElements } from "../../../assets/js/utils/observe-utils.js";
+import { initializeSlideBanner } from "../../../assets/js/modules/swiper.js";
+import { handleMap } from "../../../assets/js/modules/map-handler.js";
+import { sliderPortfolio } from "../../../assets/js/modules/slide-portfolio.js";
+import { zoomPortfolio } from "../../../assets/js/modules/zoom-portfolio.js";
+import { cardData } from "../../../assets/js/data/member.js";
+import { createCard } from "../../../assets/js/modules/member-card.js";
 
 window.onload = () => {
   const elementsToObserve = [
