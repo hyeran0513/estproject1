@@ -1,4 +1,5 @@
 @use "../pages/main" as *;
+@use "../base/variables" as *;
 
 .news {
   &__list {
@@ -93,7 +94,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@include responsive(1024px) {
   .news {
     &__list {
       &-item {
@@ -115,7 +116,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@include responsive(768px) {
   .news {
     &__list {
       grid-template-columns: repeat(1, 1fr);

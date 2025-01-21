@@ -1,5 +1,6 @@
 @use "../pages/main" as *;
 @use "../components/slide-portfolio.scss" as *;
+@use "../base/variables" as *;
 
 /* 로딩 */
 #loading {
@@ -1189,7 +1190,7 @@ section {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@include responsive(1024px) {
   /* 배너 */
   .swiper {
     height: 37.5rem;
@@ -1295,7 +1296,7 @@ section {
   }
 }
 
-@media screen and (max-width: 768px) {
+@include responsive(768px) {
   /* 세션 타이틀 (공통) */
   section {
     scroll-margin-top: 3.125rem;

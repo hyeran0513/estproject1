@@ -1,4 +1,5 @@
 @use "../pages/main" as *;
+@use "../base/variables" as *;
 
 /* 회사 소개*/
 .company {
@@ -339,7 +340,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@include responsive(1024px) {
   /* 비전 */
   .vision {
     &__image {
@@ -348,7 +349,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@include responsive(768px) {
   /* 회사 소개 */
   .company {
     &__intro {

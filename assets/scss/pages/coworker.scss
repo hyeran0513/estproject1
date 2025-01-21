@@ -1,4 +1,5 @@
 @use "../pages/main" as *;
+@use "../base/variables" as *;
 
 .coworker {
   &__inner {
@@ -84,7 +85,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@include responsive(1024px) {
   .coworker {
     &__card {
       grid-template-columns: repeat(2, 1fr);
@@ -131,7 +132,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@include responsive(768px) {
   .coworker {
     &__card {
       &-item {

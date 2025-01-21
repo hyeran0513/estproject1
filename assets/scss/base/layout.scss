@@ -1,3 +1,5 @@
+@use "../base/variables" as *;
+
 body {
   display: flex;
   flex-direction: column;
@@ -315,7 +317,7 @@ main {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@include responsive(1024px) {
   /* 헤더 */
   .header {
     height: 3.125rem;
@@ -372,7 +374,7 @@ main {
   }
 }
 
-@media screen and (max-width: 768px) {
+@include responsive(768px) {
   /* 헤더 */
   .header {
     .btn-wrap {
