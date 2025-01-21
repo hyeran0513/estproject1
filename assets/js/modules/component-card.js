@@ -1,10 +1,11 @@
 export const createCard = (data) => {
   const cardItem = document.createElement("div");
   cardItem.classList.add("card__item");
+  const baseUrl = window.baseUrl;
 
   cardItem.innerHTML = `
     <div class="card__item-thumbnail">
-      <img src="${data.image}" alt="${data.title}" />
+      <img src="${baseUrl}assets/images/bg/${data.image}" alt="${data.title}" />
     </div>
     <div class="card__item-info">
       <div class="card__item-title multi-ellipsis">${data.title}</div>

@@ -1,10 +1,11 @@
 export const createCard = (data) => {
   const cardItem = document.createElement("div");
   cardItem.classList.add("member__card-item");
+  const baseUrl = window.baseUrl;
 
   cardItem.innerHTML = `
     <div class="member__card-profile">
-      <img src="${data.image}" alt="" />
+      <img src="${baseUrl}assets/images/bg/${data.image}" alt="" />
     </div>
     <div class="member__card-info">
       <div class="member__card-details">

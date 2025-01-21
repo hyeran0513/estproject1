@@ -1,6 +1,7 @@
 export const createCard = (data) => {
   const cardItem = document.createElement("div");
   cardItem.classList.add("coworker__card-item");
+  const baseUrl = window.baseUrl;
 
   if (data.type === "description") {
     cardItem.innerHTML = `
@@ -12,7 +13,7 @@ export const createCard = (data) => {
   } else if (data.type === "image") {
     cardItem.innerHTML = `
     <div class="coworker__card-thumbnail">
-      <img src="${data.image}" alt="${data.coworkerName}" />
+      <img src="${baseUrl}assets/images/bg/${data.image}" alt="${data.coworkerName}" />
     </div>
      `;
   } else {

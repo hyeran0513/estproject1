@@ -1,7 +1,7 @@
 export const cardData = [
   {
     title: "새로운 시대를 건축하다",
-    image: "../../../assets/images/bg/news/bg_news1.png",
+    image: "news/bg_news1.png",
     content:
       "혁신적이고 감각적인 건축 디자인을 만나보세요. 미래지향적 공간과 독창적 설계를 경험해 보실 준비가 되셨나요?",
     date: "2024.12.21 (토)",
@@ -9,7 +9,7 @@ export const cardData = [
   },
   {
     title: "공간의 가치를 재정의하다",
-    image: "../../../assets/images/bg/news/bg_news2.png",
+    image: "news/bg_news2.png",
     content:
       " 이스트 건축은 건축의 본질을 탐구하고 새로운 트렌드를 반영한 디자인으로 공간의 가치를 높입니다. 차별화된 설계를 지금 만나보세요. 이스트 건축은 건축의 본질을 탐구하고 새로운 트렌드를 반영한 디자인으로 공간의 가치를 높입니다. 차별화된 설계를 지금 만나보세요.",
     date: "2024.12.21 (토)",

@@ -1,12 +1,13 @@
 export const createCard = (data) => {
   const cardItem = document.createElement("div");
   cardItem.classList.add("news__list-item");
+  const baseUrl = window.baseUrl;
 
   cardItem.innerHTML = `
     <div class="news__thumbnail">
     ${
       data.image
-        ? `<img src="${data.image}" alt="${data.title}" />`
+        ? `<img src="${baseUrl}assets/images/bg/${data.image}" alt="${data.title}" />`
         : `<div class="news__thumbnail-default">
              <i class="bx bxs-image"></i>
            </div>`
