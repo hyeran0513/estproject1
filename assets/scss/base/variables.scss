@@ -22,3 +22,9 @@
 
 // 폰트 변수
 $primary-font: "Pretendard", sans-serif;
+
+@mixin responsive($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
