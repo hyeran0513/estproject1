@@ -126,7 +126,8 @@ https://www.youtube.com/watch?v=WVf0szhZ7wc
  ┃ ┣ 📂modules
  ┃ ┃ ┣ 📜component-card.js
  ┃ ┃ ┣ 📜coworker-card.js
- ┃ ┃ ┣ 📜logo.js
+ ┃ ┃ ┣ 📜footer-logo.js
+ ┃ ┃ ┣ 📜header-logo.js
  ┃ ┃ ┣ 📜map-handler.js
  ┃ ┃ ┣ 📜map.js
  ┃ ┃ ┣ 📜member-card.js

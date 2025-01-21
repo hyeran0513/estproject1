@@ -10,6 +10,7 @@ export const updateHeaderLogo = () => {
 
     const getLogoSrc = () => {
       const isDarkTheme = theme === "dark";
+      const isLightTheme = theme === "light";
       const isHomePage = path === "/";
 
       if (isDarkTheme) {
@@ -19,6 +20,11 @@ export const updateHeaderLogo = () => {
       if (isHomePage && header.classList.contains("--active")) {
         return `${baseUrl}assets/images/icon/common/icon_logo_black.svg`;
       }
+
+      if (isLightTheme && !isHomePage) {
+        return `${baseUrl}assets/images/icon/common/icon_logo_black.svg`;
+      }
+
       return `${baseUrl}assets/images/icon/common/icon_logo_white.svg`;
     };
 

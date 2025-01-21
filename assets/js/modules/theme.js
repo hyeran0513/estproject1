@@ -1,5 +1,5 @@
-import { updateHeaderLogo } from "/assets/js/modules/headerLogo.js";
-import { updateFooterLogo } from "/assets/js/modules/footerLogo.js";
+import { updateHeaderLogo } from "/assets/js/modules/header-logo.js";
+import { updateFooterLogo } from "/assets/js/modules/footer-logo.js";
 
 export const handleTheme = () => {
   // 테마를 로컬 스토리지에 저장

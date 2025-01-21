@@ -1,4 +1,4 @@
-import { updateFooterLogo } from "/assets/js/modules/footerLogo.js";
+import { updateFooterLogo } from "/assets/js/modules/footer-logo.js";
 
 // 푸터 초기화
 const initializeFooter = () => {
