@@ -1,3 +1,5 @@
+import { updateHeaderLogo } from "/assets/js/modules/headerLogo.js";
+
 export const handleScrollEvent = () => {
   const header = document.querySelector("#header");
 
@@ -7,5 +9,7 @@ export const handleScrollEvent = () => {
     } else {
       header.classList.remove("--active");
     }
+
+    updateHeaderLogo();
   });
 };

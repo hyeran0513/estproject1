@@ -13,7 +13,6 @@
   --secondary-bg-color: light-dark(#f5f5f5, #444);
   --secondary-border-color: light-dark(#eaedf4, #444);
   --footer-bg-color: light-dark(#f8f8f8, #222);
-  --fixed-light-color: light-dark(#e0e0e0, #e0e0e0);
   --font-size: 100%;
   /* 포트폴리오, 인터뷰, 동료 카드의 배경 색상 */
   --portfolio-bg-color: light-dark(#000, #1e1e1e);
@@ -295,9 +294,6 @@ body.visible {
   height: 100%;
   object-fit: cover;
 }
-.header__logo img.header__logo--black {
-  display: none;
-}
 .header .gnb__list {
   display: flex;
   gap: 2rem;
@@ -305,7 +301,7 @@ body.visible {
 .header .gnb__list-link {
   position: relative;
   font-size: 0.8rem;
-  color: var(--fixed-light-color);
+  color: #e0e0e0;
 }
 .header .gnb__list-link::after {
   content: "";
@@ -318,7 +314,7 @@ body.visible {
   opacity: 0;
   transform: scaleX(0);
   transition: all 0.3s ease;
-  background-color: var(--fixed-light-color);
+  background-color: #e0e0e0;
 }
 .header .gnb__list-link:hover::after, .header .gnb__list-link.--active::after {
   opacity: 1;
@@ -340,6 +336,7 @@ body.visible {
 }
 .header .utility__button > i {
   font-size: 20px;
+  color: #e0e0e0;
 }
 .header .utility__button input[type=radio] {
   display: none;
@@ -363,10 +360,7 @@ body.visible {
 .header.header--sub .gnb__list-link::after, .header.--active .gnb__list-link::after {
   background-color: var(--primary-text-color);
 }
-.header.header--sub .btn-hamburger > i, .header.--active .btn-hamburger > i {
-  color: var(--primary-text-color);
-}
-.header.header--sub #btn-theme-toggle, .header.--active #btn-theme-toggle {
+.header.header--sub .utility__button > i, .header.--active .utility__button > i {
   color: var(--primary-text-color);
 }
 
@@ -583,24 +577,6 @@ main .section__head {
     padding: 0;
   }
 }
-/* 다크 모드 */
-[data-theme=dark] {
-  /* 헤더 */
-  /* 푸터 */
-}
-[data-theme=dark] .header--sub .header__logo img.header__logo--white, [data-theme=dark] .header.--active .header__logo img.header__logo--white {
-  display: block;
-}
-[data-theme=dark] .header--sub .header__logo img.header__logo--black, [data-theme=dark] .header.--active .header__logo img.header__logo--black {
-  display: none;
-}
-[data-theme=dark] .footer__logo img.footer__logo--white {
-  display: block;
-}
-[data-theme=dark] .footer__logo img.footer__logo--black {
-  display: none;
-}
-
 .notice__list {
   display: none;
   flex-direction: column;

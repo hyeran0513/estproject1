@@ -1,6 +1,6 @@
 export const cardData = [
   {
-    image: "/assets/images/pc/bg/coworker/bg_coworker1.png",
+    image: "/assets/images/bg/coworker/bg_coworker1.png",
     type: "image",
   },
   {
@@ -13,7 +13,7 @@ export const cardData = [
     ],
   },
   {
-    image: "/assets/images/pc/bg/coworker/bg_coworker2.png",
+    image: "/assets/images/bg/coworker/bg_coworker2.png",
     type: "image",
   },
   {
@@ -30,7 +30,7 @@ export const cardData = [
     text: "멋진 건축가들 소개",
   },
   {
-    image: "/assets/images/pc/bg/coworker/bg_coworker3.png",
+    image: "/assets/images/bg/coworker/bg_coworker3.png",
     type: "image",
   },
   {
@@ -43,7 +43,7 @@ export const cardData = [
     ],
   },
   {
-    image: "/assets/images/pc/bg/coworker/bg_coworker4.png",
+    image: "/assets/images/bg/coworker/bg_coworker4.png",
     type: "image",
   },
   {

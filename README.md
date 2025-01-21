@@ -108,64 +108,36 @@ https://www.youtube.com/watch?v=WVf0szhZ7wc
 
 ```
 📦estproject1
-┣ 📂.vscode
- ┃ ┗ 📜settings.json
+ 📦assets
  ┣ 📂images
- ┃ ┣ 📂icon
- ┃ ┃ ┣ 📂common
- ┃ ┃ ┃ ┣ 📜icon_logo_black.svg
- ┃ ┃ ┃ ┗ 📜icon_logo_white.svg
- ┃ ┃ ┣ 📂notice
- ┃ ┃ ┃ ┣ 📜ico_arrow_black.svg
- ┃ ┃ ┃ ┣ 📜ico_arrow_main.svg
- ┃ ┃ ┃ ┗ 📜ico_arrow_white.svg
- ┃ ┃ ┣ 📂portfolio
- ┃ ┃ ┃ ┣ 📜icon_next_black.svg
- ┃ ┃ ┃ ┣ 📜icon_next_white.svg
- ┃ ┃ ┃ ┣ 📜icon_prev_black.svg
- ┃ ┃ ┃ ┗ 📜icon_prev_white.svg
- ┃ ┃ ┗ 📂vision
- ┃ ┃ ┃ ┣ 📜icon_arrow_black.svg
- ┃ ┃ ┃ ┣ 📜icon_arrow_main.svg
- ┃ ┃ ┃ ┗ 📜icon_arrow_white.svg
- ┃ ┣ 📂mobile
- ┃ ┃ ┗ 📂bg
- ┃ ┗ 📂pc
- ┃ ┃ ┗ 📂bg
+ ┃ ┣ 📂bg
+ ┃ ┗ 📂icon
  ┣ 📂js
  ┃ ┣ 📂components
  ┃ ┃ ┣ 📜footer.js
  ┃ ┃ ┣ 📜header.js
  ┃ ┃ ┗ 📜sidebar.js
  ┃ ┣ 📂data
- ┃ ┃ ┣ 📂index
- ┃ ┃ ┣ 📂interview
- ┃ ┃ ┃ ┗ 📜interview-card.js
- ┃ ┃ ┗ 📂portfolio
- ┃ ┃ ┃ ┗ 📜portfolio-card.js
+ ┃ ┃ ┣ 📜coworker.js
+ ┃ ┃ ┣ 📜interview.js
+ ┃ ┃ ┣ 📜member.js
+ ┃ ┃ ┣ 📜news.js
+ ┃ ┃ ┗ 📜portfolio.js
  ┃ ┣ 📂modules
- ┃ ┃ ┣ 📂card
- ┃ ┃ ┃ ┗ 📜component-card.js
- ┃ ┃ ┣ 📂map
- ┃ ┃ ┃ ┣ 📜map-handler.js
- ┃ ┃ ┃ ┗ 📜map.js
- ┃ ┃ ┣ 📂portfolio
- ┃ ┃ ┃ ┣ 📜slide-portfolio.js
- ┃ ┃ ┃ ┗ 📜zoom-portfolio.js
- ┃ ┃ ┣ 📂scroll
- ┃ ┃ ┃ ┗ 📜scroll-event.js
- ┃ ┃ ┣ 📂swiper
- ┃ ┃ ┃ ┗ 📜swiper.js
- ┃ ┃ ┣ 📂tab
- ┃ ┃ ┃ ┗ 📜tab.js
- ┃ ┃ ┣ 📂theme
- ┃ ┃ ┃ ┗ 📜theme.js
- ┃ ┃ ┗ 📂utils
- ┃ ┃ ┃ ┣ 📜observe-utils.js
- ┃ ┃ ┃ ┣ 📜page-utils.js
- ┃ ┃ ┃ ┣ 📜template-utils.js
- ┃ ┃ ┃ ┗ 📜url-utils.js
- ┃ ┗ 📂pages
+ ┃ ┃ ┣ 📜component-card.js
+ ┃ ┃ ┣ 📜coworker-card.js
+ ┃ ┃ ┣ 📜logo.js
+ ┃ ┃ ┣ 📜map-handler.js
+ ┃ ┃ ┣ 📜map.js
+ ┃ ┃ ┣ 📜member-card.js
+ ┃ ┃ ┣ 📜news-card.js
+ ┃ ┃ ┣ 📜scroll-event.js
+ ┃ ┃ ┣ 📜slide-portfolio.js
+ ┃ ┃ ┣ 📜swiper.js
+ ┃ ┃ ┣ 📜tab.js
+ ┃ ┃ ┣ 📜theme.js
+ ┃ ┃ ┗ 📜zoom-portfolio.js
+ ┃ ┣ 📂pages
  ┃ ┃ ┣ 📜about.js
  ┃ ┃ ┣ 📜coworker.js
  ┃ ┃ ┣ 📜index.js
@@ -174,7 +146,12 @@ https://www.youtube.com/watch?v=WVf0szhZ7wc
  ┃ ┃ ┣ 📜news.js
  ┃ ┃ ┣ 📜notice.js
  ┃ ┃ ┗ 📜portfolio.js
- ┣ 📂scss
+ ┃ ┗ 📂utils
+ ┃ ┃ ┣ 📜observe-utils.js
+ ┃ ┃ ┣ 📜page-utils.js
+ ┃ ┃ ┣ 📜template-utils.js
+ ┃ ┃ ┗ 📜url-utils.js
+ ┗ 📂scss
  ┃ ┣ 📂base
  ┃ ┃ ┣ 📜common.scss
  ┃ ┃ ┣ 📜layout.scss
@@ -187,13 +164,15 @@ https://www.youtube.com/watch?v=WVf0szhZ7wc
  ┃ ┃ ┣ 📜about.scss
  ┃ ┃ ┣ 📜coworker.scss
  ┃ ┃ ┣ 📜index.scss
+ ┃ ┃ ┣ 📜interview.scss
+ ┃ ┃ ┣ 📜main.scss
  ┃ ┃ ┣ 📜news.scss
  ┃ ┃ ┣ 📜notice.scss
  ┃ ┃ ┗ 📜portfolio.scss
- ┣ 📂templates
- ┃ ┣ 📜footer.html
- ┃ ┣ 📜header.html
- ┃ ┗ 📜sidebar.html
+ 📦components
+ ┣ 📜footer.html
+ ┣ 📜header.html
+ ┗ 📜sidebar.html
  ┣ 📜about.html
  ┣ 📜coworker.html
  ┣ 📜favicon.ico

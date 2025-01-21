@@ -1,3 +1,6 @@
+import { updateHeaderLogo } from "/assets/js/modules/headerLogo.js";
+import { updateFooterLogo } from "/assets/js/modules/footerLogo.js";
+
 export const handleTheme = () => {
   // 테마를 로컬 스토리지에 저장
   const setTheme = (theme) => {
@@ -20,12 +23,18 @@ export const handleTheme = () => {
       setTheme(defaultTheme);
       document.getElementById(defaultTheme).checked = true;
     }
+
+    updateHeaderLogo();
+    updateFooterLogo();
   };
 
   // 테마 변경 시 radio 버튼의 상태에 따라 테마 설정
   document.querySelectorAll('input[name="color-scheme"]').forEach((input) => {
     input.addEventListener("change", () => {
       setTheme(input.value);
+
+      updateHeaderLogo();
+      updateFooterLogo();
     });
   });
 

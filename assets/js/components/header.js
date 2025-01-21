@@ -1,4 +1,5 @@
 import { handleTheme } from "/assets/js/modules/theme.js";
+import { updateHeaderLogo } from "/assets/js/modules/headerLogo.js";
 
 // 메뉴 데이터 정의
 const menuItems = [
@@ -60,47 +61,16 @@ const highlightActiveMenuLink = () => {
   });
 };
 
-// 로고 및 메뉴 초기화
+// 헤더 초기화
 const initializeHeader = () => {
-  const logoLink = document.querySelector(".header__logo");
-  const logoImg = document.querySelector(".header__logo-img");
-
-  const theme = document.documentElement.getAttribute("data-theme");
-
-  // 테마에 따라 로고 변경
-  const updateLogo = () => {
-    if (theme === "dark") {
-      logoImg.src = `${window.baseUrl}assets/images/icon/common/icon_logo_white.svg`;
-    } else if (theme === "light") {
-      logoImg.src = `${window.baseUrl}assets/images/icon/common/icon_logo_black.svg`;
-    }
-  };
-
-  // 로고 업데이트 함수 호출
-  updateLogo();
-
-  // 테마 변경 시 로고 변경
-  const themeRadios = document.querySelectorAll('input[name="color-scheme"]');
-  themeRadios.forEach((radio) => {
-    radio.addEventListener("change", () => {
-      const selectedTheme = document.querySelector(
-        'input[name="color-scheme"]:checked'
-      ).value;
-      document.documentElement.setAttribute("data-theme", selectedTheme);
-      updateLogo();
-    });
-  });
-
-  logoLink.href = `${window.baseUrl}`;
-
   const menuList = document.querySelector(".gnb__list");
   renderMenuItems(menuList);
   highlightActiveMenuLink();
+  updateHeaderLogo();
 };
 
 // 헤더를 로드하는 함수
 export const loadHeader = () => {
-  console.log("loadHeader called");
   const url =
     window.location.hostname === "hyeran0513.github.io"
       ? "/estproject1/components/header.html"
@@ -114,7 +84,7 @@ export const loadHeader = () => {
       // 테마
       handleTheme();
 
-      // 헤더 설정
+      // 헤더 초기화
       initializeHeader();
     })
     .catch((error) => console.error("헤더 fetch 오류:", error));

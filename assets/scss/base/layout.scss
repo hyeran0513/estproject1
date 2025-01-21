@@ -43,10 +43,6 @@ body {
       width: 100%;
       height: 100%;
       object-fit: cover;
-
-      &.header__logo--black {
-        display: none;
-      }
     }
   }
 
@@ -58,7 +54,7 @@ body {
       &-link {
         position: relative;
         font-size: 0.8rem;
-        color: var(--fixed-light-color);
+        color: #e0e0e0;
 
         &::after {
           content: "";
@@ -71,7 +67,7 @@ body {
           opacity: 0;
           transform: scaleX(0);
           transition: all 0.3s ease;
-          background-color: var(--fixed-light-color);
+          background-color: #e0e0e0;
         }
 
         &:hover,
@@ -101,6 +97,7 @@ body {
 
       & > i {
         font-size: 20px;
+        color: #e0e0e0;
       }
 
       input[type="radio"] {
@@ -145,14 +142,12 @@ body {
       }
     }
 
-    .btn-hamburger {
-      & > i {
-        color: var(--primary-text-color);
+    .utility {
+      &__button {
+        & > i {
+          color: var(--primary-text-color);
+        }
       }
-    }
-
-    #btn-theme-toggle {
-      color: var(--primary-text-color);
     }
   }
 }
@@ -435,44 +430,6 @@ main {
 
       &__inner {
         padding: 0;
-      }
-    }
-  }
-}
-
-/* 다크 모드 */
-[data-theme="dark"] {
-  /* 헤더 */
-  .header {
-    &--sub,
-    &.--active {
-      .header {
-        &__logo {
-          img {
-            &.header__logo--white {
-              display: block;
-            }
-
-            &.header__logo--black {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  /* 푸터 */
-  .footer {
-    &__logo {
-      img {
-        &.footer__logo--white {
-          display: block;
-        }
-
-        &.footer__logo--black {
-          display: none;
-        }
       }
     }
   }

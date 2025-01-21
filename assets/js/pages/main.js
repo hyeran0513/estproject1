@@ -3,7 +3,6 @@ import { setBaseUrl } from "/assets/js/utils/url-utils.js";
 import { handleScrollEvent } from "/assets/js/modules/scroll-event.js";
 import { loadHeader } from "/assets/js/components/header.js";
 import { loadSidebar } from "/assets/js/components/sidebar.js";
-
 import { loadFooter } from "/assets/js/components/footer.js";
 
 const loading = initializePage();
