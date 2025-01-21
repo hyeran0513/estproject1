@@ -1,11 +1,22 @@
 export const setBaseUrl = () => {
-  const base = document.createElement("base");
+  let base = document.querySelector("base");
+  let baseUrl = "";
 
-  if (window.location.hostname === "hyeran0513.github.io") {
-    base.href = "/estproject1/";
+  // base 태그의 유무에 따른 유효성 검사
+  if (base) {
+    baseUrl = base.href;
   } else {
-    base.href = "/";
+    base = document.createElement("base");
+
+    if (window.location.hostname === "hyeran0513.github.io") {
+      baseUrl = "/estproject1/";
+    } else {
+      baseUrl = "/";
+    }
+
+    base.href = baseUrl;
+    document.head.prepend(base);
   }
 
-  document.head.prepend(base);
+  window.baseUrl = baseUrl;
 };

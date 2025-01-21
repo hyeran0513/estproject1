@@ -1,24 +1,16 @@
 .portfolio {
   &--slide {
-    padding: 3.125rem 1.25rem;
+    margin-bottom: 3rem;
     max-width: 100%;
     width: 100%;
     overflow: hidden;
-    background-color: var(--portfolio-bg-color);
-    color: var(--primary-bg-color);
   }
 
   &__inner {
     margin: 0 auto;
-    max-width: 75rem;
-
-    .section__head {
-      .section__title {
-        &::before {
-          background-color: var(--primary-bg-color);
-        }
-      }
-    }
+    padding: 0 1.25rem;
+    max-width: 77.5rem;
+    width: 100%;
   }
 
   &__info {
@@ -105,15 +97,16 @@
       width: 3.1rem;
       height: 0.8rem;
       z-index: 1;
+      cursor: pointer;
     }
 
     &-prev {
-      background: url("/assets/images/icon/portfolio/icon_prev_white.svg")
+      background: url("../../images/icon/portfolio/icon_prev_black.svg")
         no-repeat center / contain;
     }
 
     &-next {
-      background: url("/assets/images/icon/portfolio/icon_next_white.svg")
+      background: url("../../images/icon/portfolio/icon_next_black.svg")
         no-repeat center / contain;
     }
   }
@@ -132,7 +125,7 @@
 @media screen and (max-width: 768px) {
   .portfolio {
     &--slide {
-      padding: 1.25rem;
+      margin-bottom: 1.25rem;
     }
 
     &__info {
@@ -173,6 +166,23 @@
       &-next {
         width: 2rem;
         height: 0.6rem;
+      }
+    }
+  }
+}
+
+/* 다크 모드 */
+[data-theme="dark"] {
+  .portfolio {
+    &__control {
+      &-prev {
+        background: url("../../images/icon/portfolio/icon_prev_white.svg")
+          no-repeat center / contain;
+      }
+
+      &-next {
+        background: url("../../images/icon/portfolio/icon_next_white.svg")
+          no-repeat center / contain;
       }
     }
   }

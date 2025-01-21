@@ -4,6 +4,8 @@ import { initializeSlideBanner } from "/assets/js/modules/swiper.js";
 import { handleMap } from "/assets/js/modules/map-handler.js";
 import { sliderPortfolio } from "/assets/js/modules/slide-portfolio.js";
 import { zoomPortfolio } from "/assets/js/modules/zoom-portfolio.js";
+import { cardData } from "/assets/js/data/member.js";
+import { createCard } from "/assets/js/modules/member-card.js";
 
 window.onload = () => {
   const elementsToObserve = [
@@ -17,6 +19,10 @@ window.onload = () => {
 
   elementsToObserve.forEach((selector) => observeElements(selector));
 
+  // 슬라이드형 포트폴리오
+  const slider = sliderPortfolio();
+  slider.addEventListeners();
+
   /* 지도 */
   handleMap();
 };
@@ -28,9 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
   /* 슬라이드 배너 초기화 */
   initializeSlideBanner();
 
-  const slider = sliderPortfolio();
-  slider.addEventListeners();
-
   // 확대형 포트폴리오
   zoomPortfolio();
+
+  // 작업자 소개
+  const cardContainer = document.querySelector(".member__card");
+
+  cardData.map((data) => {
+    const cardItem = createCard(data);
+    cardContainer.appendChild(cardItem);
+  });
 });

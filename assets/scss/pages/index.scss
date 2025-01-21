@@ -1,4 +1,5 @@
 @use "../pages/main" as *;
+@use "../components/slide-portfolio.scss" as *;
 
 /* 로딩 */
 #loading {
@@ -828,6 +829,7 @@ section {
     }
 
     &-title {
+      margin-bottom: 10px;
       line-height: 1.6rem;
       font-size: 1.2rem;
       -webkit-text-decoration: underline transparent;

@@ -12,73 +12,23 @@
   <div class="a11y-hidden">메뉴</div>
 
   <nav class="gnb" aria-label="주 메뉴">
-    <ul class="gnb__list">
-      <li class="gnb__list-item">
-        <a
-          href="./about.html"
-          class="gnb__list-link"
-          title="회사소개 페이지로 이동"
-          >회사소개</a
-        >
-      </li>
-
-      <li class="gnb__list-item">
-        <a
-          href="./portfolio.html"
-          class="gnb__list-link"
-          title="포트폴리오 페이지로 이동"
-          >포트폴리오</a
-        >
-      </li>
-
-      <li class="gnb__list-item">
-        <a
-          href="./coworker.html"
-          class="gnb__list-link"
-          title="직원소개 페이지로 이동"
-          >직원소개</a
-        >
-      </li>
-
-      <li class="gnb__list-item">
-        <a
-          href="./interview.html"
-          class="gnb__list-link"
-          title="인터뷰 페이지로 이동"
-          >인터뷰</a
-        >
-      </li>
-
-      <li class="gnb__list-item">
-        <a href="./news.html" class="gnb__list-link" title="뉴스 페이지로 이동"
-          >뉴스</a
-        >
-      </li>
-
-      <li class="gnb__list-item">
-        <a
-          href="./notice.html"
-          class="gnb__list-link"
-          title="공지사항 페이지로 이동"
-          >공지사항</a
-        >
-      </li>
-    </ul>
+    <ul class="gnb__list"></ul>
   </nav>
 
-  <div class="btn-wrap">
-    <button
-      type="button"
-      id="btn-theme-toggle"
-      aria-label="테마 변경"
-      title="테마 변경"
-    >
+  <div class="utility">
+    <label for="light" class="utility__button btn-theme">
+      <input name="color-scheme" type="radio" value="light" id="light" />
+      <i class="bx bx-sun"></i>
+    </label>
+
+    <label for="dark" class="utility__button btn-theme">
+      <input name="color-scheme" type="radio" value="dark" id="dark" checked />
       <i class="bx bx-moon"></i>
-    </button>
+    </label>
 
     <button
       type="button"
-      class="btn-hamburger"
+      class="utility__button btn-hamburger"
       aria-label="메뉴 열기"
       title="햄버거 버튼"
     >

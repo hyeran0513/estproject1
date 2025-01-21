@@ -77,6 +77,25 @@
   text-overflow: ellipsis;
 }
 
+/* 라디오 버튼을 클릭하면 테마 변경 */
+:root {
+  &:has(input[name="color-scheme"][value="light"]:checked) {
+    color-scheme: light;
+
+    label[for="light"] {
+      display: none;
+    }
+  }
+
+  &:has(input[name="color-scheme"][value="dark"]:checked) {
+    color-scheme: dark;
+
+    label[for="dark"] {
+      display: none;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   /*  탭 */
   .tab {

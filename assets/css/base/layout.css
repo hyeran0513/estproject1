@@ -72,20 +72,28 @@ body.visible {
   opacity: 1;
   transform: scaleX(1);
 }
-.header .btn-wrap {
+.header .utility {
   display: flex;
   align-items: center;
   gap: 1.875rem;
   justify-self: flex-end;
 }
-.header .btn-hamburger {
+.header .utility__button {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .utility__button > i {
+  font-size: 20px;
+}
+.header .utility__button input[type=radio] {
   display: none;
 }
-.header .btn-hamburger > i {
-  color: var(--fixed-light-color);
-}
-.header #btn-theme-toggle {
-  color: var(--fixed-light-color);
+.header .utility__button.btn-hamburger {
+  display: none;
 }
 .header.header--sub, .header.--active {
   background-color: var(--primary-bg-color);
@@ -115,7 +123,7 @@ body.visible {
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
@@ -162,6 +170,10 @@ body.visible {
 /* 메인 */
 main {
   flex: 1;
+}
+main .section__head {
+  margin: 0 auto 30px;
+  max-width: 1200px;
 }
 
 .main--sub {
@@ -255,9 +267,11 @@ main {
   .header .gnb {
     display: none;
   }
-  .header .btn-hamburger {
-    display: block;
+  .header .utility__button > i {
     font-size: 1.2rem;
+  }
+  .header .utility__button.btn-hamburger {
+    display: block;
   }
   /* 메인 */
   .main--sub {

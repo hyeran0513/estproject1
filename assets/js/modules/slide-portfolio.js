@@ -12,6 +12,7 @@ export const sliderPortfolio = () => {
   };
 
   const updateActiveClass = () => {
+    console.log("update", pictures);
     pictures.forEach((picture, index) => {
       picture.classList.toggle("--active", index === currentIndex);
     });

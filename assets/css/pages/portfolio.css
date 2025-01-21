@@ -1,37 +1,24 @@
 @charset "UTF-8";
 :root {
   /* 기본 색상 변수 */
-  --primary-color: rgb(13, 110, 253);
-  --primary-clear-color: rgba(13, 110, 253, 0.2);
-  --primary-bg-color: #fff;
-  --primary-text-color: #333;
-  --primary-border-color: #333;
-  --secondary-text-color: #757575;
-  --secondary-bg-color: #f5f5f5;
-  --secondary-border-color: #eaedf4;
-  --footer-bg-color: #f8f8f8;
-  --fixed-light-color: #e0e0e0;
+  --primary-color: light-dark(rgb(13, 110, 253), rgb(13, 110, 253));
+  --primary-clear-color: light-dark(
+    rgba(13, 110, 253, 0.2),
+    rgba(13, 110, 253, 0.2)
+  );
+  --primary-bg-color: light-dark(#fff, #272727);
+  --primary-text-color: light-dark(#333, #e0e0e0);
+  --primary-border-color: light-dark(#333, #e0e0e0);
+  --secondary-text-color: light-dark(#757575, #757575);
+  --secondary-bg-color: light-dark(#f5f5f5, #444);
+  --secondary-border-color: light-dark(#eaedf4, #444);
+  --footer-bg-color: light-dark(#f8f8f8, #222);
+  --fixed-light-color: light-dark(#e0e0e0, #e0e0e0);
   --font-size: 100%;
   /* 포트폴리오, 인터뷰, 동료 카드의 배경 색상 */
-  --portfolio-bg-color: #000;
-  --interview-bg-color: #ece8e5;
-  --coworker-bg-color: #e7e7da;
-}
-
-/* 다크 모드 변수 설정 */
-[data-theme=dark] {
-  /* 기본 색상 변수 */
-  --primary-bg-color: #272727;
-  --primary-text-color: #e0e0e0;
-  --secondary-text-color: #bbb;
-  --primary-border-color: #e0e0e0;
-  --secondary-bg-color: #444;
-  --secondary-border-color: #444;
-  --footer-bg-color: #222;
-  /* 포트폴리오, 인터뷰, 동료 카드의 배경 색상 */
-  --portfolio-bg-color: #1e1e1e;
-  --interview-bg-color: #1e1e1e;
-  --coworker-bg-color: #1e1e1e;
+  --portfolio-bg-color: light-dark(#000, #1e1e1e);
+  --interview-bg-color: light-dark(#ece8e5, #1e1e1e);
+  --coworker-bg-color: light-dark(#e7e7da, #1e1e1e);
 }
 
 /* 박스 모델을 전역적으로 border-box로 설정 */
@@ -244,6 +231,20 @@ summary {
   text-overflow: ellipsis;
 }
 
+/* 라디오 버튼을 클릭하면 테마 변경 */
+:root:has(input[name=color-scheme][value=light]:checked) {
+  color-scheme: light;
+}
+:root:has(input[name=color-scheme][value=light]:checked) label[for=light] {
+  display: none;
+}
+:root:has(input[name=color-scheme][value=dark]:checked) {
+  color-scheme: dark;
+}
+:root:has(input[name=color-scheme][value=dark]:checked) label[for=dark] {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   /*  탭 */
   .tab__content {
@@ -323,20 +324,28 @@ body.visible {
   opacity: 1;
   transform: scaleX(1);
 }
-.header .btn-wrap {
+.header .utility {
   display: flex;
   align-items: center;
   gap: 1.875rem;
   justify-self: flex-end;
 }
-.header .btn-hamburger {
+.header .utility__button {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .utility__button > i {
+  font-size: 20px;
+}
+.header .utility__button input[type=radio] {
   display: none;
 }
-.header .btn-hamburger > i {
-  color: var(--fixed-light-color);
-}
-.header #btn-theme-toggle {
-  color: var(--fixed-light-color);
+.header .utility__button.btn-hamburger {
+  display: none;
 }
 .header.header--sub, .header.--active {
   background-color: var(--primary-bg-color);
@@ -366,7 +375,7 @@ body.visible {
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
@@ -413,6 +422,10 @@ body.visible {
 /* 메인 */
 main {
   flex: 1;
+}
+main .section__head {
+  margin: 0 auto 30px;
+  max-width: 1200px;
 }
 
 .main--sub {
@@ -506,9 +519,11 @@ main {
   .header .gnb {
     display: none;
   }
-  .header .btn-hamburger {
-    display: block;
+  .header .utility__button > i {
     font-size: 1.2rem;
+  }
+  .header .utility__button.btn-hamburger {
+    display: block;
   }
   /* 메인 */
   .main--sub {
@@ -658,6 +673,143 @@ main {
   .card__item-info {
     gap: 1rem;
   }
+}
+.portfolio--slide {
+  margin-bottom: 3rem;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.portfolio__inner {
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 77.5rem;
+  width: 100%;
+}
+.portfolio__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+}
+.portfolio__info-wrap {
+  position: relative;
+  display: flex;
+  height: 37.5rem;
+}
+.portfolio__details-title {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  font-size: 1.4rem;
+}
+.portfolio__details-creator {
+  font-size: 1rem;
+  letter-spacing: 0.24rem;
+}
+.portfolio__picture {
+  position: relative;
+  flex: 0 0 70%;
+  transition: transform 0.3s ease;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+.portfolio__picture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.portfolio__picture.--active::before {
+  opacity: 0;
+}
+.portfolio__picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.portfolio__picture-wrap {
+  position: absolute;
+  left: 30%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.portfolio__picture-container {
+  display: flex;
+  gap: 0.625rem;
+  height: 100%;
+  transition: transform ease 0.6s;
+}
+.portfolio__control {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+.portfolio__control-prev, .portfolio__control-next {
+  width: 3.1rem;
+  height: 0.8rem;
+  z-index: 1;
+  cursor: pointer;
+}
+.portfolio__control-prev {
+  background: url("../../images/icon/portfolio/icon_prev_black.svg") no-repeat center/contain;
+}
+.portfolio__control-next {
+  background: url("../../images/icon/portfolio/icon_next_black.svg") no-repeat center/contain;
+}
+
+@media screen and (max-width: 1024px) {
+  .portfolio__info-wrap {
+    height: 31.25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .portfolio--slide {
+    margin-bottom: 1.25rem;
+  }
+  .portfolio__info {
+    width: 100%;
+  }
+  .portfolio__info-wrap {
+    flex-direction: column;
+    gap: 1.5rem;
+    height: auto;
+  }
+  .portfolio__details-title {
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+  }
+  .portfolio__details-creator {
+    font-size: 0.8rem;
+  }
+  .portfolio__picture {
+    flex: 0 0 100%;
+  }
+  .portfolio__picture-wrap {
+    position: relative;
+    left: 0;
+  }
+  .portfolio__control {
+    gap: 0.75rem;
+    padding: 0 1.25rem;
+  }
+  .portfolio__control-prev, .portfolio__control-next {
+    width: 2rem;
+    height: 0.6rem;
+  }
+}
+/* 다크 모드 */
+[data-theme=dark] .portfolio__control-prev {
+  background: url("../../images/icon/portfolio/icon_prev_white.svg") no-repeat center/contain;
+}
+[data-theme=dark] .portfolio__control-next {
+  background: url("../../images/icon/portfolio/icon_next_white.svg") no-repeat center/contain;
 }
 
 /*# sourceMappingURL=portfolio.css.map */

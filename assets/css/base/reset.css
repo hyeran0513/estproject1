@@ -1,37 +1,24 @@
 @charset "UTF-8";
 :root {
   /* 기본 색상 변수 */
-  --primary-color: rgb(13, 110, 253);
-  --primary-clear-color: rgba(13, 110, 253, 0.2);
-  --primary-bg-color: #fff;
-  --primary-text-color: #333;
-  --primary-border-color: #333;
-  --secondary-text-color: #757575;
-  --secondary-bg-color: #f5f5f5;
-  --secondary-border-color: #eaedf4;
-  --footer-bg-color: #f8f8f8;
-  --fixed-light-color: #e0e0e0;
+  --primary-color: light-dark(rgb(13, 110, 253), rgb(13, 110, 253));
+  --primary-clear-color: light-dark(
+    rgba(13, 110, 253, 0.2),
+    rgba(13, 110, 253, 0.2)
+  );
+  --primary-bg-color: light-dark(#fff, #272727);
+  --primary-text-color: light-dark(#333, #e0e0e0);
+  --primary-border-color: light-dark(#333, #e0e0e0);
+  --secondary-text-color: light-dark(#757575, #757575);
+  --secondary-bg-color: light-dark(#f5f5f5, #444);
+  --secondary-border-color: light-dark(#eaedf4, #444);
+  --footer-bg-color: light-dark(#f8f8f8, #222);
+  --fixed-light-color: light-dark(#e0e0e0, #e0e0e0);
   --font-size: 100%;
   /* 포트폴리오, 인터뷰, 동료 카드의 배경 색상 */
-  --portfolio-bg-color: #000;
-  --interview-bg-color: #ece8e5;
-  --coworker-bg-color: #e7e7da;
-}
-
-/* 다크 모드 변수 설정 */
-[data-theme=dark] {
-  /* 기본 색상 변수 */
-  --primary-bg-color: #272727;
-  --primary-text-color: #e0e0e0;
-  --secondary-text-color: #bbb;
-  --primary-border-color: #e0e0e0;
-  --secondary-bg-color: #444;
-  --secondary-border-color: #444;
-  --footer-bg-color: #222;
-  /* 포트폴리오, 인터뷰, 동료 카드의 배경 색상 */
-  --portfolio-bg-color: #1e1e1e;
-  --interview-bg-color: #1e1e1e;
-  --coworker-bg-color: #1e1e1e;
+  --portfolio-bg-color: light-dark(#000, #1e1e1e);
+  --interview-bg-color: light-dark(#ece8e5, #1e1e1e);
+  --coworker-bg-color: light-dark(#e7e7da, #1e1e1e);
 }
 
 /* 박스 모델을 전역적으로 border-box로 설정 */
