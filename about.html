@@ -11,24 +11,17 @@
 
     <title>이스트소프트 프론트엔드 부트캠프</title>
 
-    <!-- 중요 CSS 미리 로드 -->
-    <link rel="preload" href="./styles/base/variables.css" as="style" />
-    <link rel="preload" href="./styles/base/layout.css" as="style" />
-
-    <!-- 스타일시트 -->
-    <link rel="stylesheet" href="./styles/base/variables.css" />
-    <link rel="stylesheet" href="./styles/base/layout.css" />
-    <link rel="stylesheet" href="./styles/base/reset.css" />
-    <link rel="stylesheet" href="./styles/base/common.css" />
+    <!-- Pretendard -->
     <link
       rel="stylesheet"
-      href="./styles/pages/about.css"
-      media="print"
-      onload="this.media='all'"
+      href="https://cdn.jsdelivr.net/npm/preset.css@1.0.0/preset.min.css"
     />
 
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="./assets/css/pages/about.css" />
+
     <!-- 파비콘 -->
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
 
     <!-- 아이콘 라이브러리 -->
     <link
@@ -49,18 +42,26 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Yantramanav:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- 페이지 스크립트 -->
+    <script type="module" src="/assets/js/pages/about.js"></script>
   </head>
 
   <body>
+    <!-- 로딩 -->
+    <div id="loading">
+      <div class="spinner"></div>
+    </div>
+
     <!-- 헤더 -->
-    <div class="a11y-hidden">헤더</div>
+    <h2 class="a11y-hidden">헤더</h2>
 
     <header id="header" class="header header--sub"></header>
 
     <!-- 사이드바 -->
-    <div class="a11y-hidden">메뉴</div>
+    <h2 class="a11y-hidden">메뉴</h2>
 
-    <aside id="sidebar"></aside>
+    <aside id="sidebar" class="sidebar"></aside>
 
     <!-- 메인 -->
     <main class="main main--sub">
@@ -72,7 +73,7 @@
           <div class="section__title">회사 소개</div>
           <div class="section__description">저희 회사에 대해 소개합니다.</div>
         </div>
-  
+
         <div class="company__inner">
           <!-- 회사 정보 영역 -->
           <div class="company__intro">
@@ -88,7 +89,7 @@
 
             <div class="company__thumbnail">
               <img
-                src="./images/bg/company/bg_company2.jpg"
+                src="/assets/images/bg/company/bg_company2.jpg"
                 alt="설계도 사진"
                 loading="lazy"
               />
@@ -142,7 +143,7 @@
       <div class="a11y-hidden">회사 비전</div>
 
       <!-- 비전 섹션 -->
-      <section class="vision" id="vision">
+      <section class="vision" id="vision" class="vision">
         <!-- 비전 컨테이너 -->
         <div class="vision__inner">
           <!-- 비전 카드 리스트 -->
@@ -156,7 +157,9 @@
                     <span class="text-box__title--back" aria-hidden="true"
                       >FUTURE</span
                     >
-                    <span class="text-box__title--main">미래를 건설하는 힘</span>
+                    <span class="text-box__title--main"
+                      >미래를 건설하는 힘</span
+                    >
                   </div>
 
                   <p class="text-box__description">
@@ -172,7 +175,7 @@
                 <!-- 비전 이미지 -->
                 <div class="vision__image">
                   <img
-                    src="./images/bg/vision/bg_vision1.png"
+                    src="/assets/images/bg/vision/bg_vision1.png"
                     alt="회사를 대표하는 비전 이미지 1"
                     loading="lazy"
                   />
@@ -186,7 +189,7 @@
                 <!-- 비전 이미지 -->
                 <div class="vision__image">
                   <img
-                    src="./images/bg/vision/bg_vision2.png"
+                    src="/assets/images/bg/vision/bg_vision2.png"
                     alt="회사를 대표하는 비전 이미지 2"
                     loading="lazy"
                   />
@@ -198,7 +201,9 @@
                     <span class="text-box__title--back" aria-hidden="true"
                       >PROMISE</span
                     >
-                    <span class="text-box__title--main">안전과 신뢰의 약속</span>
+                    <span class="text-box__title--main"
+                      >안전과 신뢰의 약속</span
+                    >
                   </div>
 
                   <p class="text-box__description">
@@ -218,11 +223,8 @@
     </main>
 
     <!-- 푸터 -->
-    <footer id="footer"></footer>
+    <h2 class="a11y-hidden">푸터</h2>
 
-    <!-- 메인 JS 파일 -->
-    <script src="./js/base/layout.js"></script>
-    <script src="./js/base/common.js"></script>
-    <script src="./js/pages/about.js"></script>
+    <footer id="footer" class="footer"></footer>
   </body>
 </html>
