@@ -7,14 +7,6 @@ import { zoomPortfolio } from "/assets/js/modules/zoom-portfolio.js";
 import { cardData } from "/assets/js/data/member.js";
 import { createCard } from "/assets/js/modules/member-card.js";
 
-const slider = sliderPortfolio();
-
-const init = () => {
-  console.log("Initializing slider...");
-  slider.calculateSlideWidth();
-  slider.moveSlide();
-};
-
 window.onload = () => {
   const elementsToObserve = [
     ".company__info", // 회사 소개
@@ -26,10 +18,6 @@ window.onload = () => {
   ];
 
   elementsToObserve.forEach((selector) => observeElements(selector));
-
-  // 슬라이드형 포트폴리오
-  const slider = sliderPortfolio();
-  slider.addEventListeners();
 
   /* 지도 */
   handleMap();
@@ -52,4 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const cardItem = createCard(data);
     cardContainer.appendChild(cardItem);
   });
+
+  // 슬라이드형 포트폴리오
+  const slider = sliderPortfolio();
+  slider.init();
+  slider.addEventListeners();
 });
