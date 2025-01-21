@@ -1,0 +1,38 @@
+<div class="header__inner">
+  <a href="/" class="header__logo">
+    <img
+      id="headerLogo"
+      src=""
+      alt="est"
+      class="header__logo-img"
+      loading="lazy"
+    />
+  </a>
+
+  <div class="a11y-hidden">메뉴</div>
+
+  <nav class="gnb" aria-label="주 메뉴">
+    <ul class="gnb__list"></ul>
+  </nav>
+
+  <div class="utility">
+    <label for="light" class="utility__button btn-theme">
+      <input name="color-scheme" type="radio" value="light" id="light" />
+      <i class="bx bx-sun"></i>
+    </label>
+
+    <label for="dark" class="utility__button btn-theme">
+      <input name="color-scheme" type="radio" value="dark" id="dark" checked />
+      <i class="bx bx-moon"></i>
+    </label>
+
+    <button
+      type="button"
+      class="utility__button btn-hamburger"
+      aria-label="메뉴 열기"
+      title="햄버거 버튼"
+    >
+      <i class="bx bx-menu"></i>
+    </button>
+  </div>
+</div>
